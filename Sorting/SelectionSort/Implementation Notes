@@ -1,0 +1,4 @@
+Selection Sort is a quadratic sorting algorithm, meaning it sorts in O(N ^ 2). The algorithm works as follows: It keeps iterating through the array, and each time it increments the
+index where it starts the iteration. Every iteration, it selects the smallest number from the starting index to the end, and keeps track of the index of the smallest number.
+After it finishes that iteration, it places the smallest number it found at the starting index. So, the first iteration it places the smallest number at the start, then the next
+iteration it places the second smallest number at the right after the start, etc.
