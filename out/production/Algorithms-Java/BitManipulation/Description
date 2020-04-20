@@ -1,0 +1,37 @@
+Bit Manipulation is manipulating the bits of a number. Computers store all numbers internally as binary because inside a computer, it can only represent 0's and 1's
+representing powered wires and not powered wires. Each language has it's own set of data types, like int, float, char, etc. Every data type has a different number of
+bytes, and each byte has 8 bits, where each bit can store either 0 or 1. For example, in Java an int has 4 bytes, or 32 bits. We can easily calculate the largest
+possible value by doing (2 ^ 31) - 1. The reason we are doing 2 ^ 31 instead of 2 ^ 32 is because the first bit is used for the sign. If the first bit, usually called
+the signed bit, is 0, it means the number is positive. If the signed bit is 1, it means the number is negative.
+
+These languages also gave a number of tools to help manipulate these bits. Here are a few operators:
+
+a & b (a and b): the and of two numbers looks at each bit individually. For each bit, the resulting numbers bit at that index is the and of the two previous bits. The
+and of two bits is 1 if both bits are 1. For example: 2 & 6 = 2. For the first pair is 0 and 1, which results in 0. The next pair, 1 and 1, which is 1, and the last
+pair, 0 and 0, is 0. So the resulting number is 0 1 0, which is 2.
+
+0 1 0
+1 1 0
+↓ ↓ ↓
+0 1 0 (2)
+
+a | b (a or b): almost the same as and, except when comparing bits it uses or instead of and. The or of two bits is 1 if at least of of the bits is 1. For example,
+2 | 6 = 6.
+
+0 1 0
+1 1 0
+↓ ↓ ↓
+1 1 0 (6)
+
+a ^ b (a xor b): similar to the previous two, except compares two bits using xor. The xor of two bits is 1 if the two bits are different, that is, one bit is 1 and
+one is 0. For example, 2 ^ 6 = 4.
+
+0 1 0
+1 1 0
+↓ ↓ ↓
+1 0 0 (4)
+
+~a (complement of a): flips all the bits of a in the resulting number. For example, ~5
+
+00000000000000000000000000000101
+11111111111111111111111111111010
