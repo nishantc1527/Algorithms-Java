@@ -1,6 +1,6 @@
 package Sorting.CountingSort;
 
-import Algorithms.Sorting.Utility;
+import Sorting.Utility;
 
 public class Tester {
 
