@@ -1,5 +1,7 @@
 package BitManipulation;
 
+import java.util.LinkedList;
+
 public class Utility {
 
     /**
