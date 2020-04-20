@@ -1,4 +1,4 @@
-package Algorithms.Sorting;
+package Sorting;
 
 public class Utility {
 
