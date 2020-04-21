@@ -1,4 +1,4 @@
-package BitManipulation.PowerOfTwo;
+package Algorithms.BitManipulation.PowerOfTwo;
 
 public class PowerOfTwo {
 

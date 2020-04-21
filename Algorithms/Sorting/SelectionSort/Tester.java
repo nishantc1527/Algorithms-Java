@@ -1,13 +1,13 @@
-package Sorting.InsertionSort;
+package Algorithms.Sorting.SelectionSort;
 
-import Sorting.Utility;
+import Algorithms.Sorting.Utility;
 
 public class Tester {
 
     public static void main(String[] args) {
         int[] arr = Utility.createArray(10, 10);
         Utility.printArray(arr);
-        Sorting.InsertionSort.InsertionSort.sort(arr);
+        Algorithms.Sorting.SelectionSort.SelectionSort.sort(arr);
         Utility.printArray(arr);
     }
 

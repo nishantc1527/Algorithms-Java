@@ -1,6 +1,4 @@
-package BitManipulation;
-
-import java.util.LinkedList;
+package Algorithms.BitManipulation;
 
 public class Utility {
 

@@ -1,4 +1,4 @@
-package Sorting.QuickSort;
+package Algorithms.Sorting.QuickSort;
 
 public class QuickSort {
 

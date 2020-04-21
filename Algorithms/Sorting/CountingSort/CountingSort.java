@@ -1,4 +1,4 @@
-package Sorting.CountingSort;
+package Algorithms.Sorting.CountingSort;
 
 public class CountingSort {
 
