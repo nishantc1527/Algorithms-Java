@@ -1,4 +1,4 @@
-# Algorithms
+# [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms)
 Has lot's of algorithms in Java with a description for each Algorithm.
 ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting)
 
