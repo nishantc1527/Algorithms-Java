@@ -17,9 +17,9 @@ public class QuickSort {
     }
 
     private static int partition(int[] arr, int left, int right) {
-        int pivotIndex = (int) (Math.random() * (right - left)) + left, partitionIndex = left;
+        int pivotIndex = right - 1, partitionIndex = left;
 
-        for(int i = left; i < right; i ++) {
+        for(int i = left; i < right - 1; i ++) {
             if(arr[i] < arr[pivotIndex]) {
                 if(partitionIndex == pivotIndex) {
                     pivotIndex = i;
