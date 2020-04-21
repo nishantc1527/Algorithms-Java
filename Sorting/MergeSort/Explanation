@@ -6,3 +6,6 @@ array j, and the pointer for the resulting array k. Initially, i, j, and k is 0.
 at k with the element at i, while incrementing i and k. If j was smaller, replace the element at k with j, incrementing j and k. You repeat this until either i or
 j is out of bounds, which is when you just add all the remaining elements from the other array. What merge sort does is sorts the left half and the right half of the
 array, then merges them together to get a sorted array. The sorting algorithm that it so happens to choose: merge sort.
+
+The problem with merge sort has to do with the merging algorithm. The thing is, we have to create two whole new arrays and copy over the elements from the original
+array into these array to merge. This takes lots of more memory, and more importantly, takes lots more time. Still, it is a widely used sorting algorithm.
