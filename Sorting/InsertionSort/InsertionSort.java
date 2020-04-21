@@ -1,4 +1,4 @@
-package Algorithms.Sorting.InsertionSort;
+package Sorting.InsertionSort;
 
 public class InsertionSort {
 
