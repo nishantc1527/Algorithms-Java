@@ -61,18 +61,18 @@ The Utility class provides a few implementations on commonly used operations. He
 ones that are useful:
 
 1. To get the first bit of any number a, use a & 1. All the other bits gets (anded?) with 0, except the single 1. If the first bit was 0, 0 and
-1 returns 0. If first bit was 1, 1 and 1 returns 1.
-2. To get the ith bit of any number a, use (a >> i) & 1. Simply shifts the bit to become the first bit, then gets the first bit using and 1.
-3. a ^ a = 0. Since it is (xored?) with itself, and xor checks for a difference, everything outputs 0.
-4. a ^ 0 = a. The 0's xor 0 stays 0, and the 1's xor 0 stays 1.
-5. a & 0 = 0. And requires both bits to be 1. Since there are no 1's present in the number 0, everything becomes 0.
-6. a | 0 = a. All the 0's or 0 stays 0, and the 1's or 0 stay 1. So, everything stays the same.
-7. a | 1 sets the first bit to 1. According to the previous rule, everything before the 1 stays the same. If the first bit is 0, it becomes 1,
+2 returns 0. If first bit was 1, 1 and 1 returns 1.
+3. To get the ith bit of any number a, use (a >> i) & 1. Simply shifts the bit to become the first bit, then gets the first bit using and 1.
+4. a ^ a = 0. Since it is (xored?) with itself, and xor checks for a difference, everything outputs 0.
+5. a ^ 0 = a. The 0's xor 0 stays 0, and the 1's xor 0 stays 1.
+6. a & 0 = 0. And requires both bits to be 1. Since there are no 1's present in the number 0, everything becomes 0.
+7. a | 0 = a. All the 0's or 0 stays 0, and the 1's or 0 stay 1. So, everything stays the same.
+8. a | 1 sets the first bit to 1. According to the previous rule, everything before the 1 stays the same. If the first bit is 0, it becomes 1,
 and if the first bit is 1, it stays 1.
-8. a | (1 << i). Moves the position of the 1 to the correct location, and then according to the previous rule it sets it to 1.
-9. a & ~0 = a. The complement of 0 is a number where all bits are 1. For each bit, the 0's and 1 stays 0, and the 1's and 1 stays 1.
-10. a & ~1 sets the first bit to 0, also called clearing the first bit. The complement of 1 is a number where all bits are one except the first
+9. a | (1 << i). Moves the position of the 1 to the correct location, and then according to the previous rule it sets it to 1.
+10. a & ~0 = a. The complement of 0 is a number where all bits are 1. For each bit, the 0's and 1 stays 0, and the 1's and 1 stays 1.
+11. a & ~1 sets the first bit to 0, also called clearing the first bit. The complement of 1 is a number where all bits are one except the first
 one, which is 0. According to the previous rule, all the one bits makes sure everything else stays the same, except for the 0 bit. The 0's and 0
 stays 0, and the 1's and 0 becomes 0.
-11. a & ~(1 << i) clears the ith bit. According to the previous rule, keeping a one as the first bit, clears the first bit. Moving the first bit
+12. a & ~(1 << i) clears the ith bit. According to the previous rule, keeping a one as the first bit, clears the first bit. Moving the first bit
 to the ith location clears the ith bit.
