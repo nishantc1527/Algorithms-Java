@@ -1,4 +1,4 @@
-Sorting algorithms are algorithms where, given an array, it sorts the elements in the array in sorted order. For example, this array:
+Algorithms.Sorting algorithms are algorithms where, given an array, it sorts the elements in the array in sorted order. For example, this array:
 
 0 3 3 6 2 5 3 8 5 8
 

@@ -1,8 +1,0 @@
-Quick Sort can sort an array in O(N lg N) on average. I say on average because the worst case running time of quick sort i O(N ^ 2). However, it's extremely unlikely
-that it gets a running time of O(N ^ 2). It usually always gets, or close to gets, O(N lg N). That, and the fact that it doesn't have to create whole new arrays like
-merge sort, makes it one of the more used sorting algorithms when sorting any type, including objects (if you only want to sort numbers, there are much better ways).
-For example, Java's Arrays.sort() uses quick sort. Quick sort works on the fact that if you have a single element somewhere in the array, and everything to the left
-of it is smaller than it and everything to the right of it is larger than it, all you need to do is sort the two sides and you get a sorted array. There is, in fact,
-an algorithm that can get this structure in the array, called the partitioning algorithm. It chooses a pivot, and can move everything smaller than it to the left of
-it and everything larger than it to the right of it in O(N). The partitioning algorithm works as follows: it chooses a pivot (I'll explain the choosing of the pivot
-later) and keeps track of two pointers, I'll call i and j. It traverses the array using i, and when it finds
