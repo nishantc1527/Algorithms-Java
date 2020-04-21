@@ -10,5 +10,3 @@ index, if you scan through the array, everything will be naturally ordered, and 
 
 An improvement can be made, where you can create an array smaller size and allow negative numbers. The counting array will be of size max - min + 1 (the extra +1 because of
 zero based indexing). Then for each element E, you increment count[E - min], and when acceding index i, you do arr[j] = i + min.
-
-I added an extra method to the utility class which creates an array with negatives, because that requires extra steps.
