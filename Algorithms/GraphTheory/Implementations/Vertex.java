@@ -47,10 +47,7 @@ public class Vertex<E> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Vertex<?> vertex = (Vertex<?>) o;
-        return dist == vertex.dist &&
-                Objects.equals(val, vertex.val) &&
-                Objects.equals(prev, vertex.prev) &&
-                color == vertex.color;
+        return Objects.equals(val, vertex.val);
     }
 
     @Override
