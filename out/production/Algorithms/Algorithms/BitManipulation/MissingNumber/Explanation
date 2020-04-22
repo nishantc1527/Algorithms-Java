@@ -1,0 +1,6 @@
+Problem: Given an array of numbers numbered 0, 1, 2... n - 1, one element is missing. Find the missing number.
+
+Example:
+
+Input(0, 5, 3, 2, 4)
+Output(1)
