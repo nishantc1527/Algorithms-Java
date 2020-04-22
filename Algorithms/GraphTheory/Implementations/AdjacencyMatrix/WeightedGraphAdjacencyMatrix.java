@@ -4,7 +4,7 @@ import Algorithms.GraphTheory.Implementations.Pair;
 
 public class WeightedGraphAdjacencyMatrix implements GraphAdjacencyMatrix {
 
-    int[][] adjacencyMatrix;
+    public int[][] adjacencyMatrix;
 
     public WeightedGraphAdjacencyMatrix(int size) {
         adjacencyMatrix = new int[size][size];

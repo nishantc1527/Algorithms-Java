@@ -4,7 +4,7 @@ import Algorithms.GraphTheory.Implementations.Pair;
 
 public class DirectedGraphAdjacencyMatrix implements GraphAdjacencyMatrix {
 
-    boolean[][] adjacencyMatrix;
+    public boolean[][] adjacencyMatrix;
 
     public DirectedGraphAdjacencyMatrix(int size) {
         adjacencyMatrix = new boolean[size][size];

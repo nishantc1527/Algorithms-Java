@@ -26,7 +26,7 @@ public class Vertex<E> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(val, prev, dist, color);
+        return Objects.hash(val);
     }
 
     @Override
