@@ -1,5 +1,13 @@
 Problem: Write a program to check if a number is a power of two. Use bit manipulation, and in O(1).
 
+Example:
+
+Input(2)
+Output(true)
+
+Input(5)
+Output(false)
+
 Solution: You use powers of two a lot of times when talking about binary. So there must be a pattern.
 
 2 ^ 0 = 1
