@@ -12,3 +12,4 @@ Has lot's of algorithms in Java with a description for each Algorithm.
 ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation)
  - [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/PowerOfTwo)
  - [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/SingleNumber)
+ - [Missing Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/MissingNumber)
