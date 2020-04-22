@@ -12,4 +12,11 @@ Has lot's of algorithms in Java with a description for each Algorithm.
 ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation)
  - [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/PowerOfTwo)
  - [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/SingleNumber)
- - [Missing Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/MissingNumber)
+## [Graph Theory](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory)
+ ### [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations)
+ 
+ - [Adjacency List](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations/AdjacencyList)
+ - [Adjacency Matrix](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations/AdjacencyMatrix)
+
+# License
+Licensed under [The GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
