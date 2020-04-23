@@ -13,15 +13,23 @@ Has lot's of algorithms in Java with a description for each Algorithm.
  - [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/PowerOfTwo)
  - [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/SingleNumber)
 ## [Graph Theory](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory)
+
  ### [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations)
  
  - [Adjacency List](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations/AdjacencyList)
  - [Adjacency Matrix](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations/AdjacencyMatrix)
  
  ### [Shortest Path Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms)
+ 
   #### [Single Source Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath)
   
   - [Dijkstra's Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath/DijkstraShortestPath)
+
+## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures)
+
+ ### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures)
+ 
+ - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures/BinarySearchTrees/BinarySearchTree)
 
 # License
 Licensed under [The GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
