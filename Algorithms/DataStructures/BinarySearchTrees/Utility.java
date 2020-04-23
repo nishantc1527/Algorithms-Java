@@ -33,7 +33,7 @@ public class Utility {
         }
 
         printInInorder(root.getLeft());
-        System.out.print(root.getVal() + " ");
+        System.out.print(root.getVal() == null ? "" : root.getVal() + " ");
         printInInorder(root.getRight());
     }
 
