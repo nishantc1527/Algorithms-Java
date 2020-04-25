@@ -37,7 +37,7 @@ public class Utility {
         Vertex<E> from = edge.from;
         Vertex<E> to = edge.to;
         if(from.dist + edge.weight < to.dist) {
-            to.dist = from.dist + edge.weight;
+            to.dist = (int) (from.dist + edge.weight);
             to.prev = from;
             heap.decreaseKey(to, to.dist);
             return true;
@@ -50,7 +50,7 @@ public class Utility {
         Vertex<E> from = edge.from;
         Vertex<E> to = edge.to;
         if(from.dist + edge.weight < to.dist) {
-            to.dist = from.dist + edge.weight;
+            to.dist = (int) (from.dist + edge.weight);
             to.prev = from;
             return true;
         }
@@ -60,7 +60,7 @@ public class Utility {
 
     public static <E> void printPathDistances(WeightedGraphAdjacencyList<E> graph, E source) {
         for(Vertex<E> vertex : graph.vertices.values()) {
-            int tempDist = vertex.dist;
+            Vertex<E> temp = vertex;
             StringBuilder sb = new StringBuilder();
 
             while(vertex.val != source) {
@@ -68,7 +68,7 @@ public class Utility {
                 vertex = vertex.prev;
             }
 
-            System.out.println(source + " -> " + vertex + ": " + sb.append(source).reverse() + ", weight: " + tempDist);
+            System.out.println(source + " -> " + temp + ": " + sb.append(source).reverse() + ", weight: " + temp.dist);
         }
     }
 
