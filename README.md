@@ -1,5 +1,5 @@
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms)
-Has lot's of algorithms in Java with a description for each Algorithm.
+Has lots of algorithms in Java with a description for each Algorithm.
 ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting)
 
  - [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting/BubbleSort)
