@@ -9,6 +9,10 @@ public class Tester {
         BinaryTree<Integer> tree = new BinarySearchTree<>();
         Utility.createTree(tree, 10, 10);
         Utility.printInInorder(tree);
+
+        for(int i = -9; i <= 9; i ++) {
+            System.out.println(i + ": " + tree.search(i));
+        }
     }
 
 }

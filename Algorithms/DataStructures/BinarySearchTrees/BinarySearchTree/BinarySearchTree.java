@@ -8,7 +8,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
     private class BSTNode implements Node<E> {
 
         private E val;
-        private Node<E> left, right, parent;
+        private BSTNode left, right, parent;
 
         public BSTNode(E val) {
             this.val = val;
@@ -36,17 +36,17 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
 
         @Override
         public void setLeft(Node<E> newNode) {
-            left = newNode;
+            left = (BSTNode) newNode;
         }
 
         @Override
         public void setRight(Node<E> newNode) {
-            right = newNode;
+            right = (BSTNode) newNode;
         }
 
         @Override
         public void setParent(Node<E> newNode) {
-            parent = newNode;
+            parent = (BSTNode) newNode;
         }
 
         @Override
@@ -56,7 +56,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
 
     }
 
-    private Node<E> root;
+    private BSTNode root;
 
     @Override
     public Node<E> getRoot() {
@@ -136,4 +136,22 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         }
     }
 
+    @Override
+    public boolean search(E val) {
+        BSTNode dummy = root;
+
+        while(dummy != null) {
+            if(dummy.val.equals(val)) {
+                return true;
+            } else {
+                if(val.compareTo(dummy.val) > 0) {
+                    dummy = dummy.right;
+                } else {
+                    dummy = dummy.left;
+                }
+            }
+        }
+
+        return false;
+    }
 }

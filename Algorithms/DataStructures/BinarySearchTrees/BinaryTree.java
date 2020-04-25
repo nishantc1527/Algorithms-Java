@@ -5,5 +5,6 @@ public interface BinaryTree<E extends Comparable<E>> {
     Node<E> getRoot();
     void insert(E val);
     void delete(E val);
+    boolean search(E val);
 
 }
