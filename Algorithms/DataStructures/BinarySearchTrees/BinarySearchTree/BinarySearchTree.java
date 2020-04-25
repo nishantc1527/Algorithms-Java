@@ -81,7 +81,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         /**
          * Sets the left child of this node.
          *
-         * @param newNode This nodes new left child.
+         * @param newNode This node's new left child.
          */
 
         @Override
@@ -90,8 +90,9 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         }
 
         /**
+         * Sets the right child of this node.
          *
-         * @param newNode
+         * @param newNode The node's new right child.
          */
 
         @Override
@@ -99,10 +100,22 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
             right = (BSTNode) newNode;
         }
 
+        /**
+         * Sets the parent of this node.
+         *
+         * @param newNode The node's new parent.
+         */
+
         @Override
         public void setParent(Node<E> newNode) {
             parent = (BSTNode) newNode;
         }
+
+        /**
+         * Sets the value of this node.
+         *
+         * @param newVal This node's new value.
+         */
 
         @Override
         public void setVal(E newVal) {
@@ -127,6 +140,14 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
     public Node<E> getRoot() {
         return root;
     }
+
+    /**
+     * Inserts a node into the binary tree. After
+     * inserting, the tree still has to follow the binary
+     * search tree guidelines.
+     *
+     * @param val The value of the new node.
+     */
 
     @Override
     public void insert(E val) {
@@ -156,6 +177,14 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
             }
         }
     }
+
+    /**
+     * Deletes a node from the binary search tree.
+     * After deletion, the binary tree still has to
+     * follow the binary search tree guidelines.
+     *
+     * @param val The value of the new node.
+     */
 
     @Override
     public void delete(E val) {
@@ -200,6 +229,13 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
             dummy.setVal(largestInLeft.getVal());
         }
     }
+
+    /**
+     * Searches for a node in the tree.
+     *
+     * @param val The value of the node you are searching for.
+     * @return True if the node exists, false otherwise.
+     */
 
     @Override
     public boolean contains(E val) {
