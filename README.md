@@ -14,6 +14,10 @@ Has lots of algorithms in Java with a description for each Algorithm.
  - [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/SingleNumber)
 ## [Graph Theory](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory)
 
+ ### [Elementary Graph Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ElementaryGraphAlgorithms)
+ 
+ - [Breadth First Search](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ElementaryGraphAlgorithms/BreadthFirstSearch)
+
  ### [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations)
  
  - [Adjacency List](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/Implementations/AdjacencyList)
