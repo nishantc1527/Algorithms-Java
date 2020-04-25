@@ -13,7 +13,7 @@ public class Tester {
         System.out.println("\n\n\n");
 
         for(int i = -9; i <= 9; i ++) {
-            System.out.println(i + ": " + tree.search(i));
+            System.out.println(i + ": " + tree.contains(i));
         }
     }
 
