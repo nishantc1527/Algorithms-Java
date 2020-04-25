@@ -1,5 +1,5 @@
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms)
-Has lot's of algorithms in Java with a description for each Algorithm.
+Has lots of algorithms in Java with a description for each Algorithm.
 ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting)
 
  - [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting/BubbleSort)
@@ -24,6 +24,7 @@ Has lot's of algorithms in Java with a description for each Algorithm.
   #### [Single Source Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath)
   
   - [Dijkstra's Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath/DijkstraShortestPath)
+  - [Bellman Ford's Shortest Path Algorithm](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath/BellmanFordShortestPath)
 
 ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures)
 

@@ -37,6 +37,7 @@ public class DirectedGraphAdjacencyList<E> implements GraphAdjacencyList<E> {
 
         Vertex<E> vertexForm = new Vertex<>(val);
         vertices.put(val, vertexForm);
+        adjacencyList.put(vertexForm, new LinkedList<>());
     }
 
     /**
@@ -68,6 +69,10 @@ public class DirectedGraphAdjacencyList<E> implements GraphAdjacencyList<E> {
 
         if(edges.containsKey(edge)) {
             throw new IllegalArgumentException("Edge " + edge.first + " -> " + edge.second + " Already Exists");
+        }
+
+        if(!adjacencyList.containsKey(v1)) {
+            throw new IllegalArgumentException("Vertex " + v1 + " Doesn't Exist");
         }
 
         adjacencyList.get(v1).add(v2);
