@@ -24,6 +24,7 @@ Has lot's of algorithms in Java with a description for each Algorithm.
   #### [Single Source Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath)
   
   - [Dijkstra's Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath/DijkstraShortestPath)
+  - [Bellman Ford's Shortest Path Algorithm](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath/BellmanFordShortestPath)
 
 ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures)
 
