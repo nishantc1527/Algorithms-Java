@@ -66,4 +66,12 @@ public interface Node<E extends Comparable<E>> {
 
     void setVal(E newVal);
 
+    /**
+     * Checks if this node is null.
+     *
+     * @return If this node is null.
+     */
+
+    boolean isNull();
+
 }

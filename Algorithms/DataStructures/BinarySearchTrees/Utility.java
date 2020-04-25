@@ -6,20 +6,48 @@ import java.util.List;
 
 public class Utility {
 
+    /**
+     * Prints a tree in preorder traversal.
+     *
+     * @param tree The tree to traverse.
+     * @param <E> The type parameter of the tree.
+     */
+
     public static <E extends Comparable<E>> void printInPreorder(BinaryTree<E> tree) {
         printInPreorder(tree.getRoot());
         System.out.println();
     }
+
+    /**
+     * Prints a tree in inorder traversal.
+     *
+     * @param tree The tree to traverse.
+     * @param <E> The type parameter of the tree.
+     */
 
     public static <E extends Comparable<E>> void printInInorder(BinaryTree<E> tree) {
         printInInorder(tree.getRoot());
         System.out.println();
     }
 
+    /**
+     * Prints a tree in post order traversal.
+     *
+     * @param tree The tree to traverse.
+     * @param <E> The type parameter of the tree.
+     */
+
     public static <E extends Comparable<E>> void printInPostOrder(BinaryTree<E> tree) {
         printInPostOrder(tree.getRoot());
         System.out.println();
     }
+
+    /**
+     * Helper method to print in preorder traversal.
+     *
+     * @param root The root node of the tree.
+     * @param <E> The type parameter of the tree.
+     */
 
     private static <E extends Comparable<E>> void printInPreorder(Node<E> root) {
         if (root == null) {
@@ -31,6 +59,13 @@ public class Utility {
         printInPreorder(root.getRight());
     }
 
+    /**
+     * Helper method to print in inorder traversal.
+     *
+     * @param root The root node of the tree.
+     * @param <E> The type parameter of the tree.
+     */
+
     private static <E extends Comparable<E>> void printInInorder(Node<E> root) {
         if (root == null) {
             return;
@@ -41,6 +76,13 @@ public class Utility {
         printInInorder(root.getRight());
     }
 
+    /**
+     * Helper method to print in post order traversal.
+     *
+     * @param root The root node of the tree.
+     * @param <E> The type parameter of the tree.
+     */
+
     private static <E extends Comparable<E>> void printInPostOrder(Node<E> root) {
         if (root == null) {
             return;
@@ -50,6 +92,14 @@ public class Utility {
         printInPostOrder(root.getRight());
         System.out.print(root.getVal() + " ");
     }
+
+    /**
+     * Creates a tree with random values.
+     *
+     * @param tree The tree who's values you are filling.
+     * @param size The size of the tree.
+     * @param max The maximum of every node in the new tree, negative and positive.
+     */
 
     public static void createTree(BinaryTree<Integer> tree, int size, int max) {
         for (int i = 0; i < size; i++) {

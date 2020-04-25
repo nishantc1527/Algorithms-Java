@@ -122,6 +122,17 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
             val = newVal;
         }
 
+        /**
+         * Checks if this node is null.
+         *
+         * @return If this node is null.
+         */
+
+        @Override
+        public boolean isNull() {
+            return false;
+        }
+
     }
 
     /**
