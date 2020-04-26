@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Utility<E> {
+public class Utility {
 
     /**
      * Prints a tree in preorder traversal.
