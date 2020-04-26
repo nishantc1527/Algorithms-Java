@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Utility {
+public class Utility<E> {
 
     /**
      * Prints a tree in preorder traversal.
@@ -111,16 +111,15 @@ public class Utility {
         printNode(tree.getRoot());
     }
 
-    public static <E extends Comparable<E>> void printNode(Node<E> root) {
+    private static <E extends Comparable<E>> void printNode(Node<E> root) {
         int maxLevel = maxLevel(root);
 
         printNodeInternal(Collections.singletonList(root), 1, maxLevel);
     }
 
     private static <E extends Comparable<E>> void printNodeInternal(List<Node<E>> nodes, int level, int maxLevel) {
-        if(nodes.isEmpty() || isAllElementsNull(nodes)) {
+        if (nodes.isEmpty() || isAllElementsNull(nodes))
             return;
-        }
 
         int floor = maxLevel - level;
         int edgeLines = (int) Math.pow(2, (Math.max(floor - 1, 0)));
@@ -130,8 +129,8 @@ public class Utility {
         printWhitespaces(firstSpaces);
 
         List<Node<E>> newNodes = new ArrayList<>();
-        for(Node<E> node : nodes) {
-            if(node != null) {
+        for (Node<E> node : nodes) {
+            if (node != null && !node.isNull()) {
                 System.out.print(node.getVal());
                 newNodes.add(node.getLeft());
                 newNodes.add(node.getRight());
@@ -145,15 +144,15 @@ public class Utility {
         }
         System.out.println();
 
-        for(int i = 1; i <= edgeLines; i++) {
-            for(Node<E> node : nodes) {
+        for (int i = 1; i <= edgeLines; i++) {
+            for (Node<E> node : nodes) {
                 printWhitespaces(firstSpaces - i);
-                if(node == null) {
+                if (node == null || node.isNull()) {
                     printWhitespaces(edgeLines + edgeLines + i + 1);
                     continue;
                 }
 
-                if(node.getLeft() != null) {
+                if (node.getLeft() != null && !node.getLeft().isNull()) {
                     System.out.print("/");
                 } else {
                     printWhitespaces(1);
@@ -161,7 +160,7 @@ public class Utility {
 
                 printWhitespaces(i + i - 1);
 
-                if(node.getRight() != null) {
+                if (node.getRight() != null && !node.getRight().isNull()) {
                     System.out.print("\\");
                 } else {
                     printWhitespaces(1);
@@ -177,22 +176,21 @@ public class Utility {
     }
 
     private static void printWhitespaces(int count) {
-        for(int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             System.out.print(" ");
         }
     }
 
     private static <E extends Comparable<E>> int maxLevel(Node<E> node) {
-        if(node == null) {
+        if (node == null || node.isNull())
             return 0;
-        }
 
         return Math.max(maxLevel(node.getLeft()), maxLevel(node.getRight())) + 1;
     }
 
-    private static <T> boolean isAllElementsNull(List<T> list) {
-        for(T object : list) {
-            if (object != null) {
+    private static <E extends Comparable<E>> boolean isAllElementsNull(List<Node<E>> list) {
+        for (Node<E> node : list) {
+            if (node != null && !node.isNull()) {
                 return false;
             }
         }
