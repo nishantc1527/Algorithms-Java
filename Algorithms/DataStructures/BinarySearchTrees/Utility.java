@@ -1,8 +1,6 @@
 package Algorithms.DataStructures.BinarySearchTrees;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Utility {
 
@@ -50,7 +48,7 @@ public class Utility {
      */
 
     private static <E extends Comparable<E>> void printInPreorder(Node<E> root) {
-        if (root == null) {
+        if (root == null || root.isNull()) {
             return;
         }
 
@@ -67,7 +65,7 @@ public class Utility {
      */
 
     private static <E extends Comparable<E>> void printInInorder(Node<E> root) {
-        if (root == null) {
+        if (root == null || root.isNull()) {
             return;
         }
 
@@ -84,13 +82,55 @@ public class Utility {
      */
 
     private static <E extends Comparable<E>> void printInPostOrder(Node<E> root) {
-        if (root == null) {
+        if (root == null || root.isNull()) {
             return;
         }
 
         printInPostOrder(root.getLeft());
         printInPostOrder(root.getRight());
         System.out.print(root.getVal() + " ");
+    }
+
+    /**
+     * Prints an array
+     */
+    public static <E> void printArray(E[] arr) {
+        int totalSize = 0;
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (E e : arr) {
+            sb.append(e);
+            sb.append(", ");
+            totalSize += e == null ? 0 : e.toString().length();
+            if (totalSize > 30) {
+                sb.append("\n");
+                totalSize = 0;
+            }
+        }
+        sb.deleteCharAt(sb.length() - 1);
+        sb.append("]");
+        System.out.println(sb);
+    }
+
+    private static <E extends Comparable<E>> String[] treeToArray(BinaryTree<E> tree) {
+        Node<E> current = tree.getRoot();
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.add(current);
+        List<String> res = new ArrayList<>();
+
+        while (!queue.isEmpty()) {
+            current = queue.remove();
+            if (!(current == null || current.isNull())) {
+                res.add(current.toString());
+                queue.add(current.getLeft());
+                queue.add(current.getRight());
+            }
+            else {
+                res.add(null);
+            }
+        }
+
+        return res.toArray(new String[0]);
     }
 
     /**
@@ -108,7 +148,9 @@ public class Utility {
     }
 
     public static <E extends Comparable<E>> void printTree(BinaryTree<E> tree) {
-        printNode(tree.getRoot());
+//        printNode(tree.getRoot());
+
+        printArray(treeToArray(tree));
     }
 
     private static <E extends Comparable<E>> void printNode(Node<E> root) {
@@ -182,8 +224,9 @@ public class Utility {
     }
 
     private static <E extends Comparable<E>> int maxLevel(Node<E> node) {
-        if (node == null || node.isNull())
+        if(node == null || node.isNull()) {
             return 0;
+        }
 
         return Math.max(maxLevel(node.getLeft()), maxLevel(node.getRight())) + 1;
     }
