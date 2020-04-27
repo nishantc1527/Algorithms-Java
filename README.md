@@ -9,9 +9,13 @@ Has lots of algorithms in Java with a description for each Algorithm.
  - [Quick Sort](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting/QuickSort)
  - [Counting Sort](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting/CountingSort)
  - [Heap Sort](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/Sorting/HeapSort)
+ 
 ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation)
+
  - [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/PowerOfTwo)
  - [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/SingleNumber)
+ - [Missing Number](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation/MissingNumber)
+ 
 ## [Graph Theory](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory)
 
  ### [Elementary Graph Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/GraphTheory/ElementaryGraphAlgorithms)
