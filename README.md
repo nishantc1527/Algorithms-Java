@@ -39,6 +39,7 @@ Has lots of algorithms in Java with a description for each Algorithm.
  ### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures)
  
  - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures/BinarySearchTrees/BinarySearchTree)
+ - [Red Black Tree](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/DataStructures/BinarySearchTrees/RedBlackTree)
 
 # License
 Licensed under [The GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)

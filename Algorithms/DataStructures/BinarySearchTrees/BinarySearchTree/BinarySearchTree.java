@@ -1,7 +1,9 @@
 package Algorithms.DataStructures.BinarySearchTrees.BinarySearchTree;
 
 import Algorithms.DataStructures.BinarySearchTrees.BinaryTree;
+import Algorithms.DataStructures.BinarySearchTrees.Color;
 import Algorithms.DataStructures.BinarySearchTrees.Node;
+import Algorithms.DataStructures.BinarySearchTrees.Utility;
 
 public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> {
 
@@ -133,6 +135,24 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
             return false;
         }
 
+        /**
+         * Binary search trees don't have
+         * colored nodes.
+         */
+
+        @Override
+        public Color getColor() {
+            return null;
+        }
+
+        /**
+         * Binary search trees don't have
+         * colored nodes.
+         */
+
+        @Override
+        public void setColor(Color newColor) { }
+
     }
 
     /**
@@ -192,7 +212,8 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
     /**
      * Deletes a node from the binary search tree.
      * After deletion, the binary tree still has to
-     * follow the binary search tree guidelines.
+     * follow the binary search tree guidelines. If
+     * the element doesn't exist, just returns.
      *
      * @param val The value of the new node.
      */
@@ -201,11 +222,19 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
     public void delete(E val) {
         Node<E> dummy = root;
 
+        if(dummy == null) {
+            return;
+        }
+
         while(!dummy.getVal().equals(val)) {
             if(val.compareTo(dummy.getVal()) > 0) {
                 dummy = dummy.getRight();
             } else {
                 dummy = dummy.getLeft();
+            }
+
+            if(dummy == null) {
+                return;
             }
         }
 
@@ -216,7 +245,13 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
                 dummy.getParent().setRight(null);
             }
         } else if(dummy.getLeft() == null || dummy.getRight() == null) { // case 2
-            if(dummy == dummy.getParent().getLeft()) {
+            if(dummy.getParent() == null) {
+                if(dummy.getLeft() == null) {
+                    root = root.right;
+                } else {
+                    root = root.left;
+                }
+            } else if(dummy == dummy.getParent().getLeft()) {
                 if(dummy.getLeft() == null) {
                     dummy.getParent().setLeft(dummy.getRight());
                 } else {
