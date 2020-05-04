@@ -325,7 +325,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
      * calcBalanceFactor(AVLTreeNode root) for definition of balance factor)
      * @return Whether this tree is a valid AVL tree
      */
-    public boolean isValidAVLTree() {
+    public boolean isValid() {
         return isValidAVLTree(root);
     }
 
