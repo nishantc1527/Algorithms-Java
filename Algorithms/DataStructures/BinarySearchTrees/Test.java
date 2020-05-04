@@ -3,8 +3,7 @@ package Algorithms.DataStructures.BinarySearchTrees;
 import Algorithms.DataStructures.BinarySearchTrees.AVLTree.AVLTree;
 import Algorithms.DataStructures.BinarySearchTrees.RedBlackTree.RedBlackTree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
