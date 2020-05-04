@@ -394,7 +394,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
                 myTree.insert(a);
             }
 
-            boolean correct1 = myTree.isValidRBTree() && myTree.NIL.parent == null;
+            boolean correct1 = myTree.isValidRBTree() && myTree.NIL.getParent() == null;
             if (correct1) insertCorrect++;
 
             for (int j = 0; j < 10; j++) {
