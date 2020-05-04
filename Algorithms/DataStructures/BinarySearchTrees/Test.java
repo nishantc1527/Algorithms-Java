@@ -34,5 +34,24 @@ public class Test {
                 ((rbTimeFinish - rbTimeStart)) + " milliseconds");
         System.out.println("AVL Tree insertion time for " + n + " values: " +
                 ((avlTimeFinish - avlTimeStart)) + " milliseconds");
+
+        System.out.println("\n");
+
+        rbTimeStart = System.currentTimeMillis();
+        for (int i = 0; i < n; i++) {
+            rbtree.delete(rbTreeVals.remove(0));
+        }
+        rbTimeFinish = System.currentTimeMillis();
+
+        avlTimeStart = System.currentTimeMillis();
+        for (int i = 0; i < n; i++) {
+            avltree.delete(avlTreeVals.remove(0));
+        }
+        avlTimeFinish = System.currentTimeMillis();
+
+        System.out.println("Red Black Tree deletion time for " + n + " values: " +
+                ((rbTimeFinish - rbTimeStart)) + " milliseconds");
+        System.out.println("AVL Tree deletion time for " + n + " values: " +
+                ((avlTimeFinish - avlTimeStart)) + " milliseconds");
     }
 }
