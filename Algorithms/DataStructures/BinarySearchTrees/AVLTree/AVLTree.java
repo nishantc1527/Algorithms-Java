@@ -233,12 +233,24 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         else return minimum(root.left);
     }
 
+    public int getHeight() {
+        return getHeight(getRoot());
+    }
+
+    private int getHeight(Node<E> root) {
+        if(root == null) {
+            return 0;
+        }
+
+        return 1 + Math.max(getHeight(root.getLeft()), getHeight(root.getRight()));
+    }
+
     /**
      * Checks if the tree contains a specified value
      *
      * Time complexity: O(log n)
-     * @param val
-     * @return
+     * @param val the value to check
+     * @return if the tree contains the value
      */
     public boolean contains(E val) {
         return contains(val, root);

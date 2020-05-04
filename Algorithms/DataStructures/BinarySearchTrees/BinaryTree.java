@@ -6,6 +6,6 @@ public interface BinaryTree<E extends Comparable<E>> {
     void insert(E val);
     void delete(E val);
     boolean contains(E val);
-
+    int getHeight();
 
 }

@@ -8,8 +8,9 @@ import java.util.List;
 
 public class Tester {
     public static void main(String[] args) {
-        AVLTree<Integer> myTree = new AVLTree<>();
-        List<Integer> treeVals = new ArrayList<>();
+        new AVLTree<>();
+        AVLTree<Integer> myTree;
+        List<Integer> treeVals;
         int insertCorrect = 0, deleteCorrect = 0, trials = 10000, heightAvg = 0;
 
         for (int i = 0; i < trials; i++) {
