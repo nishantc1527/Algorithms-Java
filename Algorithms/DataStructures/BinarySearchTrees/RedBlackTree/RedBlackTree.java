@@ -295,7 +295,6 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         return res.iterator();
     }
 
-
     private class RBTreeNode implements Node<E>{
         E val;
         RBTreeNode left, right, parent;
@@ -379,7 +378,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
             myTree = new RedBlackTree<>();
             treeVals = new LinkedList<>();
 
-            for (int j = 0; j < 25; j++) {
+            for (int j = 0; j < 31; j++) {
                 int a = (int) (Math.random() * 100);
                 treeVals.add(a);
                 myTree.insert(a);
@@ -388,7 +387,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
             boolean correct1 = myTree.isValidRBTree() && myTree.NIL.parent == null;
             if (correct1) insertCorrect++;
 
-            for (int j = 0; j < 20; j++) {
+            for (int j = 0; j < 10; j++) {
                 int a = (int) (Math.random() * treeVals.size());
                 myTree.delete(treeVals.remove(a));
             }
