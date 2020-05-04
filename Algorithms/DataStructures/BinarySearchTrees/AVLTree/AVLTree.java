@@ -246,7 +246,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     }
 
     /**
-     * Checks if the tree contains a specified value
+     * Checks if the tree contains a specified value, same logic as a binary search tree search
      *
      * Time complexity: O(log n)
      * @param val the value to check
@@ -259,7 +259,10 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     private boolean contains(E val, AVLTreeNode root) {
         if (root == null) return false;
         else if (root.val == val) return true;
-        else return contains(val, root.left) || contains(val, root.right);
+        else {
+            if (root.val.compareTo(val) > 0) return contains(val, root.left);
+            else return contains(val, root.right);
+        }
     }
 
     /**
