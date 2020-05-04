@@ -1,6 +1,7 @@
 package Algorithms.DataStructures.BinarySearchTrees.AVLTree;
 
 import Algorithms.DataStructures.BinarySearchTrees.BinaryTree;
+import Algorithms.DataStructures.BinarySearchTrees.Color;
 import Algorithms.DataStructures.BinarySearchTrees.Node;
 import java.util.*;
 
@@ -524,6 +525,14 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         public boolean isNull() {
             return false;
         }
+
+        @Override
+        public Color getColor() {
+            return null;
+        }
+
+        @Override
+        public void setColor(Color newColor) { }
 
         @Override
         public boolean equals(Object o) {
