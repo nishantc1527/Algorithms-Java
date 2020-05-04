@@ -9,7 +9,7 @@ public class Test {
     public static void main(String[] args) {
         BinaryTree<Integer> rbtree = new RedBlackTree<>(), avltree = new AVLTree<>();
         List<Integer> rbTreeVals = new ArrayList<>(), avlTreeVals = new ArrayList<>();
-        int n = 5000000;
+        int n = 500;
         for (int i = 0; i < n; i++) {
             int newVal = (int) (Math.random() * 1000 - 500);
             rbTreeVals.add(newVal);
@@ -26,7 +26,7 @@ public class Test {
 
         avlTimeStart = System.currentTimeMillis();
         for (Integer avlTreeVal : avlTreeVals) {
-            rbtree.insert(avlTreeVal);
+            avltree.insert(avlTreeVal);
         }
         avlTimeFinish = System.currentTimeMillis();
 
