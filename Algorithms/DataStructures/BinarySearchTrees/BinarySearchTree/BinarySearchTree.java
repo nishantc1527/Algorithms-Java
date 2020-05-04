@@ -280,6 +280,20 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         return getHeight(getRoot());
     }
 
+    public boolean isValid() {
+        return isValid(root);
+    }
+
+    private boolean isValid(BSTNode root) {
+        if (root == null) return true;
+        if (root.left != null && root.left.parent != root) return false;
+        if (root.right != null && root.right.parent != root) return false;
+        if (root.parent.left != root && root.parent.right != root) return false;
+        if (root.left != null && root.val.compareTo(root.left.val) <= 0) return false;
+        if (root.right != null && root.val.compareTo(root.right.val) > 0) return false;
+        return isValid(root.left) && isValid(root.right);
+    }
+
     private int getHeight(Node<E> root) {
         if(root == null) {
             return 0;
