@@ -12,7 +12,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
      * like val, left, right, and parent.
      */
 
-    private class BSTNode implements Node<E> {
+    protected class BSTNode implements Node<E> {
 
         /**
          * The value of this binary search tree node.
@@ -159,7 +159,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
      * The root of the binary search tree.
      */
 
-    private BSTNode root;
+    protected BSTNode root;
 
     /**
      * Gets the root of the binary tree.
@@ -300,5 +300,24 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         }
 
         return false;
+    }
+
+    protected Node<E> search(E val) {
+        if (!contains(val)) return null;
+        BSTNode dummy = root;
+
+        while(dummy != null) {
+            if(dummy.val.equals(val)) {
+                return dummy;
+            } else {
+                if(val.compareTo(dummy.val) > 0) {
+                    dummy = dummy.right;
+                } else {
+                    dummy = dummy.left;
+                }
+            }
+        }
+
+        return null;
     }
 }
