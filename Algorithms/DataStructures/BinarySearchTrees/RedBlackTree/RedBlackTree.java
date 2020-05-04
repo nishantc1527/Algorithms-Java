@@ -240,7 +240,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         else return search(val, root.left);
     }
 
-    public boolean isValidRBTree() {
+    public boolean isValid() {
         return root.getColor() == Color.BLACK && checkAdjacentReds() && checkBlackHeights();
     }
 
@@ -406,7 +406,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
                 myTree.insert(a);
             }
 
-            boolean correct1 = myTree.isValidRBTree() && myTree.NIL.getParent() == null;
+            boolean correct1 = myTree.isValid() && myTree.NIL.getParent() == null;
             if (correct1) insertCorrect++;
 
             for (int j = 0; j < 10; j++) {
@@ -414,7 +414,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
                 myTree.delete(treeVals.remove(a));
             }
 
-            boolean correct2 = myTree.isValidRBTree();
+            boolean correct2 = myTree.isValid();
             if (correct2) deleteCorrect++;
         }
 

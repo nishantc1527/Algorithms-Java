@@ -1,5 +1,6 @@
 package Algorithms.DataStructures.BinarySearchTrees.AVLTree;
 
+import Algorithms.DataStructures.BinarySearchTrees.BinarySearchTree.BinarySearchTree;
 import Algorithms.DataStructures.BinarySearchTrees.BinaryTree;
 import Algorithms.DataStructures.BinarySearchTrees.Color;
 import Algorithms.DataStructures.BinarySearchTrees.Node;
@@ -326,7 +327,18 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
      * @return Whether this tree is a valid AVL tree
      */
     public boolean isValid() {
-        return isValidAVLTree(root);
+        calcBalanceFactor(root);
+        return isValidBST(root) && isValidAVLTree(root);
+    }
+
+    private boolean isValidBST(AVLTreeNode root) {
+        if (root == null) return true;
+        if (root.left != null && root.left.parent != root) return false;
+        if (root.right != null && root.right.parent != root) return false;
+        if (root.parent.left != root && root.parent.right != root) return false;
+        if (root.left != null && root.val.compareTo(root.left.val) < 0) return false;
+        if (root.right != null && root.val.compareTo(root.right.val) > 0) return false;
+        return isValidBST(root.left) && isValidBST(root.right);
     }
 
     private boolean isValidAVLTree(AVLTreeNode root) {
