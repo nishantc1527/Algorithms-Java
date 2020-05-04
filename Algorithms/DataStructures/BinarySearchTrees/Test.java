@@ -12,9 +12,9 @@ public class Test {
                 binarySearchTree = new BinarySearchTree<>();
         List<Integer> rbTreeVals = new ArrayList<>(),
                 avlTreeVals = new ArrayList<>(), bstVals = new ArrayList<>();
-        int n = 50000;
+        int n = 1000;
         for (int i = 0; i < n; i++) {
-            int newVal = (int) (Math.random() * n * 4 - n * 2);
+            int newVal = (int) (Math.random() * n * 2 - n);
             rbTreeVals.add(newVal);
             avlTreeVals.add(newVal);
             bstVals.add(newVal);
@@ -73,5 +73,36 @@ public class Test {
                 ((avlTimeFinish - avlTimeStart)) + " milliseconds");
         System.out.println("Binary Search Tree deletion time for " + n + " values: " +
                 ((bstTimeFinish - bstTimeStart)) + " milliseconds");
+
+        System.out.println("\n");
+
+        int newN = n * 200;
+
+        rbTimeStart = System.currentTimeMillis();
+        for (int i = -newN; i < newN; i++) {
+            rbtree.contains(i);
+        }
+        rbTimeFinish = System.currentTimeMillis();
+
+        avlTimeStart = System.currentTimeMillis();
+        for (int i = -newN; i < newN; i++) {
+            avltree.contains(i);
+        }
+        avlTimeFinish = System.currentTimeMillis();
+
+        bstTimeStart = System.currentTimeMillis();
+        for (int i = -newN; i < newN; i++) {
+            binarySearchTree.contains(i);
+        }
+        bstTimeFinish = System.currentTimeMillis();
+
+        System.out.println("Red Black Tree search time for searching " + (newN * 2) + " values: " +
+                ((rbTimeFinish - rbTimeStart)) + " milliseconds");
+        System.out.println("AVL Tree deletion search time for searching " + (newN * 2) + " values: " +
+                ((avlTimeFinish - avlTimeStart)) + " milliseconds");
+        System.out.println("Binary Search Tree search deletion time for searching " + (newN * 2) + " values: " +
+                ((bstTimeFinish - bstTimeStart)) + " milliseconds");
+
+
     }
 }
