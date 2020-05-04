@@ -259,6 +259,18 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         return true;
     }
 
+    public int getHeight() {
+        return getHeight(getRoot());
+    }
+
+    private int getHeight(Node<E> root) {
+        if(root == null) {
+            return 0;
+        }
+
+        return 1 + Math.max(getHeight(root.getLeft()), getHeight(root.getRight()));
+    }
+
     private boolean checkBlackHeights() {
         for (Node<E> node : this) {
             if (node == NIL) continue;
