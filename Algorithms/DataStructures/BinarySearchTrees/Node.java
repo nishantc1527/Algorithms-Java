@@ -74,4 +74,24 @@ public interface Node<E extends Comparable<E>> {
 
     boolean isNull();
 
+    /**
+     * In red black trees, returns
+     * whether it's color is red or
+     * black.
+     *
+     * @return The color of this node.
+     */
+
+    Color getColor();
+
+    /**
+     * In red black trees, sets the
+     * color of this node to specified
+     * color.
+     *
+     * @param newColor The new color of this node.
+     */
+
+    void setColor(Color newColor);
+
 }

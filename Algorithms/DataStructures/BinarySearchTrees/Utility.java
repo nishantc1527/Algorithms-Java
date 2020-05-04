@@ -92,48 +92,6 @@ public class Utility {
     }
 
     /**
-     * Prints an array
-     */
-    public static <E> void printArray(E[] arr) {
-        int totalSize = 0;
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        for (E e : arr) {
-            sb.append(e);
-            sb.append(", ");
-            totalSize += e == null ? 0 : e.toString().length();
-            if (totalSize > 30) {
-                sb.append("\n");
-                totalSize = 0;
-            }
-        }
-        sb.deleteCharAt(sb.length() - 1);
-        sb.append("]");
-        System.out.println(sb);
-    }
-
-    private static <E extends Comparable<E>> String[] treeToArray(BinaryTree<E> tree) {
-        Node<E> current = tree.getRoot();
-        Queue<Node<E>> queue = new LinkedList<>();
-        queue.add(current);
-        List<String> res = new ArrayList<>();
-
-        while (!queue.isEmpty()) {
-            current = queue.remove();
-            if (!(current == null || current.isNull())) {
-                res.add(current.toString());
-                queue.add(current.getLeft());
-                queue.add(current.getRight());
-            }
-            else {
-                res.add(null);
-            }
-        }
-
-        return res.toArray(new String[0]);
-    }
-
-    /**
      * Creates a tree with random values.
      *
      * @param tree The tree who's values you are filling.
@@ -143,14 +101,41 @@ public class Utility {
 
     public static void createTree(BinaryTree<Integer> tree, int size, int max) {
         for (int i = 0; i < size; i++) {
-            tree.insert(Math.random() > 0.5 ? -(int) (Math.random() * max) : (int) (Math.random() * max));
+            tree.insert(i);
         }
     }
 
-    public static <E extends Comparable<E>> void printTree(BinaryTree<E> tree) {
-//        printNode(tree.getRoot());
+    /**
+     * Determines if a binary search tree is valid, meaning left
+     * subtrees are smaller than the root and right subtrees are larger.
+     *
+     * @param tree The tree to check.
+     * @return Whether it's valid or not.
+     */
 
-        printArray(treeToArray(tree));
+    public static <E extends Comparable<E>> boolean isValidBST(BinaryTree<E> tree) {
+        return isValid(tree.getRoot());
+    }
+
+    private static <E extends Comparable<E>> boolean isValid(Node<E> root) {
+        if (root == null) return true;
+        Stack<Node<E>> stack = new Stack<>();
+        Node<E> pre = null;
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.getLeft();
+            }
+            root = stack.pop();
+            if(pre != null && root.getVal().compareTo(pre.getVal()) < 0) return false;
+            pre = root;
+            root = root.getRight();
+        }
+        return true;
+    }
+
+    public static <E extends Comparable<E>> void printTree(BinaryTree<E> tree) {
+        printNode(tree.getRoot());
     }
 
     private static <E extends Comparable<E>> void printNode(Node<E> root) {
