@@ -1,8 +1,6 @@
 package Algorithms.DataStructures.MinPriotiryQueue.FibonacciHeap;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Objects;
+import java.util.*;
 
 public class FibonacciHeap {
 
@@ -177,15 +175,20 @@ public class FibonacciHeap {
         } while(dummy != min);
     }
 
-    public void iterate() {
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
         if(min != null) {
             Node dummy = min;
 
             do {
-                System.out.println(dummy.val);
+                sb.append(dummy.val).append(" ");
                 dummy = dummy.right;
             } while (dummy != min);
         }
+
+        return sb.toString();
     }
 
 }

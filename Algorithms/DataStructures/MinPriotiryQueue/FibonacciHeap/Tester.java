@@ -15,7 +15,7 @@ public class Tester {
             System.out.println(h.extractMin());
         }
 
-        h.iterate();
+        System.out.println(h);
     }
 
 }
