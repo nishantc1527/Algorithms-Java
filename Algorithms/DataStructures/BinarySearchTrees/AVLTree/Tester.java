@@ -15,13 +15,11 @@ public class Tester {
             treeClone = new AVLTree<>();
             treeVals = new LinkedList<>();
 
-            for (int j = 0; j < 63; j++) {
+            for (int j = 0; j < 20; j++) {
                 int a = (int) (Math.random() * 1000 - 500);
                 treeVals.add(a);
                 myTree.insert(a);
-                if (!myTree.isValid())
-                    System.out.println("Face");
-                treeClone.insert(j);
+                treeClone.insert(a);
             }
 
             heightAvg += myTree.maxHeight();
@@ -29,9 +27,11 @@ public class Tester {
             boolean correct1 = myTree.isValid();
             if (correct1) insertCorrect++;
 
-            for (int j = 0; j < 31; j++) {
+            for (int j = 0; j < 10; j++) {
                 int a = (int) (Math.random() * treeVals.size());
                 myTree.delete(treeVals.remove(a));
+                if (!myTree.isValid())
+                    System.out.println("Fail");
             }
 
             boolean correct2 = myTree.isValid();
@@ -41,16 +41,13 @@ public class Tester {
         System.out.println("Insertion correct percentage: " + insertCorrect * 100.0 / trials + "%");
         System.out.println("Deletion correct percentage: " + deleteCorrect * 100.0 / trials + "%");
         System.out.println("Average height: " + heightAvg * 1.0 / trials);
+    }
 
-        myTree = new AVLTree<>();
-        myTree.insert(371);
-        myTree.insert(-364);
-        myTree.insert(-322);
-        myTree.insert(451);
-        myTree.insert(384);
-        myTree.insert(401);
-        myTree.insert(-257);
-        System.out.println(myTree.isValid());
-        System.out.println(myTree.getHeight());
+    private static <E extends Comparable<E>> AVLTree<E> makeTree(E... vals) {
+        AVLTree<E> res = new AVLTree<>();
+        for (E val : vals) {
+            res.insert(val);
+        }
+        return res;
     }
 }
