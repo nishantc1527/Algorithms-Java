@@ -12,7 +12,7 @@ public class TimeComparisonTest {
                 binarySearchTree = new BinarySearchTree<>();
         List<Integer> rbTreeVals = new ArrayList<>(),
                 avlTreeVals = new ArrayList<>(), bstVals = new ArrayList<>();
-        int n = 15000;
+        int n = 1000;
         for (int i = 0; i < n; i++) {
             int newVal = (int) (Math.random() * n * 2 - n);
             rbTreeVals.add(newVal);
@@ -84,6 +84,7 @@ public class TimeComparisonTest {
 
         System.out.println("\n");
 
+
         rbTimeStart = System.nanoTime();
         for (int i = 0; i < n; i++) {
             rbtree.delete(rbTreeVals.remove(0));
@@ -108,7 +109,5 @@ public class TimeComparisonTest {
                 ((avlTimeFinish - avlTimeStart) / 1000000));
         System.out.printf("%-40s %d values: %-5d milliseconds\n", "Binary Search Tree deletion time for", n,
                 ((bstTimeFinish - bstTimeStart) / 1000000));
-
-
     }
 }

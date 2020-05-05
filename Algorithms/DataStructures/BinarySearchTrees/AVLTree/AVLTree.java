@@ -3,6 +3,7 @@ package Algorithms.DataStructures.BinarySearchTrees.AVLTree;
 import Algorithms.DataStructures.BinarySearchTrees.BinaryTree;
 import Algorithms.DataStructures.BinarySearchTrees.Color;
 import Algorithms.DataStructures.BinarySearchTrees.Node;
+
 import java.util.*;
 
 public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<E> {
@@ -38,49 +39,6 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     }
 
     /**
-     * Inserts the value 'val' into the tree using the following steps:
-     * 1. Insert the value as though inserting into a regular binary search tree
-     * 2. Fix the tree, starting from the root node
-     * @param val The value to insert into the tree
-     */
-    public void insert(E val) {
-        AVLTreeNode insertion = new AVLTreeNode(val), parent = root;
-        if (root == null) {
-            root = insertion;
-            root.parent = rootParent;
-            rootParent.left = root;
-            calcBalanceFactor(root);
-            return;
-        }
-
-        int comparison = val.compareTo(parent.val);
-        if (comparison == 0) return;
-
-        while ((comparison < 0 && parent.left != null) ||
-                (comparison >= 0 && parent.right != null)) {
-            if (comparison < 0) {
-                parent = parent.left;
-            }
-            else {
-                parent = parent.right;
-            }
-            comparison = val.compareTo(parent.val);
-        }
-
-        if (comparison < 0) {
-            parent.left = insertion;
-        }
-        else {
-            parent.right = insertion;
-        }
-        insertion.parent = parent;
-
-        calcBalanceFactor(root);
-
-        fixTree(root);
-    }
-
-    /**
      * Fixes the tree after an insertion or deletion
      * Assuming the balance factors are correct in all of the tree nodes,
      * the tree is fixed using the following rules:
@@ -104,6 +62,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         fixTree(root.right);
 
         int bf = root.balanceFactor; // root.balanceFactor = root.left.height - root.right.height
+        if (Math.abs(bf) < 2) return;
         if (bf >= 2) {
             boolean lr = root.left.balanceFactor < 0;
             if (lr) {
@@ -118,7 +77,6 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
             leftRotate(root);
         }
         this.root = rootParent.left;
-        calcBalanceFactor(this.root);
     }
 
     /**
@@ -141,6 +99,8 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         if (leftSide.right != null) leftSide.right.parent = root;
         leftSide.right = root;
         root.parent = leftSide;
+
+        updateBalanceFactorsAndHeights(root);
     }
 
     /**
@@ -163,6 +123,50 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         if (rightSide.left != null) rightSide.left.parent = root;
         rightSide.left = root;
         root.parent = rightSide;
+
+        updateBalanceFactorsAndHeights(root);
+    }
+
+    /**
+     * Inserts the value 'val' into the tree using the following steps:
+     * 1. Insert the value as though inserting into a regular binary search tree
+     * 2. Fix the tree, starting from the root node (see fixTree(AVLTreeNode) for how this works)
+     * @param val The value to insert into the tree
+     */
+    public void insert(E val) {
+        AVLTreeNode insertion = new AVLTreeNode(val), parent = root;
+        if (root == null) {
+            root = insertion;
+            root.parent = rootParent;
+            rootParent.left = root;
+            calcBalanceFactor(root);
+            return;
+        }
+
+        int comparison = val.compareTo(parent.val);
+
+        while ((comparison < 0 && parent.left != null) ||
+                (comparison >= 0 && parent.right != null)) {
+            if (comparison < 0) {
+                parent = parent.left;
+            }
+            else {
+                parent = parent.right;
+            }
+            comparison = val.compareTo(parent.val);
+        }
+
+        if (comparison < 0) {
+            parent.left = insertion;
+        }
+        else {
+            parent.right = insertion;
+        }
+        insertion.parent = parent;
+
+        updateBalanceFactorsAndHeights(insertion);
+
+        fixTree(root);
     }
 
     /**
@@ -185,39 +189,46 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         if (deletion.left == null && deletion.right == null) {
             if (deletion == deletion.parent.left) deletion.parent.left = null;
             else deletion.parent.right = null;
+            updateBalanceFactorsAndHeights(deletion.parent);
         }
         else if (deletion.left == null) {
             successor = deletion.right;
             if (deletion == deletion.parent.left) deletion.parent.left = successor;
             else deletion.parent.right = successor;
             successor.parent = deletion.parent;
+            updateBalanceFactorsAndHeights(deletion.parent);
         }
         else if (deletion.right == null) {
             successor = deletion.left;
             if (deletion == deletion.parent.left) deletion.parent.left = successor;
             else deletion.parent.right = successor;
             successor.parent = deletion.parent;
+            updateBalanceFactorsAndHeights(deletion.parent);
         }
         else {
             successor = minimum(deletion.right);
-            if (successor == successor.parent.right) {
-                successor.parent.right = successor.right;
-                if (successor.right != null) successor.right.parent = successor.parent;
+            AVLTreeNode rightSide = successor.right, update;
+            if (rightSide == null) {
+                if (successor.parent == deletion) update = successor;
+                else update = successor.parent;
             }
-            else successor.parent.left = successor.right;
-            if (successor.right != null) successor.right.parent = successor.parent;
+            else update = rightSide;
+            if (successor == successor.parent.right) successor.parent.right = rightSide;
+            else successor.parent.left = rightSide;
+            if (rightSide != null) rightSide.parent = successor.parent;
 
             successor.parent = deletion.parent;
             if (deletion == deletion.parent.left) successor.parent.left = successor;
             else successor.parent.right = successor;
             successor.left = deletion.left;
+            assert successor.left != null;
             successor.left.parent = successor;
             successor.right = deletion.right;
             if (successor.right != null)
                 successor.right.parent = successor;
+            updateBalanceFactorsAndHeights(update);
         }
         root = rootParent.left;
-        calcBalanceFactor(root);
         fixTree(root);
     }
 
@@ -265,6 +276,29 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         }
     }
 
+    private void updateBalanceFactorsAndHeights(AVLTreeNode root) {
+        if (root == null || this.root == null) return;
+        while (root != rootParent) {
+            if (root.left == null && root.right == null) {
+                root.height = 1;
+                root.balanceFactor = 0;
+            }
+            else if (root.right == null) {
+                root.height = root.left.height + 1;
+                root.balanceFactor = root.left.height;
+            }
+            else if (root.left == null) {
+                root.height = root.right.height + 1;
+                root.balanceFactor = -root.right.height;
+            }
+            else {
+                root.height = Math.max(root.left.height, root.right.height) + 1;
+                root.balanceFactor = root.left.height - root.right.height;
+            }
+            root = root.parent;
+        }
+    }
+
     /**
      * Calculates the balance factor of each node in the subtree
      * The balance factor of a given node is calculated by taking the difference
@@ -273,16 +307,26 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
      * @param root The subtree in which to calculate the balance factors
      */
     private void calcBalanceFactor(AVLTreeNode root) {
-        calcHeights(root);
-        Iterator<AVLTreeNode> nodeIterator = nodeIterator();
-        AVLTreeNode current;
-        while (nodeIterator.hasNext()) {
-            current = nodeIterator.next();
-            if (current.left == null && current.right == null) current.balanceFactor = 0;
-            else if (current.left == null) current.balanceFactor = -current.right.height;
-            else if (current.right == null) current.balanceFactor = current.left.height;
-            else current.balanceFactor = current.left.height - current.right.height;
+        if (root == null) return;
+        calcBalanceFactor(root.left);
+        calcBalanceFactor(root.right);
+        if (root.left == null && root.right == null) {
+            root.height = 1;
+            root.balanceFactor = 0;
         }
+        else if (root.right == null) {
+            root.height = root.left.height + 1;
+            root.balanceFactor = root.left.height;
+        }
+        else if (root.left == null) {
+            root.height = root.right.height + 1;
+            root.balanceFactor = -root.right.height;
+        }
+        else {
+            root.height = Math.max(root.left.height, root.right.height) + 1;
+            root.balanceFactor = root.left.height - root.right.height;
+        }
+
     }
 
     /**
@@ -326,7 +370,18 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
      * @return Whether this tree is a valid AVL tree
      */
     public boolean isValid() {
-        return isValidAVLTree(root);
+        calcBalanceFactor(root);
+        return isValidBST(root) && isValidAVLTree(root);
+    }
+
+    private boolean isValidBST(AVLTreeNode root) {
+        if (root == null) return true;
+        if (root.left != null && root.left.parent != root) return false;
+        if (root.right != null && root.right.parent != root) return false;
+        if (root.parent.left != root && root.parent.right != root) return false;
+        if (root.left != null && root.val.compareTo(root.left.val) < 0) return false;
+        if (root.right != null && root.val.compareTo(root.right.val) > 0) return false;
+        return isValidBST(root.left) && isValidBST(root.right);
     }
 
     private boolean isValidAVLTree(AVLTreeNode root) {
@@ -556,8 +611,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
             AVLTreeNode that = (AVLTreeNode) o;
             return Objects.equals(val, that.val) &&
                     Objects.equals(left, that.left) &&
-                    Objects.equals(right, that.right) &&
-                    Objects.equals(parent, that.parent);
+                    Objects.equals(right, that.right);
         }
 
         @Override
