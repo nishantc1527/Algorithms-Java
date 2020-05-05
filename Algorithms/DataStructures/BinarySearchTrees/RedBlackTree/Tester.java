@@ -1,5 +1,6 @@
 package Algorithms.DataStructures.BinarySearchTrees.RedBlackTree;
 
+import Algorithms.DataStructures.BinarySearchTrees.Node;
 import Algorithms.DataStructures.BinarySearchTrees.Utility;
 
 import java.util.LinkedList;
@@ -21,7 +22,7 @@ public class Tester {
                 myTree.insert(a);
             }
 
-            boolean correct1 = myTree.isValid() && myTree.NIL.getParent() == null;
+            boolean correct1 = myTree.isValid() && ((Node<Integer>) myTree.NIL).getParent() == null;
             if (correct1) insertCorrect++;
 
             for (int j = 0; j < 20; j++) {

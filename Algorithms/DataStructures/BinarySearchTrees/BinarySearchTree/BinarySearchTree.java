@@ -5,6 +5,10 @@ import Algorithms.DataStructures.BinarySearchTrees.Color;
 import Algorithms.DataStructures.BinarySearchTrees.Node;
 import Algorithms.DataStructures.BinarySearchTrees.Utility;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> {
 
     /**
@@ -345,5 +349,24 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         }
 
         return null;
+    }
+
+    @Override
+    public int numNodes() {
+        return numNodes(root);
+    }
+
+    private int numNodes(BSTNode root) {
+        if (root == null) return 0;
+        else return numNodes(root.left) + numNodes(root.right) + 1;
+    }
+
+    @Override
+    public Iterator<Node<E>> iterator() {
+        List<Node<E>> list = new ArrayList<>();
+
+
+
+        return list.iterator();
     }
 }

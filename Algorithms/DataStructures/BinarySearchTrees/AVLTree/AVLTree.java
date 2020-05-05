@@ -6,7 +6,7 @@ import Algorithms.DataStructures.BinarySearchTrees.Node;
 
 import java.util.*;
 
-public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<E> {
+public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
     private AVLTreeNode root, rootParent;
 
     /**
@@ -354,6 +354,16 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
         }
     }
 
+    @Override
+    public int numNodes() {
+        return numNodes(root);
+    }
+
+    private int numNodes(AVLTreeNode root) {
+        if (root == null) return 0;
+        else return numNodes(root.left) + numNodes(root.right) + 1;
+    }
+
     /**
      * Gets the maximum height of the whole tree
      * @return The maximum height of the whole tree
@@ -411,10 +421,10 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
      * Iterates through the values in this tree in and inorder traversal
      * @return An iterator that iterates through the values in this tree in and inorder traversal
      */
-    public Iterator<E> iterator() {
-        Iterator<AVLTreeNode> nodeIterator = nodeIterator();
+    private Iterator<E> valIterator() {
+        Iterator<Node<E>> nodeIterator = iterator();
         List<E> res = new LinkedList<>();
-        nodeIterator.forEachRemaining((AVLTreeNode node) -> res.add(node.val));
+        nodeIterator.forEachRemaining((Node<E> node) -> res.add(node.getVal()));
         return res.iterator();
     }
 
@@ -422,8 +432,8 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
      * Iterates through the nodes in this tree in and inorder traversal
      * @return An iterator that iterates through the nodes in this tree in and inorder traversal
      */
-    private Iterator<AVLTreeNode> nodeIterator() {
-        List<AVLTreeNode> res = new LinkedList<>();
+    public Iterator<Node<E>> iterator() {
+        List<Node<E>> res = new LinkedList<>();
         Queue<AVLTreeNode> q = new LinkedList<>();
         if (root != null) q.add(root);
         AVLTreeNode current;

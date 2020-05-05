@@ -12,7 +12,7 @@ public class TimeComparisonTest {
                 binarySearchTree = new BinarySearchTree<>();
         List<Integer> rbTreeVals = new ArrayList<>(),
                 avlTreeVals = new ArrayList<>(), bstVals = new ArrayList<>();
-        int n = 1000;
+        int n = 15000;
         for (int i = 0; i < n; i++) {
             int newVal = (int) (Math.random() * n * 2 - n);
             rbTreeVals.add(newVal);

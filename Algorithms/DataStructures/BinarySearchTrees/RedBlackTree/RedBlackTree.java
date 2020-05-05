@@ -8,8 +8,8 @@ import java.util.*;
 import java.util.List;
 
 public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
-    private Node<E> root;
-    public final Node<E> NIL= new RBTreeNode(null, Color.BLACK, null, null, null);
+    private RBTreeNode root;
+    public final RBTreeNode NIL= new RBTreeNode(null, Color.BLACK, null, null, null);
 
     public RedBlackTree () {
         root = NIL;
@@ -20,7 +20,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     }
 
     public void insert(E val) {
-        RBTreeNode x = (RBTreeNode) root, y = (RBTreeNode) NIL;
+        RBTreeNode x = root, y = NIL;
 
         while (x != NIL) {
             y = x;
@@ -31,7 +31,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
             else x = x.right;
         }
 
-        RBTreeNode z = new RBTreeNode(val, Color.RED, y, (RBTreeNode) NIL, (RBTreeNode) NIL);
+        RBTreeNode z = new RBTreeNode(val, Color.RED, y, NIL, NIL);
 
         if (y == NIL) {
             root = z;
@@ -90,8 +90,8 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         NIL.setParent(null);
     }
 
-    private void leftRotate(Node<E> x) {
-        Node<E> y = x.getRight();
+    private void leftRotate(RBTreeNode x) {
+        RBTreeNode y = x.right;
         x.setRight(y.getLeft());
         if (y.getLeft() != NIL) y.getLeft().setParent(x);
         y.setParent(x.getParent());
@@ -115,30 +115,30 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     }
 
     public void delete(E key) {
-        Node<E> z;
-        if((z = search(key, (RBTreeNode) root))==null) return;
-        Node<E> x;
-        Node<E> y = z; // temporary reference y
+        RBTreeNode z;
+        if((z = ((RBTreeNode) search(key, root)))==null) return;
+        RBTreeNode x;
+        RBTreeNode y = z; // temporary reference y
         Color y_original_color = y.getColor();
 
         if(z.getLeft() == NIL){
             x = z.getRight();
-            transplant((RBTreeNode) z, (RBTreeNode) z.getRight());
+            transplant(z, z.getRight());
         }else if(z.getRight() == NIL){
             x = z.getLeft();
-            transplant((RBTreeNode) z, (RBTreeNode) z.getLeft());
+            transplant(z, z.getLeft());
         }else{
-            y = successor((RBTreeNode) z.getRight());
+            y = successor(z.getRight());
             y_original_color = y.getColor();
             x = y.getRight();
             if(y.getParent() == z)
                 x.setParent(y);
             else{
-                transplant((RBTreeNode) y, (RBTreeNode) y.getRight());
+                transplant(y, y.getRight());
                 y.setRight(z.getRight());
                 y.getRight().setParent(y);
             }
-            transplant((RBTreeNode) z, ((RBTreeNode) y));
+            transplant(z, y);
             y.setLeft(z.getLeft());
             y.getLeft().setParent(y);
             y.setColor(z.getColor());
@@ -147,14 +147,14 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
             deleteFix(x);
     }
 
-    private void deleteFix(Node<E> x) {
+    private void deleteFix(RBTreeNode x) {
         while(x!=root && x.getColor() == Color.BLACK){
             if(x == x.getParent().getLeft()){
-                Node<E> w = x.getParent().getRight();
+                RBTreeNode w = x.getParent().getRight();
                 if(w.getColor() == Color.RED){
                     w.setColor(Color.BLACK);
                     x.getParent().setColor(Color.RED);
-                    leftRotate(x.getParent());
+                    leftRotate(x.parent);
                     w = x.getParent().getRight();
                 }
                 if(w.getLeft().getColor() == Color.BLACK && w.getRight().getColor() == Color.BLACK){
@@ -165,7 +165,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
                 else if(w.getRight().getColor() == Color.BLACK){
                     w.getLeft().setColor(Color.BLACK);
                     w.setColor(Color.RED);
-                    rightRotate(((RBTreeNode) w));
+                    rightRotate(w);
                     w = x.getParent().getRight();
                 }
                 if(w.getRight().getColor() == Color.RED){
@@ -176,12 +176,12 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
                     x = root;
                 }
             }else{
-                RBTreeNode w = ((RBTreeNode) x.getParent().getLeft());
+                RBTreeNode w = (x.getParent().getLeft());
                 if(w.color == Color.RED){
                     w.color = Color.BLACK;
                     x.getParent().setColor(Color.RED);
-                    rightRotate((RBTreeNode) x.getParent());
-                    w = ((RBTreeNode) x.getParent()).getLeft();
+                    rightRotate(x.getParent());
+                    w = (x.getParent()).getLeft();
                 }
                 if(w.right.color == Color.BLACK && w.left.color == Color.BLACK){
                     w.color = Color.RED;
@@ -192,13 +192,13 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
                     w.right.color = Color.BLACK;
                     w.color = Color.RED;
                     leftRotate(w);
-                    w = ((RBTreeNode) x.getParent().getLeft());
+                    w = (x.getParent().getLeft());
                 }
                 if(w.left.color == Color.RED){
                     w.color = x.getParent().getColor();
                     x.getParent().setColor(Color.BLACK);
                     w.left.color = Color.BLACK;
-                    rightRotate(((RBTreeNode) x.getParent()));
+                    rightRotate(x.getParent());
                     x = root;
                 }
             }
@@ -223,7 +223,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     }
 
     public boolean contains(E val) {
-        return contains(val, ((RBTreeNode) root));
+        return contains(val, root);
     }
 
     private boolean contains(E val, RBTreeNode root) {
@@ -274,7 +274,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     private boolean checkBlackHeights() {
         for (Node<E> node : this) {
             if (node == NIL) continue;
-            if (countBlacks((RBTreeNode) root.getLeft()) != countBlacks((RBTreeNode) root.getRight()))
+            if (countBlacks(root.getLeft()) != countBlacks(root.getRight()))
                 return false;
         }
 
@@ -421,5 +421,14 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         System.out.println("Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
         System.out.println("Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
     }
-  
+
+    @Override
+    public int numNodes() {
+        return numNodes(root);
+    }
+
+    private int numNodes(RBTreeNode root) {
+        if (root == null) return 0;
+        else return numNodes(root.left) + numNodes(root.right) + 1;
+    }
 }
