@@ -2,34 +2,33 @@ package Algorithms.DataStructures.MinPriotiryQueue.MinHeap;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-public class MinHeap<E extends Comparable<E>> {
+public class MinHeap {
 
-    private List<E> heap;
+    private final List<Integer> heap;
 
     public MinHeap() {
         heap = new ArrayList<>();
     }
 
-    public void add(E val) {
+    public void add(int val) {
         heap.add(val);
         bubbleUp(heap.size() - 1);
     }
 
-    public E getMin() {
+    public int getMin() {
         return heap.get(0);
     }
 
-    public E extractMin() {
-        E toReturn = heap.get(0);
+    public int extractMin() {
+        int toReturn = heap.get(0);
         swap(0, heap.size() - 1);
         heap.remove(heap.size() - 1);
         bubbleDown(0);
         return toReturn;
     }
 
-    public void decreaseValue(E val, E newVal) {
+    public void decreaseValue(int val, int newVal) {
          int i = heap.indexOf(val);
          heap.set(i, newVal);
          bubbleUp(i);
@@ -71,7 +70,7 @@ public class MinHeap<E extends Comparable<E>> {
     }
 
     private void swap(int i, int j) {
-        E temp = heap.get(i);
+        int temp = heap.get(i);
         heap.set(i, heap.get(j));
         heap.set(j, temp);
     }

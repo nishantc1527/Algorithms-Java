@@ -21,7 +21,7 @@ public class Tester {
                 myTree.insert(a);
             }
 
-            boolean correct1 = myTree.isValidRBTree() && myTree.NIL.getParent() == null;
+            boolean correct1 = myTree.isValid() && myTree.NIL.getParent() == null;
             if (correct1) insertCorrect++;
 
             for (int j = 0; j < 20; j++) {
@@ -29,7 +29,7 @@ public class Tester {
                 myTree.delete(treeVals.remove(a));
             }
 
-            boolean correct2 = myTree.isValidRBTree();
+            boolean correct2 = myTree.isValid();
             if (correct2) {
                 deleteCorrect++;
             }

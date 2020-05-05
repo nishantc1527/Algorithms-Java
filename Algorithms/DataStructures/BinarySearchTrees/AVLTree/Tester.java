@@ -25,7 +25,7 @@ public class Tester {
 
             heightAvg += myTree.maxHeight();
 
-            boolean correct1 = myTree.isValidAVLTree();
+            boolean correct1 = myTree.isValid();
             if (correct1) insertCorrect++;
 
             for (int j = 0; j < 7; j++) {
@@ -33,7 +33,7 @@ public class Tester {
                 myTree.delete(treeVals.remove(a));
             }
 
-            boolean correct2 = myTree.isValidAVLTree();
+            boolean correct2 = myTree.isValid();
             if (correct2) deleteCorrect++;
         }
 
