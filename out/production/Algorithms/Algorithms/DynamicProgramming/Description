@@ -14,4 +14,14 @@ sub-problem twice). I printed the index of the method in the code, and this is t
 and that was for an array size 16. We already proved that if two methods have the same index in the parameter, then they are solving the same problem
 again. As you can see in the result, there are lot's of duplicate 15's, 14's, there are even two duplicates of 2, which is practically solving the whole
 problem a second time. This is where dynamic programming comes in. It stores the previous answers (usually in an array) and every method call it checks
-if it solves the problem before. This is called memoization (not a typo).
+if it solves the problem before. This is called memoization (not a typo). In the case of this problem, you can set the array with the index of the index
+in the parameter as the answer you got. In the method, if you see that it was solved before, return that. This makes the solution really fast, since you
+solve each problem only once. These brute force/memoization solutions are called top-down solutions.
+
+Although this solves in O(N), there is another way that solves in O(N) but still just a little faster. It's called bottom-up. Instead of solving the
+largest problems first using smaller problems, bottom-up solves the smallest problems first and then builds the larger problems using the smaller
+problems. For example in this problem, the smallest sub-problem is only taking the first element. Obviously, the answer will just be that element. Then
+the next smallest would be the first two element. The answer would be the larger of the first two. Then for the first three elements would be either the
+answer for the first element + the third element, or the second element. The answer to the first four elements would be the larger of the answer to the
+second element + the first element or the answer to the third element. The pattern we get is the nth element is the larger of the answer to the n - 2th
+element + the nth element or the answer to the n - 1th element.
