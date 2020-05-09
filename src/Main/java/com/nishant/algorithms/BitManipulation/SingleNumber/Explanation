@@ -1,0 +1,10 @@
+Problem: Given an array that only contains duplicates except for one number, which only shows up once, return the number that appears only once. Solve in O(N) and
+using bit manipulation.
+
+Example:
+
+Input(1, 2, 2, 1, 5)
+Output(5)
+
+Solution: Using the property that a ^ b ^ a = b, we can extend that to a ^ a ^ b ^ b ^ c = c. Since XOR is commutative, a, b, and c can appear anywhere. So we can
+keep a xor variable, and set it to the XOR of every element in the array. The resulting number will be the answer.
