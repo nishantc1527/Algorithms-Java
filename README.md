@@ -75,5 +75,23 @@ Has lots of algorithms in Java with a description for each Algorithm, along with
   ### [Power Of Two](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/PowerOfTwoTest.java)
   ### [Single Number](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/SingleNumberTest.java)
 
+ ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures)
+ 
+  ### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees)
+  
+   #### [Binary Search Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/BinarySearchTreeTest.java)
+   #### [Red Black Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/RedBlackTreeTest.java)
+   #### [AVL Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/AVLTreeTest.java)
+   
+  ### [Min Priority Queue](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue)
+  
+   #### [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/FibonacciHeapTest.java)
+   #### [Min Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/MinHeapTest.java)
+
+ ## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DynamicProgramming)
+ 
+  ### [House Robber](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DynamicProgramming/HouseRobberTest.java)
+  ### [Unique Paths](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DynamicProgramming/UniquePathsTest.java)
+
 # License
 Licensed under [MIT License](https://opensource.org/licenses/MIT)
