@@ -2,6 +2,8 @@
 
 Has lots of algorithms in Java with a description for each Algorithm, along with JUnit testing.
 
+Many of these algorithm problems come from a interview preparing website called [LeetCode](https://leetcode.com/problemset/all/). If you want, you can also check out [my LeetCode solutions](https://github.com/nishantc1527/LeetCode).
+
 # [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms)
 
  ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting)
