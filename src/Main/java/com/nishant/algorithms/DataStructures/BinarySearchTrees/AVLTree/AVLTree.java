@@ -626,7 +626,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
 
         @Override
         public int hashCode() {
-            return Objects.hash(val, left, right, parent);
+            return Objects.hash(val, left, right);
         }
     }
 }
