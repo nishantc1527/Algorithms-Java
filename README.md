@@ -7,25 +7,17 @@ Has lots of algorithms in Java with a description for each Algorithm, along with
  ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting)
  
   ### [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/BubbleSort)
-   
   ### [Selection Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/SelectionSort)
-  
   ### [Insertion Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/InsertionSort)
-  
   ### [Merge Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/MergeSort)
-  
   ### [Quick Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/QuickSort)
-  
   ### [Counting Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/CountingSort)
-  
   ### [Heap Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/HeapSort)
   
  ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation)
  
   ### [Missing Number](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/BitManipulation/MissingNumber)
-  
   ### [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/BitManipulation/PowerOfTwo)
-  
   ### [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/BitManipulation/SingleNumber)
   
  ## [Graph Theory](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory)
@@ -64,6 +56,24 @@ Has lots of algorithms in Java with a description for each Algorithm, along with
  
   ### [House Robber](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming/HouseRobber)
   ### [Unique Paths](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming/UniquePaths)
+
+# [Testing](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms)
+
+ ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Sorting)
+ 
+  ### [Bubble Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/BubbleSortTest.java)
+  ### [Selection Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/SelectionSortTest.java)
+  ### [Insertion Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/InsertionSortTest.java)
+  ### [Merge Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/MergeSortTest.java)
+  ### [Quick Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/QuickSortTest.java)
+  ### [Counting Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/CountingSortTest.java)
+  ### [Heap Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/HeapSortTest.java)
+
+ ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/BitManipulation)
+ 
+  ### [Missing Number](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/MissingNumberTest.java)
+  ### [Power Of Two](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/PowerOfTwoTest.java)
+  ### [Single Number](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/SingleNumberTest.java)
 
 # License
 Licensed under [MIT License](https://opensource.org/licenses/MIT)
