@@ -37,8 +37,8 @@ Has lots of algorithms in Java with a description for each Algorithm, along with
  
   ### [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations)
   
-  - [Adjacency List](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations/AdjacencyList)
-  - [Adjacency Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations/AdjacencyMatrix)
+  #### [Adjacency List](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations/AdjacencyList)
+  #### [Adjacency Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations/AdjacencyMatrix)
   
   ### [Shortest Path Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ShortestPathAlgorithms)
   
