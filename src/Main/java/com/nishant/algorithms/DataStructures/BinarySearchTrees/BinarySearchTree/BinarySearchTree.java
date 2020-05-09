@@ -4,9 +4,7 @@ import com.nishant.algorithms.DataStructures.BinarySearchTrees.BinaryTree;
 import com.nishant.algorithms.DataStructures.BinarySearchTrees.Color;
 import com.nishant.algorithms.DataStructures.BinarySearchTrees.Node;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> {
 
@@ -162,7 +160,22 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
      * The root of the binary search tree.
      */
 
-    protected BSTNode root;
+    private BSTNode root;
+
+    /**
+     * Parent of the root, just used to simplify insertion and deletion algorithms
+     */
+
+    private BSTNode rootParent;
+
+    /**
+     * Default constructor of this tree
+     */
+
+    public BinarySearchTree() {
+        root = null;
+        rootParent = new BSTNode(null);
+    }
 
     /**
      * Gets the root of the binary tree.
@@ -187,11 +200,13 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
     public void insert(E val) {
         if(root == null) {
             root = new BSTNode(val);
+            root.parent = rootParent;
+            rootParent.left = root;
         } else {
             Node<E> dummy = root;
 
             while(true) {
-                if(val.compareTo(dummy.getVal()) > 0) {
+                if(val.compareTo(dummy.getVal()) >= 0) {
                     if(dummy.getRight() == null) {
                         dummy.setRight(new BSTNode(val));
                         dummy.getRight().setParent(dummy);
@@ -223,60 +238,118 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
 
     @Override
     public void delete(E val) {
-        Node<E> dummy = root;
+//        Node<E> dummy = root;
+//
+//        if(dummy == null) {
+//            return;
+//        }
+//
+//        while(!dummy.getVal().equals(val)) {
+//            if(val.compareTo(dummy.getVal()) > 0) {
+//                dummy = dummy.getRight();
+//            } else {
+//                dummy = dummy.getLeft();
+//            }
+//
+//            if(dummy == null) {
+//                return;
+//            }
+//        }
+//
+//        if(dummy.getLeft() == null && dummy.getRight() == null) { // case 1
+//            if(dummy == dummy.getParent().getLeft()) {
+//                dummy.getParent().setLeft(null);
+//            } else {
+//                dummy.getParent().setRight(null);
+//            }
+//        } else if(dummy.getLeft() == null || dummy.getRight() == null) { // case 2
+//            if(dummy.getParent() == null) {
+//                if(dummy.getLeft() == null) {
+//                    root = root.right;
+//                } else {
+//                    root = root.left;
+//                }
+//            } else if(dummy == dummy.getParent().getLeft()) {
+//                if(dummy.getLeft() == null) {
+//                    dummy.getParent().setLeft(dummy.getRight());
+//                } else {
+//                    dummy.getParent().setLeft(dummy.getLeft());
+//                }
+//            } else {
+//                if(dummy.getLeft() == null) {
+//                    dummy.getParent().setRight(dummy.getRight());
+//                } else {
+//                    dummy.getParent().setRight(dummy.getLeft());
+//                }
+//            }
+//        } else { // case 3
+//            Node<E> largestInLeft = dummy.getLeft();
+//
+//            while(largestInLeft.getRight() != null) {
+//                largestInLeft = largestInLeft.getRight();
+//            }
+//
+//            largestInLeft.getParent().setRight(largestInLeft.getLeft());
+//            dummy.setVal(largestInLeft.getVal());
+//        }
 
-        if(dummy == null) {
-            return;
+
+        BSTNode deletion = root, successor;
+        if (deletion == null) return;
+        int comparison = deletion.val.compareTo(val);
+        while (comparison != 0) {
+            if (comparison > 0) deletion = deletion.left;
+            else deletion = deletion.right;
+            if (deletion == null) return;
+            comparison = deletion.val.compareTo(val);
         }
 
-        while(!dummy.getVal().equals(val)) {
-            if(val.compareTo(dummy.getVal()) > 0) {
-                dummy = dummy.getRight();
-            } else {
-                dummy = dummy.getLeft();
-            }
-
-            if(dummy == null) {
-                return;
-            }
+        if (deletion.left == null && deletion.right == null) {
+            if (deletion == deletion.parent.left) deletion.parent.left = null;
+            else deletion.parent.right = null;
         }
-
-        if(dummy.getLeft() == null && dummy.getRight() == null) { // case 1
-            if(dummy == dummy.getParent().getLeft()) {
-                dummy.getParent().setLeft(null);
-            } else {
-                dummy.getParent().setRight(null);
-            }
-        } else if(dummy.getLeft() == null || dummy.getRight() == null) { // case 2
-            if(dummy.getParent() == null) {
-                if(dummy.getLeft() == null) {
-                    root = root.right;
-                } else {
-                    root = root.left;
-                }
-            } else if(dummy == dummy.getParent().getLeft()) {
-                if(dummy.getLeft() == null) {
-                    dummy.getParent().setLeft(dummy.getRight());
-                } else {
-                    dummy.getParent().setLeft(dummy.getLeft());
-                }
-            } else {
-                if(dummy.getLeft() == null) {
-                    dummy.getParent().setRight(dummy.getRight());
-                } else {
-                    dummy.getParent().setRight(dummy.getLeft());
-                }
-            }
-        } else { // case 3
-            Node<E> largestInLeft = dummy.getLeft();
-
-            while(largestInLeft.getRight() != null) {
-                largestInLeft = largestInLeft.getRight();
-            }
-
-            largestInLeft.getParent().setRight(largestInLeft.getLeft());
-            dummy.setVal(largestInLeft.getVal());
+        else if (deletion.left == null) {
+            successor = deletion.right;
+            if (deletion == deletion.parent.left) deletion.parent.left = successor;
+            else deletion.parent.right = successor;
+            successor.parent = deletion.parent;
         }
+        else if (deletion.right == null) {
+            successor = deletion.left;
+            if (deletion == deletion.parent.left) deletion.parent.left = successor;
+            else deletion.parent.right = successor;
+            successor.parent = deletion.parent;
+        }
+        else {
+            successor = minimum(deletion.right);
+            BSTNode rightSide = successor.right, update;
+            if (rightSide == null) {
+                if (successor.parent == deletion) update = successor;
+                else update = successor.parent;
+            }
+            else update = rightSide;
+            if (successor == successor.parent.right) successor.parent.right = rightSide;
+            else successor.parent.left = rightSide;
+            if (rightSide != null) rightSide.parent = successor.parent;
+
+            successor.parent = deletion.parent;
+            if (deletion == deletion.parent.left) successor.parent.left = successor;
+            else successor.parent.right = successor;
+            successor.left = deletion.left;
+            assert successor.left != null;
+            successor.left.parent = successor;
+            successor.right = deletion.right;
+            if (successor.right != null)
+                successor.right.parent = successor;
+        }
+        root = rootParent.left;
+    }
+
+    private BSTNode minimum(BSTNode root) {
+        if (root == null || root.left == null) {
+            return root;
+        }
+        else return minimum(root.left);
     }
 
     public int getHeight() {
@@ -291,7 +364,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         if (root == null) return true;
         if (root.left != null && root.left.parent != root) return false;
         if (root.right != null && root.right.parent != root) return false;
-        if (root.parent.left != root && root.parent.right != root) return false;
+        if (root.parent != null && (root.parent.left != root && root.parent.right != root)) return false;
         if (root.left != null && root.val.compareTo(root.left.val) <= 0) return false;
         if (root.right != null && root.val.compareTo(root.right.val) > 0) return false;
         return isValid(root.left) && isValid(root.right);
@@ -362,10 +435,17 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
 
     @Override
     public Iterator<Node<E>> iterator() {
-        List<Node<E>> list = new ArrayList<>();
 
-
-
-        return list.iterator();
+        List<Node<E>> res = new LinkedList<>();
+        Queue<BSTNode> q = new LinkedList<>();
+        if (root != null) q.add(root);
+        BSTNode current;
+        while (!q.isEmpty()) {
+            current = q.remove();
+            res.add(current);
+            if (current.left != null) q.add(current.left);
+            if (current.right != null) q.add(current.right);
+        }
+        return res.iterator();
     }
 }

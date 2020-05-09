@@ -4,10 +4,7 @@ import com.nishant.algorithms.DataStructures.BinarySearchTrees.BinaryTree;
 import com.nishant.algorithms.DataStructures.BinarySearchTrees.Color;
 import com.nishant.algorithms.DataStructures.BinarySearchTrees.Node;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
     private RBTreeNode root;
@@ -374,6 +371,11 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
             color = newColor;
         }
 
+        @Override
+        public int hashCode() {
+            if (this == NIL) return 0;
+            return Objects.hash(val, left, right, color);
+        }
     }
 
     public String toString() {
