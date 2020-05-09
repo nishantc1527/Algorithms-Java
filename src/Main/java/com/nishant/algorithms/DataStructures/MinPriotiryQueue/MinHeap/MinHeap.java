@@ -38,8 +38,12 @@ public class MinHeap {
         return heap.size() == 0;
     }
 
-    public Object[] getHeap() {
-        return heap.toArray();
+    public boolean contains(int i) {
+        return heap.contains(i);
+    }
+
+    public Integer[] getHeap() {
+        return heap.toArray(new Integer[0]);
     }
 
     private void bubbleUp(int i) {
