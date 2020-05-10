@@ -7,7 +7,7 @@ public class Matrix {
     /**
      * The representation of the matrix, using a 2D array
      */
-    private int[][] matrix;
+    private double[][] matrix;
     private int rows, cols;
 
     /**
@@ -15,12 +15,12 @@ public class Matrix {
      * @param data The data to check
      * @return Whether the data is valid
      */
-    public boolean isValidData(int[][] data) {
+    public boolean isValidData(double[][] data) {
         if (data == null) return false;
         if (data.length == 0) return false;
-        for (int[] arr : data) if (arr == null) return false;
+        for (double[] arr : data) if (arr == null) return false;
         int len = data[0].length;
-        for (int[] arr : data) {
+        for (double[] arr : data) {
             if (arr.length != len) return false;
         }
 
@@ -41,12 +41,12 @@ public class Matrix {
      * Sets up the matrix with an initial set of data
      * @param data The initial set of data
      */
-    public Matrix(int[][] data) {
+    public Matrix(double[][] data) {
         if (!isValidData(data)) return;
 
         rows = data.length;
         cols = data[0].length;
-        matrix = new int[rows][cols];
+        matrix = new double[rows][cols];
         setData(data);
     }
 
@@ -55,7 +55,7 @@ public class Matrix {
      * if the data given has different dimensions as the matrix
      * @param data The data to set into this matrix
      */
-    private void setData(int[][] data) {
+    private void setData(double[][] data) {
         for (int i = 0; i < matrix.length; i++) {
             matrix[i] = Arrays.copyOf(data[i], data[i].length);
         }
@@ -65,10 +65,9 @@ public class Matrix {
      * Gets the data that is stored in this matrix, in the form of a 2D array
      * @return The 2D array representation of the matrix
      */
-    public int[][] getData() {
+    public double[][] getData() {
         return Arrays.copyOf(matrix, matrix.length);
     }
-
 
     /**
      * Matrix adds this matrix to the other given matrix.
@@ -79,7 +78,7 @@ public class Matrix {
      */
     public Matrix add(Matrix other) {
         if (rows != other.rows || cols != other.cols) return null;
-        int[][] res = new int[rows][cols];
+        double[][] res = new double[rows][cols];
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -107,7 +106,7 @@ public class Matrix {
     public Matrix multiply(Matrix other) {
         if (cols != other.rows) return null;
 
-        int[][] res = new int[rows][other.cols];
+        double[][] res = new double[rows][other.cols];
 
         for (int i = 0; i < res.length; i++) {
             for (int j = 0; j < res[i].length; j++) {
@@ -125,13 +124,44 @@ public class Matrix {
      * @param scalar The scalar to multiply by
      * @return The product of the multiplication
      */
-    public Matrix multiply(int scalar) {
-        int[][] res = new int[rows][cols];
+    public Matrix multiply(double scalar) {
+        double[][] res = new double[rows][cols];
 
         for (int i = 0; i < res.length; i++) {
             for (int j = 0; j < res[i].length; j++) {
                 res[i][j] = matrix[i][j] * scalar;
             }
+        }
+
+        return new Matrix(res);
+    }
+
+    /**
+     * Gets the transposition of this matrix
+     * @return The transposition
+     */
+    public Matrix transpose() {
+        double[][] res = new double[cols][rows];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                res[j][i] = matrix[i][j];
+            }
+        }
+
+        return new Matrix(res);
+    }
+
+    /**
+     * Gets the identity square matrix with a given number of rows and columns
+     * @param len The number of rows and columns
+     * @return The identity matrix with the given dimensions
+     */
+    public static Matrix identity(int len) {
+        double[][] res = new double[len][len];
+
+        for (int i = 0; i < len; i++) {
+            res[i][i] = 1;
         }
 
         return new Matrix(res);
