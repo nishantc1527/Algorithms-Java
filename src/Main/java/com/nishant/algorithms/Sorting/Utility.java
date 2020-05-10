@@ -1,5 +1,6 @@
 package com.nishant.algorithms.Sorting;
 
+
 public class Utility {
 
     public static void printArray(int[] arr) {
