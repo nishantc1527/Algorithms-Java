@@ -1,6 +1,5 @@
-package Matrices;
+package com.nishant.algorithms.Matrices;
 
-import com.nishant.algorithms.Matrices.Matrix;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -108,5 +107,43 @@ public class MatrixTest {
                 {0, 1, 0},
                 {0, 0, 1}
         }), mat1);
+    }
+
+    @Test
+    public void getRowTest() {
+        mat1 = new Matrix(new double[][]{
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        });
+        Matrix row1 = mat1.getRow(0);
+        assertEquals(new Matrix(new double[][]{
+                {1, 2, 3}
+        }), row1);
+        Matrix row2 = mat1.getRow(1);
+        assertEquals(new Matrix(new double[][]{
+                {4, 5, 6}
+        }), row2);
+    }
+
+    @Test
+    public void getColTest() {
+        mat1 = new Matrix(new double[][]{
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        });
+        Matrix col1 = mat1.getColumn(0);
+        assertEquals(new Matrix(new double[][]{
+                {1},
+                {4},
+                {7}
+        }), col1);
+        Matrix col2 = mat1.getColumn(1);
+        assertEquals(new Matrix(new double[][]{
+                {2},
+                {5},
+                {8}
+        }), col2);
     }
 }

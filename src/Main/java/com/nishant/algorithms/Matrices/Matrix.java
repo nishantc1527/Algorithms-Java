@@ -167,6 +167,38 @@ public class Matrix {
         return new Matrix(res);
     }
 
+    /**
+     * Gets a specific row of this Matrix, also represented as a matrix
+     * @param row The row to get
+     * @return The row at the given position
+     */
+    public Matrix getRow(int row) {
+        if (row > rows) return null;
+
+        double[][] res = new double[1][cols];
+        for (int i = 0; i < cols; i++) {
+            res[0][i] = matrix[row][i];
+        }
+
+        return new Matrix(res);
+    }
+
+    /**
+     * Gets a specific col of this Matrix, also represented as a matrix
+     * @param col The column to get
+     * @return The col at the given position
+     */
+    public Matrix getColumn(int col) {
+        if (col > cols) return null;
+
+        double[][] res = new double[rows][1];
+        for (int i = 0; i < rows; i++) {
+            res[i][0] = matrix[i][col];
+        }
+
+        return new Matrix(res);
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
