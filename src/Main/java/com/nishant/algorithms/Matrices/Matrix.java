@@ -38,6 +38,17 @@ public class Matrix {
     }
 
     /**
+     * Makes an empty matrix with the given number of rows and columns
+     * @param rows The initial number of rows
+     * @param cols The initial number of columns
+     */
+    public Matrix(int rows, int cols) {
+        this.rows = rows;
+        this.cols = cols;
+        matrix = new double[rows][cols];
+    }
+
+    /**
      * Sets up the matrix with an initial set of data
      * @param data The initial set of data
      */
@@ -55,10 +66,36 @@ public class Matrix {
      * if the data given has different dimensions as the matrix
      * @param data The data to set into this matrix
      */
-    private void setData(double[][] data) {
+    public void setData(double[][] data) {
+        if (data.length != rows) return;
         for (int i = 0; i < matrix.length; i++) {
+            if (data[i].length != cols) return;
             matrix[i] = Arrays.copyOf(data[i], data[i].length);
         }
+    }
+
+    /**
+     * Sets the data in this matrix at the given position (i, j)
+     * @param i i-position of the value
+     * @param j j-position of the value
+     */
+    public void setData(int i, int j, double value) {
+        if (i >= 0 && i < rows && j >= 0 && j < cols) {
+            matrix[i][j] = value;
+        }
+    }
+
+    /**
+     * Gets the data in this matrix at a given (i, j) position
+     * @param i i-position of the value
+     * @param j j-position of the value
+     * @return The value at the given position
+     */
+    public double getData(int i, int j) {
+        if (i >= 0 && i < rows && j >= 0 && j < cols) {
+            return matrix[i][j];
+        }
+        else return 0;
     }
 
     /**
@@ -194,6 +231,36 @@ public class Matrix {
         double[][] res = new double[rows][1];
         for (int i = 0; i < rows; i++) {
             res[i][0] = matrix[i][col];
+        }
+
+        return new Matrix(res);
+    }
+
+    public Matrix randomize() {
+        double[][] res = new double[rows][cols];
+
+        for (int i = 0; i < res.length; i++) {
+            for (int j = 0; j < res[i].length; j++) {
+                res[i][j] = Math.random()*2 - 1;
+            }
+        }
+
+        return new Matrix(res);
+    }
+
+    /**
+     * Makes a matrix with the given dimensions and filled with random values in the range [-1, 1)
+     * @param rows The number of rows to make the randomized matrix
+     * @param cols The number of columns to make the randomized matrix
+     * @return The randomized matrix
+     */
+    public static Matrix randomize(int rows, int cols) {
+        double[][] res = new double[rows][cols];
+
+        for (int i = 0; i < res.length; i++) {
+            for (int j = 0; j < res[i].length; j++) {
+                res[i][j] = Math.random()*2 - 1;
+            }
         }
 
         return new Matrix(res);
