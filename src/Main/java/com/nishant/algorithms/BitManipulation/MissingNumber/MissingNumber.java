@@ -12,4 +12,8 @@ public class MissingNumber {
         return XOR ^ arr.length;
     }
 
+    public static void main(String[] args) {
+        System.out.println(MissingNumber.missingNumber(new int[]{0, 5, 3, 2, 4}));
+    }
+
 }

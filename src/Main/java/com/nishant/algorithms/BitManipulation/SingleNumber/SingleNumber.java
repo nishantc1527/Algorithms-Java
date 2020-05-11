@@ -12,4 +12,8 @@ public class SingleNumber {
         return xor;
     }
 
+    public static void main(String[] args) {
+        System.out.println(SingleNumber.singleNumber(new int[]{1, 2, 2, 1, 5}));
+    }
+
 }
