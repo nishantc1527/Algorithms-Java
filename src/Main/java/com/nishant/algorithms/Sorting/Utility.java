@@ -3,8 +3,8 @@ package com.nishant.algorithms.Sorting;
 public class Utility {
 
     public static void printArray(int[] arr) {
-        for(int i = 0; i < arr.length; i ++) {
-            System.out.print(arr[i] + " ");
+        for(int i : arr){
+            System.out.print(i + " ");
         }
 
         System.out.println();
