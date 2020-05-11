@@ -27,16 +27,16 @@ As you can see, it adds every character in a line. Now if you add the word "appl
 
 It addes the extra "le" at the end. Note we still remember the original "app" becuase the frequency of the 'p' node is 1. Then when you add "ape":
 
-    nil
-     |
-     a
-     |
-     p
-    / \
-   e   p
-       |
-       l
-       |
-       e
+     nil
+      |
+      a
+      |
+      p
+     / \
+    e   p
+        |
+        l
+        |
+        e
 
 It creates another branch with the 'e'. Now whenever you check if the tree contains a string, you travel down the tree with the string and check if the result has a frequency higher than one.

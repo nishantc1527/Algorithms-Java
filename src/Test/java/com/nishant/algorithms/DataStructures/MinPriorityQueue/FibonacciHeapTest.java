@@ -1,6 +1,7 @@
 package com.nishant.algorithms.DataStructures.MinPriorityQueue;
 
 import com.nishant.algorithms.DataStructures.MinPriotiryQueue.FibonacciHeap.FibonacciHeap;
+import com.nishant.algorithms.DataStructures.Trie.Trie;
 import org.junit.Before;
 import org.junit.Test;
 

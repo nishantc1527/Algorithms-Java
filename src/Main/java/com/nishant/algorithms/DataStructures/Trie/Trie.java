@@ -1,62 +1,64 @@
-class Trie {
-	class TrieNode {
-		public TrieNode[] children;
-		public int count;
+package com.nishant.algorithms.DataStructures.Trie;
 
-		public TrieNode() {
-			children = new TrieNode[26];
-		}
-	}
+public class Trie {
 
-	private TrieNode root;
+    private static class TrieNode {
+        public TrieNode[] children;
+        public int count;
 
-	public Trie() {
-		root = new TrieNode();
-	}
+        public TrieNode() {
+            children = new TrieNode[26];
+        }
+    }
 
-	public void insert(String s) {
-		TrieNode curr = root;
-		char[] chars = s.toCharArray();
+    private final TrieNode root;
 
-		for(int i = 0; i < chars.length; i ++) {
-			int index = chars[i] - 'a';
+    public Trie() {
+        root = new TrieNode();
+    }
 
-			if(curr.children[index] == null) {
-				curr.children[index] = new TrieNode();
-			}
+    public void insert(String s) {
+        TrieNode curr = root;
+        char[] chars = s.toCharArray();
 
-			curr = curr.children[index];
-		}
+        for (char aChar : chars) {
+            int index = aChar - 'a';
 
-		curr.count ++;
-	}
+            if (curr.children[index] == null) {
+                curr.children[index] = new TrieNode();
+            }
 
-	public boolean contains(String s) {
-		TrieNode curr = root;
-		char[] chars = s.toCharArray();
+            curr = curr.children[index];
+        }
 
-		for(int i = 0; i < chars.length; i ++) {
-			int index = chars[i] - 'a';
+        curr.count ++;
+    }
 
-			if(curr.children[index] == null) {
-				return false;
-			}
+    public boolean contains(String s) {
+        TrieNode curr = root;
+        char[] chars = s.toCharArray();
 
-			curr = curr.children[index];
-		}
+        for (char aChar : chars) {
+            int index = aChar - 'a';
 
-		return curr.count > 0;
-	}
+            if (curr.children[index] == null) {
+                return false;
+            }
 
-	public static void main(String[] args) {
-		Trie trie = new Trie();
-		trie.insert("app");
-		trie.insert("apple");
-		trie.insert("ap");
+            curr = curr.children[index];
+        }
 
-		System.out.println(trie.contains("app"));
-		System.out.println(trie.contains("appl"));
-	}
+        return curr.count > 0;
+    }
 
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("app");
+        trie.insert("apple");
+        trie.insert("ap");
+
+        System.out.println(trie.contains("app"));
+        System.out.println(trie.contains("appl"));
+    }
 
 }
