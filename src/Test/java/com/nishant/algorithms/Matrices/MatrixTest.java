@@ -1,6 +1,5 @@
-package Matrices;
+package com.nishant.algorithms.Matrices;
 
-import com.nishant.algorithms.Matrices.Matrix;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

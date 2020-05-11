@@ -46,4 +46,9 @@ public class UniquePaths {
         return dp[0][0];
     }
 
+    public static void main(String[] args) {
+        System.out.println(UniquePaths.topDown(7, 3));
+        System.out.println(UniquePaths.bottomUp(7, 3));
+    }
+
 }

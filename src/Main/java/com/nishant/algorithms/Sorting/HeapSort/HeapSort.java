@@ -1,5 +1,7 @@
 package com.nishant.algorithms.Sorting.HeapSort;
 
+import java.util.Arrays;
+
 public class HeapSort {
 
     private static int heapSize;
@@ -56,6 +58,13 @@ public class HeapSort {
         int temp = arr[pos1];
         arr[pos1] = arr[pos2];
         arr[pos2] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 3, 5, 3, 2, 4, 5, 2};
+        System.out.println(Arrays.toString(arr));
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 }
