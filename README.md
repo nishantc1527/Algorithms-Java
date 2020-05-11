@@ -54,6 +54,8 @@ Many of these algorithm problems come from a interview preparing website called 
    - [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue/FibonacciHeap)
    - [Min Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue/MinHeap)
  
+  ### [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trie)
+ 
  ## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming)
  
   - [House Robber](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming/HouseRobber)
@@ -89,6 +91,8 @@ Many of these algorithm problems come from a interview preparing website called 
   
    - [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/FibonacciHeapTest.java)
    - [Min Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/MinHeapTest.java)
+
+  ### [Trie](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trie/TrieTest.java)
 
  ## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DynamicProgramming)
  
