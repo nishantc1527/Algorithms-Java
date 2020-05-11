@@ -25,7 +25,7 @@ As you can see, it adds every character in a line. Now if you add the word "appl
      |
      e
 
-It addes the extra "le" at the end. Note we still remember the original "app" becuase the frequency of the 'p' node is 1. Then when you add "ape":
+It adds the extra "le" at the end. Note we still remember the original "app" becuase the frequency of the 'p' node is 1. Then when you add "ape":
 
      nil
       |
