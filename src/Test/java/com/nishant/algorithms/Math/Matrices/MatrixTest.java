@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Matrices;
+package com.nishant.algorithms.Math.Matrices;
 
 import org.junit.Test;
 
@@ -14,7 +14,11 @@ public class MatrixTest {
                 {0, 1, 1},
                 {-1, -1, 1}
         });
-        System.out.println(mat1);
+        assertArrayEquals(new double[][]{
+                {-1, 0, 1},
+                {0, 1, 1},
+                {-1, -1, 1}
+        }, mat1.matrix);
     }
 
     @Test
@@ -33,7 +37,6 @@ public class MatrixTest {
                 {0, 4, 8},
                 {12, 16, 20},
         }), res);
-        System.out.println(res);
     }
 
     @Test
@@ -64,7 +67,6 @@ public class MatrixTest {
                 {9, 12, 15},
                 {18, 21, 24}
         }), res);
-        System.out.println(res);
     }
 
     @Test

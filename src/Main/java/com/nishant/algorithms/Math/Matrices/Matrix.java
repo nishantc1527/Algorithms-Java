@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Matrices;
+package com.nishant.algorithms.Math.Matrices;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -7,7 +7,7 @@ public class Matrix {
     /**
      * The representation of the matrix, using a 2D array
      */
-    private double[][] matrix;
+    public double[][] matrix;
     private int rows, cols;
 
     /**

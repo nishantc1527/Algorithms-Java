@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Vectors;
+package com.nishant.algorithms.Math.Vectors;
 
 public class Vector {
     private double x, y;
