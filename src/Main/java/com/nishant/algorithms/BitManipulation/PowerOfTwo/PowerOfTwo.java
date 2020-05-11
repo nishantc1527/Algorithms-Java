@@ -13,4 +13,9 @@ public class PowerOfTwo {
         return n > 0 && (n & (n - 1)) == 0;
     }
 
+    public static void main(String[] args) {
+        System.out.println(PowerOfTwo.isPowerOfTwo(2));
+        System.out.println(PowerOfTwo.isPowerOfTwo(5));
+    }
+
 }

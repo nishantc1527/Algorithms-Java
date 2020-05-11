@@ -91,4 +91,19 @@ public class MinHeap {
         return i % 2 == 0 ? (i >> 1) - 1 : (i >> 1);
     }
 
+    public static void main(String[] args) {
+        MinHeap heap = new MinHeap();
+        heap.add(7);
+        heap.add(4);
+        heap.add(3);
+        heap.add(2);
+        heap.add(1);
+
+        heap.decreaseValue(7, 1);
+
+        while(!heap.isEmpty()) {
+            System.out.println(heap.extractMin());
+        }
+    }
+
 }

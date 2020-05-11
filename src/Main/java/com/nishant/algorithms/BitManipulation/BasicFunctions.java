@@ -1,6 +1,6 @@
 package com.nishant.algorithms.BitManipulation;
 
-public class Utility {
+public class BasicFunctions {
 
     /**
      * Gets the bit of an integer at a certain index

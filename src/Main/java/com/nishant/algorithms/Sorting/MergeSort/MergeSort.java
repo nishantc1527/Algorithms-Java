@@ -1,5 +1,7 @@
 package com.nishant.algorithms.Sorting.MergeSort;
 
+import java.util.Arrays;
+
 public class MergeSort {
 
     public static void sort(int[] arr) {
@@ -40,6 +42,13 @@ public class MergeSort {
                 }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 3, 5, 3, 2, 4, 5, 2};
+        System.out.println(Arrays.toString(arr));
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 }

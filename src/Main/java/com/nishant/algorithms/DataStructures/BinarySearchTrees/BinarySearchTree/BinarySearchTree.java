@@ -448,4 +448,36 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
         }
         return res.iterator();
     }
+
+    public static void main(String[] args) {
+        BinarySearchTree<Integer> myTree;
+        List<Integer> treeVals;
+        int insertCorrect = 0, deleteCorrect = 0, trials = 10000;
+
+        for (int i = 0; i < trials; i++) {
+            myTree = new BinarySearchTree<>();
+            treeVals = new LinkedList<>();
+
+            for (int j = 0; j < 31; j++) {
+                int a = (int) (Math.random() * 100);
+                treeVals.add(a);
+                myTree.insert(a);
+            }
+
+            boolean correct1 = myTree.isValid();
+            if (correct1) insertCorrect++;
+
+            for (int j = 0; j < 10; j++) {
+                int a = (int) (Math.random() * treeVals.size());
+                myTree.delete(treeVals.remove(a));
+            }
+
+            boolean correct2 = myTree.isValid();
+            if (correct2) deleteCorrect++;
+        }
+
+        System.out.println("Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
+        System.out.println("Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
+    }
+
 }

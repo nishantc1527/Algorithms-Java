@@ -395,6 +395,16 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         return sb.toString();
     }
 
+    @Override
+    public int numNodes() {
+        return numNodes(root);
+    }
+
+    private int numNodes(RBTreeNode root) {
+        if (root == null) return 0;
+        else return numNodes(root.left) + numNodes(root.right) + 1;
+    }
+
     public static void main(String[] args) {
         RedBlackTree<Integer> myTree;
         List<Integer> treeVals;
@@ -426,13 +436,4 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         System.out.println("Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
     }
 
-    @Override
-    public int numNodes() {
-        return numNodes(root);
-    }
-
-    private int numNodes(RBTreeNode root) {
-        if (root == null) return 0;
-        else return numNodes(root.left) + numNodes(root.right) + 1;
-    }
 }
