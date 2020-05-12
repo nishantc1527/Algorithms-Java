@@ -100,6 +100,11 @@ Example:
   - [House Robber](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming/HouseRobber)
   - [Unique Paths](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming/UniquePaths)
 
+ ## [Math](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Math)
+ 
+  - [Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Math)
+  - [Vector](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Math/Vectors)
+
 # [Testing](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms)
 
  ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Sorting)
@@ -137,6 +142,10 @@ Example:
  
   - [House Robber](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DynamicProgramming/HouseRobberTest.java)
   - [Unique Paths](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DynamicProgramming/UniquePathsTest.java)
+
+ ## [Math](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Math)
+ 
+  - [Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Math/Matrices)
 
 # License
 Licensed under [MIT License](https://opensource.org/licenses/MIT)
