@@ -36,21 +36,14 @@ public class FibonacciHeapTest {
 
     @Test
     public void chainedExtractMinTest() {
-        heap.insert(1);
-        heap.insert(2);
-        heap.insert(3);
-        heap.insert(4);
-        heap.insert(5);
-        heap.insert(6);
-        heap.insert(7);
-        heap.insert(8);
-        heap.insert(9);
-        heap.insert(10);
+        for (int i = 0; i < 10; i++) {
+            heap.insert(i);
+        }
 
-        int count = 1;
+        int count = 0;
 
-        while(!heap.isEmpty()) {
-            assertEquals(count ++, heap.extractMin());
+        while (!heap.isEmpty()) {
+            assertEquals(count++, heap.extractMin());
         }
     }
 

@@ -1,3 +1,5 @@
+I have a whole repository for this: [Graph Theory](https://github.com/nishantc1527/Graph-Theory)
+
 A Graph is a kind of data structure that can be described as a mess of nodes somehow connected with each other. Sometimes, the connections can have a certain cost,
 or weight. Graphs are really useful in the real world. For example, Google Map has lot's of houses, which can be nodes, and roads as the connections, or often
 called edges. When you pick a starting and ending point, Google Maps has to quickly calculate the shortest path from the source node to the target node. This also
