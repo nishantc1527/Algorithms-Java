@@ -7,21 +7,20 @@ import static org.junit.Assert.*;
 
 public class TrieTest {
 
-    private Trie trie;
+  private Trie trie;
 
-    @Before
-    public void setup() {
-        trie = new Trie();
-    }
+  @Before
+  public void setup() {
+    trie = new Trie();
+  }
 
-    @Test
-    public void testInsertAndContains() {
-        trie.insert("app");
-        trie.insert("apple");
+  @Test
+  public void testInsertAndContains() {
+    trie.insert("app");
+    trie.insert("apple");
 
-        assertTrue(trie.contains("app"));
-        assertFalse(trie.contains("appl"));
-        assertTrue(trie.contains("apple"));
-    }
-
+    assertTrue(trie.contains("app"));
+    assertFalse(trie.contains("appl"));
+    assertTrue(trie.contains("apple"));
+  }
 }

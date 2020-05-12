@@ -2,100 +2,85 @@ package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
 
 public interface Node<E extends Comparable<E>> {
 
-    /**
-     * Gets the value of this node.
-     *
-     * @return The value of this node.
-     */
+  /**
+   * Gets the value of this node.
+   *
+   * @return The value of this node.
+   */
+  E getVal();
 
-    E getVal();
+  /**
+   * Gets the left child of this node.
+   *
+   * @return The left child of this node.
+   */
+  Node<E> getLeft();
 
-    /**
-     * Gets the left child of this node.
-     *
-     * @return The left child of this node.
-     */
+  /**
+   * Gets the right child of this node.
+   *
+   * @return The right child of this node.
+   */
+  Node<E> getRight();
 
-    Node<E> getLeft();
+  /**
+   * Gets the parent of this node.
+   *
+   * @return The parent of this node.
+   */
+  Node<E> getParent();
 
-    /**
-     * Gets the right child of this node.
-     *
-     * @return The right child of this node.
-     */
+  /**
+   * Sets the left child of this node.
+   *
+   * @param newNode This node's new left child.
+   */
+  void setLeft(Node<E> newNode);
 
-    Node<E> getRight();
+  /**
+   * Sets the right child of this node.
+   *
+   * @param newNode The node's new right child.
+   */
+  void setRight(Node<E> newNode);
 
-    /**
-     * Gets the parent of this node.
-     *
-     * @return The parent of this node.
-     */
+  /**
+   * Sets the parent of this node.
+   *
+   * @param newNode The node's new parent.
+   */
+  void setParent(Node<E> newNode);
 
-    Node<E> getParent();
+  /**
+   * Sets the value of this node.
+   *
+   * @param newVal This node's new value.
+   */
+  void setVal(E newVal);
 
-    /**
-     * Sets the left child of this node.
-     *
-     * @param newNode This node's new left child.
-     */
+  /**
+   * Checks if this node is null.
+   *
+   * @return If this node is null.
+   */
+  boolean isNull();
 
-    void setLeft(Node<E> newNode);
+  /**
+   * In red black trees, returns whether it's color is red or black.
+   *
+   * @return The color of this node.
+   */
+  Color getColor();
 
-    /**
-     * Sets the right child of this node.
-     *
-     * @param newNode The node's new right child.
-     */
+  /**
+   * In red black trees, sets the color of this node to specified color.
+   *
+   * @param newColor The new color of this node.
+   */
+  void setColor(Color newColor);
 
-    void setRight(Node<E> newNode);
-
-    /**
-     * Sets the parent of this node.
-     *
-     * @param newNode The node's new parent.
-     */
-
-    void setParent(Node<E> newNode);
-
-    /**
-     * Sets the value of this node.
-     *
-     * @param newVal This node's new value.
-     */
-
-    void setVal(E newVal);
-
-    /**
-     * Checks if this node is null.
-     *
-     * @return If this node is null.
-     */
-
-    boolean isNull();
-
-    /**
-     * In red black trees, returns
-     * whether it's color is red or
-     * black.
-     *
-     * @return The color of this node.
-     */
-
-    Color getColor();
-
-    /**
-     * In red black trees, sets the
-     * color of this node to specified
-     * color.
-     *
-     * @param newColor The new color of this node.
-     */
-
-    void setColor(Color newColor);
-
-    /**
-     * Hashing function
-     */
-    int hashCode();
+  /**
+   * Hashing function
+   */
+  int hashCode();
 }

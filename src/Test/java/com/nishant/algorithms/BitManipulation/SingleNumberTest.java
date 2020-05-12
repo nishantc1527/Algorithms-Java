@@ -8,16 +8,15 @@ import static org.junit.Assert.*;
 
 public class SingleNumberTest {
 
-    private int[] arr;
+  private int[] arr;
 
-    @Before
-    public void setup() {
-        arr = new int[]{1, 2, 2, 1, 5};
-    }
+  @Before
+  public void setup() {
+    arr = new int[]{1, 2, 2, 1, 5};
+  }
 
-    @Test
-    public void resultTest() {
-        assertEquals(5, SingleNumber.singleNumber(arr));
-    }
-
+  @Test
+  public void resultTest() {
+    assertEquals(5, SingleNumber.singleNumber(arr));
+  }
 }

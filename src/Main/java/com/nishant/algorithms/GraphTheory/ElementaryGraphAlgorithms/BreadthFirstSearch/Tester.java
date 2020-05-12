@@ -28,5 +28,4 @@ public class Tester {
         System.out.println();
         Utility.printDistances(graph);
     }
-
 }
