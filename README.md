@@ -1,6 +1,8 @@
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src)
 
-Has lots of algorithms in Java with a description for each Algorithm, along with JUnit testing.
+This project is a hope to share the whole knowledge of algorithms there is to offer. Obviously, one guy can't do that, which is why it's open source!
+
+# Side Note
 
 Many of these algorithm problems come from a interview preparing website called [LeetCode](https://leetcode.com/problemset/all/). If you want, you can also check out [my LeetCode solutions](https://github.com/nishantc1527/LeetCode).
 
@@ -42,6 +44,44 @@ Example:
     $ cd src/Main/java/com/nishant/algorithms/Sorting/QuickSort/
     $ javac QuickSort.java
     $ java QuickSort
+    
+ ## Possible Error
+ 
+    Error: Could not find or load main class MergeSort
+    
+ A couple of detailed posts about this:
+ 
+ - [Stack Overflow](https://stackoverflow.com/questions/18093928/what-does-could-not-find-or-load-main-class-mean)
+ - [Tutorialspoint](https://www.tutorialspoint.com/how-to-resolve-could-not-find-or-load-main-class-package-in-java)
+
+# Contributing
+
+This repository is welcome to contributing. There are tons of stuff to add, some easy and some hard. If you want something to contribute, look at the issues page.  
+To encourage contributing, I developed a fun little game. Every time you contribute, you get points. I'll talk about what score you get and all the details, 
+but first, what is the use of the score? The more score you get, you get to put your name higher on the leaderboard in the section below. And what is the point
+of the leaderboard? Right under your name, you get to advertise any repository, project, etc... you want. Here is a quick privilege list (I will update it now
+and then when I feel something can be made better).
+
+5 points: Share a project.
+20 points: Add a description.
+Every 20 points, add another project with a description.
+(the rest is for you to add in [this issue](https://github.com/nishantc1527/Algorithms/issues/3))
+
+Okay, now, how many points do you get for contributing? When you pick something from [the issues](https://github.com/nishantc1527/Algorithms/issues), the issue
+will specify the number of points you get. Sometimes, it will be a concrete number, but sometimes, it will be a range (for example, 5 - 10) and you get rewarded
+depending on the quality of your pull request. Even in the issues with concrete numbers, if you go above and beyond and do a really good job I might reward more.
+If you leave out some stuff or leave bugs, I will ask if you want to except fewer points or fix it. If you decide to just except fewer points, then I will open
+another issue for that.
+
+But what if you found something that wasn't in the issues? Then, submit the pull request anyways, and I will determine the points myself.
+
+Now that I have the game cleared up, I would recommend some easy issues. [Improving explanations](https://github.com/nishantc1527/Algorithms/issues/4) would probably
+be the best place to start, then adding privileges. However, you can always look into the [issues](https://github.com/nishantc1527/Algorithms/issues) page for more
+stuff.
+
+# Leaderboard
+
+No one here yet. Be the first to put your name!
 
 # [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms)
 
