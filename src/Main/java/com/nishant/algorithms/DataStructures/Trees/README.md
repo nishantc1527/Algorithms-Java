@@ -13,4 +13,4 @@ Tree nodes are referred to as family terms. For example, the node pointing to a 
 Your parents other child is your sibling, and so on. There are also some tree terms. The top most node in the tree is the root, and a node that has no children is called a leaf.  
 
 There are many applications for trees. Most of the time, they are used to achieve really fast running
-times like O(lg N) most commonly. 
+times like O(lg N) most commonly.

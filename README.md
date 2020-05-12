@@ -125,7 +125,7 @@ Example:
 
  ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures)
  
-  ### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees)
+  ### [Trees]
   
    - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/BinarySearchTreeTest.java)
    - [Red Black Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/RedBlackTreeTest.java)
