@@ -146,4 +146,16 @@ public class MatrixTest {
                 {8}
         }), col2);
     }
+
+    @Test
+    public void colFromArrayTest() {
+        double[] arr = {1, 0, 5, 10};
+        mat1 = Matrix.colMatrixFromArray(arr);
+        assertEquals(new Matrix(new double[][]{
+                {1},
+                {0},
+                {5},
+                {10}
+        }), mat1);
+    }
 }

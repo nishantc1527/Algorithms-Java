@@ -1,3 +1,5 @@
+package com.nishant.algorithms.DataStructures.Trie;
+
 class Trie {
 	class TrieNode {
 		public TrieNode[] children;
