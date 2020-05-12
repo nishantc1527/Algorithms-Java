@@ -82,18 +82,20 @@ Example:
  
  ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures)
  
-  ### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/BinarySearchTrees)
+  ### [Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees)
   
-  - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/BinarySearchTree)
-  - [Red Black Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/RedBlackTree)
-  - [AVL Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/AVLTree)
- 
+   #### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees)
+   
+   - [AVL Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/AVLTree)
+   - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/BinarySearchTree)
+   - [Red Black Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/RedBlackTree)
+  
+   #### [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/Trie)
+  
   ### [Min Priority Queue](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue)
   
    - [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue/FibonacciHeap)
    - [Min Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue/MinHeap)
- 
-  ### [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trie)
  
  ## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming)
  
@@ -125,18 +127,20 @@ Example:
 
  ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures)
  
-  ### [Trees]
+  ### [Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees)
   
-   - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/BinarySearchTreeTest.java)
-   - [Red Black Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/RedBlackTreeTest.java)
-   - [AVL Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/BinarySearchTrees/AVLTreeTest.java)
+   #### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees)
+  
+   - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/BinarySearchTreeTest.java)
+   - [Red Black Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/RedBlackTreeTest.java)
+   - [AVL Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/AVLTreeTest.java)
+   
+   #### [Trie](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/Trie/TrieTest.java)
    
   ### [Min Priority Queue](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue)
   
    - [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/FibonacciHeapTest.java)
    - [Min Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/MinHeapTest.java)
-
-  ### [Trie](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trie/TrieTest.java)
 
  ## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DynamicProgramming)
  
