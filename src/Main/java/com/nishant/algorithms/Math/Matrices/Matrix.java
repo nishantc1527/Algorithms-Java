@@ -8,7 +8,7 @@ public class Matrix {
     /**
      * The representation of the matrix, using a 2D array
      */
-    private double[][] matrix;
+    public double[][] matrix;
     private int rows, cols;
 
     /**
