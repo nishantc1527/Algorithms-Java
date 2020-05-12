@@ -192,4 +192,4 @@ No one here yet. Be the first to put your name!
   - [Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Math/Matrices)
 
 # License
-Licensed under [MIT License](https://opensource.org/licenses/MIT)
+Licensed under [MIT License](https://opensource.org/licenses/MIT). That means feel free to add whatever you want if you find it necessary.
