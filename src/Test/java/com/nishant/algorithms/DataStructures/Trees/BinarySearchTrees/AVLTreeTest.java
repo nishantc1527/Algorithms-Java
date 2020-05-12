@@ -1,19 +1,18 @@
-package com.nishant.algorithms.DataStructures.BinarySearchTrees;
+package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
 
-import com.nishant.algorithms.DataStructures.BinarySearchTrees.BinarySearchTree.BinarySearchTree;
+import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.AVLTree.AVLTree;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class BinarySearchTreeTest {
+public class AVLTreeTest {
 
-    private BinarySearchTree<Integer> tree;
+    private AVLTree<Integer> tree;
 
     @Before
     public void setup() {
-        tree = new BinarySearchTree<>();
+        tree = new AVLTree<>();
     }
 
     @Test

@@ -1,4 +1,4 @@
-package com.nishant.algorithms.DataStructures.BinarySearchTrees;
+package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
 
 public interface BinaryTree<E extends Comparable<E>> extends Iterable<Node<E>> {
 

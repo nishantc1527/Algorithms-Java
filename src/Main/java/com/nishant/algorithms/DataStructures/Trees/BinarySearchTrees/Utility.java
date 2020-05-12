@@ -1,7 +1,4 @@
-package com.nishant.algorithms.DataStructures.BinarySearchTrees;
-
-import com.nishant.algorithms.DataStructures.BinarySearchTrees.BinaryTree;
-import com.nishant.algorithms.DataStructures.BinarySearchTrees.Node;
+package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
 
 import java.util.ArrayList;
 import java.util.Collections;
