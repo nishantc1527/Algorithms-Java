@@ -18,6 +18,7 @@ public class OneHiddenLayerNeuralNetwork {
 
     public double[] predict(double[] inputArray) {
         Matrix inputs = Matrix.colMatrixFromArray(inputArray);
+
         Matrix hidden = weightsIH.multiply(inputs);
         hidden = hidden.add(biasH);
         hidden = hidden.forEach(this::sigmoid);

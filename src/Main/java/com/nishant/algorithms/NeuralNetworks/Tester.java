@@ -27,11 +27,6 @@ public class Tester extends JPanel {
         trainingData[2][0] = new double[]{1, 0}; trainingData[2][1] = new double[]{1};
         trainingData[3][0] = new double[]{0, 1}; trainingData[3][1] = new double[]{1};
 
-//        double[] input = {1, 0};
-//        double[] targets = {1, 2};
-//        double[] output = nn.feedForward(input);
-//        nn.train(input, targets);
-
         for (int i = 0; i < 50000; i++) {
             for (int j = 0; j < trainingData.length; j++) {
                 int index = ((int) (Math.random() * trainingData.length));
@@ -45,7 +40,8 @@ public class Tester extends JPanel {
         System.out.println(Arrays.toString(nn.predict(trainingData[2][0])));
         System.out.println(Arrays.toString(nn.predict(trainingData[3][0])));
 
-//        System.out.println(Arrays.toString(output));
+//        MultilayeredNeuralNetwork mnn = new MultilayeredNeuralNetwork(2, 1, 1, 1);
+//        System.out.println(Arrays.toString(mnn.predict(new double[]{0, 1})));
     }
 
     public Tester(int width, int height) {
