@@ -2,6 +2,8 @@ package com.nishant.algorithms.Matrices;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Matrix {
     /**
@@ -68,7 +70,7 @@ public class Matrix {
      */
     public void setData(double[][] data) {
         if (data.length != rows) return;
-        for (int i = 0; i < matrix.length; i++) {
+        for (int i = 0; i < rows; i++) {
             if (data[i].length != cols) return;
             matrix[i] = Arrays.copyOf(data[i], data[i].length);
         }
@@ -132,7 +134,7 @@ public class Matrix {
      * @return The difference of the two matrices
      */
     public Matrix subtract(Matrix other) {
-        return this.add(this.multiply(-1));
+        return this.add(other.multiply(-1));
     }
 
     /**
@@ -145,11 +147,25 @@ public class Matrix {
 
         double[][] res = new double[rows][other.cols];
 
-        for (int i = 0; i < res.length; i++) {
-            for (int j = 0; j < res[i].length; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < other.cols; j++) {
                 for (int k = 0; k < cols; k++) {
                     res[i][j] += matrix[i][k] * other.matrix[k][j];
                 }
+            }
+        }
+
+        return new Matrix(res);
+    }
+
+    public Matrix hadamardMultiply(Matrix other) {
+        if (rows != other.rows || cols != other.cols) return null;
+
+        double[][] res = new double[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                res[i][j] = matrix[i][j] * other.matrix[i][j];
             }
         }
 
@@ -236,18 +252,6 @@ public class Matrix {
         return new Matrix(res);
     }
 
-    public Matrix randomize() {
-        double[][] res = new double[rows][cols];
-
-        for (int i = 0; i < res.length; i++) {
-            for (int j = 0; j < res[i].length; j++) {
-                res[i][j] = Math.random()*2 - 1;
-            }
-        }
-
-        return new Matrix(res);
-    }
-
     /**
      * Makes a matrix with the given dimensions and filled with random values in the range [-1, 1)
      * @param rows The number of rows to make the randomized matrix
@@ -260,6 +264,46 @@ public class Matrix {
         for (int i = 0; i < res.length; i++) {
             for (int j = 0; j < res[i].length; j++) {
                 res[i][j] = Math.random()*2 - 1;
+            }
+        }
+
+        return new Matrix(res);
+    }
+
+    /**
+     * Makes a new Matrix with 1 column, given by the array input
+     * @param arr The input to make the new matrix from
+     * @return The generated matrix
+     */
+    public static Matrix colMatrixFromArray(double[] arr) {
+        double[][] res = new double[arr.length][1];
+        for (int i = 0; i < arr.length; i++) {
+            res[i][0] = arr[i];
+        }
+
+        return new Matrix(res);
+    }
+
+    public double[] colMatrixToArray() {
+        double[] res = new double[rows];
+        for (int i = 0; i < rows; i++) {
+            res[i] = matrix[i][0];
+        }
+
+        return res;
+    }
+
+    /**
+     * Applies the given function to each value in the matrix
+     * @param func The function to apply
+     * @return The result after applying the function
+     */
+    public Matrix forEach(Function<Double, Double> func) {
+        double[][] res = new double[rows][cols];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                res[i][j] = func.apply(matrix[i][j]);
             }
         }
 
