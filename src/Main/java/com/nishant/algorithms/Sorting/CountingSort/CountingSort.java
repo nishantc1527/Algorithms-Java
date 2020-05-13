@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Sorting.CountingSort;
+package com.nishant.algorithms.sorting.countingsort;
 
 import java.util.Arrays;
 

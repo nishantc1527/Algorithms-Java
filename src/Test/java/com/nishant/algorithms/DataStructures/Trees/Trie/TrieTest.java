@@ -1,4 +1,4 @@
-package com.nishant.algorithms.DataStructures.Trees.Trie;
+package com.nishant.algorithms.datastructures.trees.trie;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -7,11 +7,11 @@ import static org.junit.Assert.*;
 
 public class TrieTest {
 
-  private Trie trie;
+  private com.nishant.algorithms.DataStructures.Trees.Trie.Trie trie;
 
   @Before
   public void setup() {
-    trie = new Trie();
+    trie = new com.nishant.algorithms.DataStructures.Trees.Trie.Trie();
   }
 
   @Test

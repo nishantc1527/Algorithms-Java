@@ -1,6 +1,6 @@
-package com.nishant.algorithms.GraphTheory.Implementations.AdjacencyMatrix;
+package com.nishant.algorithms.graphtheory.implementations.adjacencymatrix;
 
-import com.nishant.algorithms.GraphTheory.Implementations.Pair;
+import com.nishant.algorithms.graphtheory.implementations.Pair;
 
 public interface GraphAdjacencyMatrix {
 

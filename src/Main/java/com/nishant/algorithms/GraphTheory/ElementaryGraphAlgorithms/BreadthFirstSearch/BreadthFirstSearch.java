@@ -1,10 +1,10 @@
-package com.nishant.algorithms.GraphTheory.ElementaryGraphAlgorithms.BreadthFirstSearch;
+package com.nishant.algorithms.graphtheory.elementarygraphalgorithms.breadthfirstsearch;
 
-import com.nishant.algorithms.GraphTheory.ElementaryGraphAlgorithms.Utility;
-import com.nishant.algorithms.GraphTheory.Implementations.AdjacencyList.DirectedGraphAdjacencyList;
-import com.nishant.algorithms.GraphTheory.Implementations.Color;
-import com.nishant.algorithms.GraphTheory.Implementations.Pair;
-import com.nishant.algorithms.GraphTheory.Implementations.Vertex;
+import com.nishant.algorithms.graphtheory.elementarygraphalgorithms.Utility;
+import com.nishant.algorithms.graphtheory.implementations.Color;
+import com.nishant.algorithms.graphtheory.implementations.Pair;
+import com.nishant.algorithms.graphtheory.implementations.Vertex;
+import com.nishant.algorithms.graphtheory.implementations.adjacencylist.DirectedGraphAdjacencyList;
 
 import java.util.LinkedList;
 import java.util.Queue;

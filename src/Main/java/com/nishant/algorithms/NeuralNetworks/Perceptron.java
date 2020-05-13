@@ -1,4 +1,4 @@
-package com.nishant.algorithms.NeuralNetworks;
+package com.nishant.algorithms.neuralnetworks;
 
 import java.util.Arrays;
 

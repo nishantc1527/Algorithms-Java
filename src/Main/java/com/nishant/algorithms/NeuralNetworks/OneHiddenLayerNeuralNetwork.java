@@ -1,4 +1,4 @@
-package com.nishant.algorithms.NeuralNetworks;
+package com.nishant.algorithms.neuralnetworks;
 
 public class OneHiddenLayerNeuralNetwork {
     private com.nishant.algorithms.Math.Matrices.Matrix weightsIH, weightsHO, biasH, biasO;

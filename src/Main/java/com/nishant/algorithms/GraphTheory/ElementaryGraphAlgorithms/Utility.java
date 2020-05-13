@@ -1,8 +1,8 @@
-package com.nishant.algorithms.GraphTheory.ElementaryGraphAlgorithms;
+package com.nishant.algorithms.graphtheory.elementarygraphalgorithms;
 
-import com.nishant.algorithms.GraphTheory.Implementations.AdjacencyList.DirectedGraphAdjacencyList;
-import com.nishant.algorithms.GraphTheory.Implementations.Color;
-import com.nishant.algorithms.GraphTheory.Implementations.Vertex;
+import com.nishant.algorithms.graphtheory.implementations.Color;
+import com.nishant.algorithms.graphtheory.implementations.Vertex;
+import com.nishant.algorithms.graphtheory.implementations.adjacencylist.DirectedGraphAdjacencyList;
 
 public class Utility {
 

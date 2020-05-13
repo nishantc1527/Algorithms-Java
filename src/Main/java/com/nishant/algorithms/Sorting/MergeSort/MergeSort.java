@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Sorting.MergeSort;
+package com.nishant.algorithms.sorting.mergesort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.nishant.algorithms.dynmanicprogramming.UniquePaths;
+package com.nishant.algorithms.dynmanicprogramming.uniquepaths;
 
 public class UniquePaths {
 

@@ -1,4 +1,4 @@
-package com.nishant.algorithms.BitManipulation;
+package com.nishant.algorithms.bitmanipulation;
 
 public class BasicFunctions {
 

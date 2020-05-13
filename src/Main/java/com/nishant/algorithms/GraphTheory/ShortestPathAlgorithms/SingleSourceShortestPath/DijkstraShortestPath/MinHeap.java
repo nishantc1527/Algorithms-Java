@@ -1,6 +1,6 @@
-package com.nishant.algorithms.GraphTheory.ShortestPathAlgorithms.SingleSourceShortestPath.DijkstraShortestPath;
+package com.nishant.algorithms.graphtheory.shortestpathalgorithms.singlesourceshortestpath.dijkstrashortestpath;
 
-import com.nishant.algorithms.GraphTheory.Implementations.Vertex;
+import com.nishant.algorithms.graphtheory.implementations.Vertex;
 
 import java.util.HashMap;
 

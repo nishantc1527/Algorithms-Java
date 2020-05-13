@@ -1,8 +1,8 @@
-package com.nishant.algorithms.GraphTheory.ShortestPathAlgorithms.SingleSourceShortestPath.BellmanFordShortestPath;
+package com.nishant.algorithms.graphtheory.shortestpathalgorithms.singlesourceshortestpath.bellmanfordshortestpath;
 
-import com.nishant.algorithms.GraphTheory.Implementations.AdjacencyList.WeightedGraphAdjacencyList;
-import com.nishant.algorithms.GraphTheory.Implementations.Edge;
-import com.nishant.algorithms.GraphTheory.Implementations.Vertex;
+import com.nishant.algorithms.graphtheory.implementations.Edge;
+import com.nishant.algorithms.graphtheory.implementations.Vertex;
+import com.nishant.algorithms.graphtheory.implementations.adjacencylist.WeightedGraphAdjacencyList;
 
 public class BellmanFordShortestPath {
 

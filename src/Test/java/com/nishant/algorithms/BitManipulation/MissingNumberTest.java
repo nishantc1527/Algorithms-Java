@@ -1,6 +1,6 @@
-package com.nishant.algorithms.BitManipulation;
+package com.nishant.algorithms.bitmanipulation;
 
-import com.nishant.algorithms.BitManipulation.MissingNumber.MissingNumber;
+import com.nishant.algorithms.bitmanipulation.missingnumber.MissingNumber;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.nishant.algorithms.DataStructures.MinPriotiryQueue.MinHeap;
+package com.nishant.algorithms.datastructures.minpriotiryqueue.minheap;
 
 import java.util.ArrayList;
 import java.util.List;

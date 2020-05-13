@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Sorting.SelectionSort;
+package com.nishant.algorithms.sorting.selectionsort;
 
 import java.util.Arrays;
 

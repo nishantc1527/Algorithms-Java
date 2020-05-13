@@ -1,4 +1,4 @@
-package com.nishant.algorithms.BitManipulation.MissingNumber;
+package com.nishant.algorithms.bitmanipulation.missingnumber;
 
 public class MissingNumber {
 

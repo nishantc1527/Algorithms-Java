@@ -1,4 +1,4 @@
-package com.nishant.algorithms.GraphTheory.Implementations;
+package com.nishant.algorithms.graphtheory.implementations;
 
 import java.util.Objects;
 

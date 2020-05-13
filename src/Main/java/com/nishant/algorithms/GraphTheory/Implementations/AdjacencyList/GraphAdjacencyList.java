@@ -1,7 +1,7 @@
-package com.nishant.algorithms.GraphTheory.Implementations.AdjacencyList;
+package com.nishant.algorithms.graphtheory.implementations.adjacencylist;
 
-import com.nishant.algorithms.GraphTheory.Implementations.Edge;
-import com.nishant.algorithms.GraphTheory.Implementations.Vertex;
+import com.nishant.algorithms.graphtheory.implementations.Edge;
+import com.nishant.algorithms.graphtheory.implementations.Vertex;
 
 public interface GraphAdjacencyList<E> {
 

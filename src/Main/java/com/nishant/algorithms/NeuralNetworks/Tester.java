@@ -1,7 +1,7 @@
-package com.nishant.algorithms.NeuralNetworks;
+package com.nishant.algorithms.neuralnetworks;
 
-import com.nishant.algorithms.NeuralNetworks.OneHiddenLayerNeuralNetwork;
-import com.nishant.algorithms.NeuralNetworks.Perceptron;
+import com.nishant.algorithms.neuralnetworks.OneHiddenLayerNeuralNetwork;
+import com.nishant.algorithms.neuralnetworks.Perceptron;
 
 import javax.swing.*;
 import java.awt.*;

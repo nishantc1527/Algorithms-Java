@@ -1,6 +1,6 @@
-package com.nishant.algorithms.DynamicProgramming;
+package com.nishant.algorithms.dynamicprogramming;
 
-import com.nishant.algorithms.dynmanicprogramming.UniquePaths.UniquePaths;
+import com.nishant.algorithms.dynmanicprogramming.uniquepaths.UniquePaths;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,9 +1,8 @@
 package com.nishant.algorithms.sorting;
 
+import com.nishant.algorithms.sorting.countingsort.CountingSort;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.nishant.algorithms.Sorting.CountingSort.CountingSort;
 
 import static org.junit.Assert.assertArrayEquals;
 
