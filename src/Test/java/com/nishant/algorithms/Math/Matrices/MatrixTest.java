@@ -1,4 +1,4 @@
-package com.nishant.algorithms.math.matrices;
+package com.nishant.algorithms.Math.Matrices;
 
 import org.junit.Test;
 
