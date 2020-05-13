@@ -34,7 +34,7 @@ public class CountingSort {
       }
     }
 
-    return new int[]{min, max};
+    return new int[] {min, max};
   }
 
   public static void main(String[] args) {
