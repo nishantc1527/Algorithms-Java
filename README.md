@@ -1,5 +1,7 @@
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src)
 
+Algorithms are a way to solve problems. Not only that, it wants to solve problem fast. That's why there's tons and tons of theory on this stuff.
+
 This project is a hope to share the whole knowledge of algorithms there is to offer. Obviously, one guy can't do that, which is why it's open source!
 
 # Side Note
