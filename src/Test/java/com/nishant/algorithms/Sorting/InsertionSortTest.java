@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Sorting;
+package com.nishant.algorithms.sorting;
 
 import org.junit.Before;
 import org.junit.Test;

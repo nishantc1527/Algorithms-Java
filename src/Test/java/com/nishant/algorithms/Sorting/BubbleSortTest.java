@@ -1,9 +1,8 @@
-package com.nishant.algorithms.Sorting;
+package com.nishant.algorithms.sorting;
 
+import com.nishant.algorithms.sorting.bubblesort.BubbleSort;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.nishant.algorithms.Sorting.BubbleSort.BubbleSort;
 
 import static org.junit.Assert.assertArrayEquals;
 
