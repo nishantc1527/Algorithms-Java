@@ -10,11 +10,11 @@ It seems really good, however there are a lot of hidden constants. It's still a 
 A fibonacci heap is a doubly-linked circular linked list, where each node is a min-heap. Every node has a pointer to it's left and right child, as well
 as one of it's children. You can access the children by calling child.left and child.right. Here is an example of a fibonacci heap:
 
-       4  -------  6
-       |           |
-   9 - 5 - 7   8 - 7 - 9
-   |
-   10
+           4  -------  6
+           |           |
+       9 - 5 - 7   8 - 7 - 9
+       |
+       10
 
 As you can see, every node has a pointer to one of it's children, who has access to it's siblings and it's child if it has one. Also, every node is
 larger than it's parent. The linked list at the top that contains all the smallest numbers is called the root list. The fibonacci heap only contains one
