@@ -2,7 +2,7 @@
 
 Algorithms are a way to solve problems. Not only that, it wants to solve problem fast. That's why there's tons and tons of theory on this stuff.
 
-This project is a hope to share the whole knowledge of algorithms there is to offer. Obviously, one guy can't do that, which is why it's open source!
+This project is a hope to share the whole knowledge of algorithms there is to offer. Obviously, one guy can't do that, which is why it's open source! I also developed a fun way to contribute. You can look at it in the [contributing page](https://github.com/nishantc1527/Algorithms#contributing).
 
 # Side Note
 
