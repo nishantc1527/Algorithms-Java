@@ -12,7 +12,7 @@ Many of these algorithm problems come from a interview preparing website called 
 
  ## Go To The Folder Where You Want To Place The Repository
  
-This part is optional. Use ```cd```. For example:
+This part is optional. Use ```cd``` to go to the location you want to place the repository. In my case, I have a seperate location in my ```d``` drive. For example:
 
     $ cd d:/github/myrepos
 
