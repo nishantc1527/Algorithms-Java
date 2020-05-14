@@ -87,6 +87,8 @@ No one here yet. Be the first to put your name!
 
 # [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms)
 
+This part contains all the implementations of the algorithms.
+
  ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting)
  
   - [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/BubbleSort)
@@ -150,6 +152,8 @@ No one here yet. Be the first to put your name!
   - [Vector](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Math/Vectors)
 
 # [Testing](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms)
+
+This part contains all the testing classes.
 
  ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Sorting)
  
