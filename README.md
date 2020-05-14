@@ -49,7 +49,7 @@ Example:
     
  ## Possible Error
  
-    Error: Could not find or load main class MergeSort
+    Error: Could not find or load main class QuickSort
     
  A couple of detailed posts about this:
  
