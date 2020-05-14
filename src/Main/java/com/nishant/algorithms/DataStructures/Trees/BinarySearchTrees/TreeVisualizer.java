@@ -1,6 +1,6 @@
-package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
+package com.nishant.algorithms.datastructures.trees.BinarySearchTrees;
 
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.AVLTree.AVLTree;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.AVLTree.AVLTree;
 
 import javax.swing.*;
 import java.awt.*;
@@ -61,11 +61,11 @@ public class TreeVisualizer extends JPanel implements KeyListener {
     this.rootHeight = tree.getHeight();
     this.height = ((int) (rootHeight * 100 * zoomFactor));
     this.width =
-            ((int)
-                    ((maxLeft(tree.getRoot()) + maxRight(tree.getRoot()))
-                            * (this.height)
-                            * 5
-                            * zoomFactor));
+        ((int)
+            ((maxLeft(tree.getRoot()) + maxRight(tree.getRoot()))
+                * (this.height)
+                * 5
+                * zoomFactor));
     this.setPreferredSize(new Dimension(width, height));
     setCoords(tree.getRoot(), 1, 0, false);
   }
@@ -120,21 +120,18 @@ public class TreeVisualizer extends JPanel implements KeyListener {
 
       if (map.containsKey(node.getLeft()))
         g.drawLine(
-                x, y, ((int) map.get(node.getLeft()).getX()), ((int) map.get(node.getLeft()).getY()));
+            x, y, ((int) map.get(node.getLeft()).getX()), ((int) map.get(node.getLeft()).getY()));
       if (map.containsKey(node.getRight()))
         g.drawLine(
-                x, y, ((int) map.get(node.getRight()).getX()), ((int) map.get(node.getRight()).getY()));
+            x, y, ((int) map.get(node.getRight()).getX()), ((int) map.get(node.getRight()).getY()));
     }
   }
 
   public void keyPressed(KeyEvent e) {
-    if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-    }
+    if (e.getKeyCode() == KeyEvent.VK_SPACE) {}
   }
 
-  public void keyReleased(KeyEvent e) {
-  }
+  public void keyReleased(KeyEvent e) {}
 
-  public void keyTyped(KeyEvent e) {
-  }
+  public void keyTyped(KeyEvent e) {}
 }

@@ -9,9 +9,7 @@ import java.util.*;
 public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
   private AVLTreeNode root, rootParent;
 
-  /**
-   * Creates a default, empty AVL tree with a null root
-   */
+  /** Creates a default, empty AVL tree with a null root */
   public AVLTree() {
     rootParent = new AVLTreeNode((E) null);
     rootParent.left = null;
@@ -384,8 +382,8 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
   private boolean isValidAVLTree(AVLTreeNode root) {
     if (root == null) return true;
     return Math.abs(root.balanceFactor) <= 1
-            && isValidAVLTree(root.left)
-            && isValidAVLTree(root.right);
+        && isValidAVLTree(root.left)
+        && isValidAVLTree(root.right);
   }
 
   /**
@@ -448,24 +446,16 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
       return "{" + "val=" + val + '}';
     }
 
-    /**
-     * The value of this binary search tree node.
-     */
+    /** The value of this binary search tree node. */
     private E val;
 
-    /**
-     * The height of this tree node
-     */
+    /** The height of this tree node */
     private int height;
 
-    /**
-     * The balance factor of this tree node, used in balancing the tree
-     */
+    /** The balance factor of this tree node, used in balancing the tree */
     private int balanceFactor;
 
-    /**
-     * The left, right, and parent of this node, respectively.
-     */
+    /** The left, right, and parent of this node, respectively. */
     private AVLTreeNode left, right, parent;
 
     /**
@@ -591,8 +581,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     }
 
     @Override
-    public void setColor(Color newColor) {
-    }
+    public void setColor(Color newColor) {}
 
     @Override
     public boolean equals(Object o) {
@@ -600,8 +589,8 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
       if (!(o instanceof AVLTree.AVLTreeNode)) return false;
       AVLTreeNode that = (AVLTreeNode) o;
       return Objects.equals(val, that.val)
-              && Objects.equals(left, that.left)
-              && Objects.equals(right, that.right);
+          && Objects.equals(left, that.left)
+          && Objects.equals(right, that.right);
     }
 
     @Override
@@ -638,8 +627,8 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     }
 
     System.out.println(
-            "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
+        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
     System.out.println(
-            "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
+        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
   }
 }

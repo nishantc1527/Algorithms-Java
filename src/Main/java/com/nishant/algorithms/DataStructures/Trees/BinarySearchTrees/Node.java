@@ -79,8 +79,6 @@ public interface Node<E extends Comparable<E>> {
    */
   void setColor(Color newColor);
 
-  /**
-   * Hashing function
-   */
+  /** Hashing function */
   int hashCode();
 }

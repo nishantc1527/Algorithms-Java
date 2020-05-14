@@ -14,14 +14,10 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
    */
   protected class BSTNode implements Node<E> {
 
-    /**
-     * The value of this binary search tree node.
-     */
+    /** The value of this binary search tree node. */
     private E val;
 
-    /**
-     * The left, right, and parent of this node, respectively.
-     */
+    /** The left, right, and parent of this node, respectively. */
     private BSTNode left, right, parent;
 
     /**
@@ -123,35 +119,24 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
       return false;
     }
 
-    /**
-     * Binary search trees don't have colored nodes.
-     */
+    /** Binary search trees don't have colored nodes. */
     @Override
     public Color getColor() {
       return null;
     }
 
-    /**
-     * Binary search trees don't have colored nodes.
-     */
+    /** Binary search trees don't have colored nodes. */
     @Override
-    public void setColor(Color newColor) {
-    }
+    public void setColor(Color newColor) {}
   }
 
-  /**
-   * The root of the binary search tree.
-   */
+  /** The root of the binary search tree. */
   private BSTNode root;
 
-  /**
-   * Parent of the root, just used to simplify insertion and deletion algorithms
-   */
+  /** Parent of the root, just used to simplify insertion and deletion algorithms */
   private BSTNode rootParent;
 
-  /**
-   * Default constructor of this tree
-   */
+  /** Default constructor of this tree */
   public BinarySearchTree() {
     root = null;
     rootParent = new BSTNode(null);
@@ -444,8 +429,8 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
     }
 
     System.out.println(
-            "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
+        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
     System.out.println(
-            "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
+        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
   }
 }

@@ -1,7 +1,4 @@
-package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
-
-import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.BinaryTree;
-import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.Node;
+package com.nishant.algorithms.datastructures.trees.BinarySearchTrees;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,7 +11,7 @@ public class Utility {
    * Prints a tree in preorder traversal.
    *
    * @param tree The tree to traverse.
-   * @param <E>  The type parameter of the tree.
+   * @param <E> The type parameter of the tree.
    */
   public static <E extends Comparable<E>> void printInPreorder(BinaryTree<E> tree) {
     printInPreorder(tree.getRoot());
@@ -25,7 +22,7 @@ public class Utility {
    * Prints a tree in inorder traversal.
    *
    * @param tree The tree to traverse.
-   * @param <E>  The type parameter of the tree.
+   * @param <E> The type parameter of the tree.
    */
   public static <E extends Comparable<E>> void printInInorder(BinaryTree<E> tree) {
     printInInorder(tree.getRoot());
@@ -36,7 +33,7 @@ public class Utility {
    * Prints a tree in post order traversal.
    *
    * @param tree The tree to traverse.
-   * @param <E>  The type parameter of the tree.
+   * @param <E> The type parameter of the tree.
    */
   public static <E extends Comparable<E>> void printInPostOrder(BinaryTree<E> tree) {
     printInPostOrder(tree.getRoot());
@@ -47,7 +44,7 @@ public class Utility {
    * Helper method to print in preorder traversal.
    *
    * @param root The root node of the tree.
-   * @param <E>  The type parameter of the tree.
+   * @param <E> The type parameter of the tree.
    */
   private static <E extends Comparable<E>> void printInPreorder(Node<E> root) {
     if (root == null || root.isNull()) {
@@ -63,7 +60,7 @@ public class Utility {
    * Helper method to print in inorder traversal.
    *
    * @param root The root node of the tree.
-   * @param <E>  The type parameter of the tree.
+   * @param <E> The type parameter of the tree.
    */
   private static <E extends Comparable<E>> void printInInorder(Node<E> root) {
     if (root == null || root.isNull()) {
@@ -79,7 +76,7 @@ public class Utility {
    * Helper method to print in post order traversal.
    *
    * @param root The root node of the tree.
-   * @param <E>  The type parameter of the tree.
+   * @param <E> The type parameter of the tree.
    */
   private static <E extends Comparable<E>> void printInPostOrder(Node<E> root) {
     if (root == null || root.isNull()) {
@@ -96,7 +93,7 @@ public class Utility {
    *
    * @param tree The tree who's values you are filling.
    * @param size The size of the tree.
-   * @param max  The maximum of every node in the new tree, negative and positive.
+   * @param max The maximum of every node in the new tree, negative and positive.
    */
   public static void createTree(BinaryTree<Integer> tree, int size, int max) {
     for (int i = 0; i < size; i++) {
@@ -143,7 +140,7 @@ public class Utility {
   }
 
   private static <E extends Comparable<E>> void printNodeInternal(
-          List<Node<E>> nodes, int level, int maxLevel) {
+      List<Node<E>> nodes, int level, int maxLevel) {
     if (nodes.isEmpty() || isAllElementsNull(nodes)) return;
 
     int floor = maxLevel - level;
