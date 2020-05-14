@@ -4,9 +4,7 @@ import java.util.Objects;
 
 public class Vertex<E> {
 
-  /**
-   * The value of this vertex.
-   */
+  /** The value of this vertex. */
   public E val;
 
   /**
