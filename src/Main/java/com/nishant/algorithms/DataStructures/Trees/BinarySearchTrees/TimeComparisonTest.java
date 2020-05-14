@@ -1,8 +1,8 @@
-package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
+package com.nishant.algorithms.datastructures.trees.BinarySearchTrees;
 
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.AVLTree.AVLTree;
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.BinarySearchTree.BinarySearchTree;
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.RedBlackTree.RedBlackTree;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.AVLTree.AVLTree;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.BinarySearchTree.BinarySearchTree;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.RedBlackTree.RedBlackTree;
 
 import java.util.ArrayList;
 import java.util.List;
