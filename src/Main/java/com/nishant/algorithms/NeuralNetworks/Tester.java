@@ -6,8 +6,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Tester extends JPanel {
-    private Perceptron perceptron;
+    private com.nishant.algorithms.neuralnetworks.Perceptron perceptron;
     private Map<Point, Integer> points = new HashMap<>();
     private int trainingSize;
     private static final int WIDTH = 900, HEIGHT = 900;

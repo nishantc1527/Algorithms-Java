@@ -36,6 +36,7 @@ public class Matrix {
         this (copy.matrix);
         rows = copy.rows;
         cols = copy.cols;
+
     }
 
     /**

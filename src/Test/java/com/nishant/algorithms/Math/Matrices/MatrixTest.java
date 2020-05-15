@@ -22,7 +22,7 @@ public class MatrixTest {
                         {0, 1, 1},
                         {-1, -1, 1}
                 },
-                mat1.matrix);
+                mat1.getData());
     }
 
     @Test

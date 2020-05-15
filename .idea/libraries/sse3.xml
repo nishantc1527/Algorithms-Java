@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="sse3">
+    <CLASSES />
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/src/Main/java/java/org/JBLAS/jblas-project-jblas-2818f23/src/main/resources/lib/static/Windows/x86/sse3" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>

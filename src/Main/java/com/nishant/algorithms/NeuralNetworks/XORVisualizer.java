@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class XORVisualizer extends JPanel {
 
-    private MultilayeredNeuralNetwork nn;
+    private EfficientNeuralNetwork nn;
     private static final int WIDTH = 900, HEIGHT = 900;
 
     public XORVisualizer() {
@@ -32,12 +32,12 @@ public class XORVisualizer extends JPanel {
         Color color;
         for (int i = 0; i < img.getWidth(); i++) {
             for (int j = 0; j < img.getHeight(); j++) {
-                guess = nn.predict(new double[]{((double) i) / WIDTH, ((double) j) / HEIGHT,
-                                (((double) i) / WIDTH + ((double) j) / HEIGHT) / 2})[0];
+                guess = nn.predict(new double[]{((double) i) / WIDTH, ((double) j) / HEIGHT})[0];
+                System.out.println(guess);
 //                color = new Color(((int) (guess * (Math.pow(2, 24) - 1))));
-//                color = new Color(((int) (guess * 256)), ((int) (guess * 256)), ((int) (guess * 256)));
-                color = new Color(((int) (guess * 256)), ((int) (1 / (1 + Math.exp(-guess)) * 256)),
-                        ((int) ((guess + 1) / 2 * 256)));
+                color = new Color(((int) (guess * 256)), ((int) (guess * 256)), ((int) (guess * 256)));
+//                color = new Color(((int) (guess)) * 256, ((int) (1 / (1 + Math.exp(-guess)) * 256)),
+//                        ((int) ((guess + 1) / 2)) * 256);
                 img.setRGB(i, j, color.getRGB());
 //                img.setRGB(i, j, ((int) ((double) i * j / WIDTH / HEIGHT)));
             }
@@ -48,27 +48,25 @@ public class XORVisualizer extends JPanel {
 
     private void train() {
         double input1, input2;
-        double[] input = new double[3], output = new double[1];
+        double[] input = new double[2], output = new double[1];
         for (int i = 0; i < 200; i++) {
-//            input1 = Math.random() < 0.5 ? 0 : 1;
-//            input2 = Math.random() < 0.5 ? 0 : 1;
+            input1 = Math.random() < 0.5 ? 0 : 1;
+            input2 = Math.random() < 0.5 ? 0 : 1;
 //            input1 = ((int) (Math.random() * 5)) / 5.0;
 //            input2 = ((int) (Math.random() * 5)) / 5.0;
-            input1 = Math.random();
-            input2 = Math.random();
+//            input1 = Math.random();
+//            input2 = Math.random();
 
             input[0] = input1;
             input[1] = input2;
-            input[2] = Math.random();
 
 //            output[0] = input1 + input2;
-//            output[0] = Math.abs(input1 - input2);
+            output[0] = Math.abs(input1 - input2);
 //            output[0] = ((int) input1) ^ ((int) input2);
 //            output[0] = Math.abs(input1 - 0.5) > Math.abs(input2 - 0.5) ? 1 : 0;
 //            output[0] = input1 == input2 && input2 == 1 ? 1 : 0;
 //            output[0] = input1 * input2;
 //            output[0] = input1;
-            output[0] = (input1 + input2 + input[2]) / 3;
 
             nn.train(input, output);
         }
@@ -79,7 +77,13 @@ public class XORVisualizer extends JPanel {
 
         int[] hiddens = new int[2];
         Arrays.fill(hiddens, 10);
-        v.nn = new MultilayeredNeuralNetwork(3, 1, 0.1, hiddens);
+        v.nn = new EfficientNeuralNetwork(2, 1, 0.1, hiddens);
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         new Thread(() -> {
             while (true) v.train();

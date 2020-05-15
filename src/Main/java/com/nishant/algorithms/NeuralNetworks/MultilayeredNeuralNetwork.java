@@ -83,5 +83,9 @@ public class MultilayeredNeuralNetwork {
         return new Matrix[]{weightsDeltas, gradient};
     }
 
+    public Matrix[] getWeights() {
+        return weights;
+    }
+
 
 }
