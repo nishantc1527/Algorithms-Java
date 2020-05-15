@@ -13,6 +13,6 @@ public class SingleNumber {
   }
 
   public static void main(String[] args) {
-    System.out.println(SingleNumber.singleNumber(new int[]{1, 2, 2, 1, 5}));
+    System.out.println(SingleNumber.singleNumber(new int[] {1, 2, 2, 1, 5}));
   }
 }

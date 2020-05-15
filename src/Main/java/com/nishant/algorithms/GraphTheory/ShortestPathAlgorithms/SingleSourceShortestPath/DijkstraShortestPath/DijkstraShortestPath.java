@@ -59,17 +59,17 @@ public class DijkstraShortestPath {
     graph.connect('e', 'd', 4);
 
     System.out.println(
-            "a -> b: 6\n"
-                    + "a -> e: 1\n"
-                    + "e -> b: 1\n"
-                    + "b -> c: 7\n"
-                    + "d -> c: 2\n"
-                    + "e -> d: 4\n"
-                    + "\n"
-                    + "a -> b ↘\n"
-                    + "↓ ↗     c\n"
-                    + "e -> d ↗"
-                    + "\n\n\n");
+        "a -> b: 6\n"
+            + "a -> e: 1\n"
+            + "e -> b: 1\n"
+            + "b -> c: 7\n"
+            + "d -> c: 2\n"
+            + "e -> d: 4\n"
+            + "\n"
+            + "a -> b ↘\n"
+            + "↓ ↗     c\n"
+            + "e -> d ↗"
+            + "\n\n\n");
     DijkstraShortestPath.shortestPath(graph, 'a');
 
     for (Vertex<Character> vertex : graph.vertices.values()) {
@@ -82,7 +82,7 @@ public class DijkstraShortestPath {
       }
 
       System.out.println(
-              'a' + " -> " + temp + ": " + sb.append('a').reverse() + ", weight: " + temp.dist);
+          'a' + " -> " + temp + ": " + sb.append('a').reverse() + ", weight: " + temp.dist);
     }
   }
 }

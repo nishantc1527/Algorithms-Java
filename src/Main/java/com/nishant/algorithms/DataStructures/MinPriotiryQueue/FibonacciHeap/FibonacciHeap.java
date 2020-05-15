@@ -76,11 +76,11 @@ public class FibonacciHeap {
       if (o == null || getClass() != o.getClass()) return false;
       Node node = (Node) o;
       return val == node.val
-              && degree == node.degree
-              && mark == node.mark
-              && Objects.equals(left, node.left)
-              && Objects.equals(right, node.right)
-              && Objects.equals(child, node.child);
+          && degree == node.degree
+          && mark == node.mark
+          && Objects.equals(left, node.left)
+          && Objects.equals(right, node.right)
+          && Objects.equals(child, node.child);
     }
 
     @Override

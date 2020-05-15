@@ -1,8 +1,8 @@
-package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.RedBlackTree;
+package com.nishant.algorithms.datastructures.trees.BinarySearchTrees.RedBlackTree;
 
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.BinaryTree;
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.Color;
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.Node;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.BinaryTree;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.Color;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.Node;
 
 import java.util.*;
 
@@ -237,8 +237,8 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
       if (current == NIL) continue;
       if (current.color == Color.RED) {
         if (current.parent.color == Color.RED
-                || current.getLeft().color == Color.RED
-                || current.getRight().color == Color.RED) {
+            || current.getLeft().color == Color.RED
+            || current.getRight().color == Color.RED) {
           return false;
         }
       }
@@ -273,7 +273,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
       return 1;
     }
     return (root.color == Color.BLACK ? 1 : 0)
-            + Math.max(countBlacks(root.getLeft()), countBlacks(root.getRight()));
+        + Math.max(countBlacks(root.getLeft()), countBlacks(root.getRight()));
   }
 
   public Iterator<Node<E>> iterator() {
@@ -426,8 +426,8 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     }
 
     System.out.println(
-            "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
+        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
     System.out.println(
-            "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
+        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
   }
 }

@@ -5,7 +5,7 @@ public class BasicFunctions {
   /**
    * Gets the bit of an integer at a certain index
    *
-   * @param num   The number holding the bits
+   * @param num The number holding the bits
    * @param index The index of the bit you want (0-indexed).
    * @return True if the bit is 1, false if bit is 0.
    */
@@ -16,7 +16,7 @@ public class BasicFunctions {
   /**
    * Sets the bit at specific index to 1.
    *
-   * @param num   The number whose bit you want to set.
+   * @param num The number whose bit you want to set.
    * @param index The index where you want to set it (0-indexed).
    * @return The resulting number after setting the bit.
    */
@@ -27,7 +27,7 @@ public class BasicFunctions {
   /**
    * Resets the bit at an index to 0.
    *
-   * @param num   The number whose bit you want cleared.
+   * @param num The number whose bit you want cleared.
    * @param index The index of the bit you want cleared.
    * @return The new number after clearing the bit.
    */
