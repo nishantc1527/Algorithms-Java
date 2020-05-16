@@ -1,3 +1,5 @@
+[![Run on Repl.it](https://repl.it/badge/github/nishantc1527/Algorithms)](https://repl.it/github/nishantc1527/Algorithms)
+
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src)
 
 Algorithms are a way to solve problems. Not only that, it wants to solve problem fast. That's why there's tons and tons of theory on this stuff.
