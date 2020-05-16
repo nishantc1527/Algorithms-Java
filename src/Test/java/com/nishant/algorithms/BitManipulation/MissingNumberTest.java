@@ -4,7 +4,7 @@ import com.nishant.algorithms.bitmanipulation.missingnumber.MissingNumber;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class MissingNumberTest {
 
@@ -12,7 +12,7 @@ public class MissingNumberTest {
 
   @Before
   public void setup() {
-    arr = new int[]{0, 5, 2, 3, 4};
+    arr = new int[] {0, 5, 2, 3, 4};
   }
 
   @Test

@@ -10,25 +10,18 @@ public interface Node<E extends Comparable<E>> {
   E getVal();
 
   /**
+   * Sets the value of this node.
+   *
+   * @param newVal This node's new value.
+   */
+  void setVal(E newVal);
+
+  /**
    * Gets the left child of this node.
    *
    * @return The left child of this node.
    */
   Node<E> getLeft();
-
-  /**
-   * Gets the right child of this node.
-   *
-   * @return The right child of this node.
-   */
-  Node<E> getRight();
-
-  /**
-   * Gets the parent of this node.
-   *
-   * @return The parent of this node.
-   */
-  Node<E> getParent();
 
   /**
    * Sets the left child of this node.
@@ -38,6 +31,13 @@ public interface Node<E extends Comparable<E>> {
   void setLeft(Node<E> newNode);
 
   /**
+   * Gets the right child of this node.
+   *
+   * @return The right child of this node.
+   */
+  Node<E> getRight();
+
+  /**
    * Sets the right child of this node.
    *
    * @param newNode The node's new right child.
@@ -45,18 +45,18 @@ public interface Node<E extends Comparable<E>> {
   void setRight(Node<E> newNode);
 
   /**
+   * Gets the parent of this node.
+   *
+   * @return The parent of this node.
+   */
+  Node<E> getParent();
+
+  /**
    * Sets the parent of this node.
    *
    * @param newNode The node's new parent.
    */
   void setParent(Node<E> newNode);
-
-  /**
-   * Sets the value of this node.
-   *
-   * @param newVal This node's new value.
-   */
-  void setVal(E newVal);
 
   /**
    * Checks if this node is null.

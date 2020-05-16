@@ -6,99 +6,26 @@ import java.util.Objects;
 
 public class FibonacciHeap {
 
-  private static class Node {
-
-    public int val;
-    public Node left, right, child;
-    public int degree;
-    public boolean mark;
-
-    public Node(int _val) {
-      val = _val;
-    }
-
-    public void insert(Node other) {
-      if (left == this) {
-        left = other;
-        right = other;
-        left.right = this;
-        left.left = this;
-      } else {
-        Node temp = left;
-        left = other;
-        left.right = this;
-        left.left = temp;
-        temp.right = left;
-      }
-    }
-
-    public void unlink() {
-      left.right = right;
-      right.left = left;
-    }
-
-    public void safeUnlink() {
-      saveChildren();
-      unlink();
-    }
-
-    public void link(Node other) {
-      other.unlink();
-      if (child == null) {
-        child = new Node(other.val);
-        child.left = child;
-        child.right = child;
-      } else {
-        child.insert(other);
-      }
-
-      other.mark = false;
-      degree++;
-    }
-
-    public void saveChildren() {
-      if (child != null) {
-        Node dummy = child;
-
-        do {
-          Node tempNext = dummy.right;
-          insert(dummy);
-          dummy = tempNext;
-        } while (dummy != child);
-
-        child = null;
-      }
-    }
-
-    @Override
-    public boolean equals(Object o) {
-      if (this == o) return true;
-      if (o == null || getClass() != o.getClass()) return false;
-      Node node = (Node) o;
-      return val == node.val
-          && degree == node.degree
-          && mark == node.mark
-          && Objects.equals(left, node.left)
-          && Objects.equals(right, node.right)
-          && Objects.equals(child, node.child);
-    }
-
-    @Override
-    public int hashCode() {
-      return Objects.hash(val);
-    }
-
-    @Override
-    public String toString() {
-      return val + "";
-    }
-  }
-
-  private Node min;
   private final HashMap<Integer, Node> references;
-
+  private Node min;
   public FibonacciHeap() {
     references = new HashMap<>();
+  }
+
+  public static void main(String[] args) {
+    FibonacciHeap h = new FibonacciHeap();
+
+    for (int i = 0; i < 10; i++) {
+      h.insert(i);
+    }
+
+    h.delete(5);
+
+    while (!h.isEmpty()) {
+      System.out.println(h.extractMin());
+    }
+
+    System.out.println(h);
   }
 
   public void insert(int val) {
@@ -192,19 +119,91 @@ public class FibonacciHeap {
     return sb.toString();
   }
 
-  public static void main(String[] args) {
-    FibonacciHeap h = new FibonacciHeap();
+  private static class Node {
 
-    for (int i = 0; i < 10; i++) {
-      h.insert(i);
+    public int val;
+    public Node left, right, child;
+    public int degree;
+    public boolean mark;
+
+    public Node(int _val) {
+      val = _val;
     }
 
-    h.delete(5);
-
-    while (!h.isEmpty()) {
-      System.out.println(h.extractMin());
+    public void insert(Node other) {
+      if (left == this) {
+        left = other;
+        right = other;
+        left.right = this;
+        left.left = this;
+      } else {
+        Node temp = left;
+        left = other;
+        left.right = this;
+        left.left = temp;
+        temp.right = left;
+      }
     }
 
-    System.out.println(h);
+    public void unlink() {
+      left.right = right;
+      right.left = left;
+    }
+
+    public void safeUnlink() {
+      saveChildren();
+      unlink();
+    }
+
+    public void link(Node other) {
+      other.unlink();
+      if (child == null) {
+        child = new Node(other.val);
+        child.left = child;
+        child.right = child;
+      } else {
+        child.insert(other);
+      }
+
+      other.mark = false;
+      degree++;
+    }
+
+    public void saveChildren() {
+      if (child != null) {
+        Node dummy = child;
+
+        do {
+          Node tempNext = dummy.right;
+          insert(dummy);
+          dummy = tempNext;
+        } while (dummy != child);
+
+        child = null;
+      }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      Node node = (Node) o;
+      return val == node.val
+          && degree == node.degree
+          && mark == node.mark
+          && Objects.equals(left, node.left)
+          && Objects.equals(right, node.right)
+          && Objects.equals(child, node.child);
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(val);
+    }
+
+    @Override
+    public String toString() {
+      return val + "";
+    }
   }
 }

@@ -11,6 +11,33 @@ public class MinHeap {
     heap = new ArrayList<>();
   }
 
+  private static int getLeft(int i) {
+    return (i << 1) + 1;
+  }
+
+  private static int getRight(int i) {
+    return (i << 1) + 2;
+  }
+
+  private static int getParent(int i) {
+    return i % 2 == 0 ? (i >> 1) - 1 : (i >> 1);
+  }
+
+  public static void main(String[] args) {
+    MinHeap heap = new MinHeap();
+    heap.add(7);
+    heap.add(4);
+    heap.add(3);
+    heap.add(2);
+    heap.add(1);
+
+    heap.decreaseValue(7, 1);
+
+    while (!heap.isEmpty()) {
+      System.out.println(heap.extractMin());
+    }
+  }
+
   public void add(int val) {
     heap.add(val);
     bubbleUp(heap.size() - 1);
@@ -77,32 +104,5 @@ public class MinHeap {
     int temp = heap.get(i);
     heap.set(i, heap.get(j));
     heap.set(j, temp);
-  }
-
-  private static int getLeft(int i) {
-    return (i << 1) + 1;
-  }
-
-  private static int getRight(int i) {
-    return (i << 1) + 2;
-  }
-
-  private static int getParent(int i) {
-    return i % 2 == 0 ? (i >> 1) - 1 : (i >> 1);
-  }
-
-  public static void main(String[] args) {
-    MinHeap heap = new MinHeap();
-    heap.add(7);
-    heap.add(4);
-    heap.add(3);
-    heap.add(2);
-    heap.add(1);
-
-    heap.decreaseValue(7, 1);
-
-    while (!heap.isEmpty()) {
-      System.out.println(heap.extractMin());
-    }
   }
 }

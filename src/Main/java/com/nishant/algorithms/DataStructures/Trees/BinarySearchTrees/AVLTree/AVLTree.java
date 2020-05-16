@@ -27,6 +27,39 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     rootParent.left = root;
   }
 
+  public static void main(String[] args) {
+    AVLTree<Integer> myTree;
+    List<Integer> treeVals;
+    int insertCorrect = 0, deleteCorrect = 0, trials = 10000;
+
+    for (int i = 0; i < trials; i++) {
+      myTree = new AVLTree<>();
+      treeVals = new LinkedList<>();
+
+      for (int j = 0; j < 31; j++) {
+        int a = (int) (Math.random() * 100);
+        treeVals.add(a);
+        myTree.insert(a);
+      }
+
+      boolean correct1 = myTree.isValid();
+      if (correct1) insertCorrect++;
+
+      for (int j = 0; j < 10; j++) {
+        int a = (int) (Math.random() * treeVals.size());
+        myTree.delete(treeVals.remove(a));
+      }
+
+      boolean correct2 = myTree.isValid();
+      if (correct2) deleteCorrect++;
+    }
+
+    System.out.println(
+        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
+    System.out.println(
+        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
+  }
+
   /**
    * Finds and returns the root node of the tree
    *
@@ -442,19 +475,12 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
    * inserted or deleted from the tree
    */
   private class AVLTreeNode implements Node<E> {
-    public String toString() {
-      return "{" + "val=" + val + '}';
-    }
-
     /** The value of this binary search tree node. */
     private E val;
-
     /** The height of this tree node */
     private int height;
-
     /** The balance factor of this tree node, used in balancing the tree */
     private int balanceFactor;
-
     /** The left, right, and parent of this node, respectively. */
     private AVLTreeNode left, right, parent;
 
@@ -485,6 +511,10 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
       }
     }
 
+    public String toString() {
+      return "{" + "val=" + val + '}';
+    }
+
     /**
      * Gets the value of this node.
      *
@@ -493,6 +523,16 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     @Override
     public E getVal() {
       return val;
+    }
+
+    /**
+     * Sets the value of this node.
+     *
+     * @param newVal This node's new value.
+     */
+    @Override
+    public void setVal(E newVal) {
+      val = newVal;
     }
 
     /**
@@ -506,26 +546,6 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     }
 
     /**
-     * Gets the right child of this node.
-     *
-     * @return The right child of this node.
-     */
-    @Override
-    public Node<E> getRight() {
-      return right;
-    }
-
-    /**
-     * Gets the parent of this node.
-     *
-     * @return The parent of this node.
-     */
-    @Override
-    public Node<E> getParent() {
-      return parent;
-    }
-
-    /**
      * Sets the left child of this node.
      *
      * @param newNode This node's new left child.
@@ -533,6 +553,16 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     @Override
     public void setLeft(Node<E> newNode) {
       left = (AVLTreeNode) newNode;
+    }
+
+    /**
+     * Gets the right child of this node.
+     *
+     * @return The right child of this node.
+     */
+    @Override
+    public Node<E> getRight() {
+      return right;
     }
 
     /**
@@ -546,6 +576,16 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     }
 
     /**
+     * Gets the parent of this node.
+     *
+     * @return The parent of this node.
+     */
+    @Override
+    public Node<E> getParent() {
+      return parent;
+    }
+
+    /**
      * Sets the parent of this node.
      *
      * @param newNode The node's new parent.
@@ -553,16 +593,6 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     @Override
     public void setParent(Node<E> newNode) {
       parent = (AVLTreeNode) newNode;
-    }
-
-    /**
-     * Sets the value of this node.
-     *
-     * @param newVal This node's new value.
-     */
-    @Override
-    public void setVal(E newVal) {
-      val = newVal;
     }
 
     /**
@@ -597,38 +627,5 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     public int hashCode() {
       return Objects.hash(val, left, right);
     }
-  }
-
-  public static void main(String[] args) {
-    AVLTree<Integer> myTree;
-    List<Integer> treeVals;
-    int insertCorrect = 0, deleteCorrect = 0, trials = 10000;
-
-    for (int i = 0; i < trials; i++) {
-      myTree = new AVLTree<>();
-      treeVals = new LinkedList<>();
-
-      for (int j = 0; j < 31; j++) {
-        int a = (int) (Math.random() * 100);
-        treeVals.add(a);
-        myTree.insert(a);
-      }
-
-      boolean correct1 = myTree.isValid();
-      if (correct1) insertCorrect++;
-
-      for (int j = 0; j < 10; j++) {
-        int a = (int) (Math.random() * treeVals.size());
-        myTree.delete(treeVals.remove(a));
-      }
-
-      boolean correct2 = myTree.isValid();
-      if (correct2) deleteCorrect++;
-    }
-
-    System.out.println(
-        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
-    System.out.println(
-        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
   }
 }

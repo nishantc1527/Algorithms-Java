@@ -7,11 +7,44 @@ import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.Node;
 import java.util.*;
 
 public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
-  private RBTreeNode root;
   public final RBTreeNode NIL = new RBTreeNode(null, Color.BLACK, null, null, null);
+  private RBTreeNode root;
 
   public RedBlackTree() {
     root = NIL;
+  }
+
+  public static void main(String[] args) {
+    RedBlackTree<Integer> myTree;
+    List<Integer> treeVals;
+    int insertCorrect = 0, deleteCorrect = 0, trials = 10000;
+
+    for (int i = 0; i < trials; i++) {
+      myTree = new RedBlackTree<>();
+      treeVals = new LinkedList<>();
+
+      for (int j = 0; j < 31; j++) {
+        int a = (int) (Math.random() * 100);
+        treeVals.add(a);
+        myTree.insert(a);
+      }
+
+      boolean correct1 = myTree.isValid() && myTree.NIL.getParent() == null;
+      if (correct1) insertCorrect++;
+
+      for (int j = 0; j < 10; j++) {
+        int a = (int) (Math.random() * treeVals.size());
+        myTree.delete(treeVals.remove(a));
+      }
+
+      boolean correct2 = myTree.isValid();
+      if (correct2) deleteCorrect++;
+    }
+
+    System.out.println(
+        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
+    System.out.println(
+        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
   }
 
   public Node<E> getRoot() {
@@ -294,6 +327,33 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     return res.iterator();
   }
 
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    int length = 0;
+    sb.append("[");
+    for (Node<E> node : this) {
+      sb.append(node).append(", ");
+      length += node.toString().length();
+      if (length >= 40) {
+        sb.append("\n");
+        length = 0;
+      }
+    }
+    sb.deleteCharAt(sb.length() - 1);
+    sb.append("]");
+    return sb.toString();
+  }
+
+  @Override
+  public int numNodes() {
+    return numNodes(root);
+  }
+
+  private int numNodes(RBTreeNode root) {
+    if (root == null) return 0;
+    else return numNodes(root.left) + numNodes(root.right) + 1;
+  }
+
   private class RBTreeNode implements Node<E> {
     public E val;
     public RBTreeNode left, right, parent;
@@ -369,65 +429,5 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
       if (this == NIL) return 0;
       return Objects.hash(val, left, right, color);
     }
-  }
-
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    int length = 0;
-    sb.append("[");
-    for (Node<E> node : this) {
-      sb.append(node).append(", ");
-      length += node.toString().length();
-      if (length >= 40) {
-        sb.append("\n");
-        length = 0;
-      }
-    }
-    sb.deleteCharAt(sb.length() - 1);
-    sb.append("]");
-    return sb.toString();
-  }
-
-  @Override
-  public int numNodes() {
-    return numNodes(root);
-  }
-
-  private int numNodes(RBTreeNode root) {
-    if (root == null) return 0;
-    else return numNodes(root.left) + numNodes(root.right) + 1;
-  }
-
-  public static void main(String[] args) {
-    RedBlackTree<Integer> myTree;
-    List<Integer> treeVals;
-    int insertCorrect = 0, deleteCorrect = 0, trials = 10000;
-
-    for (int i = 0; i < trials; i++) {
-      myTree = new RedBlackTree<>();
-      treeVals = new LinkedList<>();
-
-      for (int j = 0; j < 31; j++) {
-        int a = (int) (Math.random() * 100);
-        treeVals.add(a);
-        myTree.insert(a);
-      }
-
-      boolean correct1 = myTree.isValid() && myTree.NIL.getParent() == null;
-      if (correct1) insertCorrect++;
-
-      for (int j = 0; j < 10; j++) {
-        int a = (int) (Math.random() * treeVals.size());
-        myTree.delete(treeVals.remove(a));
-      }
-
-      boolean correct2 = myTree.isValid();
-      if (correct2) deleteCorrect++;
-    }
-
-    System.out.println(
-        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
-    System.out.println(
-        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
   }
 }

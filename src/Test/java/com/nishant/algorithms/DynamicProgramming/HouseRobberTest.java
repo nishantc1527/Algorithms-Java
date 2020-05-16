@@ -4,7 +4,7 @@ import com.nishant.algorithms.dynmanicprogramming.houserobber.HouseRobber;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class HouseRobberTest {
 
@@ -12,7 +12,7 @@ public class HouseRobberTest {
 
   @Before
   public void setup() {
-    arr = new int[]{1, 2, 3, 1, 4, 1, 3, 4, 3, 2, 1, 3, 4, 3, 2, 1};
+    arr = new int[] {1, 2, 3, 1, 4, 1, 3, 4, 3, 2, 1, 3, 4, 3, 2, 1};
   }
 
   @Test

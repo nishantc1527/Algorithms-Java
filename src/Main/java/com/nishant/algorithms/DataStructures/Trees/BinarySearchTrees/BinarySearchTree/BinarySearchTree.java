@@ -4,135 +4,15 @@ import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.BinaryTree;
 import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.Color;
 import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.Node;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> {
 
-  /**
-   * A standard binary search tree node. It has the basic necessities like val, left, right, and
-   * parent.
-   */
-  protected class BSTNode implements Node<E> {
-
-    /** The value of this binary search tree node. */
-    private E val;
-
-    /** The left, right, and parent of this node, respectively. */
-    private BSTNode left, right, parent;
-
-    /**
-     * Creates a new node with a certain value.
-     *
-     * @param val The value of this node.
-     */
-    public BSTNode(E val) {
-      this.val = val;
-    }
-
-    /**
-     * Gets the value of this node.
-     *
-     * @return The value of this node.
-     */
-    @Override
-    public E getVal() {
-      return val;
-    }
-
-    /**
-     * Gets the left child of this node.
-     *
-     * @return The left child of this node.
-     */
-    @Override
-    public Node<E> getLeft() {
-      return left;
-    }
-
-    /**
-     * Gets the right child of this node.
-     *
-     * @return The right child of this node.
-     */
-    @Override
-    public Node<E> getRight() {
-      return right;
-    }
-
-    /**
-     * Gets the parent of this node.
-     *
-     * @return The parent of this node.
-     */
-    @Override
-    public Node<E> getParent() {
-      return parent;
-    }
-
-    /**
-     * Sets the left child of this node.
-     *
-     * @param newNode This node's new left child.
-     */
-    @Override
-    public void setLeft(Node<E> newNode) {
-      left = (BSTNode) newNode;
-    }
-
-    /**
-     * Sets the right child of this node.
-     *
-     * @param newNode The node's new right child.
-     */
-    @Override
-    public void setRight(Node<E> newNode) {
-      right = (BSTNode) newNode;
-    }
-
-    /**
-     * Sets the parent of this node.
-     *
-     * @param newNode The node's new parent.
-     */
-    @Override
-    public void setParent(Node<E> newNode) {
-      parent = (BSTNode) newNode;
-    }
-
-    /**
-     * Sets the value of this node.
-     *
-     * @param newVal This node's new value.
-     */
-    @Override
-    public void setVal(E newVal) {
-      val = newVal;
-    }
-
-    /**
-     * Checks if this node is null.
-     *
-     * @return If this node is null.
-     */
-    @Override
-    public boolean isNull() {
-      return false;
-    }
-
-    /** Binary search trees don't have colored nodes. */
-    @Override
-    public Color getColor() {
-      return null;
-    }
-
-    /** Binary search trees don't have colored nodes. */
-    @Override
-    public void setColor(Color newColor) {}
-  }
-
   /** The root of the binary search tree. */
   private BSTNode root;
-
   /** Parent of the root, just used to simplify insertion and deletion algorithms */
   private BSTNode rootParent;
 
@@ -140,6 +20,39 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
   public BinarySearchTree() {
     root = null;
     rootParent = new BSTNode(null);
+  }
+
+  public static void main(String[] args) {
+    BinarySearchTree<Integer> myTree;
+    List<Integer> treeVals;
+    int insertCorrect = 0, deleteCorrect = 0, trials = 10000;
+
+    for (int i = 0; i < trials; i++) {
+      myTree = new BinarySearchTree<>();
+      treeVals = new LinkedList<>();
+
+      for (int j = 0; j < 31; j++) {
+        int a = (int) (Math.random() * 100);
+        treeVals.add(a);
+        myTree.insert(a);
+      }
+
+      boolean correct1 = myTree.isValid();
+      if (correct1) insertCorrect++;
+
+      for (int j = 0; j < 10; j++) {
+        int a = (int) (Math.random() * treeVals.size());
+        myTree.delete(treeVals.remove(a));
+      }
+
+      boolean correct2 = myTree.isValid();
+      if (correct2) deleteCorrect++;
+    }
+
+    System.out.println(
+        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
+    System.out.println(
+        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
   }
 
   /**
@@ -401,36 +314,125 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
     return res.iterator();
   }
 
-  public static void main(String[] args) {
-    BinarySearchTree<Integer> myTree;
-    List<Integer> treeVals;
-    int insertCorrect = 0, deleteCorrect = 0, trials = 10000;
+  /**
+   * A standard binary search tree node. It has the basic necessities like val, left, right, and
+   * parent.
+   */
+  protected class BSTNode implements Node<E> {
 
-    for (int i = 0; i < trials; i++) {
-      myTree = new BinarySearchTree<>();
-      treeVals = new LinkedList<>();
+    /** The value of this binary search tree node. */
+    private E val;
 
-      for (int j = 0; j < 31; j++) {
-        int a = (int) (Math.random() * 100);
-        treeVals.add(a);
-        myTree.insert(a);
-      }
+    /** The left, right, and parent of this node, respectively. */
+    private BSTNode left, right, parent;
 
-      boolean correct1 = myTree.isValid();
-      if (correct1) insertCorrect++;
-
-      for (int j = 0; j < 10; j++) {
-        int a = (int) (Math.random() * treeVals.size());
-        myTree.delete(treeVals.remove(a));
-      }
-
-      boolean correct2 = myTree.isValid();
-      if (correct2) deleteCorrect++;
+    /**
+     * Creates a new node with a certain value.
+     *
+     * @param val The value of this node.
+     */
+    public BSTNode(E val) {
+      this.val = val;
     }
 
-    System.out.println(
-        "Insertion correct percentage: " + (((double) insertCorrect) / trials * 100) + "%");
-    System.out.println(
-        "Deletion correct percentage: " + (((double) deleteCorrect) / trials * 100) + "%");
+    /**
+     * Gets the value of this node.
+     *
+     * @return The value of this node.
+     */
+    @Override
+    public E getVal() {
+      return val;
+    }
+
+    /**
+     * Sets the value of this node.
+     *
+     * @param newVal This node's new value.
+     */
+    @Override
+    public void setVal(E newVal) {
+      val = newVal;
+    }
+
+    /**
+     * Gets the left child of this node.
+     *
+     * @return The left child of this node.
+     */
+    @Override
+    public Node<E> getLeft() {
+      return left;
+    }
+
+    /**
+     * Sets the left child of this node.
+     *
+     * @param newNode This node's new left child.
+     */
+    @Override
+    public void setLeft(Node<E> newNode) {
+      left = (BSTNode) newNode;
+    }
+
+    /**
+     * Gets the right child of this node.
+     *
+     * @return The right child of this node.
+     */
+    @Override
+    public Node<E> getRight() {
+      return right;
+    }
+
+    /**
+     * Sets the right child of this node.
+     *
+     * @param newNode The node's new right child.
+     */
+    @Override
+    public void setRight(Node<E> newNode) {
+      right = (BSTNode) newNode;
+    }
+
+    /**
+     * Gets the parent of this node.
+     *
+     * @return The parent of this node.
+     */
+    @Override
+    public Node<E> getParent() {
+      return parent;
+    }
+
+    /**
+     * Sets the parent of this node.
+     *
+     * @param newNode The node's new parent.
+     */
+    @Override
+    public void setParent(Node<E> newNode) {
+      parent = (BSTNode) newNode;
+    }
+
+    /**
+     * Checks if this node is null.
+     *
+     * @return If this node is null.
+     */
+    @Override
+    public boolean isNull() {
+      return false;
+    }
+
+    /** Binary search trees don't have colored nodes. */
+    @Override
+    public Color getColor() {
+      return null;
+    }
+
+    /** Binary search trees don't have colored nodes. */
+    @Override
+    public void setColor(Color newColor) {}
   }
 }

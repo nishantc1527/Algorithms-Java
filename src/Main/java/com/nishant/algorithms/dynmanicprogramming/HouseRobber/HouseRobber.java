@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class HouseRobber {
 
+  private static int[] memo;
+
   public static int bruteForce(int[] arr) {
     return bruteForce(arr, 0);
   }
@@ -15,8 +17,6 @@ public class HouseRobber {
 
     return Math.max(arr[i] + bruteForce(arr, i + 2), bruteForce(arr, i + 1));
   }
-
-  private static int[] memo;
 
   public static int memoized(int[] arr) {
     memo = new int[arr.length];

@@ -2,19 +2,20 @@ package com.nishant.algorithms.datastructures.trees.Trie;
 
 public class Trie {
 
-  private static class TrieNode {
-    public TrieNode[] children;
-    public int count;
-
-    public TrieNode() {
-      children = new TrieNode[26];
-    }
-  }
-
   private final TrieNode root;
 
   public Trie() {
     root = new TrieNode();
+  }
+
+  public static void main(String[] args) {
+    Trie trie = new Trie();
+    trie.insert("app");
+    trie.insert("apple");
+    trie.insert("ap");
+
+    System.out.println(trie.contains("app"));
+    System.out.println(trie.contains("appl"));
   }
 
   public void insert(String s) {
@@ -51,13 +52,12 @@ public class Trie {
     return curr.count > 0;
   }
 
-  public static void main(String[] args) {
-    Trie trie = new Trie();
-    trie.insert("app");
-    trie.insert("apple");
-    trie.insert("ap");
+  private static class TrieNode {
+    public TrieNode[] children;
+    public int count;
 
-    System.out.println(trie.contains("app"));
-    System.out.println(trie.contains("appl"));
+    public TrieNode() {
+      children = new TrieNode[26];
+    }
   }
 }
