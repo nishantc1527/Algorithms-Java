@@ -1,2 +1,0 @@
-language = "java10"
-run = "javac src/Main/java/com/nishant/algorithms/Sorting/HeapSort/HeapSort.java /"
