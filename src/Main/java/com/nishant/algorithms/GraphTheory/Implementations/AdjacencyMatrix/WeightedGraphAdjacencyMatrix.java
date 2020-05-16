@@ -1,7 +1,6 @@
-package com.nishant.algorithms.GraphTheory.Implementations.AdjacencyMatrix;
+package com.nishant.algorithms.graphtheory.implementations.adjacencymatrix;
 
-import com.nishant.algorithms.GraphTheory.Implementations.Pair;
-import com.nishant.algorithms.graphtheory.implementations.adjacencymatrix.GraphAdjacencyMatrix;
+import com.nishant.algorithms.graphtheory.implementations.Pair;
 
 public class WeightedGraphAdjacencyMatrix implements GraphAdjacencyMatrix {
 
