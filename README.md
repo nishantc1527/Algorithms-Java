@@ -1,4 +1,4 @@
-[![Run on Repl.it](https://repl.it/badge/github/nishantc1527/Algorithms)](https://repl.it/github/nishantc1527/Algorithms)
+[![Show On Repl.it](https://repl.it/badge/github/nishantc1527/Algorithms)](https://repl.it/github/nishantc1527/Algorithms)
 
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src)
 
