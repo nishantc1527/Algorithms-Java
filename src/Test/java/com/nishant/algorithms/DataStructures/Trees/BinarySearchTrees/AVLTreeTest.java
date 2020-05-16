@@ -1,6 +1,6 @@
-package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
+package com.nishant.algorithms.datastructures.trees.binarysearchtrees;
 
-import com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees.AVLTree.AVLTree;
+import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.AVLTree.AVLTree;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,7 +1,13 @@
-package com.nishant.algorithms.NeuralNetworks;
+package com.nishant.algorithms.neuralnetworks;
+
 import org.jblas.DoubleMatrix;
 
 import java.util.function.Function;
+
+/**
+ * You need jblas library installed to run this.
+ * @see <a href="http://jblas.org/">http://jblas.org/</a>
+ */
 
 public class EfficientNeuralNetwork {
     private org.jblas.DoubleMatrix[] weights;
