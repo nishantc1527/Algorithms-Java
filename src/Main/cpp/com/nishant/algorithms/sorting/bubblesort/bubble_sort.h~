@@ -1,0 +1,8 @@
+#pragma once
+
+class bubble_sort
+{
+public:
+  template <typename X>
+  static void BubbleSort(X* const items, int count);
+};
