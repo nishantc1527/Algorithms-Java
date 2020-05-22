@@ -13,6 +13,4 @@ void BubbleSort(T* items, int count)
       }
     }
   }
-
-  std::cout << "inside header" << std::endl;
 };
