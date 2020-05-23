@@ -1,24 +1,31 @@
 #include <iostream>
+#include <random>
+#include <ctime>
+#include <array>
 
-#include "bubblesort/bubble_sort.h"
+#include "bubble_sort.h"
+#include "selection_sort.h"
+#include "my_utils.h"
 
 int main()
 {
-  const int len = 5;
-  int arr[len] = {-1, 3, 2, 5, -3};
-  std::cout << "Unsorted Array: " << std::endl;
-  for (int i = 0; i < len; i++) {
-    std::cout << arr[i] << ' ';
-  }
-  std::cout << std::endl;
+  const int len = 100;
+  std::array<int, len> arr = my_utils::createRandArray<len>(1, 1000);
+  std::cout << "\n\nUnsorted Array: " << std::endl;
+  my_utils::printArr<int, len>(arr);
 
-  BubbleSort(arr, len);
+  selectionSort(arr);
   
   std::cout << "Sorted Array: " << std::endl;
-  for (int i = 0; i < len; i++) {
-    std::cout << arr[i] << ' ';
+  my_utils::printArr<int, len>(arr);
+
+  bool sorted = my_utils::isSorted<int, len>(arr);
+  if (!sorted) {
+    std::cout << "The array is not sorted!!\n\n" << std::endl;
   }
-  std::cout << std::endl;
+  else {
+    std::cout << "The array is sorted!!\n\n" << std::endl;
+  }
 
   return 0;
 }
