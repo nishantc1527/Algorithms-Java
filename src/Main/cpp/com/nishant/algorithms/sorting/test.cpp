@@ -14,6 +14,7 @@ int main()
   std::cout << "\n\nUnsorted Array: " << std::endl;
   my_utils::printArr<int, len>(arr);
 
+  // bubbleSort(arr);
   selectionSort(arr);
   
   std::cout << "Sorted Array: " << std::endl;
