@@ -3,8 +3,7 @@
 #include <ctime>
 #include <array>
 
-#include "bubble_sort.h"
-#include "selection_sort.h"
+#include "insertion_sort.h"
 #include "my_utils.h"
 
 int main()
@@ -14,9 +13,9 @@ int main()
   std::cout << "\n\nUnsorted Array: " << std::endl;
   my_utils::printArr<int, len>(arr);
 
-  selectionSort(arr);
+  insertionSort(arr);
   
-  std::cout << "Sorted Array: " << std::endl;
+  std::cout << "\nSorted Array: " << std::endl;
   my_utils::printArr<int, len>(arr);
 
   bool sorted = my_utils::isSorted<int, len>(arr);
