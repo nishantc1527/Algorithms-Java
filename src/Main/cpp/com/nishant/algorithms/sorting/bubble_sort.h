@@ -2,16 +2,24 @@
 
 #include <algorithm>
 #include <array>
+#include <iterator>
 
-template <typename T, std::size_t len>
-void bubbleSort(std::array<T, len>& items)
+template <typename Iter>
+void bubbleSort(const Iter& start, const Iter& end)
 {
-  const int count = items.size();
+  const int count = std::distance(start, end);
+  Iter it1, it2;
+  
   for (int i = count - 1; i >= 0; i--) {
+    it1 = it2 = start;
+    it2++;
     for (int j = 0; j < i; j++) {
-      if (items[j] > items[j + 1]) {
-	std::swap(items[j], items[j + 1]);
+      if (*it1 > *it2) {
+	std::swap(*it1, *it2);
       }
+      
+      ++it1;
+      ++it2;
     }
   }
 };

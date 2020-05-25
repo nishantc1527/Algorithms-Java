@@ -4,16 +4,29 @@
 #include <ctime>
 
 namespace my_utils {
-  template<typename T, int len>
-  void printArr(std::array<T, len> arr) {
-    for (int i = 0; i < len - 1; i++) {
-      std::cout << arr[i] << ", ";
+  template<typename T>
+  void printArr(std::vector<T>& arr) {
+    int len = arr.size();
+
+    std::cout << "[";
+    for (auto it = arr.begin(); it != (arr.end() - 1); it++) {
+      std::cout << *it << ", ";
     }
-    std::cout << arr[len - 1] << std::endl;
+    std::cout << arr[len - 1] << "]" << std::endl;
   }
 
-  template<typename T, int len>
-    bool isSorted(std::array<T, len> arr) {
+  template<typename Iter>
+  void printArr(Iter start, Iter end) {
+    while (start != end - 1) {
+      std::cout << *start << ", ";
+      start++;
+    }
+    std::cout << *start << std::endl;
+  }
+
+  template<typename T>
+    bool isSorted(std::vector<T>& arr) {
+    int len = arr.size();
     if (len == 0) return true;
     for (int i = 1; i < len; i++) {
       if (arr[i] < arr[i - 1])
@@ -23,15 +36,16 @@ namespace my_utils {
     return true;
   }
 
-  template<int len>
-  std::array<int, len> createRandArray(int min, int max) {
-    srand((unsigned) time(0));
+  std::vector<int> createRandArray(int len, int min, int max) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(min, max);
 
-    std::array<int, len> arr;
-    for (int i = 0; i < arr.size(); i++) {
-      arr[i] = rand() % (max - min) + min;
-    }
+    std::vector<int> newArr;
+ 
+    for (int n=0; n<len; ++n)
+      newArr.push_back(dis(gen));
 
-    return arr;
+    return newArr;
   }
 }

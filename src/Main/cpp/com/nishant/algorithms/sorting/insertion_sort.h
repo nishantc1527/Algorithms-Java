@@ -2,16 +2,23 @@
 
 #include <algorithm>
 #include <array>
+#include <iterator>
 
-template<typename T, std::size_t len>
-  void insertionSort(std::array<T, len>& arr) {
-  int current, j;
-  for (int i = 0; i < len; i++) {
-    current = arr[i];
-    for (j = i; j >= 1 && current < arr[j - 1]; j--) {
-      arr[j] = arr[j - 1];
+template<typename Iter>
+void insertionSort(const Iter& start, const Iter& end) {
+  int len = std::distance(start, end);
+  Iter iti = start, itj1, itj2;
+  iti++;
+  typename std::iterator_traits<Iter>::value_type current;
+  for (int i = 1; i < len; i++, iti++) {
+    current = *iti;
+    itj1 = iti;
+    itj2 = iti;
+    itj2--;
+    for (int j = i; j >= 1 && *itj2 > current; j--, itj1--, itj2--) {
+      *itj1 = *itj2;
     }
 
-    arr[j] = current;
+    *itj1 = current;
   }
 }
