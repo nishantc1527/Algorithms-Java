@@ -7,10 +7,14 @@ private:
 	class node {
 	public:
 		int count;
-		std::vector<node*> children;
+		node** children;
 
 		node() {
-			children = std::vector<node*>(26, nullptr);
+			children = new node*[26];
+			for(int i = 0; i < 26; i ++) {
+				children[i] = nullptr;
+			}
+			count = 0;
 		}
 	};
 public:
@@ -20,7 +24,7 @@ public:
 		root = new node();
 	}
 
-	void insert(std::string string) {
+	void insert(const std::string& string) {
 		node* curr = root;
 
 		for(int i = 0; i < string.length(); i ++) {
@@ -36,7 +40,7 @@ public:
 		curr->count ++;
 	}
 
-	bool contains(std::string string) {
+	bool contains(const std::string& string) {
 		node* curr = root;
 
 		for(int i = 0; i < string.length(); i ++) {
@@ -50,6 +54,10 @@ public:
 		}
 
 		return curr->count > 0;
+	}
+
+	~trie() {
+		delete(root);
 	}
 		
 };
