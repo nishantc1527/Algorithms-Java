@@ -2,13 +2,17 @@
 
 Algorithms are a way to solve problems. Not only that, it wants to solve problem fast. That's why there's tons and tons of theory on this stuff.
 
-This project is a hope to share the whole knowledge of algorithms there is to offer. If you don't know the algorithm, there are detailed explanations on each algorithm (the explanations are all in the java folder, later I'm going to make seperate folders for the explanation). Obviously, one guy can't do that, which is why it's open source! I also developed a fun way to contribute. You can look at it in the [contributing page](https://github.com/nishantc1527/Algorithms#contributing).
+This project is a hope to share the whole knowledge of algorithms there is to offer. If you don't know the algorithm, there are detailed explanations on each algorithm (all in the explanations folder). While Java has the most algorithms, you might find an algorithm in Java, Python, or C++.  
+
+Obviously, one guy can't do that, which is why it's open source! I also developed a fun way to contribute. You can look at it in the [contributing page](https://github.com/nishantc1527/Algorithms#contributing).
 
 # LeetCode
 
 Many of these algorithm problems come from a interview preparing website called [LeetCode](https://leetcode.com/problemset/all/). If you want, you can also check out [my LeetCode solutions](https://github.com/nishantc1527/LeetCode).
 
 # Compiling Algorithms
+
+NOTE: Whenever I use ```<something>``` it means you have to replace that with whatever it says.
 
  ## Go To The Folder Where You Want To Place The Repository
  
@@ -27,27 +31,50 @@ The second command just goes to the repository folder.
     
 First use ```cd <the path the folder which contains the file>```. For example: 
 
-    $ cd src/Main/java/com/nishant/algorithms/Sorting/QuickSort/
-    
-Then compile the file like this:
+    $ cd src/Main/<language-of-choice>/com/nishant/algorithms/Sorting/QuickSort/
 
-    $ javac <file name>
-    $ java <file name without extension>
+Where <language-of-choice> is the language you want to view it in. If you want the explanation, <language-of-choice> will be explanations.  
+ 
+If you are using Java, then compile the file like this:
+
+    $ javac <file-name>
+    $ java <file-name-without-extension>
     
 Example:
 
     $ javac QuickSort.java
     $ java QuickSort
+
+If you are using Python, then run it (not compile) using this:
+
+    $ python <file-name>
+
+Example:
+
+    $ python BubbleSort.py
+
+If you are using C++, then compile and run like this:
+
+    $ g++ <file-name> -o <name-of-your-choice>
+    $ ./<name-of-your-choice>
+
+The ```-o <name-of-your-choice>``` is optional; if you don't add it replace ```./<name-of-your-choice>``` with ```./a```.
+
+Example:
+
+    $ g++ bubble_sort.cpp -o out
+    $ ./out 
     
  ## Everything Put Together
  
     $ git clone https://github.com/nishantc1527/Algorithms.git
     $ cd Algorithms
     $ cd src/Main/java/com/nishant/algorithms/Sorting/QuickSort/
-    $ javac QuickSort.java
-    $ java QuickSort
+    $ <compile-method-depends-on-the-language>
     
  ## Possible Error
+
+In Java, you might get this:
  
     Error: Could not find or load main class QuickSort
     
@@ -85,117 +112,71 @@ stuff.
 
 No one here yet. Be the first to put your name!
 
-# [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms)
+# Implementations
 
-This part contains all the implementations of the algorithms.
+This part contains all the implementations of the algorithms. If you want to view the file associated to an implementation, go to ```src/main/<language-of-your-choice>/<follow-the-headers-before-the-file>```. If you want to see the JUnit tests, replace ```src/main``` with ```src/test```. If you want to see the explanation of something, replace ```<language-of-your-choice>``` with ```explanations```.
 
- ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting)
+ ## Sorting
  
-  - [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/BubbleSort)
-  - [Selection Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/SelectionSort)
-  - [Insertion Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/InsertionSort)
-  - [Merge Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/MergeSort)
-  - [Quick Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/QuickSort)
-  - [Counting Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/CountingSort)
-  - [Heap Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Sorting/HeapSort)
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Merge Sort
+  - Quick Sort
+  - Counting Sort
+  - Heap Sort
   
- ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/Algorithms/BitManipulation)
+ ## Bit Manipulation
  
-  - [Missing Number](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/BitManipulation/MissingNumber)
-  - [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/BitManipulation/PowerOfTwo)
-  - [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/BitManipulation/SingleNumber)
+  - Missing Number
+  - Power Of Two
+  - Single Number
   
- ## [Graph Theory](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory)
+ ## Graph Theory
  
-  ### [Elementary Graph Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ElementaryGraphAlgorithms)
+  ### Elementary Graph Algorithms
   
-  - [Breadth First Search](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ElementaryGraphAlgorithms/BreadthFirstSearch)
-  - [Depth First Search](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ElementaryGraphAlgorithms/DepthFirstSearch)
+  - Breadth First Search
+  - Depth First Search
  
-  ### [Implementations](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations)
+  ### Implementations
   
-  - [Adjacency List](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations/AdjacencyList)
-  - [Adjacency Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/Implementations/AdjacencyMatrix)
+  - Adjacency List
+  - Adjacency Matrix
   
-  ### [Shortest Path Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ShortestPathAlgorithms)
+  ### Shortest Path Algorithms
   
-   #### [Single Source Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath)
+   #### Single Source Shortest Path
    
-   - [Dijkstra's Shortest Path](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath/DijkstraShortestPath)
-   - [Bellman Ford's Shortest Path Algorithm](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/GraphTheory/ShortestPathAlgorithms/SingleSourceShortestPath/BellmanFordShortestPath)
+   - Dijkstra's Shortest Path
+   - Bellman Ford's Shortest Path Algorithm
  
- ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures)
+ ## Data Structures
  
-  ### [Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees)
+  ### Trees
   
-   #### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees)
+   #### Binary Search Trees
    
-   - [AVL Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/AVLTree)
-   - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/BinarySearchTree)
-   - [Red Black Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/RedBlackTree)
+   - AVL Tree
+   - Binary Search Tree
+   - Red Black Tree
   
-   #### [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/Trees/Trie)
+   #### Trie
   
-  ### [Min Priority Queue](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue)
+  ### Min Priority Queue
   
-   - [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue/FibonacciHeap)
-   - [Min Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DataStructures/MinPriotiryQueue/MinHeap)
+   - Fibonacci Heap
+   - Min Heap
  
- ## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming)
+ ## Dynamic Programming
  
-  - [House Robber](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming/HouseRobber)
-  - [Unique Paths](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/DynamicProgramming/UniquePaths)
+  - House Robber
+  - Unique Paths
 
- ## [Math](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Math)
+ ## Math
  
-  - [Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Math)
-  - [Vector](https://github.com/nishantc1527/Algorithms/tree/master/src/Main/java/com/nishant/algorithms/Math/Vectors)
-
-# [Testing](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms)
-
-This part contains all the testing classes.
-
- ## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Sorting)
- 
-  - [Bubble Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/BubbleSortTest.java)
-  - [Selection Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/SelectionSortTest.java)
-  - [Insertion Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/InsertionSortTest.java)
-  - [Merge Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/MergeSortTest.java)
-  - [Quick Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/QuickSortTest.java)
-  - [Counting Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/CountingSortTest.java)
-  - [Heap Sort](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/Sorting/HeapSortTest.java)
-
- ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/BitManipulation)
- 
-  - [Missing Number](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/MissingNumberTest.java)
-  - [Power Of Two](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/PowerOfTwoTest.java)
-  - [Single Number](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/BitManipulation/SingleNumberTest.java)
-
- ## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures)
- 
-  ### [Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees)
-  
-   #### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees)
-  
-   - [Binary Search Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/BinarySearchTreeTest.java)
-   - [Red Black Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/RedBlackTreeTest.java)
-   - [AVL Tree](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/BinarySearchTrees/AVLTreeTest.java)
-   
-   #### [Trie](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/Trees/Trie/TrieTest.java)
-   
-  ### [Min Priority Queue](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue)
-  
-   - [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/FibonacciHeapTest.java)
-   - [Min Heap](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DataStructures/MinPriorityQueue/MinHeapTest.java)
-
- ## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/DynamicProgramming)
- 
-  - [House Robber](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DynamicProgramming/HouseRobberTest.java)
-  - [Unique Paths](https://github.com/nishantc1527/Algorithms/blob/master/src/Test/java/com/nishant/algorithms/DynamicProgramming/UniquePathsTest.java)
-
- ## [Math](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Math)
- 
-  - [Matrix](https://github.com/nishantc1527/Algorithms/tree/master/src/Test/java/com/nishant/algorithms/Math/Matrices)
+  - Matrix
+  - Vector
 
 # License
 Licensed under [MIT License](https://opensource.org/licenses/MIT). That means feel free to add whatever you want if you find it necessary.
