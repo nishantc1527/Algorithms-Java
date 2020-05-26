@@ -1,3 +1,5 @@
+*** IF YOU WANT THE EXPLANATION FOR AVL TREES AND RED BLACK TREES, THE PROCESS FOR EACH OPERATION IS IN THE JAVADOCS ***
+
 A Binary Search Tree is a data structure that can insert, delete, and search all in O(lg N). First, a binary search tree is defined by a node called the root of the
 tree, and each node stores it's value, and it's left and right node. Those left and right node stores it's left and right node, and so on until nodes left and right
 nodes become null, indicating it has no left and right node. An example of a binary tree is this:
