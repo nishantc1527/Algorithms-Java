@@ -1,7 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <ctime>
+#include <unordered_map>
+
 
 namespace my_utils {
   template<typename T>
@@ -25,7 +26,7 @@ namespace my_utils {
   }
 
   template<typename T>
-    bool isSorted(std::vector<T>& arr) {
+  bool isSorted(std::vector<T>& arr) {
     int len = arr.size();
     if (len == 0) return true;
     for (int i = 1; i < len; i++) {
@@ -34,6 +35,19 @@ namespace my_utils {
     }
 
     return true;
+  }
+
+  template<typename T>
+  bool sameElements(std::vector<T> arr1, std::vector<T> arr2) {
+    std::unordered_map<T, int> map1, map2;
+    for (auto it = arr1.begin(); it != arr1.end(); it++) {
+      map1[*it]++;
+    }
+    for (auto it = arr2.begin(); it != arr2.end(); it++) {
+      map2[*it]++;
+    }
+
+    return map1 == map2;
   }
 
   std::vector<int> createRandArray(int len, int min, int max) {

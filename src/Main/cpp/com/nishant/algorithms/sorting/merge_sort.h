@@ -5,54 +5,6 @@
 #include <iostream>
 #include "my_utils.h"
 
-/*
-template <typename IterStart, typename IterEnd>
-void mergeArr(const IterStart& start, const IterStart& mid, const IterEnd& end) {
-  IterStart first = start, second = mid;
-
-  std::vector<typename std::iterator_traits<IterStart>::value_type> newVec;
-  while (first != mid && second != end) {
-    if (*first < *second) {
-      newVec.push_back(*first);
-      first++;
-    }
-    else {
-      newVec.push_back(*second);
-      second++;
-    }
-  }
-  
-  while (first != mid) {
-    newVec.push_back(*first);
-    first++;
-  }
-
-  while (second != end) {
-    newVec.push_back(*second);
-    second++;
-  }
-
-  std::copy(start, end, newVec.begin());
-}
-
-template <typename IterStart, typename IterEnd>
-void mergeSort(const IterStart& start, const IterEnd& end) {
-  int len = std::distance(start, end);
-  my_utils::printArr(start, end);
-
-  if (len <= 1) return;
-
-  mergeSort(start, start + len / 2);
-  mergeSort(start + len / 2, end);
-
-  IterStart mid = start;
-  for (int i = 0; i < len / 2; i++) mid++;
-  
-  mergeArr(start, mid, end);
-  my_utils::printArr(start, end);
-}
-*/
-
 template <typename Iter>
 void mergeArr(const Iter& start, const Iter& mid, const Iter& end) {
   Iter first = start, second = mid;

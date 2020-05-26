@@ -2,49 +2,49 @@
 #include <random>
 #include <ctime>
 #include <vector>
+#include <chrono>
 
-#include "insertion_sort.h"
+#include "quick_sort.h"
+#include "merge_sort.h"
+#include "bubble_sort.h"
 #include "my_utils.h"
-
-void test() {
-  std::vector<int> arr = my_utils::createRandArray(10, 1, 20);
-  auto it1 = arr.begin();
-  auto it2 = it1;
-  int i = 0;
-  for (; it1 != arr.end(); ++it1, ++i) {
-    std::cout << *it1 << ", ";
-    if (i > arr.size() / 2)
-      *it1 = arr.size() - i;
-  }
-
-  std::cout << std::endl;
-
-  std::cout << *it2 << std::endl;
-  for (; it2 != arr.end(); ++it2) {
-    std::cout << *it2 << ", ";
-  }
-  
-}
 
 int main()
 {
-  const int len = 5;
-  std::vector<int> arr = my_utils::createRandArray(len, 1, 1000);
+  const int len = 200;
+  std::vector<int> arr = my_utils::createRandArray(len, 1, 2000);
+  std::vector<int> saved = arr;
   std::cout << "\n\nUnsorted Array: " << std::endl;
   my_utils::printArr(arr);
+  std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+  
+  mergeSort(arr.begin(), arr.end());
 
-  insertionSort(arr.begin(), arr.end());
+  std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count();
   
   std::cout << "\nSorted Array: " << std::endl;
   my_utils::printArr(arr);
 
+  std::cout << std::endl;
+  
   bool sorted = my_utils::isSorted(arr);
-  if (!sorted) {
-    std::cout << "\nThe array is not sorted!!\n\n" << std::endl;
+  bool same = my_utils::sameElements(saved, arr);
+  if (same && sorted) {
+    std::cout << "The sorting is correct" << std::endl;
   }
   else {
-    std::cout << "\nThe array is sorted!!\n\n" << std::endl;
+    if (!sorted) {
+      std::cout << "The sorting is incorrect" << std::endl;
+    }
+    else {
+      std::cout << "The elements are not the same" << std::endl;
+    }
   }
 
+  std::cout << "Time taken: " << duration << " millis" << std::endl;
+
+  std::cout << std::endl << std::endl;
+  
   return 0;
 }

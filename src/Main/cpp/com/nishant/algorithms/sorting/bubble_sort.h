@@ -8,6 +8,7 @@ template <typename Iter>
 void bubbleSort(const Iter& start, const Iter& end)
 {
   const int count = std::distance(start, end);
+  const Iter startTemp = start;
   Iter it1, it2;
   
   for (int i = count - 1; i >= 0; i--) {
