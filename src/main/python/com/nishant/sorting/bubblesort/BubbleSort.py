@@ -15,7 +15,8 @@ def bubble_sort(arr):
 
         end = end - 1
 
-arr = [1, 2, 6, 4, 5]
-print(str(arr))
-bubble_sort(arr)
-print(str(arr))
+if __name__ == "__main__":
+    arr = [1, 2, 6, 4, 5]
+    print(str(arr))
+    bubble_sort(arr)
+    print(str(arr))
