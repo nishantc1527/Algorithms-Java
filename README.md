@@ -178,5 +178,7 @@ This part contains all the implementations of the algorithms. If you want to vie
   - Matrix
   - Vector
 
+ ## Neural Networks
+
 # License
 Licensed under [MIT License](https://opensource.org/licenses/MIT). That means feel free to add whatever you want if you find it necessary.
