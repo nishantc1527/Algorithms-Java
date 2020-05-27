@@ -29,4 +29,4 @@ hs_err_pid*
 Makefile
 
 # Compiled files
-*.exe*
+*exe*
