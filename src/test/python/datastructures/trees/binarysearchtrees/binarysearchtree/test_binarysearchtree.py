@@ -11,7 +11,7 @@ def test_binary_search_tree():
         for j in range(100):
             random_number = random.randrange(-1000, 1000, 1)
             random_list.append(random_number)
-            t += random_number
+            t.insert(random_number)
 
         for random_number in random_list:
             assert random_number in t

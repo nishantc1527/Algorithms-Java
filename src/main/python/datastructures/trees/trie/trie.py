@@ -7,7 +7,7 @@ class Trie:
     def __init__(self):
         self.root = self.Node()
 
-    def __add__(self, string):
+    def insert(self, string):
         curr = self.root
 
         for i in range(len(string)):
@@ -38,8 +38,8 @@ class Trie:
 if __name__ == "__main__":
     t = Trie()
 
-    t += "apple"
-    t += "app"
+    t.insert("apple")
+    t.insert("app")
 
     print("app" in t)
     print("ap" in t)

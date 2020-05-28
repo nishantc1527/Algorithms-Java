@@ -16,7 +16,7 @@ def test_trie():
         for j in range(100):
             random_string = generate_random_string()
             random_string_list.append(random_string)
-            t += random_string
+            t.insert(random_string)
 
         for random_string in random_string_list:
             assert random_string in t
