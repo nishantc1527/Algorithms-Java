@@ -1,4 +1,4 @@
-package com.nishant.algorithms.Math.Matrices;
+package com.nishant.algorithms.math.matrices;
 
 import java.util.Arrays;
 import java.util.Objects;

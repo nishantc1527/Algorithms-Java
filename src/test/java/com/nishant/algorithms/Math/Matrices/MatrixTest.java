@@ -1,6 +1,9 @@
 package com.nishant.algorithms.Math.Matrices;
 
+import com.nishant.algorithms.math.matrices.Matrix;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class MatrixTest {
   private Matrix mat1, mat2;

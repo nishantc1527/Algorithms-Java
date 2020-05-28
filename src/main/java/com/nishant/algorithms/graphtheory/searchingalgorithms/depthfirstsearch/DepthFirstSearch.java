@@ -1,9 +1,9 @@
-package com.nishant.algorithms.graphtheory.elementarygraphalgorithms.depthfirstsearch;
+package com.nishant.algorithms.graphtheory.searchingalgorithms.depthfirstsearch;
 
-import com.nishant.algorithms.graphtheory.elementarygraphalgorithms.Utility;
 import com.nishant.algorithms.graphtheory.implementations.Color;
 import com.nishant.algorithms.graphtheory.implementations.Vertex;
 import com.nishant.algorithms.graphtheory.implementations.adjacencylist.DirectedGraphAdjacencyList;
+import com.nishant.algorithms.graphtheory.searchingalgorithms.Utility;
 
 import java.util.LinkedList;
 

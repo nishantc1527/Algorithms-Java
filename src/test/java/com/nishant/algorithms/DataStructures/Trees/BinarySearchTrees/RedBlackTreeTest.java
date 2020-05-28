@@ -1,6 +1,6 @@
-package com.nishant.algorithms.datastructures.trees.binarysearchtrees;
+package com.nishant.algorithms.DataStructures.Trees.BinarySearchTrees;
 
-import com.nishant.algorithms.datastructures.trees.BinarySearchTrees.RedBlackTree.RedBlackTree;
+import com.nishant.algorithms.datastructures.trees.binarysearchtrees.redblacktree.RedBlackTree;
 import org.junit.Before;
 import org.junit.Test;
 

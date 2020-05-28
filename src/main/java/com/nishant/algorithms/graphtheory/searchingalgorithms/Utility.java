@@ -1,4 +1,4 @@
-package com.nishant.algorithms.graphtheory.elementarygraphalgorithms;
+package com.nishant.algorithms.graphtheory.searchingalgorithms;
 
 import com.nishant.algorithms.graphtheory.implementations.Color;
 import com.nishant.algorithms.graphtheory.implementations.Vertex;

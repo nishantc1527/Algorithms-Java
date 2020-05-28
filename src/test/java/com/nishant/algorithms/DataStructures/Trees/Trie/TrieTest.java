@@ -1,6 +1,6 @@
-package com.nishant.algorithms.datastructures.trees.trie;
+package com.nishant.algorithms.DataStructures.Trees.Trie;
 
-import com.nishant.algorithms.datastructures.trees.Trie.Trie;
+import com.nishant.algorithms.datastructures.trees.trie.Trie;
 import org.junit.Before;
 import org.junit.Test;
 

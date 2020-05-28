@@ -1,4 +1,4 @@
-package com.nishant.algorithms.NeuralNetworks.MNISTData;
+package com.nishant.algorithms.neuralnetworks.mnistdata;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBuffer;

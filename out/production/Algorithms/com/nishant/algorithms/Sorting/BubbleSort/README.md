@@ -1,5 +1,0 @@
-Bubble Sort is a quadratic sorting algorithm, meaning it sorts in O(N ^ 2). The algorithm works as follows: It first scans the array, and at each element, it checks
-if the element after that is smaller than it. This signifies that they are out of order, because in a sorted array, it's not possible for a larger number to be followed
-by a smaller number. So, it swaps the two numbers, making a smaller number followed by a larger number. After iterating through the array once, the array is a little more
-sorted than before. Furthermore, every iteration the largest number goes to the end, or bubbles to the end, hence the name bubble sort. If every iteration the largest number
-arrives at the end, if you repeat this process multiple times, the array will eventually be sorted. How many times? N times, because all N numbers will go to their correct position.

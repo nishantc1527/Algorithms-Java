@@ -1,4 +1,4 @@
-package com.nishant.algorithms.NeuralNetworks;
+package com.nishant.algorithms.neuralnetworks;
 
 import javax.swing.*;
 import java.awt.*;

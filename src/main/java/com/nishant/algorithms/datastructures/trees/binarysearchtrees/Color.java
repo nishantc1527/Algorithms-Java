@@ -1,4 +1,4 @@
-package com.nishant.algorithms.datastructures.trees.BinarySearchTrees;
+package com.nishant.algorithms.datastructures.trees.binarysearchtrees;
 
 public enum Color {
   RED,

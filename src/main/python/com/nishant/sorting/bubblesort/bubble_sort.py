@@ -1,19 +1,20 @@
-def bubble_sort(arr):
+def bubble_sort(to_sort):
     did_find = True
-    end = len(arr)
+    end = len(to_sort)
 
     while end >= 0:
-        if did_find == False:
+        if not did_find:
             break
 
         did_find = False
 
         for i in range(end - 1):
-            if arr[i] > arr[i + 1]:
-                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+            if to_sort[i] > to_sort[i + 1]:
+                to_sort[i], to_sort[i + 1] = to_sort[i + 1], to_sort[i]
                 did_find = True
 
         end = end - 1
+
 
 if __name__ == "__main__":
     arr = [1, 2, 6, 4, 5]

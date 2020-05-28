@@ -1,7 +1,7 @@
-package com.nishant.algorithms.NeuralNetworks;
+package com.nishant.algorithms.neuralnetworks;
 
-import com.nishant.algorithms.NeuralNetworks.MNISTData.MnistEntry;
-import com.nishant.algorithms.NeuralNetworks.MNISTData.MnistLoader;
+import com.nishant.algorithms.neuralnetworks.mnistdata.MnistEntry;
+import com.nishant.algorithms.neuralnetworks.mnistdata.MnistLoader;
 
 import javax.swing.*;
 import java.awt.*;
