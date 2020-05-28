@@ -28,5 +28,5 @@ hs_err_pid*
 # Make file
 Makefile
 
-# Compiled files
+# Compiled cpp files
 *exe*

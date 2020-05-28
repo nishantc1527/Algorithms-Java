@@ -1,3 +1,5 @@
+NOTE: In Python, all integers are assumed to be 32 bit unsigned integers.
+
 Bit Manipulation is manipulating the bits of a number. Computers store all numbers internally as binary because inside a computer, it can only
 represent 0's and 1's representing powered wires and not powered wires. Each language has it's own set of data types, like int, float, char,
 etc. Every data type has a different number of bytes, and each byte has 8 bits, where each bit can store either 0 or 1. For example, in Java

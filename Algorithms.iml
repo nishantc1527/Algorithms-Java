@@ -19,4 +19,10 @@
     <orderEntry type="library" name="sse3" level="project" />
     <orderEntry type="library" name="jblas-1.2.4" level="project" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="pytest" />
+  </component>
 </module>
