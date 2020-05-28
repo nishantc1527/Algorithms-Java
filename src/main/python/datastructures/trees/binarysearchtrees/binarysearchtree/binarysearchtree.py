@@ -9,7 +9,7 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
-    def insert(self, val):
+    def __add__(self, val):
         if self.root is None:
             self.root = self.Node(val, None, None, None)
         else:
@@ -31,7 +31,9 @@ class BinarySearchTree:
                     else:
                         dummy = dummy.right
 
-    def contains(self, val):
+        return self
+
+    def __contains__(self, val):
         if self.root:
             dummy = self.root
 
@@ -49,9 +51,9 @@ class BinarySearchTree:
 if __name__ == "__main__":
     tree = BinarySearchTree()
 
-    tree.insert(5)
-    tree.insert(10)
-    tree.insert(2)
+    tree += 5
+    tree += 10
+    tree += 2
 
-    print(tree.contains(10))
-    print(tree.contains(4))
+    print(10 in tree)
+    print(14 in tree)

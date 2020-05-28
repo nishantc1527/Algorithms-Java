@@ -30,3 +30,7 @@ Makefile
 
 # Compiled cpp files
 *exe*
+
+# __init__.py that escaped my deletion
+
+__init__.py

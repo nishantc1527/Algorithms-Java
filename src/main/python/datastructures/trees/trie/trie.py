@@ -7,7 +7,7 @@ class Trie:
     def __init__(self):
         self.root = self.Node()
 
-    def insert(self, string):
+    def __add__(self, string):
         curr = self.root
 
         for i in range(len(string)):
@@ -19,8 +19,9 @@ class Trie:
             curr = curr.children[index]
 
         curr.count = curr.count + 1
+        return self
 
-    def contains(self, string):
+    def __contains__(self, string):
         curr = self.root
 
         for i in range(len(string)):
@@ -37,8 +38,8 @@ class Trie:
 if __name__ == "__main__":
     t = Trie()
 
-    t.insert("apple")
-    t.insert("app")
+    t += "apple"
+    t += "app"
 
-    print(t.contains("app"))
-    print(t.contains("ap"))
+    print("app" in t)
+    print("ap" in t)
