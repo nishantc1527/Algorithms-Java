@@ -1,15 +1,15 @@
-def merge_sort(arr):
-    merge_sort_helper(arr, 0, len(arr))
+def merge_sort(to_sort):
+    merge_sort_helper(to_sort, 0, len(to_sort))
 
 
-def merge_sort_helper(arr, left, right):
+def merge_sort_helper(to_sort, left, right):
     if left >= right - 1:
         return
 
     mid = int((left + right) / 2)
-    merge_sort_helper(arr, left, mid)
-    merge_sort_helper(arr, mid, right)
-    merge(arr, arr[left: mid], arr[mid: right], left)
+    merge_sort_helper(to_sort, left, mid)
+    merge_sort_helper(to_sort, mid, right)
+    merge(to_sort, to_sort[left: mid], to_sort[mid: right], left)
 
 
 def merge(to_sort, left, right, start_pos):
