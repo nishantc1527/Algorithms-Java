@@ -1,4 +1,5 @@
 import random
+
 from src.main.python.bitmanipulation.missingnumber.missing_number import missing_number
 
 

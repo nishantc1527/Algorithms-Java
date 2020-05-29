@@ -23,8 +23,8 @@
 import os.path
 import pkgutil
 import shutil
-import sys
 import struct
+import sys
 import tempfile
 
 # Useful for very coarse version differentiation.
@@ -42,6 +42,7 @@ try:
 except ImportError:
     _b85alphabet = (b"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     b"abcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`{|}~")
+
 
     def b85decode(b):
         _b85dec = [None] * 256
@@ -87,6 +88,7 @@ def bootstrap(tmpdir=None):
     # Due to pip._internal.commands.commands_dict structure, a monkeypatch
     # seems the simplest workaround.
     install_parse_args = InstallCommand.parse_args
+
     def cert_parse_args(self, args):
         # If cert isn't specified in config or environment, we provide our
         # own certificate through defaults.
@@ -95,6 +97,7 @@ def bootstrap(tmpdir=None):
         if not self.parser.get_default_values().cert:
             self.parser.defaults["cert"] = cert_path  # calculated below
         return install_parse_args(self, args)
+
     InstallCommand.parse_args = cert_parse_args
 
     implicit_pip = True
@@ -23478,7 +23481,6 @@ c~DCM0u%!j000080P|F{P-i%Br?~|H0HYZI03iSX00000000000HlHC@)ZDZX>c!Jc4cm4Z*nhpWnyJ
 H)a4%nWWo~3|axZsfVr6b)Z)9n1XLB!jUv+b3a$jU+W@&C^WG--dP)h{{00000ashGyrgH!Q%Ka4p00
 0
 """
-
 
 if __name__ == "__main__":
     main()

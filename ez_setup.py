@@ -10,17 +10,16 @@ Run this script to install or upgrade setuptools.
 This method is DEPRECATED. Check https://github.com/pypa/setuptools/issues/581 for more details.
 """
 
+import contextlib
+import optparse
 import os
+import platform
 import shutil
+import subprocess
 import sys
 import tempfile
-import zipfile
-import optparse
-import subprocess
-import platform
 import textwrap
-import contextlib
-
+import zipfile
 from distutils import log
 
 try:
@@ -79,7 +78,6 @@ def _build_egg(egg, archive_filename, to_dir):
 
 
 class ContextualZipFile(zipfile.ZipFile):
-
     """Supplement ZipFile class to support context manager for Python 2.6."""
 
     def __enter__(self):
@@ -112,7 +110,7 @@ def archive_context(filename):
                 archive.extractall()
         except zipfile.BadZipfile as err:
             if not err.args:
-                err.args = ('', )
+                err.args = ('',)
             err.args = err.args + (
                 MEANINGFUL_INVALID_ZIP_ERR_MSG.format(filename),
             )
@@ -136,7 +134,7 @@ def _do_download(version, download_base, to_dir, download_delay):
     egg = os.path.join(to_dir, tp.format(**locals()))
     if not os.path.exists(egg):
         archive = download_setuptools(version, download_base,
-            to_dir, download_delay)
+                                      to_dir, download_delay)
         _build_egg(egg, archive, to_dir)
     sys.path.insert(0, egg)
 
@@ -243,10 +241,10 @@ def download_file_powershell(url, target):
     """
     target = os.path.abspath(target)
     ps_cmd = (
-        "[System.Net.WebRequest]::DefaultWebProxy.Credentials = "
-        "[System.Net.CredentialCache]::DefaultCredentials; "
-        '(new-object System.Net.WebClient).DownloadFile("%(url)s", "%(target)s")'
-        % locals()
+            "[System.Net.WebRequest]::DefaultWebProxy.Credentials = "
+            "[System.Net.CredentialCache]::DefaultCredentials; "
+            '(new-object System.Net.WebClient).DownloadFile("%(url)s", "%(target)s")'
+            % locals()
     )
     cmd = [
         'powershell',
@@ -267,6 +265,8 @@ def has_powershell():
         except Exception:
             return False
     return True
+
+
 download_file_powershell.viable = has_powershell
 
 
@@ -283,6 +283,8 @@ def has_curl():
         except Exception:
             return False
     return True
+
+
 download_file_curl.viable = has_curl
 
 
@@ -299,6 +301,8 @@ def has_wget():
         except Exception:
             return False
     return True
+
+
 download_file_wget.viable = has_wget
 
 
@@ -314,6 +318,8 @@ def download_file_insecure(url, target):
     # Write all the data in one block to avoid creating a partial file.
     with open(target, "wb") as dst:
         dst.write(data)
+
+
 download_file_insecure.viable = lambda: True
 
 
@@ -409,6 +415,7 @@ def main():
     options = _parse_args()
     archive = download_setuptools(**_download_args(options))
     return _install(archive, _build_install_args(options))
+
 
 if __name__ == '__main__':
     sys.exit(main())

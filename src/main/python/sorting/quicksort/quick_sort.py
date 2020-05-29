@@ -29,4 +29,3 @@ if __name__ == "__main__":
     print(str(arr))
     quick_sort(arr)
     print(str(arr))
-
