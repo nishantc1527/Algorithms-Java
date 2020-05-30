@@ -33,29 +33,27 @@ The second command just goes to the repository folder.
     
  ## Compiling A File
     
-First use ```cd <the path the folder which contains the file>```. For example: 
+If you are using C++, then first use ```cd <the path the folder which contains the file>```. For example: 
 
-    $ cd src/Main/<language-of-choice>/com/nishant/algorithms/Sorting/QuickSort/
+    $ cd src/main/cpp/com/nishant/algorithms/sorting/quicksort/
 
-Where <language-of-choice> is the language you want to view it in. If you want the explanation, <language-of-choice> will be explanations.  
- 
 If you are using Java, then compile the file like this:
 
-    $ javac <file-name>
+    $ javac <file-path>
     $ java <file-name-without-extension>
     
 Example:
 
-    $ javac QuickSort.java
+    $ javac src/main/java/<...>/QuickSort.java
     $ java QuickSort
 
 If you are using Python, then run it (not compile) using this:
 
-    $ python <file-name>
+    $ python <file-file-path>
 
 Example:
 
-    $ python BubbleSort.py
+    $ python <...>/BubbleSort.py
 
 If you are using C++, then compile and run like this:
 
@@ -69,16 +67,9 @@ Example:
     $ g++ bubble_sort.cpp -o out
     $ ./out 
     
- ## Everything Put Together
- 
-    $ git clone https://github.com/nishantc1527/Algorithms.git
-    $ cd Algorithms
-    $ cd src/Main/java/com/nishant/algorithms/Sorting/QuickSort/
-    $ <compile-method-depends-on-the-language>
-    
  ## Possible Error
 
-In Java, you might get this:
+In Java (or python, but the error message is different), you might get this:
  
     Error: Could not find or load main class QuickSort
     
@@ -86,6 +77,14 @@ In Java, you might get this:
  
  - [Stack Overflow](https://stackoverflow.com/questions/18093928/what-does-could-not-find-or-load-main-class-mean)
  - [Tutorialspoint](https://www.tutorialspoint.com/how-to-resolve-could-not-find-or-load-main-class-package-in-java)
+
+In short, you can't go to the directory itself to compile it. You have to start from the main repository folder, then compile using the full path. This is the same for python, except the error message will be different.
+
+ ## Another Possible Error
+
+    ModuleError: Could not load module 'src'
+
+Like I said, the reason is the same for Java. Don't compile it by first going into the directory, instead compile from the repository folder.
 
 # Contributing
 
