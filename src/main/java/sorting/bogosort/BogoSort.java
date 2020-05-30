@@ -1,4 +1,4 @@
-package com.nishant.algorithms.sorting.bogosort;
+package sorting.bogosort;
 
 public class BogoSort {
 

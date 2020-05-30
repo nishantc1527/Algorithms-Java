@@ -1,8 +1,8 @@
-package com.nishant.algorithms.graphtheory.searchingalgorithms;
+package graphtheory.searchingalgorithms;
 
-import com.nishant.algorithms.graphtheory.implementations.Color;
-import com.nishant.algorithms.graphtheory.implementations.Vertex;
-import com.nishant.algorithms.graphtheory.implementations.adjacencylist.DirectedGraphAdjacencyList;
+import graphtheory.implementations.Color;
+import graphtheory.implementations.Vertex;
+import graphtheory.implementations.adjacencylist.DirectedGraphAdjacencyList;
 
 public class Utility {
 

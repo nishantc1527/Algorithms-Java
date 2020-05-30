@@ -1,4 +1,4 @@
-package com.nishant.algorithms.bitmanipulation.singlenumber;
+package bitmanipulation.singlenumber;
 
 public class SingleNumber {
 

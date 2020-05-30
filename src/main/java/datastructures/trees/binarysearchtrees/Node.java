@@ -1,4 +1,4 @@
-package com.nishant.algorithms.datastructures.trees.binarysearchtrees;
+package datastructures.trees.binarysearchtrees;
 
 public interface Node<E extends Comparable<E>> {
 

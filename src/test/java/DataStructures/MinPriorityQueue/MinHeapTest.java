@@ -1,6 +1,6 @@
-package com.nishant.algorithms.DataStructures.MinPriorityQueue;
+package DataStructures.MinPriorityQueue;
 
-import com.nishant.algorithms.datastructures.minpriorityqueue.MinHeap.MinHeap;
+import datastructures.minpriorityqueue.MinHeap.MinHeap;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.nishant.algorithms.graphtheory.implementations;
+package graphtheory.implementations;
 
 public class Edge<E> {
 

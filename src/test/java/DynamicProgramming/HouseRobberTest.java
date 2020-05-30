@@ -1,6 +1,6 @@
-package com.nishant.algorithms.dynamicprogramming;
+package DynamicProgramming;
 
-import com.nishant.algorithms.dynmanicprogramming.houserobber.HouseRobber;
+import dynmanicprogramming.houserobber.HouseRobber;
 import org.junit.Before;
 import org.junit.Test;
 

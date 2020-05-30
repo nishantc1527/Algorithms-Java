@@ -1,8 +1,8 @@
-package com.nishant.algorithms.sorting;
+package Sorting;
 
-import com.nishant.algorithms.sorting.quicksort.QuickSort;
 import org.junit.Before;
 import org.junit.Test;
+import sorting.quicksort.QuickSort;
 
 import static org.junit.Assert.assertArrayEquals;
 

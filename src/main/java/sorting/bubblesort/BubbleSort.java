@@ -1,4 +1,4 @@
-package com.nishant.algorithms.sorting.bubblesort;
+package sorting.bubblesort;
 
 import java.util.Arrays;
 

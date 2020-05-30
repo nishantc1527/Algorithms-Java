@@ -1,4 +1,4 @@
-package com.nishant.algorithms.bitmanipulation.poweroftwo;
+package bitmanipulation.poweroftwo;
 
 public class PowerOfTwo {
 

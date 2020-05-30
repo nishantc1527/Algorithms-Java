@@ -1,4 +1,4 @@
-package com.nishant.algorithms.neuralnetworks;
+package neuralnetworks;
 
 import org.jblas.DoubleMatrix;
 

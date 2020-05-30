@@ -1,4 +1,4 @@
-package com.nishant.algorithms.sorting.quicksort;
+package sorting.quicksort;
 
 import java.util.Arrays;
 

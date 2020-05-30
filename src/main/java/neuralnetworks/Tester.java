@@ -1,4 +1,4 @@
-package com.nishant.algorithms.neuralnetworks;
+package neuralnetworks;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Tester extends JPanel {
   private static final int WIDTH = 900, HEIGHT = 900;
-  private com.nishant.algorithms.neuralnetworks.Perceptron perceptron;
+  private Perceptron perceptron;
   private Map<Point, Integer> points = new HashMap<>();
   private int trainingSize;
   private int frameCount = 0;

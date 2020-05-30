@@ -1,8 +1,8 @@
-package com.nishant.algorithms.sorting;
+package Sorting;
 
-import com.nishant.algorithms.sorting.mergesort.MergeSort;
 import org.junit.Before;
 import org.junit.Test;
+import sorting.mergesort.MergeSort;
 
 import static org.junit.Assert.assertArrayEquals;
 

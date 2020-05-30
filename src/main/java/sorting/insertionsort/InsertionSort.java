@@ -1,4 +1,4 @@
-package com.nishant.algorithms.sorting.insertionsort;
+package sorting.insertionsort;
 
 import java.util.Arrays;
 

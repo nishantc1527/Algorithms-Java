@@ -1,8 +1,8 @@
-package com.nishant.algorithms.datastructures.trees.binarysearchtrees.avltree;
+package datastructures.trees.binarysearchtrees.avltree;
 
-import com.nishant.algorithms.datastructures.trees.binarysearchtrees.BinaryTree;
-import com.nishant.algorithms.datastructures.trees.binarysearchtrees.Color;
-import com.nishant.algorithms.datastructures.trees.binarysearchtrees.Node;
+import datastructures.trees.binarysearchtrees.BinaryTree;
+import datastructures.trees.binarysearchtrees.Color;
+import datastructures.trees.binarysearchtrees.Node;
 
 import java.util.*;
 

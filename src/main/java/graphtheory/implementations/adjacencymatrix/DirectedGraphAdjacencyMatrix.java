@@ -1,6 +1,6 @@
-package com.nishant.algorithms.graphtheory.implementations.adjacencymatrix;
+package graphtheory.implementations.adjacencymatrix;
 
-import com.nishant.algorithms.graphtheory.implementations.Pair;
+import graphtheory.implementations.Pair;
 
 public class DirectedGraphAdjacencyMatrix implements GraphAdjacencyMatrix {
 

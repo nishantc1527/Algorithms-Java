@@ -1,4 +1,4 @@
-package com.nishant.algorithms.dynmanicprogramming.houserobber;
+package dynmanicprogramming.houserobber;
 
 import java.util.Arrays;
 

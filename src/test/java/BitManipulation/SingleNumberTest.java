@@ -1,6 +1,6 @@
-package com.nishant.algorithms.bitmanipulation;
+package BitManipulation;
 
-import com.nishant.algorithms.bitmanipulation.singlenumber.SingleNumber;
+import bitmanipulation.singlenumber.SingleNumber;
 import org.junit.Before;
 import org.junit.Test;
 

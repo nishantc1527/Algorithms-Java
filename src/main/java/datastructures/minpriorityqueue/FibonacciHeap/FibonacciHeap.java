@@ -1,4 +1,4 @@
-package com.nishant.algorithms.datastructures.minpriorityqueue.FibonacciHeap;
+package datastructures.minpriorityqueue.FibonacciHeap;
 
 import java.util.HashMap;
 import java.util.HashSet;

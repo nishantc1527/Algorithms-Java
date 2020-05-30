@@ -1,8 +1,8 @@
-package com.nishant.algorithms.graphtheory.implementations.adjacencylist;
+package graphtheory.implementations.adjacencylist;
 
-import com.nishant.algorithms.graphtheory.implementations.Edge;
-import com.nishant.algorithms.graphtheory.implementations.Pair;
-import com.nishant.algorithms.graphtheory.implementations.Vertex;
+import graphtheory.implementations.Edge;
+import graphtheory.implementations.Pair;
+import graphtheory.implementations.Vertex;
 
 import java.util.HashMap;
 import java.util.LinkedList;

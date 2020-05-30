@@ -1,4 +1,4 @@
-package com.nishant.algorithms.sorting.heapsort;
+package sorting.heapsort;
 
 import java.util.Arrays;
 

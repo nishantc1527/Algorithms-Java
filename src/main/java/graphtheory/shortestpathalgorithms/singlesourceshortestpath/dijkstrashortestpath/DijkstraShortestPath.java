@@ -1,8 +1,8 @@
-package com.nishant.algorithms.graphtheory.shortestpathalgorithms.singlesourceshortestpath.dijkstrashortestpath;
+package graphtheory.shortestpathalgorithms.singlesourceshortestpath.dijkstrashortestpath;
 
-import com.nishant.algorithms.graphtheory.implementations.Edge;
-import com.nishant.algorithms.graphtheory.implementations.Vertex;
-import com.nishant.algorithms.graphtheory.implementations.adjacencylist.WeightedGraphAdjacencyList;
+import graphtheory.implementations.Edge;
+import graphtheory.implementations.Vertex;
+import graphtheory.implementations.adjacencylist.WeightedGraphAdjacencyList;
 
 import java.util.LinkedList;
 

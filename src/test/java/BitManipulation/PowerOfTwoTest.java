@@ -1,6 +1,6 @@
-package com.nishant.algorithms.bitmanipulation;
+package BitManipulation;
 
-import com.nishant.algorithms.bitmanipulation.poweroftwo.PowerOfTwo;
+import bitmanipulation.poweroftwo.PowerOfTwo;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

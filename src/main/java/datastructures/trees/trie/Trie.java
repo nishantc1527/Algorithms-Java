@@ -1,4 +1,4 @@
-package com.nishant.algorithms.datastructures.trees.trie;
+package datastructures.trees.trie;
 
 public class Trie {
 
