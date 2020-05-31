@@ -28,9 +28,6 @@ hs_err_pid*
 # Make file
 Makefile
 
-# Compiled cpp files
-*exe*
-
 # __init__.py that escaped my deletion
 __init__.py
 
@@ -172,3 +169,36 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
