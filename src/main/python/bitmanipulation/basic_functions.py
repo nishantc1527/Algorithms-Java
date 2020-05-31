@@ -1,5 +1,5 @@
-def get_bit(num, index):
-    return (num >> index) & 1
+def get_bit(number, index):
+    return (number >> index) & 1
 
 
 def set_bit(number, index):
