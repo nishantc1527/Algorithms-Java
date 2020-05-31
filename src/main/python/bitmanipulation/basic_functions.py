@@ -10,9 +10,9 @@ def clear_bit(number, index):
     return number & ~(1 << index)
 
 
-def print_bits(num):
+def print_bits(number):
     for i in range(32):
-        print(get_bit(num, 31 - i), end='')
+        print(get_bit(number, 31 - i), end='')
 
 
 if __name__ == "__main__":
