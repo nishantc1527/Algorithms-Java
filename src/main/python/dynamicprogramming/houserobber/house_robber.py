@@ -3,7 +3,8 @@ def brute_force(values):
 
 
 def brute_force_helper(values, i):
-    return 0 if i >= len(values) else max(values[i] + brute_force_helper(values, i + 2), brute_force_helper(values, i + 1))
+    return 0 if i >= len(values) else max(values[i] + brute_force_helper(values, i + 2),
+                                          brute_force_helper(values, i + 1))
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------

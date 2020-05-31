@@ -17,6 +17,7 @@ public class TreeVisualizer extends JPanel implements KeyListener {
   private double zoomFactor = 0.5;
   private JFrame frame;
   private JScrollPane scrollPane;
+
   public TreeVisualizer(BinaryTree<?> tree, int width, int height) {
     this.tree = tree;
     map = new HashMap<>();

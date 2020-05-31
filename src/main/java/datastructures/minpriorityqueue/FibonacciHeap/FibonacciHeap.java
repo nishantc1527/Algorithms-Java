@@ -8,6 +8,7 @@ public class FibonacciHeap {
 
   private final HashMap<Integer, Node> references;
   private Node min;
+
   public FibonacciHeap() {
     references = new HashMap<>();
   }
