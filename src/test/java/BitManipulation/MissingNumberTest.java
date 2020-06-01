@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class MissingNumberTest {
 
   @Test
-  public void resultTest() {
+  public void testMissingNumber() {
     for (int i = 0; i < 1000; i++) {
       int randomNumber = (int) (Math.random() * 1000);
       ArrayList<Integer> arr = new ArrayList<>();

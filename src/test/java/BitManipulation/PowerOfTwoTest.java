@@ -30,7 +30,7 @@ public class PowerOfTwoTest {
 
   @Test
   public void testNegative() {
-    for(int i = -Integer.MAX_VALUE; i < 0; i ++) {
+    for (int i = -Integer.MAX_VALUE; i < 0; i++) {
       assertFalse(PowerOfTwo.isPowerOfTwo(i));
     }
   }
