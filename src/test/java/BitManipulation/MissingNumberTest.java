@@ -1,22 +1,30 @@
 package BitManipulation;
 
 import bitmanipulation.missingnumber.MissingNumber;
-import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
 public class MissingNumberTest {
 
-  private int[] arr;
-
-  @Before
-  public void setup() {
-    arr = new int[] {0, 5, 2, 3, 4};
-  }
-
   @Test
   public void resultTest() {
-    assertEquals(1, MissingNumber.missingNumber(arr));
+    for (int i = 0; i < 1000; i++) {
+      int randomNumber = (int) (Math.random() * 1000);
+      ArrayList<Integer> arr = new ArrayList<>();
+
+      for (int j = 0; j < 10000; j++) {
+        if (j != randomNumber) {
+          arr.add((int) (Math.random() * arr.size()), j);
+        }
+      }
+      assertEquals(
+          randomNumber,
+          MissingNumber.missingNumber(
+              Arrays.stream(arr.toArray(new Integer[0])).mapToInt(Integer::intValue).toArray()));
+    }
   }
 }

@@ -1,5 +1,6 @@
 package BitManipulation;
 
+import bitmanipulation.BasicFunctions;
 import bitmanipulation.poweroftwo.PowerOfTwo;
 import org.junit.Test;
 
@@ -10,17 +11,28 @@ public class PowerOfTwoTest {
 
   @Test
   public void testPowerOfTwo() {
-    assertTrue(PowerOfTwo.isPowerOfTwo(4));
+    int num = 1;
+    for (int i = 1; i < 31; i++) {
+      assertTrue(PowerOfTwo.isPowerOfTwo(num));
+      num <<= 1;
+    }
   }
 
   @Test
   public void testNonPowerOfTwo() {
-    assertFalse(PowerOfTwo.isPowerOfTwo(7));
+    int num = 1;
+    for (int i = 1; i < 31; i++) {
+      num = BasicFunctions.clearBit(num, (int) (Math.random() * i));
+      assertFalse(PowerOfTwo.isPowerOfTwo(num));
+      num <<= 1;
+    }
   }
 
   @Test
   public void testNegative() {
-    assertFalse(PowerOfTwo.isPowerOfTwo(-2));
+    for(int i = -Integer.MAX_VALUE; i < 0; i ++) {
+      assertFalse(PowerOfTwo.isPowerOfTwo(i));
+    }
   }
 
   @Test
