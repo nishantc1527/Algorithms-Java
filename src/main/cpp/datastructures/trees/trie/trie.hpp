@@ -1,59 +1,60 @@
 class trie {
 private:
-	class node {
-	public:
-		int count;
-		node** children;
+    class node {
+    public:
+        int count;
+        node **children;
 
-		node() {
-			children = new node*[26];
-			for(int i = 0; i < 26; i ++) {
-				children[i] = nullptr;
-			}
-			count = 0;
-		}
-	};
+        node() {
+            children = new node *[26];
+            for (int i = 0; i < 26; i++) {
+                children[i] = nullptr;
+            }
+            count = 0;
+        }
+    };
+
 public:
-	node* root;
+    node *root;
 
-	trie() {
-		root = new node();
-	}
+    trie() {
+        root = new node();
+    }
 
-	void insert(const std::string& string) {
-		node* curr = root;
+    void insert(const std::string &string) {
+        node *curr = root;
 
-		for(int i = 0; i < string.length(); i ++) {
-			int index = string[i] - 'a';
+        for (int i = 0; i < string.length(); i++) {
+            int index = string[i] - 'a';
 
-			if(curr->children[index] == nullptr) {
-				curr->children[index] = new node();
-			}
+            if (curr->children[index] == nullptr) {
+                curr->children[index] = new node();
+            }
 
-			curr = curr->children[index];
-		}
+            curr = curr->children[index];
+        }
 
-		curr->count ++;
-	}
+        curr->count++;
+    }
 
-	bool contains(const std::string& string) {
-		node* curr = root;
+    bool contains(const std::string &string) {
+        node *curr = root;
 
-		for(int i = 0; i < string.length(); i ++) {
-			int index = string[i] - 'a';
+        for (int i = 0; i < string.length(); i++) {
+            int index = string[i] - 'a';
 
-			if(curr->children[index] == nullptr) {
-				return false;	
-			}
+            if (curr->children[index] == nullptr) {
+                return false;
+            }
 
-			curr = curr->children[index];
-		}
+            curr = curr->children[index];
+        }
 
-		return curr->count > 0;
-	}
+        return curr->count > 0;
+    }
 
-	~trie() {
-		delete(root);
-	}
-		
+    ~trie() {
+        delete (root);
+    }
+
 };
