@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/insertionsort/insertion_sort_test.cpp" "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/cmake-build-debug/CMakeFiles/Google_Tests_run.dir/sorting/insertionsort/insertion_sort_test.cpp.o"
   "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/mergesort/merge_sort_test.cpp" "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/cmake-build-debug/CMakeFiles/Google_Tests_run.dir/sorting/mergesort/merge_sort_test.cpp.o"
   "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/quicksort/quick_sort_test.cpp" "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/cmake-build-debug/CMakeFiles/Google_Tests_run.dir/sorting/quicksort/quick_sort_test.cpp.o"
+  "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/selectionsort/selection_sort_test.cpp" "/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/cmake-build-debug/CMakeFiles/Google_Tests_run.dir/sorting/selectionsort/selection_sort_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

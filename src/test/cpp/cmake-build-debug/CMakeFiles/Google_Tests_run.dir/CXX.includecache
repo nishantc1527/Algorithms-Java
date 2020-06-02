@@ -318,29 +318,17 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/my_utils.h
-iostream
--
-unordered_map
--
-random
--
-
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/quicksort/quick_sort.h
-iterator
--
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/selectionsort/selection_sort.h
 algorithm
 -
-iostream
+vector
 -
-typeinfo
+iterator
 -
-../my_utils.h
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/my_utils.h
 
-/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/quicksort/quick_sort_test.cpp
+/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/selectionsort/selection_sort_test.cpp
 gtest/gtest.h
-/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/quicksort/gtest/gtest.h
-../../../../main/cpp/sorting/quicksort/quick_sort.h
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/quicksort/quick_sort.h
+/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/selectionsort/gtest/gtest.h
+../../../../main/cpp/sorting/selectionsort/selection_sort.h
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/selectionsort/selection_sort.h
 

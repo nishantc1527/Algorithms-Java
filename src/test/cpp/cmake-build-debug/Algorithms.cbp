@@ -340,6 +340,9 @@
 		<Unit filename="/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/quicksort/quick_sort_test.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/selectionsort/selection_sort_test.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
