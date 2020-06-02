@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/selectionsort/selection_sort.h
+algorithm
+-
+vector
+-
+iterator
+-
+
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/selectionsort/test.cpp
+iostream
+-
+vector
+-
+selection_sort.h
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/selectionsort/selection_sort.h
+
