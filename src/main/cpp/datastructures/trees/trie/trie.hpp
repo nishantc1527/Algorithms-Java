@@ -1,7 +1,3 @@
-#include <string>
-#include <vector>
-#include <iostream>
-
 class trie {
 private:
 	class node {
@@ -61,13 +57,3 @@ public:
 	}
 		
 };
-
-int main() {
-	trie t;
-	t.insert("hi");
-	t.insert("hello");
-
-	std::cout << std::boolalpha << t.contains("hi") << std::endl;
-	std::cout << std::boolalpha << t.contains("h") << std::endl;
-}
-

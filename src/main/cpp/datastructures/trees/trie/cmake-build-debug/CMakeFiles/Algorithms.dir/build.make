@@ -57,27 +57,27 @@ include CMakeFiles/Algorithms.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Algorithms.dir/flags.make
 
-CMakeFiles/Algorithms.dir/trie.cpp.o: CMakeFiles/Algorithms.dir/flags.make
-CMakeFiles/Algorithms.dir/trie.cpp.o: ../trie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Algorithms.dir/trie.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Algorithms.dir/trie.cpp.o -c /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/trie.cpp
+CMakeFiles/Algorithms.dir/test.cpp.o: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/test.cpp.o: ../test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Algorithms.dir/test.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Algorithms.dir/test.cpp.o -c /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/test.cpp
 
-CMakeFiles/Algorithms.dir/trie.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/trie.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/trie.cpp > CMakeFiles/Algorithms.dir/trie.cpp.i
+CMakeFiles/Algorithms.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/test.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/test.cpp > CMakeFiles/Algorithms.dir/test.cpp.i
 
-CMakeFiles/Algorithms.dir/trie.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/trie.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/trie.cpp -o CMakeFiles/Algorithms.dir/trie.cpp.s
+CMakeFiles/Algorithms.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/test.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/test.cpp -o CMakeFiles/Algorithms.dir/test.cpp.s
 
 # Object files for target Algorithms
 Algorithms_OBJECTS = \
-"CMakeFiles/Algorithms.dir/trie.cpp.o"
+"CMakeFiles/Algorithms.dir/test.cpp.o"
 
 # External object files for target Algorithms
 Algorithms_EXTERNAL_OBJECTS =
 
-Algorithms.exe: CMakeFiles/Algorithms.dir/trie.cpp.o
+Algorithms.exe: CMakeFiles/Algorithms.dir/test.cpp.o
 Algorithms.exe: CMakeFiles/Algorithms.dir/build.make
 Algorithms.exe: CMakeFiles/Algorithms.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Algorithms.exe"

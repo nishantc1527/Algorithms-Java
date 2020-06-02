@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "Algorithms.exe"
   "Algorithms.pdb"
-  "CMakeFiles/Algorithms.dir/trie.cpp.o"
+  "CMakeFiles/Algorithms.dir/test.cpp.o"
   "libAlgorithms.dll.a"
 )
 
