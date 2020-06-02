@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/trie/trie.cpp
+string
+-
+vector
+-
+iostream
+-
+

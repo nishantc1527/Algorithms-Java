@@ -1,0 +1,8 @@
+C:\Users\nisha\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/binarysearchtrees/binarysearchtree
+CMake Error at CMakeLists.txt:6 (add_subdirectory):
+  add_subdirectory given source "lib/googletest-master" which is not an
+  existing directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/trees/binarysearchtrees/binarysearchtree/cmake-build-debug/CMakeFiles/CMakeOutput.log".

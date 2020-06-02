@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-#include "my_utils.h"
+#include "../my_utils.h"
 
 template <typename Iter>
 void mergeArr(const Iter& start, const Iter& mid, const Iter& end) {

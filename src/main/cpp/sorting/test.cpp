@@ -4,9 +4,9 @@
 #include <vector>
 #include <chrono>
 
-#include "quick_sort.h"
-#include "merge_sort.h"
-#include "bubble_sort.h"
+#include "quicksort/quick_sort.h"
+#include "mergesort/merge_sort.h"
+#include "bubblesort/bubble_sort.h"
 #include "my_utils.h"
 
 int main()
@@ -17,7 +17,11 @@ int main()
   std::cout << "\n\nUnsorted Array: " << std::endl;
   my_utils::printArr(arr);
   std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-  
+
+  // bubbleSort(arr.begin(), arr.end());
+  // insertionSort(arr.begin(), arr.end());
+  // selectionSort(arr.begin(), arr.end());
+  // quickSort(arr.begin(), arr.end());
   mergeSort(arr.begin(), arr.end());
 
   std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
