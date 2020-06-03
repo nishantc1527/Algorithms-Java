@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/heapsort/heap_sort.hpp
+vector
+-
+
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/heapsort/test.cpp
+vector
+-
+algorithm
+-
+iostream
+-
+heap_sort.hpp
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/heapsort/heap_sort.hpp
+

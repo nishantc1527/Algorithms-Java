@@ -331,6 +331,9 @@
 		<Unit filename="/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/bubblesort/bubble_sort_test.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/heapsort/heap_sort_test.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/insertionsort/insertion_sort_test.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
