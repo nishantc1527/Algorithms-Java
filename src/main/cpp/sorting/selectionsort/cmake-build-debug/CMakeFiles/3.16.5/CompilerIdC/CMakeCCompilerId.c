@@ -614,7 +614,6 @@ char const info_simulate_version[] = {
 char const *info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
 char const *info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
 
-
 #if !defined(__STDC__)
 # if (defined(_MSC_VER) && !defined(__clang__)) \
  || (defined(__ibmxl__) || defined(__IBMC__))
@@ -630,7 +629,7 @@ char const *info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
 # define C_DIALECT "90"
 #endif
 const char *info_language_dialect_default =
-        "INFO" ":" "dialect_default[" C_DIALECT "]";
+    "INFO" ":" "dialect_default[" C_DIALECT "]";
 
 /*--------------------------------------------------------------------------*/
 
@@ -644,28 +643,28 @@ int main(argc, argv) int argc; char *argv[];
 int main(int argc, char *argv[])
 # endif
 {
-    int require = 0;
-    require += info_compiler[argc];
-    require += info_platform[argc];
-    require += info_arch[argc];
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
 #ifdef COMPILER_VERSION_MAJOR
-    require += info_version[argc];
+  require += info_version[argc];
 #endif
 #ifdef COMPILER_VERSION_INTERNAL
-    require += info_version_internal[argc];
+  require += info_version_internal[argc];
 #endif
 #ifdef SIMULATE_ID
-    require += info_simulate[argc];
+  require += info_simulate[argc];
 #endif
 #ifdef SIMULATE_VERSION_MAJOR
-    require += info_simulate_version[argc];
+  require += info_simulate_version[argc];
 #endif
 #if defined(__CRAYXE) || defined(__CRAYXC)
-    require += info_cray[argc];
+  require += info_cray[argc];
 #endif
-    require += info_language_dialect_default[argc];
-    (void) argv;
-    return require;
+  require += info_language_dialect_default[argc];
+  (void) argv;
+  return require;
 }
 
 #endif

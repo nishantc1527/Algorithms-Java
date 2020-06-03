@@ -9,10 +9,10 @@
 #include "trie.hpp"
 
 int main() {
-    trie t;
-    t.insert("hi");
-    t.insert("hello");
+  trie t;
+  t.insert("hi");
+  t.insert("hello");
 
-    std::cout << std::boolalpha << t.contains("hi") << std::endl;
-    std::cout << std::boolalpha << t.contains("h") << std::endl;
+  std::cout << std::boolalpha << t.contains("hi") << std::endl;
+  std::cout << std::boolalpha << t.contains("h") << std::endl;
 }

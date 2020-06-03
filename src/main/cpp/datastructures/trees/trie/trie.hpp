@@ -1,60 +1,60 @@
 class trie {
-private:
-    class node {
-    public:
-        int count;
-        node **children;
+ private:
+  class node {
+   public:
+    int count;
+    node **children;
 
-        node() {
-            children = new node *[26];
-            for (int i = 0; i < 26; i++) {
-                children[i] = nullptr;
-            }
-            count = 0;
-        }
-    };
+    node() {
+      children = new node *[26];
+      for (int i = 0; i < 26; i++) {
+        children[i] = nullptr;
+      }
+      count = 0;
+    }
+  };
 
-public:
-    node *root;
+ public:
+  node *root;
 
-    trie() {
-        root = new node();
+  trie() {
+    root = new node();
+  }
+
+  void insert(const std::string &string) {
+    node *curr = root;
+
+    for (int i = 0; i < string.length(); i++) {
+      int index = string[i] - 'a';
+
+      if (curr->children[index] == nullptr) {
+        curr->children[index] = new node();
+      }
+
+      curr = curr->children[index];
     }
 
-    void insert(const std::string &string) {
-        node *curr = root;
+    curr->count++;
+  }
 
-        for (int i = 0; i < string.length(); i++) {
-            int index = string[i] - 'a';
+  bool contains(const std::string &string) {
+    node *curr = root;
 
-            if (curr->children[index] == nullptr) {
-                curr->children[index] = new node();
-            }
+    for (int i = 0; i < string.length(); i++) {
+      int index = string[i] - 'a';
 
-            curr = curr->children[index];
-        }
+      if (curr->children[index] == nullptr) {
+        return false;
+      }
 
-        curr->count++;
+      curr = curr->children[index];
     }
 
-    bool contains(const std::string &string) {
-        node *curr = root;
+    return curr->count > 0;
+  }
 
-        for (int i = 0; i < string.length(); i++) {
-            int index = string[i] - 'a';
-
-            if (curr->children[index] == nullptr) {
-                return false;
-            }
-
-            curr = curr->children[index];
-        }
-
-        return curr->count > 0;
-    }
-
-    ~trie() {
-        delete (root);
-    }
+  ~trie() {
+    delete (root);
+  }
 
 };
