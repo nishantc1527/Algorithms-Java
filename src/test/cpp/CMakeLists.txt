@@ -13,6 +13,6 @@ add_executable(Google_Tests_run sorting/bubblesort/bubble_sort_test.cpp
         sorting/mergesort/merge_sort_test.cpp
         sorting/quicksort/quick_sort_test.cpp
         sorting/selectionsort/selection_sort_test.cpp
-        )
+)
 
 target_link_libraries(Google_Tests_run gtest gtest_main)

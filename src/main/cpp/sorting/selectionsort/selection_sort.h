@@ -3,20 +3,19 @@
 #include <algorithm>
 #include <vector>
 #include <iterator>
+#include <limits>
 
-template<typename Iter>
-void selectionSort(const Iter &start, const Iter &end) {
-    int len = std::distance(start, end);
-    Iter min, iti = start, itj;
-    for (int i = 0; i < len - 1; i++, iti++) {
-        itj = iti;
-        min = end;
-        for (int j = i; j < len; j++, itj++) {
-            if (min == end || *itj < *min)
-                min = itj;
+void selectionSort(std::vector<int>& vector) {
+    for(int start = 0; start < vector.size(); start ++) {
+        int min = std::numeric_limits<int>::max(), min_index = -1;
+
+        for(int i = start; i < vector.size(); i ++) {
+            if(vector[i] < min) {
+                min = vector[i];
+                min_index = i;
+            }
         }
 
-        std::swap(*min, *iti);
-
+        std::swap(vector[min_index], vector[start]);
     }
 }

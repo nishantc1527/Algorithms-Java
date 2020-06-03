@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/my_utils.h
-iostream
--
-unordered_map
--
-random
--
-
 /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/quicksort/quick_sort.h
 iterator
 -
@@ -23,8 +15,6 @@ iostream
 -
 typeinfo
 -
-../my_utils.h
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/my_utils.h
 
 /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/quicksort/test.cpp
 iostream

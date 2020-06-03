@@ -4,23 +4,15 @@
 #include <array>
 #include <iterator>
 
-template<typename Iter>
-void bubbleSort(const Iter &start, const Iter &end) {
-    const int count = std::distance(start, end);
-    const Iter startTemp = start;
-    Iter it1, it2;
-
-    for (int i = count - 1; i >= 0; i--) {
-        it1 = it2 = start;
-        it2++;
-        for (int j = 0; j < i; j++) {
-            if (*it1 > *it2) {
-                std::swap(*it1, *it2);
+void bubbleSort(std::vector<int>& vector) {
+    bool didFind = true;
+    for (int i = vector.size(); i >= 0 && didFind; i--) {
+        didFind = false;
+        for (int j = 0; j < i - 1; j ++) {
+            if(vector[j] > vector[j + 1]) {
+                didFind = true;
+                std::swap(vector[j], vector[j + 1]);
             }
-
-            ++it1;
-            ++it2;
         }
     }
-};
-
+}

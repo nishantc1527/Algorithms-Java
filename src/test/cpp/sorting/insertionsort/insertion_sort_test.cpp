@@ -15,7 +15,7 @@ TEST(Sorting, InsertionSortTest) {
 
         std::vector<int> temp = arr;
         std::sort(temp.begin(), temp.end());
-        insertionSort(arr.begin(), arr.end());
+        insertionSort(arr);
         ASSERT_EQ(temp, arr);
     }
 }

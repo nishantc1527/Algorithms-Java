@@ -4,45 +4,38 @@
 #include <algorithm>
 #include <iostream>
 
-template<typename Iter>
-void mergeArr(const Iter &start, const Iter &mid, const Iter &end) {
-    Iter first = start, second = mid;
+void mergeSort(std::vector<int>& vector, int left, int right);
+void merge(std::vector<int>& vector, const std::vector<int>& left, const std::vector<int>& right, int left_index);
 
-    std::vector<typename std::iterator_traits<Iter>::value_type> newVec;
-    while (first != mid && second != end) {
-        if (*first < *second) {
-            newVec.push_back(*first);
-            ++first;
-        } else {
-            newVec.push_back(*second);
-            ++second;
-        }
-    }
-
-    while (first != mid) {
-        newVec.push_back(*first);
-        first++;
-    }
-
-    while (second != end) {
-        newVec.push_back(*second);
-        second++;
-    }
-
-    Iter i = start;
-    for (auto it = newVec.begin(); it != newVec.end(); it++, i++) {
-        *i = *it;
-    }
+void mergeSort(std::vector<int>& vector) {
+    mergeSort(vector, 0, vector.size());
 }
 
-template<typename Iter>
-void mergeSort(const Iter &start, const Iter &end) {
-    int len = std::distance(start, end);
+void mergeSort(std::vector<int>& vector, int left, int right) {
+    if(left >= right - 1) {
+        return;
+    }
 
-    if (len <= 1) return;
+    int mid = left + (right - left) / 2;
+    mergeSort(vector, left, mid);
+    mergeSort(vector, mid, right);
+    merge(vector, std::vector<int>(vector.begin() + left, vector.begin() + mid), std::vector<int>(vector.begin() + mid, vector.begin() + right), left);
+}
 
-    mergeSort(start, start + len / 2);
-    mergeSort(start + len / 2, end);
+void merge(std::vector<int>& vector, const std::vector<int>& left, const std::vector<int>& right, int left_index) {
+    int i = 0, j = 0, k = left_index;
 
-    mergeArr(start, start + len / 2, end);
+    while(i < left.size() || j < right.size()) {
+        if(i >= left.size()) {
+            vector[k ++] = right[j ++];
+        } else if(j >= right.size()) {
+            vector[k ++] = left[i ++];
+        } else {
+            if(left[i] < right[j]) {
+                vector[k ++] = left[i ++];
+            } else {
+                vector[k ++] = right[j ++];
+            }
+        }
+    }
 }

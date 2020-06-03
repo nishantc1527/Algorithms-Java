@@ -15,7 +15,7 @@ TEST(Sorting, QuickSortTest) {
 
         std::vector<int> temp = arr;
         std::sort(temp.begin(), temp.end());
-        quickSort(arr.begin(), arr.end());
+        quick_sort(arr);
         ASSERT_EQ(temp, arr);
     }
 }

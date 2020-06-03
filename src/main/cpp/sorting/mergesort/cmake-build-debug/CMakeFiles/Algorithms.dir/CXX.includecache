@@ -13,8 +13,6 @@ algorithm
 -
 iostream
 -
-../my_utils.h
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/my_utils.h
 
 /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/mergesort/test.cpp
 iostream
@@ -23,12 +21,4 @@ vector
 -
 merge_sort.h
 /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/mergesort/merge_sort.h
-
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/my_utils.h
-iostream
--
-unordered_map
--
-random
--
 

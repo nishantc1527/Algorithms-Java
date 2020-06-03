@@ -5,33 +5,33 @@
 #include <iostream>
 #include <typeinfo>
 
-template<typename Iter>
-Iter partition(const Iter &begin, const Iter &end) {
-    Iter left = begin, right = end - 1;
+void quick_sort(std::vector<int>& vector, int left, int right);
+int partition(std::vector<int>& vector, int left, int right);
 
-    Iter partition = begin;
-    int len = std::distance(begin, end);
-    auto pivot = *right;
+void quick_sort(std::vector<int>& vector) {
+    quick_sort(vector, 0, vector.size());
+}
 
-    for (Iter it = begin; it < end - 1; it++) {
-        if (*it < pivot) {
-            std::swap(*it, *partition);
-            partition++;
+void quick_sort(std::vector<int>& vector, int left, int right) {
+    if(left >= right - 1) {
+        return;
+    }
+
+    int pivot_index = partition(vector, left, right);
+    quick_sort(vector, left, pivot_index);
+    quick_sort(vector, pivot_index + 1, right);
+}
+
+int partition(std::vector<int>& vector, int left, int right) {
+    int pivot_index = right - 1;
+    int partition_index = left;
+
+    for(int i = left; i < right - 1; i ++) {
+        if(vector[i] < vector[pivot_index]) {
+            std::swap(vector[partition_index ++], vector[i]);
         }
     }
 
-    std::swap(*partition, *right);
-
-    return partition;
-}
-
-template<typename Iter>
-void quickSort(const Iter &begin, const Iter &end) {
-    int len = std::distance(begin, end);
-    if (len <= 1) return;
-
-    const Iter partitionIter = partition(begin, end);
-
-    quickSort(begin, partitionIter);
-    quickSort(partitionIter + 1, end);
+    std::swap(vector[partition_index], vector[pivot_index]);
+    return partition_index;
 }

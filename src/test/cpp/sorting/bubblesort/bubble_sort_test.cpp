@@ -15,7 +15,7 @@ TEST(Sorting, BubbleSortTest) {
 
         std::vector<int> temp = arr;
         std::sort(temp.begin(), temp.end());
-        bubbleSort(arr.begin(), arr.end());
+        bubbleSort(arr);
         ASSERT_EQ(temp, arr);
     }
 }
