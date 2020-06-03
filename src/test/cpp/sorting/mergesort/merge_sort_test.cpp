@@ -15,7 +15,7 @@ TEST(Sorting, MergeSortTest) {
 
         std::vector<int> temp = arr;
         std::sort(temp.begin(), temp.end());
-        mergeSort(arr);
+        merge_sort(arr);
         ASSERT_EQ(temp, arr);
     }
 }

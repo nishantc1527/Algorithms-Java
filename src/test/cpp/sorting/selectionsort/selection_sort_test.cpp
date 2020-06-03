@@ -15,7 +15,7 @@ TEST(Sorting, SelectionSortTest) {
 
         std::vector<int> temp = arr;
         std::sort(temp.begin(), temp.end());
-        selectionSort(arr);
+        selection_sort(arr);
         ASSERT_EQ(temp, arr);
     }
 }

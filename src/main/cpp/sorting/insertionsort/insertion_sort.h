@@ -4,7 +4,7 @@
 #include <array>
 #include <iterator>
 
-void insertionSort(std::vector<int> &vector) {
+void insertion_sort(std::vector<int> &vector) {
     for (int toInsert = 0; toInsert < vector.size(); toInsert++) {
         int curr = vector[toInsert], i;
 
