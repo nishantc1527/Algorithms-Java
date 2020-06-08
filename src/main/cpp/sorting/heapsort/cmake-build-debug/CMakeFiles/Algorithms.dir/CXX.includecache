@@ -10,13 +10,11 @@
 vector
 -
 
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/heapsort/test.cpp
-vector
--
+/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/heapsort/heap_sort_test.cpp
 algorithm
 -
-iostream
--
-heap_sort.hpp
+gtest/gtest.h
+/cygdrive/d/Github/myrepos/Algorithms/src/test/cpp/sorting/heapsort/gtest/gtest.h
+../../../../main/cpp/sorting/heapsort/heap_sort.hpp
 /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/heapsort/heap_sort.hpp
 
