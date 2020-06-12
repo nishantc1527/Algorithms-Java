@@ -1,6 +1,6 @@
 from random import randrange
 
-from src.main.python.bitmanipulation.singlenumber.single_number import single_number
+from python.bitmanipulation.singlenumber.single_number import single_number
 
 
 def test_single_number():
@@ -16,4 +16,3 @@ def test_single_number():
                 rand_list.append(j)
 
         assert random_number == single_number(rand_list)
-

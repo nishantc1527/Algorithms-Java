@@ -1,6 +1,6 @@
 import math
 
-from src.main.python.bitmanipulation.poweroftwo.power_of_two import power_of_two
+from python.bitmanipulation.poweroftwo.power_of_two import power_of_two
 
 
 def test_power_of_two():

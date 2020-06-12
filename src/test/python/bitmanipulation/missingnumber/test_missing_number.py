@@ -1,6 +1,6 @@
 import random
 
-from src.main.python.bitmanipulation.missingnumber.missing_number import missing_number
+from python.bitmanipulation.missingnumber.missing_number import missing_number
 
 
 def test_missing_number():

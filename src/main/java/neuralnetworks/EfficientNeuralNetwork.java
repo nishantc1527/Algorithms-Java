@@ -1,5 +1,6 @@
 package neuralnetworks;
 
+import org.jblas.ComplexDoubleMatrix;
 import org.jblas.DoubleMatrix;
 
 import java.util.function.Function;

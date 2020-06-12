@@ -1,7 +1,10 @@
 <component name="libraryTable">
   <library name="jblas-1.2.4">
-    <CLASSES />
-    <JAVADOC />
-    <SOURCES />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/jblas-1.2.4.jar!/" />
+    </CLASSES>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/jblas-1.2.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

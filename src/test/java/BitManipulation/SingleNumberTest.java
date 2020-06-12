@@ -10,8 +10,6 @@ import static org.junit.Assert.assertEquals;
 
 public class SingleNumberTest {
 
-  private int[] arr;
-
   @Test
   public void testSingleNumber() {
     for (int i = 0; i < 10000; i++) {

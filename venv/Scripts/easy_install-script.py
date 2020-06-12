@@ -1,8 +1,10 @@
 #!D:\Github\myrepos\Algorithms\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==33.1.1','console_scripts','easy_install'
 __requires__ = 'setuptools==33.1.1'
+
 import re
 import sys
+
 from pkg_resources import load_entry_point
 
 if __name__ == '__main__':

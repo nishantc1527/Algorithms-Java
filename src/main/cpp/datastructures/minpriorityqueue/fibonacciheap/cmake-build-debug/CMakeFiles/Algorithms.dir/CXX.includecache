@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/minpriorityqueue/fibonacciheap/fibonacci_heap.cpp
+fibonacci_heap.hpp
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/minpriorityqueue/fibonacciheap/fibonacci_heap.hpp
+
+/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/minpriorityqueue/fibonacciheap/fibonacci_heap.hpp
+

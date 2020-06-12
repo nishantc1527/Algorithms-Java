@@ -5,7 +5,6 @@ try:
 except ImportError:
     pass
 
-
 try:
     module_from_spec = importlib.util.module_from_spec
 except AttributeError:

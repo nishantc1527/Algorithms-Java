@@ -1,6 +1,6 @@
 from random import randrange
 
-from src.main.python.dynamicprogramming.houserobber.house_robber import brute_force, memoized, bottom_up
+from python.dynamicprogramming.houserobber.house_robber import brute_force, memoized, bottom_up
 
 
 def rob(nums):  # This function correctly works

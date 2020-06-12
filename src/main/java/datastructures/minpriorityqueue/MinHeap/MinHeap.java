@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MinHeap {
 
-  private final List<Integer> heap;
+  public final List<Integer> heap;
 
   public MinHeap() {
     heap = new ArrayList<>();
