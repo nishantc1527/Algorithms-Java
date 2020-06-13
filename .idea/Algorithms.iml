@@ -4,10 +4,10 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 (Algorithms)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="14" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="junit-4.12" level="project" />
-    <orderEntry type="library" name="jblas-1.2.4" level="project" />
+    <orderEntry type="library" exported="" name="junit-4.12" level="project" />
+    <orderEntry type="library" exported="" name="jblas-1.2.4 (1)" level="project" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

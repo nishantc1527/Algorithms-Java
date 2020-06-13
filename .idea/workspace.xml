@@ -20,19 +20,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="936ef0d3-752f-4bb2-8a53-5ea35c8fbf12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jblas_1_2_4__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/breadthfirstsearch/BreadthFirstSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/depthfirstsearch/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jblas_1_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bitmanipulation/BasicFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bitmanipulation/BasicFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bitmanipulation/missingnumber/MissingNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bitmanipulation/missingnumber/MissingNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bitmanipulation/poweroftwo/PowerOfTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bitmanipulation/poweroftwo/PowerOfTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bitmanipulation/singlenumber/SingleNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bitmanipulation/singlenumber/SingleNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/minpriorityqueue/FibonacciHeap/FibonacciHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/minpriorityqueue/FibonacciHeap/FibonacciHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/minpriorityqueue/MinHeap/MinHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/minpriorityqueue/MinHeap/MinHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/TimeComparisonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/TimeComparisonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/TreeVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/TreeVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/avltree/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/avltree/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/binarysearchtree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/binarysearchtree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/redblacktree/RedBlackTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/binarysearchtrees/redblacktree/RedBlackTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructures/trees/trie/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructures/trees/trie/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dynmanicprogramming/houserobber/HouseRobber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dynmanicprogramming/houserobber/HouseRobber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dynmanicprogramming/uniquepaths/UniquePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dynmanicprogramming/uniquepaths/UniquePaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/matrices/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/matrices/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/vectors/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/vectors/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/EfficientNeuralNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/EfficientNeuralNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/MNISTTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/MNISTTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/MultilayeredNeuralNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/MultilayeredNeuralNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/OneHiddenLayerNeuralNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/OneHiddenLayerNeuralNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/Perceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/Perceptron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/XORVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/XORVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/mnistdata/MnistEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/mnistdata/MnistEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/neuralnetworks/mnistdata/MnistLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neuralnetworks/mnistdata/MnistLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/bogosort/BogoSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/bogosort/BogoSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/bubblesort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/bubblesort/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/countingsort/CountingSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/countingsort/CountingSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/heapsort/HeapSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/heapsort/HeapSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/insertionsort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/insertionsort/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/mergesort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/mergesort/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/quicksort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/quicksort/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/selectionsort/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/selectionsort/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dCYbIHOiq6WCqweOuRfPMbmg2N" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -42,9 +96,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/python/sorting/bogosort" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jblas-1.2.4 (1).jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,14 +110,40 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\myrepos\Algorithms\src\main\python\datastructures" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_bogo_sort.test_bogo_sort">
+  <component name="RunManager" selected="Application.DepthFirstSearch">
+    <configuration name="BreadthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="graphtheory.traversals.breadthfirstsearch.BreadthFirstSearch" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="graphtheory.traversals.breadthfirstsearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="graphtheory.traversals.depthfirstsearch.DepthFirstSearch" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="graphtheory.traversals.depthfirstsearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="bogo_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="main" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,28 +158,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/sorting/bogosort/bogo_sort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="bubble_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="main" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/python/sorting/bubblesort" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/sorting/bubblesort/bubble_sort.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,37 +200,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_unique_paths.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/python/dynamicprogramming/uniquepaths" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/test/python/dynamicprogramming/uniquepaths/test_unique_paths.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Application.BreadthFirstSearch" />
       <item itemvalue="Python.bogo_sort" />
-      <item itemvalue="Python.bubble_sort" />
       <item itemvalue="Python tests.pytest for test_bogo_sort.test_bogo_sort" />
       <item itemvalue="Python tests.pytest for test_bubble_sort.test_bubble_sort" />
-      <item itemvalue="Python tests.pytest in test_unique_paths.py" />
+      <item itemvalue="Application.DepthFirstSearch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DepthFirstSearch" />
+        <item itemvalue="Application.BreadthFirstSearch" />
         <item itemvalue="Python tests.pytest for test_bogo_sort.test_bogo_sort" />
         <item itemvalue="Python tests.pytest for test_bubble_sort.test_bubble_sort" />
         <item itemvalue="Python.bogo_sort" />
-        <item itemvalue="Python.bubble_sort" />
-        <item itemvalue="Python tests.pytest in test_unique_paths.py" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +241,9 @@
       <workItem from="1592025508005" duration="1085000" />
       <workItem from="1592027242648" duration="1907000" />
       <workItem from="1592029752685" duration="657000" />
+      <workItem from="1592079331303" duration="2613000" />
+      <workItem from="1592082304981" duration="102000" />
+      <workItem from="1592082423273" duration="885000" />
     </task>
     <servers />
   </component>
@@ -226,10 +271,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="552" y="221" key="#Plugins/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1591943043675" />
-    <state x="440" y="154" key="#Project_Structure" timestamp="1591934548122">
+    <state x="440" y="154" key="#Project_Structure" timestamp="1592082272902">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="440" y="154" key="#Project_Structure/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1591934548122" />
+    <state x="440" y="154" key="#Project_Structure/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592082272902" />
     <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591938845433">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -242,50 +287,54 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="540" y="234" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1591934538110" />
+    <state width="435" height="466" key="DebuggerActiveHint" timestamp="1592082968065">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="435" height="466" key="DebuggerActiveHint/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592082968065" />
     <state x="778" y="513" key="DetectedRootsChooserDialog" timestamp="1591931059193">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="778" y="513" key="DetectedRootsChooserDialog/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1591931059193" />
-    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1592029418934">
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1592082557711">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592029418934" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1592029701463">
+    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592082557711" />
+    <state width="1877" height="392" key="GridCell.Tab.0.bottom" timestamp="1592083027838">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592029701463" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1592029701463">
+    <state width="1877" height="392" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027838" />
+    <state width="1877" height="392" key="GridCell.Tab.0.center" timestamp="1592083027838">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592029701463" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1592029701463">
+    <state width="1877" height="392" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027838" />
+    <state width="1877" height="392" key="GridCell.Tab.0.left" timestamp="1592083027838">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592029701463" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1592029701463">
+    <state width="1877" height="392" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027838" />
+    <state width="1877" height="392" key="GridCell.Tab.0.right" timestamp="1592083027838">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592029701463" />
-    <state width="1877" height="396" key="GridCell.Tab.1.bottom" timestamp="1592027235665">
+    <state width="1877" height="392" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027838" />
+    <state width="1877" height="392" key="GridCell.Tab.1.bottom" timestamp="1592083027839">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592027235665" />
-    <state width="1877" height="396" key="GridCell.Tab.1.center" timestamp="1592027235665">
+    <state width="1877" height="392" key="GridCell.Tab.1.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027839" />
+    <state width="1877" height="392" key="GridCell.Tab.1.center" timestamp="1592083027839">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592027235665" />
-    <state width="1877" height="396" key="GridCell.Tab.1.left" timestamp="1592027235665">
+    <state width="1877" height="392" key="GridCell.Tab.1.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027839" />
+    <state width="1877" height="392" key="GridCell.Tab.1.left" timestamp="1592083027839">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592027235665" />
-    <state width="1877" height="396" key="GridCell.Tab.1.right" timestamp="1592027235665">
+    <state width="1877" height="392" key="GridCell.Tab.1.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027839" />
+    <state width="1877" height="392" key="GridCell.Tab.1.right" timestamp="1592083027839">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592027235665" />
-    <state x="461" y="225" key="SettingsEditor" timestamp="1592025759272">
+    <state width="1877" height="392" key="GridCell.Tab.1.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083027839" />
+    <state x="461" y="225" key="SettingsEditor" timestamp="1592082576065">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="461" y="225" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592025759272" />
+    <state x="461" y="225" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592082576065" />
     <state x="739" y="424" key="cloudConfig.PluginsDialog" timestamp="1591941334194">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
