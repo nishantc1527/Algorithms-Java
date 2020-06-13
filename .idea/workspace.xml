@@ -20,140 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="936ef0d3-752f-4bb2-8a53-5ea35c8fbf12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/CHANGES.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/MANIFEST.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/README.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/bootstrap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/_templates/indexsidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/_theme/nature/static/nature.css_t" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/_theme/nature/static/pygments.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/_theme/nature/theme.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/developer-guide.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/development.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/easy_install.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/formats.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/history.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/index.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/pkg_resources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/python3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/releases.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/roadmap.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/docs/setuptools.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/easy_install.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/launcher.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/msvc-build-launcher.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pavement.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/appdirs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/__about__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/_compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/_structures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/markers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/requirements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/specifiers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/packaging/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/pyparsing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/six.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/_vendor/vendored.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/api_tests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/tests/test_markers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/tests/test_pkg_resources.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pkg_resources/tests/test_resources.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setup.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/archive_util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/alias.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/bdist_egg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/bdist_rpm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/bdist_wininst.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/build_ext.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/build_py.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/develop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/easy_install.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/egg_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/install.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/install_egg_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/install_lib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/install_scripts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/launcher manifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/py36compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/rotate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/saveopts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/sdist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/setopt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/upload.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/command/upload_docs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/depends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/dist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/extension.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/glob.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/launch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/lib2to3_ex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/monkey.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/msvc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/namespaces.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/package_index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/py26compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/py27compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/py31compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/py33compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/py36compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/sandbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/script (dev).tmpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/script.tmpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/site-patch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/ssl_support.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/contexts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/environment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/fixtures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/indexes/test_links_priority/external.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/indexes/test_links_priority/simple/foobar/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/mod_with_constant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/namespaces.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/py26compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/script-with-bom.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_archive_util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_bdist_egg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_build_ext.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_build_py.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_depends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_develop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_dist_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_easy_install.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_egg_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_find_packages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_install_scripts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_integration.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_manifest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_msvc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_namespaces.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_packageindex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_sandbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_sdist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_setuptools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_unicode_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_upload_docs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/test_windows_wrappers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/tests/textwrap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/unicode_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/setuptools/windows_support.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/tests/manual_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/tests/test_pypi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setuptools-33.1.1/tox.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/breadthfirstsearch/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/breadthfirstsearch/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/depthfirstsearch/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/depthfirstsearch/DepthFirstSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +205,7 @@
       <workItem from="1592029752685" duration="657000" />
       <workItem from="1592079331303" duration="2613000" />
       <workItem from="1592082304981" duration="102000" />
-      <workItem from="1592082423273" duration="1329000" />
+      <workItem from="1592082423273" duration="2957000" />
     </task>
     <servers />
   </component>
@@ -394,22 +264,22 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592082557711" />
-    <state width="1877" height="315" key="GridCell.Tab.0.bottom" timestamp="1592083609480">
+    <state width="1877" height="315" key="GridCell.Tab.0.bottom" timestamp="1592085355181">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083609480" />
-    <state width="1877" height="315" key="GridCell.Tab.0.center" timestamp="1592083609480">
+    <state width="1877" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592085355181" />
+    <state width="1877" height="315" key="GridCell.Tab.0.center" timestamp="1592085355181">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083609480" />
-    <state width="1877" height="315" key="GridCell.Tab.0.left" timestamp="1592083609479">
+    <state width="1877" height="315" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592085355181" />
+    <state width="1877" height="315" key="GridCell.Tab.0.left" timestamp="1592085355181">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083609479" />
-    <state width="1877" height="315" key="GridCell.Tab.0.right" timestamp="1592083609480">
+    <state width="1877" height="315" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592085355181" />
+    <state width="1877" height="315" key="GridCell.Tab.0.right" timestamp="1592085355181">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592083609480" />
+    <state width="1877" height="315" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592085355181" />
     <state width="1877" height="392" key="GridCell.Tab.1.bottom" timestamp="1592083027839">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

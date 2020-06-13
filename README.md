@@ -2,7 +2,7 @@
 
 Algorithms are a way to solve problems. Not only that, it wants to solve problem fast. That's why there's tons and tons of theory on this stuff.
 
-This project is a hope to share the whole knowledge of algorithms there is to offer. If you don't know the algorithm, there are detailed explanations on each algorithm (all in the explanations folder).
+This project is a hope to share the whole knowledge of algorithms there is to offer. If you don't know the algorithm, there are detailed explanations on each algorithm (all at the bottom of this page).
 
 Obviously, one guy can't do that, which is why it's open source! I also developed a fun way to contribute. You can look at it in the [contributing page](https://github.com/nishantc1527/Algorithms#contributing).
 
@@ -185,3 +185,7 @@ This part contains all the implementations of the algorithms. If you want to vie
 
 # License
 Licensed under [MIT License](https://opensource.org/licenses/MIT). That means feel free to add whatever you want if you find it necessary.
+
+# Explanations
+
+## Sorting 

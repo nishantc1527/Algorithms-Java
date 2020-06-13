@@ -1,5 +1,6 @@
 package graphtheory.traversals.depthfirstsearch;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Stack;
 
@@ -19,33 +20,38 @@ public class DepthFirstSearch {
         return graph;
     }
 
-    public static void depthFirstSearch(LinkedList<Integer>[] graph, int start) {
+    public static int[] depthFirstSearch(LinkedList<Integer>[] graph, int start) {
         int[] state = new int[graph.length];
-        Stack<Integer> queue = new Stack<>();
-        queue.push(start);
+        Stack<Integer> stack = new Stack<>();
+        stack.push(start);
         state[start] = 1;
+        int k = 0;
+        int[] res = new int[graph.length];
 
-        while (!queue.isEmpty()) {
-            int next = queue.pop();
-            state[start] = 2;
-            System.out.print(next + " ");
+        while (!stack.isEmpty()) {
+            int next = stack.pop();
+            state[next] = 2;
+            res[k ++] = next;
 
             for (int neighbor : graph[next]) {
                 if (state[neighbor] == 0) {
                     state[neighbor] = 1;
-                    queue.push(neighbor);
+                    stack.push(neighbor);
                 }
             }
         }
+
+        return res;
     }
 
     public static void main(String[] args) {
         // 0 -> 1 ↘
-        // ⬇  ↙    2
+        // ⬇  ↙    2 -> 5
         // 4 <- 3 ↙
 
-        LinkedList<Integer>[] graph = makeGraph(5, new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 4}, {0, 4}, {1, 4}});
-        depthFirstSearch(graph, 0);
+        LinkedList<Integer>[] graph = makeGraph(6, new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 4}, {0, 4}, {1, 4}, {2, 5}});
+        int[] search = depthFirstSearch(graph, 0);
+        System.out.println(Arrays.toString(search));
     }
 
 }
