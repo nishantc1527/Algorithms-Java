@@ -1,1 +1,0 @@
-These are the basic graph algorithms that are a must know.

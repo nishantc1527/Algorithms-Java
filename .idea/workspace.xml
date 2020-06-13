@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936ef0d3-752f-4bb2-8a53-5ea35c8fbf12" name="Default Changelist" comment="" />
+    <list default="true" id="936ef0d3-752f-4bb2-8a53-5ea35c8fbf12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,11 +159,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.bubble_sort" />
       <item itemvalue="Python.bogo_sort" />
-      <item itemvalue="Python tests.pytest in test_unique_paths.py" />
-      <item itemvalue="Python tests.pytest for test_bubble_sort.test_bubble_sort" />
+      <item itemvalue="Python.bubble_sort" />
       <item itemvalue="Python tests.pytest for test_bogo_sort.test_bogo_sort" />
+      <item itemvalue="Python tests.pytest for test_bubble_sort.test_bubble_sort" />
+      <item itemvalue="Python tests.pytest in test_unique_paths.py" />
     </list>
     <recent_temporary>
       <list>
@@ -196,6 +198,7 @@
       <workItem from="1592025041779" duration="326000" />
       <workItem from="1592025508005" duration="1085000" />
       <workItem from="1592027242648" duration="1907000" />
+      <workItem from="1592029752685" duration="657000" />
     </task>
     <servers />
   </component>
@@ -299,22 +302,5 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1591943021069" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Algorithms$ez_setup.coverage" NAME="ez_setup Coverage Results" MODIFIED="1592027253172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Algorithms$pytest_in_fibonacci_heap_py.coverage" NAME="pytest in fibonacci_heap.py Coverage Results" MODIFIED="1591938779795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Algorithms$Unittests_in_test_bogo_sort_py.coverage" NAME="Unittests in test_bogo_sort.py Coverage Results" MODIFIED="1591942779781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/sorting/bogosort" />
-    <SUITE FILE_PATH="coverage/Algorithms$bogo_sort.coverage" NAME="bogo_sort Coverage Results" MODIFIED="1592029396075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/python/sorting/bogosort" />
-    <SUITE FILE_PATH="coverage/Algorithms$get_pip.coverage" NAME="get-pip Coverage Results" MODIFIED="1591937468492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Algorithms$pytest_in_test_unique_paths_py.coverage" NAME="pytest in test_unique_paths.py Coverage Results" MODIFIED="1592027537092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/dynamicprogramming/uniquepaths" />
-    <SUITE FILE_PATH="coverage/Algorithms$pytest_for_test_bogo_sort_test_bogo_sort.coverage" NAME="pytest for test_bogo_sort.test_bogo_sort Coverage Results" MODIFIED="1592029532445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/sorting/bogosort" />
-    <SUITE FILE_PATH="coverage/Algorithms$pytest_for_test_bubble_sort_test_bubble_sort.coverage" NAME="pytest for test_bubble_sort.test_bubble_sort Coverage Results" MODIFIED="1592029436439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/sorting/bubblesort" />
-    <SUITE FILE_PATH="coverage/Algorithms$test_single_number.coverage" NAME="test_single_number Coverage Results" MODIFIED="1591937303206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/bitmanipulation/singlenumber" />
-    <SUITE FILE_PATH="coverage/Algorithms$test_house_robber.coverage" NAME="test_house_robber Coverage Results" MODIFIED="1591943060640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/dynamicprogramming/houserobber" />
-    <SUITE FILE_PATH="coverage/Algorithms$basic_functions.coverage" NAME="basic_functions Coverage Results" MODIFIED="1591939472832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/python/bitmanipulation" />
-    <SUITE FILE_PATH="coverage/Algorithms$test_missing_number.coverage" NAME="test_missing_number Coverage Results" MODIFIED="1591939771810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/bitmanipulation/missingnumber" />
-    <SUITE FILE_PATH="coverage/Algorithms$binarysearchtree.coverage" NAME="binarysearchtree Coverage Results" MODIFIED="1591939541758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/python/datastructures/trees/binarysearchtrees/binarysearchtree" />
-    <SUITE FILE_PATH="coverage/Algorithms$pytest_in_test_bubble_sort_py.coverage" NAME="pytest in test_bubble_sort.py Coverage Results" MODIFIED="1592027295015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/python/sorting/bubblesort" />
-    <SUITE FILE_PATH="coverage/Algorithms$bubble_sort.coverage" NAME="bubble_sort Coverage Results" MODIFIED="1592029356131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/python/sorting/bubblesort" />
   </component>
 </project>

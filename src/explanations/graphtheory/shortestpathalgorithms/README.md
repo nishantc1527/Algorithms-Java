@@ -1,2 +1,0 @@
-Shortest path algorithms in a graph is a broad term for finding the shortest path from one vertex to another. Usually, you want more information than just two vertices, so
-each one will be explained in more detail in their repective section.
