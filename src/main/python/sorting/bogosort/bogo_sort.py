@@ -18,3 +18,10 @@ def is_sorted(to_sort):
             return False
 
     return True
+
+
+if __name__ == "__main__":
+    arr = [1, 2, 6, 4, 5]
+    print(str(arr))
+    bogo_sort(arr)
+    print(str(arr))
