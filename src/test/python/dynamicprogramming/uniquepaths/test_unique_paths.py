@@ -1,6 +1,6 @@
 from math import factorial
 
-from src.main.python.dynamicprogramming.uniquepaths.unique_paths import brute_force, memoized
+from python.dynamicprogramming.uniquepaths.unique_paths import brute_force, memoized
 
 
 def math_sol(m, n):  # the math solution; it is guaranteed to work

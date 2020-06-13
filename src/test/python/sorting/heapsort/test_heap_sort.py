@@ -1,6 +1,6 @@
 import random
 
-from src.main.python.sorting.heapsort.heap_sort import heap_sort
+from python.sorting.heapsort.heap_sort import heap_sort
 
 
 def test_heap_sort():

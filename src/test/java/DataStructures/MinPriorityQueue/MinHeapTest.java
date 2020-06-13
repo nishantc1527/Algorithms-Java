@@ -3,10 +3,7 @@ package DataStructures.MinPriorityQueue;
 import datastructures.minpriorityqueue.MinHeap.MinHeap;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -40,7 +37,6 @@ public class MinHeapTest {
       for (int j = 0; j < randomAmount; j++) {
         heap.add((int) (Math.random() * 1000));
       }
-      new LinkedList().clone();
       assertFalse(heap.isEmpty());
     }
   }

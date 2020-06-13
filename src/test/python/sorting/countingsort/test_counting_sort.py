@@ -1,6 +1,6 @@
 import random
 
-from src.main.python.sorting.countingsort.counting_sort import counting_sort
+from python.sorting.countingsort.counting_sort import counting_sort
 
 
 def test_counting_sort():

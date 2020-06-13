@@ -1,6 +1,6 @@
 import random
 
-from src.main.python.sorting.insertionsort.insertion_sort import insertion_sort
+from python.sorting.insertionsort.insertion_sort import insertion_sort
 
 
 def test_insertion_sort():

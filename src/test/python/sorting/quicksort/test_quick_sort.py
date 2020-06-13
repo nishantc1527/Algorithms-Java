@@ -1,6 +1,6 @@
 import random
 
-from src.main.python.sorting.quicksort.quick_sort import quick_sort
+from python.sorting.quicksort.quick_sort import quick_sort
 
 
 def test_quick_sort():

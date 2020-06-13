@@ -1,6 +1,6 @@
 import random
 
-from src.main.python.sorting.mergesort.merge_sort import merge_sort
+from python.sorting.mergesort.merge_sort import merge_sort
 
 
 def test_merge_sort():

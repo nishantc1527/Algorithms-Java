@@ -1,6 +1,6 @@
 import random
 
-from src.main.python.sorting.selectionsort.selection_sort import selection_sort
+from python.sorting.selectionsort.selection_sort import selection_sort
 
 
 def test_selection_sort():
