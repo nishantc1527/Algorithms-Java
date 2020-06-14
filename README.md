@@ -78,7 +78,8 @@ In Java (or python, but the error message is different), you might get this:
  - [Stack Overflow](https://stackoverflow.com/questions/18093928/what-does-could-not-find-or-load-main-class-mean)
  - [Tutorialspoint](https://www.tutorialspoint.com/how-to-resolve-could-not-find-or-load-main-class-package-in-java)
 
-In short, you can't go to the directory itself to compile it. You have to start from the main repository folder, then compile using the full path. This is the same for python, except the error message will be different.
+In short, you can't go to the directory itself to compile it. You have to start from the main repository folder, then compile using the full path. 
+This is the same for python, except the error message will be different.
 
  ## Another Possible Error
 
@@ -117,7 +118,9 @@ No one here yet. Be the first to put your name!
 
 # Implementations
 
-This part contains all the implementations of the algorithms. If you want to view the file associated to an implementation, go to ```src/main/<language-of-your-choice>/<follow-the-headers-before-the-file>```. If you want to see the JUnit tests, replace ```src/main``` with ```src/test```. If you want to see the explanation of something, replace ```<language-of-your-choice>``` with ```explanations```.
+This part contains all the implementations of the algorithms. If you want to view the file associated to an implementation, go to 
+```src/main/<language-of-your-choice>/<follow-the-headers-before-the-file>```. If you want to see the JUnit tests, replace ```src/main``` with 
+```src/test```. If you want to see the explanation of something, replace ```<language-of-your-choice>``` with ```explanations```.
 
  ## Sorting
  
@@ -188,4 +191,21 @@ Licensed under [MIT License](https://opensource.org/licenses/MIT). That means fe
 
 # Explanations
 
-## Sorting 
+## Sorting
+
+Sorting an array is where you convert an array, like [5, 1, 2, 6, 3, 4] to [1, 2, 3, 4, 5, 6]. As you can see, the second array is in sorted order, where every
+number is larger than the last one. There are many sorting algorithms, ranging from O(N<sup>2</sup>), which is slow, to O(N log N), which is fast. In some cases,
+O(N + <some-constant>) is achievable, but they have many flaws.
+
+### Bubble Sort
+
+Bubble sort is one of the easiest sorting algorithms, but achives a slow time of O(N<sup>2</sup>). The algorithm is as follows: Traverse the array given, and
+every time you find a larger number followed by a smaller value (which is the wrong order), you swap the two numbers. If I take the example from above:
+
+[5, 1, 2, 6, 3, 4] becomes [1, 5, 2, 6, 3, 4] after 1 swap. Then it becomes [1, 2, 5, 6, 3, 4] and then [1, 2, 5, 6, 3, 4] (which is the same as before since
+5 and 6 are in the correct order) and then [1, 2, 5, 3, 6, 4] and finally [1, 2, 5, 3, 4, 6].
+
+All that is one traversal. As you can see, it is still not sorted, because 5 is not in the right place. However, after another traversal, it becomes sorted.
+
+What exactly is the time complexity of bubble sort? First of all, each traversal cost O(N) since you go through the entire array. The affect of the first traversal
+is to move the largest number to the end. This is because the largest element will always be swapped with the next number if it is not already at the end.

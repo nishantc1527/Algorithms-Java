@@ -3,8 +3,8 @@ package neuralnetworks;
 import math.matrices.Matrix;
 
 public class OneHiddenLayerNeuralNetwork {
-    private Matrix weightsIH, weightsHO, biasH, biasO;
     private final double learningRate;
+    private Matrix weightsIH, weightsHO, biasH, biasO;
 
     public OneHiddenLayerNeuralNetwork(int inputs, int hidden, int output) {
 

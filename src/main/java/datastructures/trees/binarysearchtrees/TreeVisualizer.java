@@ -11,12 +11,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TreeVisualizer extends JPanel implements KeyListener {
+    private final double zoomFactor = 0.5;
+    private final JScrollPane scrollPane;
     private BinaryTree<?> tree;
     private Map<Node<?>, Point> map;
     private int width, height, rootHeight;
-    private final double zoomFactor = 0.5;
     private JFrame frame;
-    private final JScrollPane scrollPane;
 
     public TreeVisualizer(BinaryTree<?> tree, int width, int height) {
         this.tree = tree;

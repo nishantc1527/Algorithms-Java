@@ -14,7 +14,7 @@ public class EfficientNeuralNetwork {
     private final DoubleMatrix[] biases;
     private final double learningRate;
     private final Function<Double, Double> activation;
-  private final Function<Double, Double> dactivation;
+    private final Function<Double, Double> dactivation;
 
     public EfficientNeuralNetwork(int inputs, int outputs, double learningRate, int... hiddenLayers) {
         if (hiddenLayers.length < 1) throw new RuntimeException("Cannot have 0 hidden layers!");

@@ -31,7 +31,7 @@ public class BreadthFirstSearch {
         while (!queue.isEmpty()) {
             int next = queue.poll();
             state[next] = 2;
-            res[k ++] = next;
+            res[k++] = next;
 
             for (int neighbor : graph[next]) {
                 if (state[neighbor] == 0) {

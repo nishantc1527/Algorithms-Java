@@ -8,9 +8,9 @@ import java.util.Map;
 
 public class Tester extends JPanel {
     private static final int WIDTH = 900, HEIGHT = 900;
-    private Perceptron perceptron;
     private final Map<Point, Integer> points = new HashMap<>();
     private final int trainingSize;
+    private Perceptron perceptron;
     private int frameCount = 0;
 
     public Tester(int width, int height) {

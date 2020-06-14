@@ -7,8 +7,8 @@ import datastructures.trees.binarysearchtrees.Node;
 import java.util.*;
 
 public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
-    private AVLTreeNode root;
     private final AVLTreeNode rootParent;
+    private AVLTreeNode root;
 
     /**
      * Creates a default, empty AVL tree with a null root

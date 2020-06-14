@@ -12,13 +12,13 @@ import java.util.Queue;
 public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> {
 
     /**
-     * The root of the binary search tree.
-     */
-    private BSTNode root;
-    /**
      * Parent of the root, just used to simplify insertion and deletion algorithms
      */
     private final BSTNode rootParent;
+    /**
+     * The root of the binary search tree.
+     */
+    private BSTNode root;
 
     /**
      * Default constructor of this tree
