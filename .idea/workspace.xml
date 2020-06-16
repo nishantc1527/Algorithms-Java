@@ -20,9 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="936ef0d3-752f-4bb2-8a53-5ea35c8fbf12" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/depthfirstsearch/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphtheory/traversals/depthfirstsearch/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DataStructures/MinPriorityQueue/FibonacciHeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataStructures/MinPriorityQueue/FibonacciHeapTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +42,42 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Algorithms" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Algorithms" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Algorithms" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -78,7 +125,7 @@
       <recent name="D:\Github\myrepos\Algorithms\src\main\python\datastructures" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DepthFirstSearch">
+  <component name="RunManager" selected="Gradle.Algorithms [buildDependents]">
     <configuration name="BreadthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="graphtheory.traversals.breadthfirstsearch.BreadthFirstSearch" />
       <module name="main" />
@@ -92,39 +139,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="graphtheory.traversals.depthfirstsearch.DepthFirstSearch" />
-      <module name="main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="graphtheory.traversals.depthfirstsearch.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Algorithms [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assemble" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="bogo_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="main" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/python/sorting/bogosort" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/sorting/bogosort/bogo_sort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+    <configuration name="Algorithms [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Algorithms [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="pytest for test_bogo_sort.test_bogo_sort" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -144,37 +213,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_bubble_sort.test_bubble_sort" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/python/sorting/bubblesort" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_bubble_sort.test_bubble_sort&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.BreadthFirstSearch" />
-      <item itemvalue="Application.DepthFirstSearch" />
-      <item itemvalue="Python.bogo_sort" />
       <item itemvalue="Python tests.pytest for test_bogo_sort.test_bogo_sort" />
-      <item itemvalue="Python tests.pytest for test_bubble_sort.test_bubble_sort" />
+      <item itemvalue="Gradle.Algorithms [build]" />
+      <item itemvalue="Gradle.Algorithms [assemble]" />
+      <item itemvalue="Gradle.Algorithms [buildDependents]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DepthFirstSearch" />
+        <item itemvalue="Gradle.Algorithms [buildDependents]" />
+        <item itemvalue="Gradle.Algorithms [assemble]" />
+        <item itemvalue="Gradle.Algorithms [build]" />
         <item itemvalue="Application.BreadthFirstSearch" />
         <item itemvalue="Python tests.pytest for test_bogo_sort.test_bogo_sort" />
-        <item itemvalue="Python tests.pytest for test_bubble_sort.test_bubble_sort" />
-        <item itemvalue="Python.bogo_sort" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +258,9 @@
       <workItem from="1592082304981" duration="102000" />
       <workItem from="1592082423273" duration="7976000" />
       <workItem from="1592102150396" duration="9000" />
-      <workItem from="1592105979906" duration="2483000" />
+      <workItem from="1592105979906" duration="3212000" />
+      <workItem from="1592259187957" duration="17000" />
+      <workItem from="1592343042646" duration="684000" />
     </task>
     <servers />
   </component>
@@ -265,22 +319,22 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592082557711" />
-    <state width="1877" height="392" key="GridCell.Tab.0.bottom" timestamp="1592100644024">
+    <state width="1877" height="315" key="GridCell.Tab.0.bottom" timestamp="1592343675012">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="392" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592100644024" />
-    <state width="1877" height="392" key="GridCell.Tab.0.center" timestamp="1592100644024">
+    <state width="1877" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592343675012" />
+    <state width="1877" height="315" key="GridCell.Tab.0.center" timestamp="1592343675012">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="392" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592100644024" />
-    <state width="1877" height="392" key="GridCell.Tab.0.left" timestamp="1592100644024">
+    <state width="1877" height="315" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592343675012" />
+    <state width="1877" height="315" key="GridCell.Tab.0.left" timestamp="1592343675011">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="392" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592100644024" />
-    <state width="1877" height="392" key="GridCell.Tab.0.right" timestamp="1592100644024">
+    <state width="1877" height="315" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592343675011" />
+    <state width="1877" height="315" key="GridCell.Tab.0.right" timestamp="1592343675012">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="392" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592100644024" />
+    <state width="1877" height="315" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592343675012" />
     <state width="1877" height="392" key="GridCell.Tab.1.bottom" timestamp="1592100644025">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
