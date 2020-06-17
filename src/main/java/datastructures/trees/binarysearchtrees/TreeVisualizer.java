@@ -1,14 +1,16 @@
 package datastructures.trees.binarysearchtrees;
 
 import datastructures.trees.binarysearchtrees.avltree.AVLTree;
-import java.awt.*;
+
+import javax.swing.*;
 import java.awt.Color;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.*;
 
+@SuppressWarnings("unused")
 public class TreeVisualizer extends JPanel implements KeyListener {
   private final double zoomFactor = 0.5;
   private final JScrollPane scrollPane;
@@ -126,6 +128,7 @@ public class TreeVisualizer extends JPanel implements KeyListener {
     }
   }
 
+  @SuppressWarnings("StatementWithEmptyBody")
   public void keyPressed(KeyEvent e) {
     if (e.getKeyCode() == KeyEvent.VK_SPACE) {}
   }

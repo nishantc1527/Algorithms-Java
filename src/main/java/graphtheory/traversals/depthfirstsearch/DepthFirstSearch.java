@@ -4,8 +4,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Stack;
 
+@SuppressWarnings("rawtypes")
 public class DepthFirstSearch {
 
+  @SuppressWarnings("unchecked")
   public static LinkedList<Integer>[] makeGraph(int V, int[][] E) {
     LinkedList[] graph = new LinkedList[V];
 

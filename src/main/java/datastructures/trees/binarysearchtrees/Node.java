@@ -1,5 +1,6 @@
 package datastructures.trees.binarysearchtrees;
 
+@SuppressWarnings("ALL")
 public interface Node<E extends Comparable<E>> {
 
   /**

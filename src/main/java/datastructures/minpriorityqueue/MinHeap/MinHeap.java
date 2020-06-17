@@ -3,6 +3,7 @@ package datastructures.minpriorityqueue.MinHeap;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class MinHeap {
 
   public final List<Integer> heap;
@@ -43,6 +44,7 @@ public class MinHeap {
     bubbleUp(heap.size() - 1);
   }
 
+  @SuppressWarnings("unused")
   public int getMin() {
     return heap.get(0);
   }

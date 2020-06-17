@@ -1,7 +1,8 @@
 package neuralnetworks;
 
-import java.util.function.Function;
 import math.matrices.Matrix;
+
+import java.util.function.Function;
 
 public class MultilayeredNeuralNetwork {
   private final Matrix[] weights;
@@ -85,6 +86,7 @@ public class MultilayeredNeuralNetwork {
     return new Matrix[] {weightsDeltas, gradient};
   }
 
+  @SuppressWarnings("unused")
   public Matrix[] getWeights() {
     return weights;
   }

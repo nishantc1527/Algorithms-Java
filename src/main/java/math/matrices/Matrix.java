@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.Function;
 
+@SuppressWarnings("ALL")
 public class Matrix {
   /** The representation of the matrix, using a 2D array */
   private double[][] matrix;
@@ -134,6 +135,7 @@ public class Matrix {
    * @param j j-position of the value
    * @return The value at the given position
    */
+  @SuppressWarnings("unused")
   public double getData(int i, int j) {
     if (i >= 0 && i < rows && j >= 0 && j < cols) {
       return matrix[i][j];
@@ -274,9 +276,10 @@ public class Matrix {
     if (row > rows) return null;
 
     double[][] res = new double[1][cols];
-    for (int i = 0; i < cols; i++) {
-      res[0][i] = matrix[row][i];
+    if (cols < 0) {
+      return new Matrix(res);
     }
+    System.arraycopy(matrix[row], 0, res[0], 0, cols);
 
     return new Matrix(res);
   }

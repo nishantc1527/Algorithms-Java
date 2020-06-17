@@ -1,11 +1,12 @@
 package neuralnetworks;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.*;
 
+@SuppressWarnings("ALL")
 public class Tester extends JPanel {
   private static final int WIDTH = 900, HEIGHT = 900;
   private final Map<Point, Integer> points = new HashMap<>();
@@ -62,6 +63,7 @@ public class Tester extends JPanel {
     //        System.out.println(Arrays.toString(mnn.predict(new double[]{0, 1})));
   }
 
+  @SuppressWarnings("unused")
   public void run() {
     Point current;
     for (int i = 0; i < trainingSize; i++) {

@@ -1,12 +1,13 @@
 package neuralnetworks;
 
+import neuralnetworks.mnistdata.MnistEntry;
+import neuralnetworks.mnistdata.MnistLoader;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Arrays;
-import javax.swing.*;
-import neuralnetworks.mnistdata.MnistEntry;
-import neuralnetworks.mnistdata.MnistLoader;
 
 public class MNISTTrainer extends JPanel {
   private static final int WIDTH = 900, HEIGHT = 900;
@@ -121,8 +122,6 @@ public class MNISTTrainer extends JPanel {
 
     repaint();
   }
-
-  private void drawTraining(MnistEntry[] data) {}
 
   @Override
   protected void paintComponent(Graphics g) {

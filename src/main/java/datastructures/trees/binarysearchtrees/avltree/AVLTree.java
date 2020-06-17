@@ -3,8 +3,11 @@ package datastructures.trees.binarysearchtrees.avltree;
 import datastructures.trees.binarysearchtrees.BinaryTree;
 import datastructures.trees.binarysearchtrees.Color;
 import datastructures.trees.binarysearchtrees.Node;
+import org.checkerframework.checker.nullness.qual.NonNull;
+
 import java.util.*;
 
+@SuppressWarnings("ALL")
 public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
   private final AVLTreeNode rootParent;
   private AVLTreeNode root;
@@ -21,6 +24,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
    *
    * @param other The AVL tree to clone
    */
+  @SuppressWarnings("unused")
   public AVLTree(AVLTree<E> other) {
     this.root = new AVLTreeNode(other.root);
     rootParent = new AVLTreeNode((E) null);
@@ -302,19 +306,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
   private void updateBalanceFactorsAndHeights(AVLTreeNode root) {
     if (root == null || this.root == null) return;
     while (root != rootParent) {
-      if (root.left == null && root.right == null) {
-        root.height = 1;
-        root.balanceFactor = 0;
-      } else if (root.right == null) {
-        root.height = root.left.height + 1;
-        root.balanceFactor = root.left.height;
-      } else if (root.left == null) {
-        root.height = root.right.height + 1;
-        root.balanceFactor = -root.right.height;
-      } else {
-        root.height = Math.max(root.left.height, root.right.height) + 1;
-        root.balanceFactor = root.left.height - root.right.height;
-      }
+      setBalanceFactors(root);
       root = root.parent;
     }
   }
@@ -330,6 +322,10 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     if (root == null) return;
     calcBalanceFactor(root.left);
     calcBalanceFactor(root.right);
+    setBalanceFactors(root);
+  }
+
+  private void setBalanceFactors(AVLTreeNode root) {
     if (root.left == null && root.right == null) {
       root.height = 1;
       root.balanceFactor = 0;
@@ -455,6 +451,8 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
    *
    * @return An iterator that iterates through the nodes in this tree in and inorder traversal
    */
+  @Override
+  @NonNull
   public Iterator<Node<E>> iterator() {
     List<Node<E>> res = new LinkedList<>();
     Queue<AVLTreeNode> q = new LinkedList<>();
@@ -615,12 +613,18 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
 
     @Override
     public boolean equals(Object o) {
-      if (this == o) return true;
-      if (!(o instanceof AVLTree.AVLTreeNode)) return false;
-      AVLTreeNode that = (AVLTreeNode) o;
-      return Objects.equals(val, that.val)
-          && Objects.equals(left, that.left)
-          && Objects.equals(right, that.right);
+      if (this != o) {
+        if (o instanceof AVLTree.AVLTreeNode) {
+          @SuppressWarnings("unchecked") AVLTreeNode that = (AVLTreeNode) o;
+          return Objects.equals(val, that.val)
+                  && Objects.equals(left, that.left)
+                  && Objects.equals(right, that.right);
+        } else {
+          return false;
+        }
+      } else {
+        return true;
+      }
     }
 
     @Override

@@ -1,11 +1,13 @@
 package DataStructures.MinPriorityQueue;
 
-import static org.junit.Assert.*;
-
 import datastructures.minpriorityqueue.FibonacciHeap.FibonacciHeap;
-import java.util.Arrays;
 import org.junit.Test;
 
+import java.util.Arrays;
+
+import static org.junit.Assert.*;
+
+@SuppressWarnings("unused")
 public class FibonacciHeapTest {
 
   private FibonacciHeap heap;

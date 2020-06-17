@@ -1,5 +1,6 @@
 package bitmanipulation;
 
+@SuppressWarnings("ALL")
 public class BasicOperators {
 
   /**
@@ -40,6 +41,7 @@ public class BasicOperators {
    *
    * @param num The number whose bits you want printed.
    */
+  @SuppressWarnings("unused")
   public static void printBits(int num) {
     for (int i = 0; i < 32; i++) {
       System.out.print((num >> (31 - i)) & 1);

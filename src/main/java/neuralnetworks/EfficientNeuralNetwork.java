@@ -8,6 +8,7 @@ import org.jblas.DoubleMatrix;
  *
  * @see <a href="http://jblas.org/">http://jblas.org/</a>
  */
+@SuppressWarnings("ALL")
 public class EfficientNeuralNetwork {
   private final DoubleMatrix[] weights;
   private final DoubleMatrix[] biases;
@@ -95,6 +96,7 @@ public class EfficientNeuralNetwork {
     return new DoubleMatrix[] {weightsDeltas, gradient};
   }
 
+  @SuppressWarnings("unused")
   public DoubleMatrix[] getWeights() {
     return weights;
   }

@@ -1,5 +1,6 @@
 package datastructures.trees.binarysearchtrees;
 
+@SuppressWarnings("unused")
 public interface BinaryTree<E extends Comparable<E>> extends Iterable<Node<E>> {
 
   Node<E> getRoot();
@@ -12,6 +13,7 @@ public interface BinaryTree<E extends Comparable<E>> extends Iterable<Node<E>> {
 
   int getHeight();
 
+  @SuppressWarnings("unused")
   boolean isValid();
 
   int numNodes();

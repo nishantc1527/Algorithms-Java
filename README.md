@@ -1,6 +1,6 @@
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src)
 
-Algorithms are a way to solve problems. Not only that, it wants to solve problem fast. That's why there's tons and tons of theory on this stuff.
+Algorithms are a way to solve problems. Not only that, it wants to solve problem fast. That's why there're tons and tons of theory on this stuff.
 
 This project is a hope to share the whole knowledge of algorithms there is to offer. If you don't know the algorithm, there are detailed explanations on each algorithm (all at the bottom of this page).
 
@@ -79,7 +79,7 @@ In Java (or python, but the error message is different), you might get this:
  - [Tutorialspoint](https://www.tutorialspoint.com/how-to-resolve-could-not-find-or-load-main-class-package-in-java)
 
 In short, you can't go to the directory itself to compile it. You have to start from the main repository folder, then compile using the full path. 
-This is the same for python, except the error message will be different.
+This is the same for Python, except the error message will be different.
 
  ## Another Possible Error
 
@@ -102,7 +102,7 @@ Every 20 points, add another project with a description.
 
 Okay, now, how many points do you get for contributing? When you pick something from [the issues](https://github.com/nishantc1527/Algorithms/issues), the issue
 will specify the number of points you get. Sometimes, it will be a concrete number, but sometimes, it will be a range (for example, 5 - 10) and you get rewarded
-depending on the quality of your pull request. Even in the issues with concrete numbers, if you go above and beyond and do a really good job I might reward more.
+depending on the quality of your pull request. Even in the issues with concrete numbers, if you go above and beyond and do a fantastic job I might reward more.
 If you leave out some stuff or leave bugs, I will ask if you want to except fewer points or fix it. If you decide to just except fewer points, then I will open
 another issue for that.
 
@@ -115,76 +115,6 @@ stuff.
 # Leaderboard
 
 No one here yet. Be the first to put your name!
-
-# Implementations
-
-This part contains all the implementations of the algorithms. If you want to view the file associated to an implementation, go to 
-```src/main/<language-of-your-choice>/<follow-the-headers-before-the-file>```. If you want to see the JUnit tests, replace ```src/main``` with 
-```src/test```. If you want to see the explanation of something, replace ```<language-of-your-choice>``` with ```explanations```.
-
- ## Sorting
- 
-  - Bubble Sort
-  - Selection Sort
-  - Insertion Sort
-  - Merge Sort
-  - Quick Sort
-  - Counting Sort
-  - Heap Sort
-  
- ## Bit Manipulation
- 
-  - Missing Number
-  - Power Of Two
-  - Single Number
-  
- ## Graph Theory
- 
-  ### Elementary Graph Algorithms
-  
-  - Breadth First Search
-  - Depth First Search
- 
-  ### Implementations
-  
-  - Adjacency List
-  - Adjacency Matrix
-  
-  ### Shortest Path Algorithms
-  
-   #### Single Source Shortest Path
-   
-   - Dijkstra's Shortest Path
-   - Bellman Ford's Shortest Path Algorithm
- 
- ## Data Structures
- 
-  ### Trees
-  
-   #### Binary Search Trees
-   
-   - AVL Tree
-   - Binary Search Tree
-   - Red Black Tree
-  
-   #### Trie
-  
-  ### Min Priority Queue
-  
-   - Fibonacci Heap
-   - Min Heap
- 
- ## Dynamic Programming
- 
-  - House Robber
-  - Unique Paths
-
- ## Math
- 
-  - Matrix
-  - Vector
-
- ## Neural Networks
 
 # License
 Licensed under [MIT License](https://opensource.org/licenses/MIT). That means feel free to add whatever you want if you find it necessary.
