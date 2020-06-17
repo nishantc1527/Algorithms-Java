@@ -206,3 +206,7 @@ cython_debug/
 
 # Ignore Gradle build output directory
 build
+
+# Ignore Inteliij Files
+.idea/
+*.iml
