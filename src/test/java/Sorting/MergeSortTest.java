@@ -1,10 +1,10 @@
 package Sorting;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 import sorting.mergesort.MergeSort;
-
-import static org.junit.Assert.assertArrayEquals;
 
 public class MergeSortTest {
 

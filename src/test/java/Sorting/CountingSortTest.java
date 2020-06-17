@@ -1,10 +1,10 @@
 package Sorting;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 import sorting.countingsort.CountingSort;
-
-import static org.junit.Assert.assertArrayEquals;
 
 public class CountingSortTest {
 

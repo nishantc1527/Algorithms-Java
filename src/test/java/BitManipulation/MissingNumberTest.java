@@ -1,12 +1,11 @@
 package BitManipulation;
 
-import bitmanipulation.missingnumber.MissingNumber;
-import org.junit.Test;
+import static org.junit.Assert.*;
 
+import bitmanipulation.missingnumber.MissingNumber;
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class MissingNumberTest {
 

@@ -1,10 +1,10 @@
 package DynamicProgramming;
 
+import static org.junit.Assert.assertEquals;
+
 import dynmanicprogramming.houserobber.HouseRobber;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class HouseRobberTest {
 

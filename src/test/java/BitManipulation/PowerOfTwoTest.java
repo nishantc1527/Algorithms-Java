@@ -1,11 +1,11 @@
 package BitManipulation;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import bitmanipulation.BasicFunctions;
 import bitmanipulation.poweroftwo.PowerOfTwo;
 import org.junit.Test;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 public class PowerOfTwoTest {
 

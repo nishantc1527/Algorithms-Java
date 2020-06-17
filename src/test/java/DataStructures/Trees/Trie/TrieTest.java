@@ -1,11 +1,11 @@
 package DataStructures.Trees.Trie;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import datastructures.trees.trie.Trie;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 public class TrieTest {
 

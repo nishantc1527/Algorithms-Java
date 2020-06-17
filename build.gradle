@@ -12,6 +12,9 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application.
     id 'application'
+
+    // Google Java Style Guide
+    id 'com.github.sherter.google-java-format' version '0.8'
 }
 
 repositories {
@@ -21,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    // jblas library for ai matrices and vectors
     compile fileTree(include: ['jblas-1.2.4.jar'], dir: 'libs')
 
     // This dependency is used by the application.
