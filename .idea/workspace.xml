@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="936ef0d3-752f-4bb2-8a53-5ea35c8fbf12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,12 +59,6 @@
                 <item name="Algorithms" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Algorithms" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -118,27 +106,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\myrepos\Algorithms\src\main\python\datastructures" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Algorithms [googleJavaFormat]">
-    <configuration name="MNISTTrainer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="neuralnetworks.MNISTTrainer" />
-      <module name="main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="neuralnetworks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.Algorithms [build]">
     <configuration name="Algorithms [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -158,7 +133,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Algorithms [googleJavaFormat]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Algorithms [distTar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +144,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="googleJavaFormat" />
+            <option value="distTar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,7 +152,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Algorithms [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Algorithms [distZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -188,7 +163,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value="distZip" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,7 +171,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Algorithms [verifyGoogleJavaFormat]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Algorithms [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -207,7 +182,26 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="verifyGoogleJavaFormat" />
+            <option value="installDist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Algorithms [startScripts]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="startScripts" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,19 +210,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.MNISTTrainer" />
-      <item itemvalue="Gradle.Algorithms [test]" />
+      <item itemvalue="Gradle.Algorithms [distTar]" />
+      <item itemvalue="Gradle.Algorithms [installDist]" />
+      <item itemvalue="Gradle.Algorithms [distZip]" />
+      <item itemvalue="Gradle.Algorithms [startScripts]" />
       <item itemvalue="Gradle.Algorithms [build]" />
-      <item itemvalue="Gradle.Algorithms [verifyGoogleJavaFormat]" />
-      <item itemvalue="Gradle.Algorithms [googleJavaFormat]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Algorithms [googleJavaFormat]" />
-        <item itemvalue="Gradle.Algorithms [verifyGoogleJavaFormat]" />
         <item itemvalue="Gradle.Algorithms [build]" />
-        <item itemvalue="Gradle.Algorithms [test]" />
-        <item itemvalue="Application.MNISTTrainer" />
+        <item itemvalue="Gradle.Algorithms [startScripts]" />
+        <item itemvalue="Gradle.Algorithms [distZip]" />
+        <item itemvalue="Gradle.Algorithms [installDist]" />
+        <item itemvalue="Gradle.Algorithms [distTar]" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +257,7 @@
       <workItem from="1592105979906" duration="3212000" />
       <workItem from="1592259187957" duration="17000" />
       <workItem from="1592343042646" duration="684000" />
-      <workItem from="1592352391113" duration="778000" />
+      <workItem from="1592352391113" duration="2194000" />
     </task>
     <servers />
   </component>
@@ -322,22 +316,22 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592082557711" />
-    <state width="1877" height="369" key="GridCell.Tab.0.bottom" timestamp="1592353072312">
+    <state width="1877" height="369" key="GridCell.Tab.0.bottom" timestamp="1592354453018">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="369" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592353072312" />
-    <state width="1877" height="369" key="GridCell.Tab.0.center" timestamp="1592353072312">
+    <state width="1877" height="369" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592354453018" />
+    <state width="1877" height="369" key="GridCell.Tab.0.center" timestamp="1592354453018">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="369" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592353072312" />
-    <state width="1877" height="369" key="GridCell.Tab.0.left" timestamp="1592353072312">
+    <state width="1877" height="369" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592354453018" />
+    <state width="1877" height="369" key="GridCell.Tab.0.left" timestamp="1592354453018">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="369" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592353072312" />
-    <state width="1877" height="369" key="GridCell.Tab.0.right" timestamp="1592353072312">
+    <state width="1877" height="369" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592354453018" />
+    <state width="1877" height="369" key="GridCell.Tab.0.right" timestamp="1592354453018">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="369" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592353072312" />
+    <state width="1877" height="369" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592354453018" />
     <state width="1877" height="392" key="GridCell.Tab.1.bottom" timestamp="1592100644025">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -358,10 +352,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="540" y="323" key="IDE.errors.dialog/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592091360073" />
-    <state x="461" y="225" key="SettingsEditor" timestamp="1592353065000">
+    <state x="461" y="225" key="SettingsEditor" timestamp="1592354259088">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="461" y="225" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592353065000" />
+    <state x="461" y="225" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592354259088" />
     <state x="739" y="424" key="cloudConfig.PluginsDialog" timestamp="1591941334194">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -374,6 +368,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="769" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1591936288569" />
+    <state x="616" y="270" width="672" height="677" key="run.anything.popup" timestamp="1592354238599">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="616" y="270" width="672" height="677" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1592354238599" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1592086417788">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
