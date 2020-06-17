@@ -2,7 +2,7 @@ package BitManipulation;
 
 import static org.junit.Assert.assertEquals;
 
-import bitmanipulation.singlenumber.SingleNumber;
+import bitmanipulation.problems.singlenumber.SingleNumber;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.junit.Test;
