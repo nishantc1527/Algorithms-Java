@@ -77,7 +77,7 @@ class binary_search_tree {
         }
       }
     }
-
+ 
     return false;
   }
 };
