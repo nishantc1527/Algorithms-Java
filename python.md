@@ -5,6 +5,10 @@ command:
 
     pip install -U pytest
     
+If you don't have ```pip``` yet, then run ```get-pip.py```.
+
+    python get-pip.py
+    
 # Running Files
 
 Running files is extremely easy. Just use this command:
