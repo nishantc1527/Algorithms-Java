@@ -210,3 +210,6 @@ build
 # Ignore Inteliij Files
 .idea/
 *.iml
+
+# CMake Output
+*cmake-build-debug/

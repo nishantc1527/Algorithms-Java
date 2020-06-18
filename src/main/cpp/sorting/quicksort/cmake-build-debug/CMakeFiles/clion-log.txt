@@ -1,4 +1,0 @@
-C:\Users\nisha\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/quicksort
--- Configuring done
--- Generating done
--- Build files have been written to: /cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/sorting/quicksort/cmake-build-debug
