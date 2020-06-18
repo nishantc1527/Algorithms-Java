@@ -29,68 +29,68 @@ Then run it like this:
 
     java <class-name>
     
-# [Source Code]:
+# [Source Code](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java)
 
-## [Bit Manipulation]
+## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/bitmanipulation)
 
-* [Basic Operators]
+* [Basic Operators](https://github.com/nishantc1527/Algorithms/blob/master/src/main/java/bitmanipulation/BasicOperators.java)
 
-### [Problems]
+### [Problems](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/bitmanipulation/problems)
 
-* [Missing Number]
-* [Power Of Two]
-* [Single Number]
+* [Missing Number](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/bitmanipulation/problems/missingnumber)
+* [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/bitmanipulation/problems/poweroftwo)
+* [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/bitmanipulation/problems/singlenumber)
 
-## [Data Structures]
+## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures)
 
-### [Min Priority Queues]
+### [Min Priority Queues](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/minpriorityqueue)
 
-* [Fibonacci Heap]
-* [Min Heap]
+* [Fibonacci Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/minpriorityqueue/FibonacciHeap)
+* [Min Heap](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/minpriorityqueue/MinHeap)
 
-### [Trees]
+### [Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/trees)
 
-#### [Binary Search Trees]
+#### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/trees/binarysearchtrees)
 
-* [Avl Tree]
-* [Binary Search Tree]
-* [Red Black Tree]
+* [Avl Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/trees/binarysearchtrees/avltree)
+* [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/trees/binarysearchtrees/binarysearchtree)
+* [Red Black Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/trees/binarysearchtrees/redblacktree)
 
-#### [Trie]
+#### [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/trees/trie)
 
-* [Trie]
+* [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/datastructures/trees/trie)
 
-## [Dynamic Programming]
+## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/dynmanicprogramming)
 
-### [Problems]
+### [Problems](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/dynmanicprogramming/problems)
 
-* [House Robber]
-* [Unique Paths]
+* [House Robber](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/dynmanicprogramming/problems/houserobber)
+* [Unique Paths](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/dynmanicprogramming/problems/uniquepaths)
 
-## [Graph Theory]
+## [Graph Theory](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/graphtheory)
 
-### [Traversals]
+### [Traversals](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/graphtheory/traversals)
 
-* [Breadth First Search]
-* [Depth First Search]
+* [Breadth First Search](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/graphtheory/traversals/breadthfirstsearch)
+* [Depth First Search](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/graphtheory/traversals/depthfirstsearch)
 
-## [Math]
+## [Math](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/math)
 
-* [Matrices]
-* [Vectors]
+* [Matrices](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/math/matrices)
+* [Vectors](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/math/vectors)
 
-## [Neural Networks]
+## [Neural Networks](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/neuralnetworks)
 
-* [Multilayered Neural Network]
-* [One Hidden Layer Neural Network]
+* [Multilayered Neural Network](https://github.com/nishantc1527/Algorithms/blob/master/src/main/java/neuralnetworks/MultilayeredNeuralNetwork.java)
+* [One Hidden Layer Neural Network](https://github.com/nishantc1527/Algorithms/blob/master/src/main/java/neuralnetworks/OneHiddenLayerNeuralNetwork.java)
 
-## [Sorting]
+## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting)
 
-* [Bogo Sort]
-* [Bubble Sort]
-* [Counting Sort]
-* [Heap Sort]
-* [Insertion Sort]
-* [Merge Sort]
-* [Quick Sort]
-* [Selection Sort]
+* [Bogo Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/bogosort)
+* [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/bubblesort)
+* [Counting Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/countingsort)
+* [Heap Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/heapsort)
+* [Insertion Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/insertionsort)
+* [Merge Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/mergesort)
+* [Quick Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/quicksort)
+* [Selection Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/java/sorting/selectionsort)
