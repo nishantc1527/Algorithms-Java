@@ -245,7 +245,7 @@ class ConfigHandler(object):
         directory with setup.py.
 
         Examples:
-            include: LICENSE
+            include: LICENSE.md
             include: src/file.txt
 
         :param str value:

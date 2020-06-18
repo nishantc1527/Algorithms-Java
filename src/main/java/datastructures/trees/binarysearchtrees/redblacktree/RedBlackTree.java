@@ -3,9 +3,8 @@ package datastructures.trees.binarysearchtrees.redblacktree;
 import datastructures.trees.binarysearchtrees.BinaryTree;
 import datastructures.trees.binarysearchtrees.Color;
 import datastructures.trees.binarysearchtrees.Node;
-import org.checkerframework.checker.nullness.qual.NonNull;
-
 import java.util.*;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 @SuppressWarnings("ALL")
 public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
@@ -121,15 +120,16 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
   }
 
   private void leftRotate(RBTreeNode x) {
-    @SuppressWarnings("SuspiciousNameCombination") RBTreeNode y = x.right;
+    @SuppressWarnings("SuspiciousNameCombination")
+    RBTreeNode y = x.right;
     x.setRight(y.getLeft());
     if (y.getLeft() != NIL) y.getLeft().setParent(x);
     y.setParent(x.getParent());
     if (x.getParent() == NIL) root = y;
-    if (x == x.getParent().getLeft()) //noinspection SuspiciousNameCombination
-      x.getParent().setLeft(y);
+    if (x == x.getParent().getLeft()) // noinspection SuspiciousNameCombination
+    x.getParent().setLeft(y);
     else //noinspection SuspiciousNameCombination
-      x.getParent().setRight(y);
+    x.getParent().setRight(y);
     y.setLeft(x);
     x.setParent(y);
   }

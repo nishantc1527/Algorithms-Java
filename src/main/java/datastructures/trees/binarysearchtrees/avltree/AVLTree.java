@@ -3,9 +3,8 @@ package datastructures.trees.binarysearchtrees.avltree;
 import datastructures.trees.binarysearchtrees.BinaryTree;
 import datastructures.trees.binarysearchtrees.Color;
 import datastructures.trees.binarysearchtrees.Node;
-import org.checkerframework.checker.nullness.qual.NonNull;
-
 import java.util.*;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 @SuppressWarnings("ALL")
 public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
@@ -615,10 +614,11 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
     public boolean equals(Object o) {
       if (this != o) {
         if (o instanceof AVLTree.AVLTreeNode) {
-          @SuppressWarnings("unchecked") AVLTreeNode that = (AVLTreeNode) o;
+          @SuppressWarnings("unchecked")
+          AVLTreeNode that = (AVLTreeNode) o;
           return Objects.equals(val, that.val)
-                  && Objects.equals(left, that.left)
-                  && Objects.equals(right, that.right);
+              && Objects.equals(left, that.left)
+              && Objects.equals(right, that.right);
         } else {
           return false;
         }

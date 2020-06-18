@@ -113,7 +113,7 @@ class TestManifestTest(TempDirTestCase):
         f.close()
         """
         Create a file tree like:
-        - LICENSE
+        - LICENSE.md
         - README.rst
         - testing.rst
         - .hidden.rst
@@ -129,7 +129,7 @@ class TestManifestTest(TempDirTestCase):
                 - app.css.map
         """
 
-        for fname in ['README.rst', '.hidden.rst', 'testing.rst', 'LICENSE']:
+        for fname in ['README.rst', '.hidden.rst', 'testing.rst', 'LICENSE.md']:
             touch(os.path.join(self.temp_dir, fname))
 
         # Set up the rest of the test package

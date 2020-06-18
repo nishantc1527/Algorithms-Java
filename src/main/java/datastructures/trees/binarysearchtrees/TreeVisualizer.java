@@ -1,14 +1,13 @@
 package datastructures.trees.binarysearchtrees;
 
 import datastructures.trees.binarysearchtrees.avltree.AVLTree;
-
-import javax.swing.*;
-import java.awt.Color;
 import java.awt.*;
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.*;
 
 @SuppressWarnings("unused")
 public class TreeVisualizer extends JPanel implements KeyListener {

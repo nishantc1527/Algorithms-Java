@@ -1,6 +1,7 @@
 # Java Users
 
-This repository supports Gradle. While you don't need it, it will make everything much easier.
+This repository supports Gradle. While you don't need it, it will make everything much easier. Testing is all done with JUnit 5. If you don't
+have gradle, you have to download JUnit. If you do have Gradle, you're fine.
 
 # Using Gradle
 
@@ -28,62 +29,62 @@ Then run it like this:
 
     java <class-name>
     
-Java implementations:
+# [Source Code]:
 
-# [Bit Manipulation]
+## [Bit Manipulation]
 
 * [Basic Operators]
 
-## [Problems]
+### [Problems]
 
 * [Missing Number]
 * [Power Of Two]
 * [Single Number]
 
-# [Data Structures]
+## [Data Structures]
 
-## [Min Priority Queues]
+### [Min Priority Queues]
 
 * [Fibonacci Heap]
 * [Min Heap]
 
-## [Trees]
+### [Trees]
 
-### [Binary Search Trees]
+#### [Binary Search Trees]
 
 * [Avl Tree]
 * [Binary Search Tree]
 * [Red Black Tree]
 
-### [Trie]
+#### [Trie]
 
 * [Trie]
 
-# [Dynamic Programming]
+## [Dynamic Programming]
 
-## [Problems]
+### [Problems]
 
 * [House Robber]
 * [Unique Paths]
 
-# [Graph Theory]
+## [Graph Theory]
 
-## [Traversals]
+### [Traversals]
 
 * [Breadth First Search]
 * [Depth First Search]
 
-# [Math]
+## [Math]
 
 * [Matrices]
 * [Vectors]
 
-# [Neural Networks]
+## [Neural Networks]
 
 * [Multilayered Neural Network]
 * [One Hidden Layer Neural Network]
 
-# [Sorting]
+## [Sorting]
 
 * [Bogo Sort]
 * [Bubble Sort]

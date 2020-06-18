@@ -1,6 +1,6 @@
 from random import randrange
 
-from python.sorting.bubblesort.bubble_sort import bubble_sort
+from src.main.python.sorting.bubblesort.bubble_sort import bubble_sort
 
 
 def test_bogo_sort():

@@ -1,12 +1,11 @@
 package BitManipulation;
 
-import bitmanipulation.problems.singlenumber.SingleNumber;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
+import bitmanipulation.problems.singlenumber.SingleNumber;
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 public class SingleNumberTest {
 

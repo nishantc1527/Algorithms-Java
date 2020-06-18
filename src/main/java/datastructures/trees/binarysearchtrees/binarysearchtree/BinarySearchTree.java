@@ -3,12 +3,11 @@ package datastructures.trees.binarysearchtrees.binarysearchtree;
 import datastructures.trees.binarysearchtrees.BinaryTree;
 import datastructures.trees.binarysearchtrees.Color;
 import datastructures.trees.binarysearchtrees.Node;
-import org.checkerframework.checker.nullness.qual.NonNull;
-
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 @SuppressWarnings("unused")
 public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> {
@@ -194,12 +193,12 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
       successor = minimum(deletion.right);
       BSTNode rightSide = successor.right, update;
       if (rightSide == null) {
-        if (successor.parent == deletion) //noinspection UnusedAssignment
-          update = successor;
+        if (successor.parent == deletion) // noinspection UnusedAssignment
+        update = successor;
         else //noinspection UnusedAssignment
-          update = successor.parent;
+        update = successor.parent;
       } else //noinspection UnusedAssignment
-        update = rightSide;
+      update = rightSide;
       if (successor == successor.parent.right) successor.parent.right = rightSide;
       else successor.parent.left = rightSide;
       if (rightSide != null) rightSide.parent = successor.parent;

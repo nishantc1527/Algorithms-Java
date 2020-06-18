@@ -1,13 +1,12 @@
 package DataStructures.MinPriorityQueue;
 
-import datastructures.minpriorityqueue.MinHeap.MinHeap;
-import org.junit.Test;
+import static org.junit.Assert.*;
 
+import datastructures.minpriorityqueue.MinHeap.MinHeap;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.PriorityQueue;
-
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class MinHeapTest {
 

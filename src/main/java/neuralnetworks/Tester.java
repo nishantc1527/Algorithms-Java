@@ -1,10 +1,10 @@
 package neuralnetworks;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.*;
 
 @SuppressWarnings("ALL")
 public class Tester extends JPanel {
