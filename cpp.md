@@ -19,25 +19,25 @@ If you replaced ```out``` with something else, replace it here to. If you didn't
 
     ./a
 
-# [Source Code]
+# [Source Code](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp)
 
-## [Data Structures]
+## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/datastructures)
 
-### [Trees]
+### [Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/datastructures/trees)
 
-#### [Binary Search Trees]
+#### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/datastructures/trees/binarysearchtrees)
 
-* [Binary Search Tree]
+* [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/datastructures/trees/binarysearchtrees/binarysearchtree)
 
-#### [Trie]
+#### [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/datastructures/trees/trie)
 
-* [Trie]
+* [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/datastructures/trees/trie)
 
-## [Sorting]
+## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/sorting)
 
-* [Bubble Sort]
-* [Heap Sort]
-* [Insertion Sort]
-* [Merge Sort]
-* [Quick Sort]
-* [Selection Sort]
+* [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/sorting/bubblesort)
+* [Heap Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/sorting/heapsort)
+* [Insertion Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/sorting/insertionsort)
+* [Merge Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/sorting/mergesort)
+* [Quick Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/sorting/quicksort)
+* [Selection Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/cpp/sorting/selectionsort)
