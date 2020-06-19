@@ -17,44 +17,44 @@ Running files is extremely easy. Just use this command:
     
 And it runs. To run a test, put the ```-u``` option before ```<path-to-file>```.
 
-# [Source Code]
+# [Source Code](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python)
 
-## [Bit Manipulation]
+## [Bit Manipulation](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/bitmanipulation)
 
-* [Basic Functions]
+* [Basic Functions](https://github.com/nishantc1527/Algorithms/blob/master/src/main/python/bitmanipulation/basic_functions.py)
 
-### [Problems]
+### [Problems](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/bitmanipulation/problems)
 
-* [Missing Number]
-* [Power Of Two]
-* [Single Number]
+* [Missing Number](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/bitmanipulation/problems/missingnumber)
+* [Power Of Two](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/bitmanipulation/problems/poweroftwo)
+* [Single Number](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/bitmanipulation/problems/singlenumber)
 
-## [Data Structures]
+## [Data Structures](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/datastructures)
 
-### [Trees]
+### [Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/datastructures/trees)
 
-#### [Binary Search Trees]
+#### [Binary Search Trees](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/datastructures/trees/binarysearchtrees)
 
-* [Binary Search Tree]
+* [Binary Search Tree](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/datastructures/trees/binarysearchtrees/binarysearchtree)
 
-#### [Trie]
+#### [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/datastructures/trees/trie)
 
-* [Trie]
+* [Trie](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/datastructures/trees/trie)
 
-## [Dynamic Programming]
+## [Dynamic Programming](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/dynamicprogramming)
 
-### [Problems]
+### [Problems](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/dynamicprogramming/problems)
 
-* [House Robber]
-* [Unique Paths]
+* [House Robber](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/dynamicprogramming/problems/houserobber)
+* [Unique Paths](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/dynamicprogramming/problems/uniquepaths)
 
-## [Sorting]
+## [Sorting](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting)
 
-* [Bogo Sort]
-* [Bubble Sort]
-* [Counting Sort]
-* [Heap Sort]
-* [Insertion Sort]
-* [Merge Sort]
-* [Quick Sort]
-* [Selection Sort]
+* [Bogo Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/bogosort)
+* [Bubble Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/bubblesort)
+* [Counting Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/countingsort)
+* [Heap Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/heapsort)
+* [Insertion Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/insertionsort)
+* [Merge Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/mergesort)
+* [Quick Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/quicksort)
+* [Selection Sort](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python/sorting/selectionsort)
