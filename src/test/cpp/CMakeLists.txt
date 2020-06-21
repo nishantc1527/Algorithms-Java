@@ -3,12 +3,10 @@ project(Algorithms)
 
 set(CMAKE_CXX_STANDARD 14)
 
-project(Algorithms)
-
-add_subdirectory(lib/googletest-master)
+add_subdirectory(libs/googletest-master)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-add_executable(Google_Tests_run sorting/bubblesort/bubble_sort_test.cpp
+add_executable(Algorithms sorting/bubblesort/bubble_sort_test.cpp
         sorting/insertionsort/insertion_sort_test.cpp
         sorting/mergesort/merge_sort_test.cpp
         sorting/quicksort/quick_sort_test.cpp
@@ -16,4 +14,4 @@ add_executable(Google_Tests_run sorting/bubblesort/bubble_sort_test.cpp
         sorting/heapsort/heap_sort_test.cpp
         )
 
-target_link_libraries(Google_Tests_run gtest gtest_main)
+target_link_libraries(Algorithms gtest gtest_main)
