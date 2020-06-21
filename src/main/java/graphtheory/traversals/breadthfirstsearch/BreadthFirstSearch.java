@@ -4,8 +4,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+@SuppressWarnings("rawtypes")
 public class BreadthFirstSearch {
 
+  @SuppressWarnings("unchecked")
   public static LinkedList<Integer>[] makeGraph(int V, int[][] E) {
     LinkedList[] graph = new LinkedList[V];
 
@@ -20,7 +22,7 @@ public class BreadthFirstSearch {
     return graph;
   }
 
-  public static int[] depthFirstSearch(LinkedList<Integer>[] graph, int start) {
+  public static int[] breadthFirstSearch(LinkedList<Integer>[] graph, int start) {
     int[] state = new int[graph.length];
     Queue<Integer> queue = new LinkedList<>();
     queue.offer(start);
@@ -51,7 +53,7 @@ public class BreadthFirstSearch {
 
     LinkedList<Integer>[] graph =
         makeGraph(5, new int[][] {{0, 1}, {1, 2}, {2, 3}, {3, 4}, {0, 4}, {1, 4}});
-    int[] search = depthFirstSearch(graph, 0);
+    int[] search = breadthFirstSearch(graph, 0);
     System.out.println(Arrays.toString(search));
   }
 }

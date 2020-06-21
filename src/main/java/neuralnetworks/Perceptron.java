@@ -2,6 +2,7 @@ package neuralnetworks;
 
 import java.util.Arrays;
 
+@SuppressWarnings("unused")
 public class Perceptron {
   private final double[] weights;
   private final double learningRate;

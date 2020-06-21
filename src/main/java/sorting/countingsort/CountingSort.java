@@ -8,8 +8,8 @@ public class CountingSort {
     int[] minMax = minAndMax(arr);
     int[] count = new int[minMax[1] - minMax[0] + 1];
 
-    for (int i = 0; i < arr.length; i++) {
-      count[arr[i] - minMax[0]]++;
+    for (int value : arr) {
+      count[value - minMax[0]]++;
     }
 
     int k = 0;
@@ -24,13 +24,13 @@ public class CountingSort {
   private static int[] minAndMax(int[] arr) {
     int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
 
-    for (int i = 0; i < arr.length; i++) {
-      if (arr[i] < min) {
-        min = arr[i];
+    for (int value : arr) {
+      if (value < min) {
+        min = value;
       }
 
-      if (arr[i] > max) {
-        max = arr[i];
+      if (value > max) {
+        max = value;
       }
     }
 

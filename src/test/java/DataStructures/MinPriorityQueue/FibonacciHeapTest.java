@@ -6,6 +6,7 @@ import datastructures.minpriorityqueue.FibonacciHeap.FibonacciHeap;
 import java.util.Arrays;
 import org.junit.Test;
 
+@SuppressWarnings("unused")
 public class FibonacciHeapTest {
 
   private FibonacciHeap heap;

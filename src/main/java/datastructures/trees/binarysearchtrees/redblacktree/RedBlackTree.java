@@ -4,7 +4,9 @@ import datastructures.trees.binarysearchtrees.BinaryTree;
 import datastructures.trees.binarysearchtrees.Color;
 import datastructures.trees.binarysearchtrees.Node;
 import java.util.*;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
+@SuppressWarnings("ALL")
 public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable<Node<E>> {
   public final RBTreeNode NIL = new RBTreeNode(null, Color.BLACK, null, null, null);
   private RBTreeNode root;
@@ -54,6 +56,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     RBTreeNode x = root, y = NIL;
 
     while (x != NIL) {
+      //noinspection SuspiciousNameCombination
       y = x;
 
       if (x.getVal().compareTo(val) > 0) {
@@ -77,6 +80,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     RBTreeNode y;
     while (z.parent.color == Color.RED) {
       if (z.parent == z.parent.parent.left) {
+        //noinspection SuspiciousNameCombination
         y = z.parent.parent.right;
         if (y.color == Color.RED) {
           z.parent.color = Color.BLACK;
@@ -93,6 +97,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
           rightRotate(z.parent.parent);
         }
       } else {
+        //noinspection SuspiciousNameCombination
         y = z.parent.parent.left;
         if (y.color == Color.RED) {
           z.parent.color = Color.BLACK;
@@ -115,13 +120,16 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
   }
 
   private void leftRotate(RBTreeNode x) {
+    @SuppressWarnings("SuspiciousNameCombination")
     RBTreeNode y = x.right;
     x.setRight(y.getLeft());
     if (y.getLeft() != NIL) y.getLeft().setParent(x);
     y.setParent(x.getParent());
     if (x.getParent() == NIL) root = y;
-    if (x == x.getParent().getLeft()) x.getParent().setLeft(y);
-    else x.getParent().setRight(y);
+    if (x == x.getParent().getLeft()) // noinspection SuspiciousNameCombination
+    x.getParent().setLeft(y);
+    else //noinspection SuspiciousNameCombination
+    x.getParent().setRight(y);
     y.setLeft(x);
     x.setParent(y);
   }
@@ -134,6 +142,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     if (y.parent == NIL) root = x;
     if (y == y.parent.left) y.parent.left = x;
     else y.parent.right = x;
+    //noinspection SuspiciousNameCombination
     x.right = y;
     y.parent = x;
   }
@@ -308,6 +317,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         + Math.max(countBlacks(root.getLeft()), countBlacks(root.getRight()));
   }
 
+  @NonNull
   public Iterator<Node<E>> iterator() {
     Queue<Node<E>> queue = new LinkedList<>();
     List<Node<E>> res = new LinkedList<>();
@@ -343,6 +353,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
     return sb.toString();
   }
 
+  @SuppressWarnings("unused")
   @Override
   public int numNodes() {
     return numNodes(root);

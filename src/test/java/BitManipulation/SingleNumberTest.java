@@ -2,7 +2,7 @@ package BitManipulation;
 
 import static org.junit.Assert.assertEquals;
 
-import bitmanipulation.singlenumber.SingleNumber;
+import bitmanipulation.problems.singlenumber.SingleNumber;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.junit.Test;
@@ -16,10 +16,8 @@ public class SingleNumberTest {
       int randomNumber = (int) (Math.random() * 1000);
 
       for (int j = 0; j < 2000; j++) {
-        if (j == randomNumber) {
-          arr.add((int) (Math.random() * arr.size()), j);
-        } else {
-          arr.add((int) (Math.random() * arr.size()), j);
+        arr.add((int) (Math.random() * arr.size()), j);
+        if (j != randomNumber) {
           arr.add((int) (Math.random() * arr.size()), j);
         }
       }

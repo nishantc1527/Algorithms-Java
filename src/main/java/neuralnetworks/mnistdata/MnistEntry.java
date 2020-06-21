@@ -8,6 +8,7 @@ import java.awt.image.DataBufferByte;
  * An entry of the MNIST data set. Instances of this class will be passed to the consumer that is
  * given to the {@link MnistLoader} and {@link MnistLoader} reading methods.
  */
+@SuppressWarnings("unused")
 public class MnistEntry {
   /** The index of the entry */
   private final int index;

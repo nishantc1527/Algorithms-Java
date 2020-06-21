@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 import static org.junit.Assert.assertEquals;
 
-import dynmanicprogramming.houserobber.HouseRobber;
+import dynmanicprogramming.problems.houserobber.HouseRobber;
 import org.junit.Before;
 import org.junit.Test;
 

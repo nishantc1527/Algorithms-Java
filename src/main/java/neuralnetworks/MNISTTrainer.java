@@ -122,8 +122,6 @@ public class MNISTTrainer extends JPanel {
     repaint();
   }
 
-  private void drawTraining(MnistEntry[] data) {}
-
   @Override
   protected void paintComponent(Graphics g) {
     super.paintComponent(g);

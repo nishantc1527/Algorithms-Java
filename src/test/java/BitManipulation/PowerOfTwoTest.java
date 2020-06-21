@@ -3,8 +3,8 @@ package BitManipulation;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import bitmanipulation.BasicFunctions;
-import bitmanipulation.poweroftwo.PowerOfTwo;
+import bitmanipulation.BasicOperators;
+import bitmanipulation.problems.poweroftwo.PowerOfTwo;
 import org.junit.Test;
 
 public class PowerOfTwoTest {
@@ -22,7 +22,7 @@ public class PowerOfTwoTest {
   public void testNonPowerOfTwo() {
     int num = 1;
     for (int i = 1; i < 31; i++) {
-      num = BasicFunctions.clearBit(num, (int) (Math.random() * i));
+      num = BasicOperators.clearBit(num, (int) (Math.random() * i));
       assertFalse(PowerOfTwo.isPowerOfTwo(num));
       num <<= 1;
     }

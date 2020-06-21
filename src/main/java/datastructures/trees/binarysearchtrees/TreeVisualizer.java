@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.swing.*;
 
+@SuppressWarnings("unused")
 public class TreeVisualizer extends JPanel implements KeyListener {
   private final double zoomFactor = 0.5;
   private final JScrollPane scrollPane;
@@ -126,6 +127,7 @@ public class TreeVisualizer extends JPanel implements KeyListener {
     }
   }
 
+  @SuppressWarnings("StatementWithEmptyBody")
   public void keyPressed(KeyEvent e) {
     if (e.getKeyCode() == KeyEvent.VK_SPACE) {}
   }

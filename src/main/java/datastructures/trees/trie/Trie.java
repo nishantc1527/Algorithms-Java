@@ -53,7 +53,7 @@ public class Trie {
   }
 
   private static class TrieNode {
-    public TrieNode[] children;
+    public final TrieNode[] children;
     public int count;
 
     public TrieNode() {

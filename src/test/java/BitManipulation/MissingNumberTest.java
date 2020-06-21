@@ -2,7 +2,7 @@ package BitManipulation;
 
 import static org.junit.Assert.*;
 
-import bitmanipulation.missingnumber.MissingNumber;
+import bitmanipulation.problems.missingnumber.MissingNumber;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.junit.Test;

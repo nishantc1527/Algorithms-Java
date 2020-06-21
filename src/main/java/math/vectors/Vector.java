@@ -1,5 +1,6 @@
 package math.vectors;
 
+@SuppressWarnings("ALL")
 public class Vector {
   private final double x;
   private final double y;
@@ -29,6 +30,7 @@ public class Vector {
     return this.add(other.multiply(-1));
   }
 
+  @SuppressWarnings("unused")
   public double dotProduct(Vector other) {
     return x * other.x + y * other.y;
   }

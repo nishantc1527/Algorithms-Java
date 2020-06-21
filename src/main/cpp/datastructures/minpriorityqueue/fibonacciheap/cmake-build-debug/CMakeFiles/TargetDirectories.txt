@@ -1,3 +1,0 @@
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/minpriorityqueue/fibonacciheap/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/minpriorityqueue/fibonacciheap/cmake-build-debug/CMakeFiles/Algorithms.dir
-/cygdrive/d/Github/myrepos/Algorithms/src/main/cpp/datastructures/minpriorityqueue/fibonacciheap/cmake-build-debug/CMakeFiles/edit_cache.dir

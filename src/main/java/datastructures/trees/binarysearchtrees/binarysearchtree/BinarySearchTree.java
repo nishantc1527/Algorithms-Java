@@ -7,7 +7,9 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
+@SuppressWarnings("unused")
 public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> {
 
   /** Parent of the root, just used to simplify insertion and deletion algorithms */
@@ -191,9 +193,12 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
       successor = minimum(deletion.right);
       BSTNode rightSide = successor.right, update;
       if (rightSide == null) {
-        if (successor.parent == deletion) update = successor;
-        else update = successor.parent;
-      } else update = rightSide;
+        if (successor.parent == deletion) // noinspection UnusedAssignment
+        update = successor;
+        else //noinspection UnusedAssignment
+        update = successor.parent;
+      } else //noinspection UnusedAssignment
+      update = rightSide;
       if (successor == successor.parent.right) successor.parent.right = rightSide;
       else successor.parent.left = rightSide;
       if (rightSide != null) rightSide.parent = successor.parent;
@@ -298,6 +303,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinaryTree<E> 
   }
 
   @Override
+  @NonNull
   public Iterator<Node<E>> iterator() {
 
     List<Node<E>> res = new LinkedList<>();

@@ -3,7 +3,9 @@ package DataStructures.MinPriorityQueue;
 import static org.junit.Assert.*;
 
 import datastructures.minpriorityqueue.MinHeap.MinHeap;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.PriorityQueue;
 import org.junit.Test;
 
 public class MinHeapTest {
@@ -53,7 +55,8 @@ public class MinHeapTest {
         }
       }
 
-      assertEquals((int) priorityQueue.poll(), (int) heap.extractMin());
+      //noinspection ConstantConditions
+      assertEquals((int) priorityQueue.poll(), heap.extractMin());
     }
   }
 

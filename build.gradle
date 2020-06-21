@@ -35,6 +35,6 @@ dependencies {
 }
 
 application {
-    // Define the main class for the application.
-    mainClassName = 'Algorithms.App'
+    // just a random file
+    mainClassName = 'sorting.bubblesort.BubbleSort'
 }
