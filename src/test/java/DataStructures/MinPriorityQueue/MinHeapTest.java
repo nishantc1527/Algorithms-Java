@@ -14,7 +14,7 @@ public class MinHeapTest {
   public void containsTest() {
     for (int i = 0; i < 10000; i++) {
       HashSet<Integer> set = new HashSet<>();
-      MinHeap heap = new MinHeap();
+      MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
 
       for (int j = 0; j < 1000; j++) {
         if (Math.random() >= 0.5) {
@@ -32,7 +32,7 @@ public class MinHeapTest {
   @Test
   public void isEmptyTest() {
     for (int i = 0; i < 100; i++) {
-      MinHeap heap = new MinHeap();
+      MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
       assertTrue(heap.isEmpty());
       int randomAmount = 1 + (int) (Math.random() * 1000);
       for (int j = 0; j < randomAmount; j++) {
@@ -46,7 +46,7 @@ public class MinHeapTest {
   public void extractMinTest() {
     for (int i = 0; i < 1000; i++) {
       PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
-      MinHeap heap = new MinHeap();
+      MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
 
       for (int j = 0; j < 1000; j++) {
         if (Math.random() >= 0.5) {
@@ -55,8 +55,7 @@ public class MinHeapTest {
         }
       }
 
-      //noinspection ConstantConditions
-      assertEquals((int) priorityQueue.poll(), heap.extractMin());
+      assertEquals(priorityQueue.poll(), heap.extractMin());
     }
   }
 
@@ -64,7 +63,7 @@ public class MinHeapTest {
   public void chainedExtractMinTest() {
     for (int i = 0; i < 1000; i++) {
       int[] toAdd = new int[1000];
-      MinHeap heap = new MinHeap();
+      MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
 
       for (int j = 0; j < toAdd.length; j++) {
         toAdd[j] = (int) (Math.random() * 1000);
@@ -83,15 +82,6 @@ public class MinHeapTest {
     }
   }
 
-  /*
   @Test
-  public void decreaseKeyTest() {
-    heap.add(5);
-    heap.add(3);
-
-    heap.decreaseValue(5, 2);
-
-    assertEquals(2, heap.extractMin());
-  }
-   */
+  public void decreaseKeyTest() {}
 }

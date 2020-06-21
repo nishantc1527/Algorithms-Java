@@ -1,15 +1,18 @@
 package datastructures.minpriorityqueue.MinHeap;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class MinHeap {
+public class MinHeap<E> {
 
-  public final List<Integer> heap;
+  public final List<E> heap;
+  private final Comparator<E> comparator;
 
-  public MinHeap() {
+  public MinHeap(Comparator<E> comparator) {
     heap = new ArrayList<>();
+    this.comparator = comparator;
   }
 
   private static int getLeft(int i) {
@@ -25,7 +28,7 @@ public class MinHeap {
   }
 
   public static void main(String[] args) {
-    MinHeap heap = new MinHeap();
+    MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
     heap.add(7);
     heap.add(4);
     heap.add(3);
@@ -39,25 +42,25 @@ public class MinHeap {
     }
   }
 
-  public void add(int val) {
+  public void add(E val) {
     heap.add(val);
     bubbleUp(heap.size() - 1);
   }
 
   @SuppressWarnings("unused")
-  public int getMin() {
+  public E getMin() {
     return heap.get(0);
   }
 
-  public int extractMin() {
-    int toReturn = heap.get(0);
+  public E extractMin() {
+    E toReturn = heap.get(0);
     swap(0, heap.size() - 1);
     heap.remove(heap.size() - 1);
     bubbleDown(0);
     return toReturn;
   }
 
-  public void decreaseValue(int val, int newVal) {
+  public void decreaseValue(E val, E newVal) {
     int i = heap.indexOf(val);
     heap.set(i, newVal);
     bubbleUp(i);
@@ -71,14 +74,10 @@ public class MinHeap {
     return heap.contains(i);
   }
 
-  public Integer[] getHeap() {
-    return heap.toArray(new Integer[0]);
-  }
-
   private void bubbleUp(int i) {
     if (i > 0) {
       int parent = getParent(i);
-      if (heap.get(parent).compareTo(heap.get(i)) > 0) {
+      if (comparator.compare(heap.get(parent), heap.get(i)) > 0) {
         swap(parent, i);
         bubbleUp(parent);
       }
@@ -88,11 +87,11 @@ public class MinHeap {
   private void bubbleDown(int i) {
     int left = getLeft(i), right = getRight(i), largest = i;
 
-    if (left < heap.size() && heap.get(left).compareTo(heap.get(largest)) < 0) {
+    if (left < heap.size() && comparator.compare(heap.get(left), heap.get(largest)) < 0) {
       largest = left;
     }
 
-    if (right < heap.size() && heap.get(right).compareTo(heap.get(largest)) < 0) {
+    if (right < heap.size() && comparator.compare(heap.get(right), heap.get(largest)) < 0) {
       largest = right;
     }
 
@@ -103,7 +102,7 @@ public class MinHeap {
   }
 
   private void swap(int i, int j) {
-    int temp = heap.get(i);
+    E temp = heap.get(i);
     heap.set(i, heap.get(j));
     heap.set(j, temp);
   }
