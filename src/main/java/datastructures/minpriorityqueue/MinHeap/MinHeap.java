@@ -35,8 +35,6 @@ public class MinHeap<E> {
     heap.add(2);
     heap.add(1);
 
-    heap.decreaseValue(7, 1);
-
     while (!heap.isEmpty()) {
       System.out.println(heap.extractMin());
     }
@@ -60,10 +58,8 @@ public class MinHeap<E> {
     return toReturn;
   }
 
-  public void decreaseValue(E val, E newVal) {
-    int i = heap.indexOf(val);
-    heap.set(i, newVal);
-    bubbleUp(i);
+  public void decreaseValue(E val) {
+    bubbleUp(heap.indexOf(val));
   }
 
   public boolean isEmpty() {
