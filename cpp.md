@@ -2,7 +2,25 @@
 
 There is a MakeFile for every C++ section. All testing is done with Google Test. You don't need to download Google Test yourself.
 
+# Running Files With CMake (Recommended)
+
+Go to the directory with the `CMakeLists.txt` file. Then make the CMake output directory using this:
+
+    mkdir cmake-build-debug # you can call it whatever you want, but this name is git-ignored
+    cd cmake-build-debug
+    
+Then run the CMake.
+
+    cmake ../
+    cmake --build .
+    
+Then run the CMake project.
+
+    ./Algorithms
+
 # Running Files Without CMake
+
+Note that without CMake, you can't run tests.
 
 To compile a file, use this command:
 
