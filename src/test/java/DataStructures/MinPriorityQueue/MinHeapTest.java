@@ -83,5 +83,26 @@ public class MinHeapTest {
   }
 
   @Test
-  public void decreaseKeyTest() {}
+  public void decreaseKeyTest() {
+    for (int i = 0; i < 1000; i++) {
+      PriorityQueue<Integer> queue = new PriorityQueue<>(Integer::compare);
+      MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
+
+      for (int j = 0; j < 1000; j++) {
+        heap.add(j);
+      }
+
+      for (Integer j : heap) {
+        heap.decreaseValue(j, j / 2);
+      }
+
+      for (Integer j : heap) {
+        queue.add(j);
+      }
+
+      while (!heap.isEmpty()) {
+        assertEquals(queue.poll(), heap.extractMin());
+      }
+    }
+  }
 }

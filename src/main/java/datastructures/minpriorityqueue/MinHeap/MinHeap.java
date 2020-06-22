@@ -2,10 +2,12 @@ package datastructures.minpriorityqueue.MinHeap;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 @SuppressWarnings("unused")
-public class MinHeap<E> {
+public class MinHeap<E> implements Iterable<E> {
 
   public final List<E> heap;
   private final Comparator<E> comparator;
@@ -58,16 +60,22 @@ public class MinHeap<E> {
     return toReturn;
   }
 
-  public void decreaseValue(E val) {
-    bubbleUp(heap.indexOf(val));
+  public void decreaseValue(E val, E newVal) {
+    int index = heap.indexOf(val);
+    heap.set(index, newVal);
+    bubbleUp(index);
   }
 
   public boolean isEmpty() {
     return heap.size() == 0;
   }
 
-  public boolean contains(int i) {
+  public boolean contains(E i) {
     return heap.contains(i);
+  }
+
+  public void update(E val) {
+    bubbleUp(heap.indexOf(val));
   }
 
   private void bubbleUp(int i) {
@@ -101,5 +109,11 @@ public class MinHeap<E> {
     E temp = heap.get(i);
     heap.set(i, heap.get(j));
     heap.set(j, temp);
+  }
+
+  @Override
+  @NonNull
+  public Iterator<E> iterator() {
+    return heap.iterator();
   }
 }

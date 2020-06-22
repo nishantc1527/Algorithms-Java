@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 public class DijkstrasShortestPath {
 
+  @SuppressWarnings("unchecked")
   public static LinkedList<int[]>[] makeGraph(int V, int[][] E) {
     LinkedList<int[]>[] graph = new LinkedList[V];
 
@@ -46,7 +47,7 @@ public class DijkstrasShortestPath {
           weights[neighbor] = nextWeight + weight;
 
           if (!states[neighbor]) {
-            heap.decreaseValue(neighbor);
+            heap.update(neighbor);
           }
         }
       }
