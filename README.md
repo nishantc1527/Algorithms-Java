@@ -1,6 +1,6 @@
 # [Algorithms](https://github.com/nishantc1527/Algorithms/tree/master/src)
 
-A collection of common algorithms and data structures with detailed explanations, and source code in Java, C++, and Python. I also added
+A collection of common algorithms and data structures with source code in Java, C++, and Python. I also added
 a fun little game for contributing (see contributing.md).
 
 If you want to view the Java source code, go to java.md. If you want to view the Python source code, go to python.md, and same for C++ except
