@@ -63,7 +63,7 @@ public class RedBlackTree<E extends Comparable<E>> implements BinaryTree<E>, Ite
         x = x.left;
       } else x = x.right;
     }
-
+    
     RBTreeNode z = new RBTreeNode(val, Color.RED, y, NIL, NIL);
 
     if (y == NIL) {

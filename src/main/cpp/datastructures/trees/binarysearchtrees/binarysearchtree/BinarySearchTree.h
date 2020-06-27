@@ -7,53 +7,85 @@
 #include "../BinaryTree.h"
 
 template<typename T>
-class BinarySearchTree : public BinaryTree<T> {
-public:
-  BinarySearchTree() : BinaryTree<T>(nullptr, nullptr) {
-    this->root = nullptr;
+class BSTNode : public TreeNode<T> {
+  template<typename> friend class BinarySearchTree;
+private:
+  BSTNode<T> *parent, *left, *right;
+
+  BSTNode(const T *val)
+    : TreeNode<T>(val), parent(nullptr), left(nullptr), right(nullptr) {}
+
+  BSTNode(const T &val_)
+    : BSTNode(val_, nullptr) {}
+
+  BSTNode(const T& val_, BSTNode<T> *parent_)
+    : TreeNode<T>(val_), parent(parent_), left(nullptr), right(nullptr) {}
+
+  ~BSTNode() override {
+    if (left)
+      delete left;
+
+    if (right)
+      delete right;
   }
 
-  ~BinarySearchTree() override {
-    std::cout << "Deleting" << "\n";
+public:
+  TreeNode<T>* getParent() const override {
+    return parent;
+  }
 
-    if (this->rootParent) delete this->rootParent;
+  TreeNode<T>* getLeft() const override {
+    return left;
+  }
+  
+  TreeNode<T>* getRight() const override {
+    return right;
+  }
+};
+
+template<typename T>
+class BinarySearchTree : public BinaryTree<T> {
+private:
+  BSTNode<T>  *rootParent, *root;
+public:
+  BinarySearchTree() : rootParent(new BSTNode<T>(nullptr)), root(nullptr) {}
+
+  ~BinarySearchTree() override {
+    delete rootParent;
   }
 
   void insert(const T& val) override {
-    if (this->rootParent == nullptr) {
-      this->rootParent = new TreeNode<T>(val);
-    }
-    
-    if (this->root == nullptr) {
-      this->root = new TreeNode<T>(val, this->rootParent);
-      this->rootParent->left = this->root;
+    if (!root) {
+      root = new BSTNode<T>(val, rootParent);
+      rootParent->left = root;
+    } else if (contains(val)) {
       return;
-    }
+    } else {
+      BSTNode<T> *dummy = root;
 
-    TreeNode<T> *dummy = this->root;
+      while (dummy) {
+	if (val < *dummy->val) {
+	  if (!dummy->left) {
+	    dummy->left = new BSTNode<T>(val, dummy);
+	    return;
+	  }
 
-    while (true) {
-      if (val < dummy->val) {
-	if (dummy->left == nullptr) {
-	  dummy->left = new TreeNode<T>(val, dummy);
-	  return;
+	  dummy = dummy->left;
 	}
+	else {
+	  if (!dummy->right) {
+	    dummy->right = new BSTNode<T>(val, dummy);
+	    return;
+	  }
 
-	dummy = dummy->left;
-      }
-      else {
-	if (dummy->right == nullptr) {
-	  dummy->right = new TreeNode<T>(val, dummy);
-	  return;
+	  dummy = dummy->right;
 	}
-
-	dummy = dummy->right;
       }
     }
   }
 
   bool remove(const T& value) override {
-    TreeNode<T> *deletion = find(value);
+    BSTNode<T> *deletion = find(value);
     if (!deletion) return false;
     
     bool rightChild = (deletion == deletion->parent->right);
@@ -82,7 +114,7 @@ public:
     }
     else {
       // find the inorder successor of deletion
-      TreeNode<T> *successor = minimum(deletion->right);
+      BSTNode<T> *successor = minimum(deletion->right);
 
       if (successor == deletion->right) {
 	successor->left = deletion->left;
@@ -106,7 +138,7 @@ public:
       if (rightChild) successor->parent->right = successor;
       else successor->parent->left = successor;
 
-      if (deletion == this->root) this->root = successor;
+      if (deletion == root) root = successor;
     }
 
     return true;
@@ -121,39 +153,50 @@ public:
   }
   
   unsigned int getHeight() const override {
-    return getHeight(this->root);
+    return getHeight(root);
   }
 
   bool isValid() const override {
-    return isValid(this->root);
+    return isValid(root);
   }
 
-  unsigned int numNodes() const override {
-    return numNodes(this->root);
+  std::size_t numNodes() const override {
+    return numNodes(root);
   }
 
+  void print() const override {
+    print(root, "");
+  }
 
 private:
-  bool isValid(TreeNode<T>* rootNode) const {
+  void print(BSTNode<T> *node, std::string prefix) const {
+    if (!node) return;
+
+    print(node->right, prefix + "  ");
+    std::cout << prefix << " + " << *node->val << std::endl;
+    print(node->left, prefix + "  ");
+  }
+  
+  bool isValid(BSTNode<T>* rootNode) const {
     if (!rootNode) return true;
     else if (!rootNode->left && !rootNode->right) return true;
     bool result = true;
-    if (rootNode->left) result = result && rootNode->left->val <= rootNode->val;
-    if (rootNode->right) result = result && rootNode->right->val >= rootNode->val;
+    if (rootNode->left) result = result && *rootNode->left->val <= *rootNode->val;
+    if (rootNode->right) result = result && *rootNode->right->val >= *rootNode->val;
     return result && isValid(rootNode->left) && isValid(rootNode->right);
   }
   
-  unsigned int getHeight(TreeNode<T>* rootNode) const {
+  unsigned int getHeight(BSTNode<T>* rootNode) const {
     if (!rootNode) return 0;
     else return 1 + std::max(getHeight(rootNode->left), getHeight(rootNode->right));
   }
   
-  unsigned int numNodes(TreeNode<T>* rootNode) const {
+  unsigned int numNodes(BSTNode<T>* rootNode) const {
     if (!rootNode) return 0;
     else return 1 + numNodes(rootNode->left) + numNodes(rootNode->right);
   }
   
-  TreeNode<T>* minimum(TreeNode<T>* rootNode) const {
+  BSTNode<T>* minimum(BSTNode<T>* rootNode) const {
     while (true) {
       if (rootNode == nullptr) return nullptr;
       else if (!rootNode->left) return rootNode;
@@ -161,15 +204,15 @@ private:
     }
   }
 
-  TreeNode<T>* find(const T& val) const {
-    if (this->root == nullptr) return nullptr;
+  BSTNode<T>* find(const T& val) const {
+    if (!root) return nullptr;
     
-    TreeNode<T> *dummy = this->root;
+    BSTNode<T> *dummy = this->root;
 
     while (dummy != nullptr) {
-      if (val < dummy->val) {
+      if (val < *dummy->val) {
 	dummy = dummy->left;
-      } else if (val > dummy->val) {
+      } else if (val > *dummy->val) {
 	dummy = dummy->right;
       } else {
 	return dummy;

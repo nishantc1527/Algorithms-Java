@@ -2,7 +2,7 @@
 // Created by nisha on 6/2/2020.
 //
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "../../../../main/cpp/sorting/quicksort/quick_sort.h"
 
 TEST(Sorting, QuickSortTest) {
@@ -18,4 +18,10 @@ TEST(Sorting, QuickSortTest) {
         quick_sort(arr);
         ASSERT_EQ(temp, arr);
     }
+}
+
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS();
 }

@@ -5,65 +5,38 @@
 #include <queue>
 
 template <typename T>
-struct TreeNode {
-  const T& val;
+class TreeNode {
+protected:
+  const T *val;
 
-  TreeNode<T>* parent;
-  TreeNode<T>* left;
-  TreeNode<T>* right;
+  TreeNode(const T &val_)
+    : val(new T(val_)) {}
 
-  TreeNode(const T& val) : TreeNode(val, nullptr) {}
-  
-  TreeNode(const T& value, TreeNode<T> *parent_)
-    : val(value), parent(parent_), left(nullptr), right(nullptr) {}
+  TreeNode(const T *val_)
+    : val(val_) {}
 
-  ~TreeNode() {
-    if (left != nullptr) {
-      delete left;
-    }
-    
-    if (right != nullptr) {
-      delete right;
-    }
-  }
-
-  TreeNode* getParent() const {
-    return parent;
+  virtual ~TreeNode() {
+    if (val) delete val;
   }
   
-  TreeNode* getLeft() const {
-    return left;
-  }
+public:
+
+  virtual TreeNode<T>* getParent() const = 0;
   
-  TreeNode* getRight() const {
-    return right;
-  }
+  virtual TreeNode<T>* getLeft() const = 0;
   
-  const T& getValue() const {
-    return val;
-  }
-
-  void setParent(TreeNode* parent_) {
-    this->parent = parent_;
-  }
-
-  void setLeft(TreeNode* left_) {
-    this->left = left_;
-  }
-
-  void setRight(TreeNode* right_) {
-    this->right = right_;
+  virtual TreeNode<T>* getRight() const = 0;
+  
+  virtual const T& getValue() const {
+    return *val;
   }
 };
 
 template <typename T>
 class BinaryTree {
 protected:
-  TreeNode<T> *root, *rootParent;
-
 public:
-  BinaryTree(TreeNode<T> *root_, TreeNode<T> *rootParent_)
-    : root(root_), rootParent(rootParent_){}
+  BinaryTree() = default;
   
   virtual ~BinaryTree() {}
 
@@ -80,22 +53,10 @@ public:
   // gets whether the tree is valid
   virtual bool isValid() const = 0;
   // gets the number of nodes in the tree
-  virtual unsigned int numNodes() const = 0;
+  virtual std::size_t numNodes() const = 0;
 
   // prints the tree to console
-  void print() {
-    print(root, "");
-  }
-
-private:
-  void print(TreeNode<T>* node, std::string prefix) {
-    if (!node) return;
-
-    print(node->left, prefix + "  ");
-    std::cout << prefix << " + " << node->val << std::endl;
-    print(node->right, prefix + "  ");
-  }
-
+  virtual void print() const {};
 };
 
 #endif

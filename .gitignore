@@ -198,6 +198,7 @@ cython_debug/
 *.exe
 *.out
 *.app
+*out*
 
 # Ignore Gradle project-specific cache directory
 .gradle
@@ -210,4 +211,10 @@ build
 *.iml
 
 # CMake Output
-*cmake-build-debug/
+*cmake_build*
+
+# generated output
+*generated*
+
+# valgrind output
+*valgrind*
