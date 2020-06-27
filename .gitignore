@@ -27,9 +27,6 @@ hs_err_pid*
 # Make file
 Makefile
 
-# __init__.py that escaped my deletion
-__init__.py
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

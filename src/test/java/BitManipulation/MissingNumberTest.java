@@ -1,6 +1,6 @@
 package BitManipulation;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import bitmanipulation.problems.missingnumber.MissingNumber;
 import java.util.ArrayList;
