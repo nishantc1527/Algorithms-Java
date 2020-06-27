@@ -1,3 +1,6 @@
+#ifndef MY_UTILS
+#define MY_UTILS
+
 #include <iostream>
 #include <unordered_map>
 #include <random>
@@ -57,3 +60,5 @@ namespace my_utils {
   }
   
 }
+
+#endif

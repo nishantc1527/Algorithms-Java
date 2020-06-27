@@ -48,14 +48,3 @@ BellmanFord::returnType BellmanFord::shortestPaths(inputAdjListType adjList, int
 
   return res;
 }
-
-int main() {
-  std::vector<std::list<std::pair<int, double>>> graph = makeGraphAdjListWeighted(6, {{{0, 1}, 4}, {{1, 2}, 5}, {{1, 3}, 2}, {{2, 3}, 7}, {{0, 2}, 3}, {{3, 4}, 2}, {{4, 0}, 4}, {{4, 1}, 4}, {{4, 5}, 6}});
-  bool negWeightCycle;
-  std::vector<std::pair<int, int>> res = BellmanFord::shortestPaths(graph, 0, negWeightCycle);
-  for (int i = 0; i < res.size(); i++) {
-    std::cout << std::to_string(i) << ": Predecessor = " << res[i].first << ", Distance from source = " << res[i].second << std::endl;
-  }
-
-  std::cout << "Negative weight cycle? " << (negWeightCycle ? "true" : "false") << std::endl;
-}
