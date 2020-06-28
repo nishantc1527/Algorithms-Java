@@ -7,12 +7,12 @@
 
 #include "main/cpp/my_utils.h"
 
-TEST(BinarySearchTreeTest, NoNodesDeletionTest) {
+TEST(BinarySearchTreesTest, NoNodesDeletionTest) {
   BinarySearchTree<int> tree;
   ASSERT_FALSE(tree.remove(1));
 }
 
-TEST(BinarySearchTreeTest, Duplicates) {
+TEST(BinarySearchTreesTest, Duplicates) {
   BinarySearchTree<int> tree;
   tree.insert(1);
   tree.insert(2);
@@ -22,7 +22,7 @@ TEST(BinarySearchTreeTest, Duplicates) {
   ASSERT_EQ(tree.numNodes(), 2);
 }
 
-TEST(BinarySearchTreeTest, DuplicatesDeletion) {
+TEST(BinarySearchTreesTest, DuplicatesDeletion) {
   BinarySearchTree<int> tree;
   tree.insert(1);
   tree.insert(2);

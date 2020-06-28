@@ -6,55 +6,59 @@
 
 #include "../BinaryTree.h"
 
-enum Color {RED=0, BLACK};
-
-template<typename T>
-class RBTreeNode : public TreeNode<T> {
-  template<typename> friend class RedBlackTree;
-private:
-  Color color;
-
-  RBTreeNode<T>* parent;
-  RBTreeNode<T>* left;
-  RBTreeNode<T>* right;
-
-  RBTreeNode(const T *val_, Color color_)
-    : TreeNode<T>(val_), color(color_), parent(nullptr), left(nullptr), right(nullptr) {}
-  
-  RBTreeNode(const T& val_, Color color_, RBTreeNode<T> *parent_, RBTreeNode<T> *left_, RBTreeNode<T> *right_)
-    : TreeNode<T>(val_), color(color_), parent(parent_), left(left_), right(right_) {}
-  
-  ~RBTreeNode() override {}
-
-  void print() {
-    std::cout << *this->val << ", " << color << std::endl;
-  }
-  
-public:
-  const Color& getColor() const {
-    return color;
-  }
-
-  TreeNode<T>* getParent() const override {
-    return parent;
-  }
-  
-  TreeNode<T>* getLeft() const override {
-    return left;
-  }
-  
-  TreeNode<T>* getRight() const override {
-    return right;
-  }
-  
-  const T& getValue() const override {
-    return *this->val;
-  }
-};
-
 template<typename T>
 class RedBlackTree : public BinaryTree<T> {
 private:
+  
+
+  enum Color {RED=0, BLACK};
+
+  template<typename>
+  class RBTreeNode : public TreeNode<T> {
+    template<typename> friend class RedBlackTree<T>;
+  private:
+    Color color;
+
+    RBTreeNode<T>* parent;
+    RBTreeNode<T>* left;
+    RBTreeNode<T>* right;
+
+    RBTreeNode(const T *val_, Color color_)
+      : TreeNode<T>(val_), color(color_), parent(nullptr), left(nullptr), right(nullptr) {}
+  
+    RBTreeNode(const T& val_, Color color_, RBTreeNode<T> *parent_, RBTreeNode<T> *left_, RBTreeNode<T> *right_)
+      : TreeNode<T>(val_), color(color_), parent(parent_), left(left_), right(right_) {}
+  
+    ~RBTreeNode() override {}
+
+    void print() {
+      std::cout << *this->val << ", " << color << std::endl;
+    }
+  
+  public:
+    const Color& getColor() const {
+      return color;
+    }
+
+    TreeNode<T>* getParent() const override {
+      return parent;
+    }
+  
+    TreeNode<T>* getLeft() const override {
+      return left;
+    }
+  
+    TreeNode<T>* getRight() const override {
+      return right;
+    }
+  
+    const T& getValue() const override {
+      return *this->val;
+    }
+  };
+
+
+  
   RBTreeNode<T> *NIL, *root;
   
 public:
@@ -74,6 +78,9 @@ public:
     
     while (x != NIL) {
       y = x;
+
+      if (*x->val == val)
+	return;
 
       if (*x->val > val)
 	x = x->left;

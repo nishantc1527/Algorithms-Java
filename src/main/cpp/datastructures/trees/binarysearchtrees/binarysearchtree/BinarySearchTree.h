@@ -7,45 +7,44 @@
 #include "../BinaryTree.h"
 
 template<typename T>
-class BSTNode : public TreeNode<T> {
-  template<typename> friend class BinarySearchTree;
-private:
-  BSTNode<T> *parent, *left, *right;
-
-  BSTNode(const T *val)
-    : TreeNode<T>(val), parent(nullptr), left(nullptr), right(nullptr) {}
-
-  BSTNode(const T &val_)
-    : BSTNode(val_, nullptr) {}
-
-  BSTNode(const T& val_, BSTNode<T> *parent_)
-    : TreeNode<T>(val_), parent(parent_), left(nullptr), right(nullptr) {}
-
-  ~BSTNode() override {
-    if (left)
-      delete left;
-
-    if (right)
-      delete right;
-  }
-
-public:
-  TreeNode<T>* getParent() const override {
-    return parent;
-  }
-
-  TreeNode<T>* getLeft() const override {
-    return left;
-  }
-  
-  TreeNode<T>* getRight() const override {
-    return right;
-  }
-};
-
-template<typename T>
 class BinarySearchTree : public BinaryTree<T> {
 private:
+  template<typename>
+  class BSTNode : public TreeNode<T> {
+    template<typename> friend class BinarySearchTree<T>;
+  public:
+    BSTNode<T> *parent, *left, *right;
+
+    BSTNode(const T *val)
+      : TreeNode<T>(val), parent(nullptr), left(nullptr), right(nullptr) {}
+
+    BSTNode(const T &val_)
+      : BSTNode(val_, nullptr) {}
+
+    BSTNode(const T& val_, BSTNode<T> *parent_)
+      : TreeNode<T>(val_), parent(parent_), left(nullptr), right(nullptr) {}
+
+    ~BSTNode() override {
+      if (left)
+	delete left;
+
+      if (right)
+	delete right;
+    }
+    
+    TreeNode<T>* getParent() const override {
+      return parent;
+    }
+
+    TreeNode<T>* getLeft() const override {
+      return left;
+    }
+  
+    TreeNode<T>* getRight() const override {
+      return right;
+    }
+  };
+  
   BSTNode<T>  *rootParent, *root;
 public:
   BinarySearchTree() : rootParent(new BSTNode<T>(nullptr)), root(nullptr) {}

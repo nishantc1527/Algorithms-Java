@@ -14,7 +14,7 @@ private:
   };
   
   // Each index represents predecessor and shortest path length to that vertex
-  typedef std::vector<std::pair<int, int>> returnType;
+  typedef std::vector<std::pair<int, double>> returnType;
   typedef std::vector<std::list<std::pair<int, double>>> inputAdjListType;
   typedef std::vector<std::list<std::pair<vertex, double>>> adjListType;
   typedef std::vector<vertex> vertListType;

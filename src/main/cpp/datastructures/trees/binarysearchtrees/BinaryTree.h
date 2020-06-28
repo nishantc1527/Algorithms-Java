@@ -6,7 +6,7 @@
 
 template <typename T>
 class TreeNode {
-protected:
+public:
   const T *val;
 
   TreeNode(const T &val_)
@@ -32,9 +32,9 @@ public:
   }
 };
 
+
 template <typename T>
 class BinaryTree {
-protected:
 public:
   BinaryTree() = default;
   
