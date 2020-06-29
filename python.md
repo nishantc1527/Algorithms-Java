@@ -11,11 +11,14 @@ If you don't have ```pip``` yet, then run ```get-pip.py```.
     
 # Running Files
 
+***Make Sure You Are In The src directory before running***
 Running files is extremely easy. Just use this command:
 
     python <path-to-file>
     
-And it runs. To run a test, put the ```-u``` option before ```<path-to-file>```.
+And it runs. To run a test, put the ```-u``` option before ```<path-to-file>```, or replace ```python``` with ```pytest```, like this:
+
+    pytest <path-to-file>
 
 # [Source Code](https://github.com/nishantc1527/Algorithms/tree/master/src/main/python)
 

@@ -13,14 +13,34 @@ class MinHeap:
         if default is None:
             default = []
         self.heap = default
+        self.make_heap()
+
+    def make_heap(self):
+        for i in range((len(self.heap) >> 1) - 1, -1, -1):
+            self._bubble_down(i)
+
+    def is_valid(self):
+        return self._is_valid(0)
+
+    def _is_valid(self, index):
+        left, right = self._left(index), self._right(index)
+
+        if left < len(self.heap):
+            if self.heap[left] < self.heap[index] or not self._is_valid(left):
+                return False
+
+        if right < len(self.heap):
+            if self.heap[right] < self.heap[index] or not self._is_valid(right):
+                return False
+
+        return True
 
     def add(self, value):
         self.heap.append(value)
-        self.__bubble_up(len(self.heap) - 1)
+        self._bubble_up(len(self.heap) - 1)
 
     def add_all(self, values):
-        for value in values:
-            self.add(value)
+        self.add(value for value in values)
 
     def contains(self, item):
         return item in self.heap
@@ -29,33 +49,25 @@ class MinHeap:
         to_return = self.heap[0]
         self.heap[0], self.heap[len(self.heap) - 1] = self.heap[len(self.heap) - 1], self.heap[0]
         del self.heap[len(self.heap) - 1]
-        self.__bubble_down(0)
+        self._bubble_down(0)
         return to_return
-
-    def delete(self, value):
-        self.delete_index(self.heap.index(value))
-
-    def delete_index(self, index):
-        self.heap[index], self.heap[len(self.heap) - 1] = self.heap[len(self.heap) - 1], self.heap[index]
-        del self.heap[len(self.heap) - 1]
-        self.__bubble_down(index)
 
     def is_empty(self):
         return len(self.heap) == 0
 
-    def __bubble_up(self, index):
+    def _bubble_up(self, index):
         if index > 0:
-            p = self.__parent(index)
+            p = self._parent(index)
 
             if self.heap[p] > self.heap[index]:
                 self.heap[p], self.heap[index] = self.heap[index], self.heap[p]
-                self.__bubble_up(p)
+                self._bubble_up(p)
 
-    def __bubble_down(self, index):
+    def _bubble_down(self, index):
         if index >= len(self.heap):
             return
 
-        l, r, minimum = self.__left(index), self.__right(index), index
+        l, r, minimum = self._left(index), self._right(index), index
 
         if l < len(self.heap) and self.heap[l] < self.heap[minimum]:
             minimum = l
@@ -66,18 +78,18 @@ class MinHeap:
         self.heap[index], self.heap[minimum] = self.heap[minimum], self.heap[index]
 
         if minimum is not index:
-            self.__bubble_down(minimum)
+            self._bubble_down(minimum)
 
     @staticmethod
-    def __right(index):
+    def _right(index):
         return (index * 2) + 2
 
     @staticmethod
-    def __left(index):
+    def _left(index):
         return (index * 2) + 1
 
     @staticmethod
-    def __parent(index):
+    def _parent(index):
         return (index // 2) - 1 if (index & 1) == 0 else index // 2
 
     def __iter__(self):
@@ -125,3 +137,6 @@ if __name__ == "__main__":
 
     while heap:
         print(heap.extract_min())
+
+    heap = MinHeap([1, 1, 4, 2, 43, 5, 3, 4, 5])
+    print(heap.is_valid())
