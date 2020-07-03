@@ -9,8 +9,6 @@
 template<typename T>
 class RedBlackTree : public BinaryTree<T> {
 private:
-  
-
   enum Color {RED=0, BLACK};
 
   template<typename>
@@ -56,8 +54,6 @@ private:
       return *this->val;
     }
   };
-
-
   
   RBTreeNode<T> *NIL, *root;
   
@@ -73,7 +69,7 @@ public:
     delete NIL;
   }
 
-  void insert(const T& val) {
+  void insert(const T& val) override {
     RBTreeNode<T> *x = root, *y = NIL;
     
     while (x != NIL) {
@@ -99,6 +95,85 @@ public:
     insertFix(z);
   }
 
+  // removes the given value from the tree
+  bool remove(const T& value) override {
+    RBTreeNode<T> *z = find(value, root);
+    if (z == NIL) return false;
+    RBTreeNode<T> *x;
+    RBTreeNode<T> *y = z;
+    Color y_orig_color = y->color;
+
+    if (z->left == NIL) {
+      x = z->right;
+      transplant(z, z->right);
+    } else if (z->right == NIL) {
+      x = z->left;
+      transplant(z, z->left);
+    } else {
+      y = successor(z->right);
+      y_orig_color = y->color;
+      x = y->right;
+      if (y->parent == z) x->parent = y;
+      else {
+	transplant(y, y->right);
+	y->right = z->right;
+	y->right->parent = y;
+      }
+      transplant(z, y);
+      y->left = z->left;
+      y->left->parent = y;
+      y->color = z->color;
+    }
+    if (y_orig_color == Color::BLACK) deleteFix(x);
+
+    return true;
+  }
+
+  // checks if the given value exists inside the tree
+  bool contains(const T& key) const override {
+    RBTreeNode<T> *current = root;
+    while (current != NIL) {
+      const T &val = current->getValue();
+      if (val == key)
+	return true;
+      else if (val < key)
+	current = current->right;
+      else
+	current = current->left;
+    }
+
+    return false;
+  }
+
+  // gets the root of the tree as a TreeNode object
+  const TreeNode<T>& getRoot() const override {
+    return *root;
+  }
+
+  // gets the max height of the tree
+  unsigned int getHeight() const override {
+    return getHeight(root);
+  }
+
+  // gets whether the tree is valid
+  bool isValid() const override {
+    std::vector<RBTreeNode<T>*> nodes;
+    toArray(root, nodes);
+    return root->color == Color::BLACK && checkAdjacentReds(nodes) && checkBlackHeights(nodes);
+  }
+
+  // gets the number of nodes in the tree
+  std::size_t numNodes() const {
+    std::vector<RBTreeNode<T>*> vec;
+    toArray(root, vec);
+    return vec.size();
+  }
+
+  void print() const {
+    print(this->root, "");
+  }
+  
+private:
   void insertFix(RBTreeNode<T> *z) {
     RBTreeNode<T> *y;
     while (z->parent->color == Color::RED) {
@@ -138,40 +213,6 @@ public:
     }
     root->color = Color::BLACK;
     NIL->parent = nullptr;
-  }
-
-  // removes the given value from the tree
-  bool remove(const T& value) {
-    RBTreeNode<T> *z = find(value, root);
-    if (z == NIL) return false;
-    RBTreeNode<T> *x;
-    RBTreeNode<T> *y = z;
-    Color y_orig_color = y->color;
-
-    if (z->left == NIL) {
-      x = z->right;
-      transplant(z, z->right);
-    } else if (z->right == NIL) {
-      x = z->left;
-      transplant(z, z->left);
-    } else {
-      y = successor(z->right);
-      y_orig_color = y->color;
-      x = y->right;
-      if (y->parent == z) x->parent = y;
-      else {
-	transplant(y, y->right);
-	y->right = z->right;
-	y->right->parent = y;
-      }
-      transplant(z, y);
-      y->left = z->left;
-      y->left->parent = y;
-      y->color = z->color;
-    }
-    if (y_orig_color == Color::BLACK) deleteFix(x);
-
-    return true;
   }
 
   void deleteFix(RBTreeNode<T> *x) {
@@ -230,52 +271,7 @@ public:
     }
     x->color = Color::BLACK;
   }
-
-  // checks if the given value exists inside the tree
-  bool contains(const T& key) const override {
-    RBTreeNode<T> *current = root;
-    while (current != NIL) {
-      const T &val = current->getValue();
-      if (val == key)
-	return true;
-      else if (val < key)
-	current = current->right;
-      else
-	current = current->left;
-    }
-
-    return false;
-  }
-
-  // gets the root of the tree as a TreeNode object
-  const TreeNode<T>& getRoot() const override {
-    return *root;
-  }
-
-  // gets the max height of the tree
-  unsigned int getHeight() const override {
-    return getHeight(root);
-  }
-
-  // gets whether the tree is valid
-  bool isValid() const override {
-    std::vector<RBTreeNode<T>*> nodes;
-    toArray(root, nodes);
-    return root->color == Color::BLACK && checkAdjacentReds(nodes) && checkBlackHeights(nodes);
-  }
-
-  // gets the number of nodes in the tree
-  std::size_t numNodes() const {
-    std::vector<RBTreeNode<T>*> vec;
-    toArray(root, vec);
-    return vec.size();
-  }
-
-  void print() const {
-    print(this->root, "");
-  }
   
-private:
   void print(RBTreeNode<T>* node, std::string prefix) const {
     if (node == NIL) return;
 

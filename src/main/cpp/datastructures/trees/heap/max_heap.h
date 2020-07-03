@@ -4,6 +4,10 @@
 #include <vector>
 #include <algorithm>
 #include <exception>
+#include <concepts>
+
+template <typename T>
+concept Sortable = std::totally_ordered<T>;
 
 template <typename T>
 class max_heap {

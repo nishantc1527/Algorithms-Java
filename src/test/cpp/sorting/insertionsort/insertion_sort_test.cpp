@@ -2,20 +2,16 @@
 // Created by nisha on 6/2/2020.
 //
 
-#include "gtest/gtest.h"
-#include "../../../../main/cpp/sorting/insertionsort/insertion_sort.h"
+#include <gtest/gtest.h>
+
+#include "main/cpp/sorting/insertionsort/insertion_sort.h"
+#include "main/cpp/my_utils.h"
 
 TEST(Sorting, InsertionSortTest) {
-    for(int i = 0; i < 1000; i ++) {
-        std::vector<int> arr;
-
-        for(int j = 0; j < 500; j ++) {
-            arr.push_back(rand() % 1000);
-        }
-
-        std::vector<int> temp = arr;
-        std::sort(temp.begin(), temp.end());
-        insertion_sort(arr);
-        ASSERT_EQ(temp, arr);
-    }
+  std::vector<int> arr = my_utils::createRandVector(10000, 1, 1000000);
+  std::vector<int> copy = arr;
+  
+  std::sort(copy.begin(), copy.end());
+  insertion_sort(arr);
+  ASSERT_EQ(copy, arr);
 }

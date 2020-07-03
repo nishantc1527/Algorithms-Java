@@ -7,8 +7,17 @@
 
 #include <vector>
 
-int get_left(int i);
-int get_right(int i);
+inline int get_left(int i) {
+  return (i << 1) + 1;
+}
+
+inline int get_right(int i) {
+  return (i << 1) + 2;
+}
+
+inline int get_parent(int i) {
+  return (i-1) >> 1;
+}
 
 template <typename T>
 void heapify(std::vector<T>& vector, int i, std::size_t &heap_size);
@@ -25,18 +34,6 @@ void heap_sort(std::vector<T>& vector) {
   while(heap_size > 0) {
     pop_max(vector, heap_size);
   }
-}
-
-inline int get_left(int i) {
-  return (i << 1) + 1;
-}
-
-inline int get_right(int i) {
-  return (i << 1) + 2;
-}
-
-inline int get_parent(int i) {
-  return (i-1) >> 1;
 }
 
 template <typename T>
