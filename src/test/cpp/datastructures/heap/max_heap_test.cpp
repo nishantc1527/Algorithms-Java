@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "main/cpp/datastructures/trees/heap/max_heap.h"
+#include "main/cpp/datastructures/heap/max_heap.h"
 
 TEST(HeapTest, MaxHeap) {
   std::vector<int> data = {5, 3, 6, 4, 5, 10, 15, 14};
