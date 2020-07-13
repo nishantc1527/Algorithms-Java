@@ -10,21 +10,22 @@ plugins {
     // Apply the java plugin to add support for Java
     id 'java'
 
-    // Apply the application plugin to add support for building a CLI application.
-    id 'application'
-
     // Google Java Style Guide
     id 'com.github.sherter.google-java-format' version '0.8'
 }
 
+sourceCompatibility = 1.8;
+targetCompatibility = 1.8;
+
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     jcenter()
+
+    mavenCentral()
 }
 
 dependencies {
-    // jblas library for ai matrices and vectors
+    /* jblas library for ai matrices and vectors, and pair
+     class for utility */
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
     // This dependency is used by the application.
@@ -34,11 +35,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
-application {
-    // just a random file
-    mainClassName = 'sorting.bubblesort.BubbleSort'
-}
-
-tasks.build {
-    dependsOn(javadoc)
-}
+tasks.build.dependsOn(
+        tasks.javadoc
+)
