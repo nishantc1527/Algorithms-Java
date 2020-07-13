@@ -107,6 +107,7 @@ public class Utility {
    * and right subtrees are larger.
    *
    * @param tree The tree to check.
+   * @param <E> The generic type for the binary tree.
    * @return Whether it's valid or not.
    */
   public static <E extends Comparable<E>> boolean isValidBST(BinaryTree<E> tree) {

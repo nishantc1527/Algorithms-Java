@@ -121,6 +121,7 @@ public class Matrix {
    *
    * @param i i-position of the value
    * @param j j-position of the value
+   * @param value The value of the data.
    */
   public void setData(int i, int j, double value) {
     if (i >= 0 && i < rows && j >= 0 && j < cols) {
