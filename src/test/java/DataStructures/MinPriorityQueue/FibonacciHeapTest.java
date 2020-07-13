@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import datastructures.minpriorityqueue.FibonacciHeap.FibonacciHeap;
 import java.util.Arrays;
+import org.junit.Ignore;
 import org.junit.Test;
 
 @SuppressWarnings("unused")
@@ -23,12 +24,12 @@ public class FibonacciHeapTest {
 
   @Test
   public void extractMinTest() {
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < 100; i++) {
       heap = new FibonacciHeap();
-      int[] arr = new int[1000];
+      int[] arr = new int[100];
 
       for (int j = 0; j < arr.length; j++) {
-        arr[j] = (int) (Math.random() * 1000);
+        arr[j] = (int) (Math.random() * 100);
       }
 
       int min = Integer.MAX_VALUE;
@@ -43,7 +44,8 @@ public class FibonacciHeapTest {
   }
 
   // TODO Fix The Fibonacci Heap Extract Min Method
-  // @Test
+  @Test
+  @Ignore
   public void chainedExtractMinTest() {
     for (int i = 0; i < 10000; i++) {
       heap = new FibonacciHeap();

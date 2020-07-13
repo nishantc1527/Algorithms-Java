@@ -11,11 +11,11 @@ public class SingleNumberTest {
 
   @Test
   public void testSingleNumber() {
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < 100; i++) {
       ArrayList<Integer> arr = new ArrayList<>();
-      int randomNumber = (int) (Math.random() * 1000);
+      int randomNumber = (int) (Math.random() * 100);
 
-      for (int j = 0; j < 2000; j++) {
+      for (int j = 0; j < 100; j++) {
         arr.add((int) (Math.random() * arr.size()), j);
         if (j != randomNumber) {
           arr.add((int) (Math.random() * arr.size()), j);

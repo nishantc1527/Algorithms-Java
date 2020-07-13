@@ -12,11 +12,11 @@ public class MinHeapTest {
 
   @Test
   public void containsTest() {
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < 100; i++) {
       HashSet<Integer> set = new HashSet<>();
       MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
 
-      for (int j = 0; j < 1000; j++) {
+      for (int j = 0; j < 100; j++) {
         if (Math.random() >= 0.5) {
           set.add(j);
           heap.add(j);
@@ -44,11 +44,11 @@ public class MinHeapTest {
 
   @Test
   public void extractMinTest() {
-    for (int i = 0; i < 1000; i++) {
+    for (int i = 0; i < 100; i++) {
       PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
       MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
 
-      for (int j = 0; j < 1000; j++) {
+      for (int j = 0; j < 100; j++) {
         if (Math.random() >= 0.5) {
           priorityQueue.add(j);
           heap.add(j);
@@ -61,8 +61,8 @@ public class MinHeapTest {
 
   @Test
   public void chainedExtractMinTest() {
-    for (int i = 0; i < 1000; i++) {
-      int[] toAdd = new int[1000];
+    for (int i = 0; i < 100; i++) {
+      int[] toAdd = new int[100];
       MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
 
       for (int j = 0; j < toAdd.length; j++) {
@@ -72,7 +72,7 @@ public class MinHeapTest {
 
       int[] sorted = toAdd.clone();
       Arrays.sort(sorted);
-      int[] heapValues = new int[1000];
+      int[] heapValues = new int[100];
 
       for (int j = 0; j < heapValues.length; j++) {
         heapValues[j] = heap.extractMin();
@@ -84,11 +84,11 @@ public class MinHeapTest {
 
   @Test
   public void decreaseKeyTest() {
-    for (int i = 0; i < 1000; i++) {
+    for (int i = 0; i < 100; i++) {
       PriorityQueue<Integer> queue = new PriorityQueue<>(Integer::compare);
       MinHeap<Integer> heap = new MinHeap<>(Integer::compare);
 
-      for (int j = 0; j < 1000; j++) {
+      for (int j = 0; j < 100; j++) {
         heap.add(j);
       }
 

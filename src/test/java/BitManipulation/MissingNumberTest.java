@@ -11,11 +11,11 @@ public class MissingNumberTest {
 
   @Test
   public void testMissingNumber() {
-    for (int i = 0; i < 1000; i++) {
-      int randomNumber = (int) (Math.random() * 1000);
+    for (int i = 0; i < 100; i++) {
+      int randomNumber = (int) (Math.random() * 100);
       ArrayList<Integer> arr = new ArrayList<>();
 
-      for (int j = 0; j < 10000; j++) {
+      for (int j = 0; j < 100; j++) {
         if (j != randomNumber) {
           arr.add((int) (Math.random() * arr.size()), j);
         }
