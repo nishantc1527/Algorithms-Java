@@ -25,11 +25,9 @@ private:
       : TreeNode<T>(val_), parent(parent_), left(nullptr), right(nullptr) {}
 
     ~BSTNode() override {
-      if (left)
-	delete left;
+      delete left;
 
-      if (right)
-	delete right;
+      delete right;
     }
     
     TreeNode<T>* getParent() const override {
@@ -95,14 +93,14 @@ public:
       else
 	deletion->parent->left = nullptr;
 
-      if (deletion == this->root) this->root = nullptr;
+      if (deletion == root) root = nullptr;
     }
     else if (!deletion->left) {
       if (rightChild)
 	deletion->parent->right = deletion->right;
       else deletion->parent->left = deletion->right;
 
-      if (deletion == this->root) this->root = deletion->right;
+      if (deletion == root) root = deletion->right;
     }
     else if (!deletion->right) {
       if (rightChild)

@@ -120,6 +120,8 @@ public:
 	deletion->parent->right = nullptr;
       
       updateBalanceFactorsAndHeights(deletion->parent);
+
+      // delete deletion;
     }
     
     else if (!deletion->left) {
@@ -133,6 +135,11 @@ public:
       successor->parent = deletion->parent;
       
       updateBalanceFactorsAndHeights(deletion->parent);
+
+      /*
+      deletion->right = nullptr;
+      delete deletion;
+      */
     }
     else if (!deletion->right) {
       successor = deletion->left;
@@ -145,6 +152,12 @@ public:
       successor->parent = deletion->parent;
       
       updateBalanceFactorsAndHeights(deletion->parent);
+
+      /*
+      deletion->left = nullptr;
+      delete deletion;
+      */
+      
     }
     else {
       successor = minimum(deletion->right);
