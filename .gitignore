@@ -218,3 +218,7 @@ build
 
 # valgrind output
 *valgrind*
+/GPATH
+/GTAGS
+/GRTAGS
+*#
