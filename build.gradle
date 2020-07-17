@@ -38,6 +38,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
-tasks.build.dependsOn(
-        tasks.javadoc
-)
+task showProjectReport(dependsOn: tasks.projectReport) {
+    doLast {
+        copy {
+            from "build/reports"
+
+            into "project-report"
+        }
+    }
+}
+
+tasks.build.dependsOn {
+    tasks.javadoc
+    tasks.showProjectReport
+}
