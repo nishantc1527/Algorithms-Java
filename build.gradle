@@ -52,3 +52,5 @@ tasks.build.dependsOn {
     tasks.javadoc
     tasks.showProjectReport
 }
+
+tasks.verifyGoogleJavaFormat.dependsOn(tasks.googleJavaFormat)

@@ -28,15 +28,6 @@ No dependencies
 default - Configuration for default artifacts. (n)
 No dependencies
 
-googleJavaFormat1.6
-\--- com.google.googlejavaformat:google-java-format:1.6
-     +--- com.google.guava:guava:22.0
-     |    +--- com.google.code.findbugs:jsr305:1.3.9
-     |    +--- com.google.errorprone:error_prone_annotations:2.0.18
-     |    +--- com.google.j2objc:j2objc-annotations:1.1
-     |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
-     \--- com.google.errorprone:javac-shaded:9+181-r4173-1
-
 implementation - Implementation only dependencies for source set 'main'. (n)
 \--- com.google.guava:guava:28.1-jre (n)
 
