@@ -19,7 +19,6 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['Pair.jar'], dir: 'libs')
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:28.1-jre'
