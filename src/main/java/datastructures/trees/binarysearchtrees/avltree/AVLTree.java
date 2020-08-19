@@ -77,7 +77,7 @@ public class AVLTree<E extends Comparable<E>> implements BinaryTree<E>, Iterable
 
   /**
    * Fixes the tree after an insertion or deletion Assuming the balance factors are correct in all
-   * of the tree nodes, the tree is fixed using the following rules: 1. First have to fix both the
+   * of the tree nodes, the tree is fixed using the following rules: 1. First have to fix both thnne
    * left and right subtrees 2. There is no need to fix the current tree node if the balance factor
    * of the current node belongs to the set of {-1, 0, 1}. 3. If the balance factor is greater than
    * or equal to 2 (the left subtree is heavier than the right subtree) then do the following: a. If
