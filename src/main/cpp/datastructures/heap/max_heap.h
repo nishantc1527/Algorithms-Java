@@ -4,7 +4,6 @@
 #include <vector>
 #include <algorithm>
 #include <exception>
-#include <concepts>
 
 template <typename T>
 class max_heap {

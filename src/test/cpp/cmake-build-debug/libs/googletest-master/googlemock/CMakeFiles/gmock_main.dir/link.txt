@@ -1,2 +1,0 @@
-/usr/bin/ar.exe qc ../../../lib/libgmock_maind.a  CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
-/usr/bin/ranlib.exe ../../../lib/libgmock_maind.a

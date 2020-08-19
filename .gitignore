@@ -208,7 +208,7 @@ build
 *.iml
 
 # CMake Output
-*cmake_build*
+cmake-build-debug/
 
 # generated output
 *generated*
