@@ -24,6 +24,8 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+
+    implementation project(':pair')
 }
 
 task showTestResults(dependsOn: tasks.projectReport) {
