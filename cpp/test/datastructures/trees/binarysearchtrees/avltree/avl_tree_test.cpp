@@ -3,11 +3,8 @@
 #include <cmath>
 #include <vector>
 #include <set>
-#include <unordered_set>
 
 #include "../../../../main/datastructures/trees/binarysearchtrees/avltree/AVLTree.h"
-
-#include "../../../../../main/my_utils.h"
 
 TEST(BinarySearchTreesTest, AVLTreeTest) {
   std::vector<int> values = my_utils::createRandVector(50, 0, 200);

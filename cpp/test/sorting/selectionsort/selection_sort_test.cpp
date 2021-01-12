@@ -4,8 +4,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../../../main/sorting/insertionsort/insertion_sort.h"
-#include "../../../main/my_utils.h"
+#include "../../../main/sorting/selectionsort/selection_sort.h"
 
 TEST(Sorting, SelectionSortTest) {
   std::vector<int> arr = my_utils::createRandVector(10000, 1, 1000000);

@@ -27,6 +27,7 @@ class binary_search_tree {
 
  public:
   node *root;
+  int size;
  public:
   binary_search_tree() {
     root = nullptr;
@@ -61,6 +62,8 @@ class binary_search_tree {
         }
       }
     }
+
+    size ++;
   }
 
   bool contains(int val) {

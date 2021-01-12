@@ -2,26 +2,26 @@
 #define AVL_TREE
 
 template <typename T>
-class AVLTree : public BinaryTree<T> {
+class AVLTree {
 private:
   template<typename>
-  class AVLTreeNode : public TreeNode<T> {
-    template<typename> friend class AVLTree<T>;
+  class AVLTreeNode {
   private:
     std::size_t height;
     int balanceFactor;
+    int val;
     
     AVLTreeNode<T> *parent;
     AVLTreeNode<T> *left;
     AVLTreeNode<T> *right;
 
     AVLTreeNode(const T *val_)
-      : TreeNode<T>(val_), parent(nullptr), left(nullptr), right(nullptr) {}
+      : val(val_), parent(nullptr), left(nullptr), right(nullptr) {}
   
     AVLTreeNode(const T& val_, AVLTreeNode<T> *parent_, AVLTreeNode<T> *left_, AVLTreeNode<T> *right_)
-      : TreeNode<T>(val_), parent(parent_), left(left_), right(right_) {}
+      : parent(parent_), left(left_), right(right_) {}
   
-    ~AVLTreeNode() override {
+    ~AVLTreeNode() {
       if (left)
 	delete left;
       if (right)
@@ -29,24 +29,32 @@ private:
     }
 
     void print() const {
-      std::cout << *this->val << std::endl;
+      std::cout << *this->getVal() << std::endl;
     }
   
   public:
-    TreeNode<T>* getParent() const override {
+    AVLTreeNode<T>* getParent() const override {
       return parent;
     }
-  
-    TreeNode<T>* getLeft() const override {
+
+    AVLTreeNode<T>* getLeft() const override {
       return left;
     }
-  
-    TreeNode<T>* getRight() const override {
+
+    AVLTreeNode<T>* getRight() const override {
       return right;
     }
   
     const T& getValue() const override {
-      return *this->val;
+      return *this->getVal();
+    }
+
+    int getBalanceFactor() const {
+      return balanceFactor;
+    }
+
+    int getVal() const {
+      return val;
     }
   };
 
@@ -58,7 +66,7 @@ public:
     root = nullptr;
   }
 
-  ~AVLTree() override {
+  ~AVLTree() {
     delete rootParent;
   }
 
@@ -73,10 +81,10 @@ public:
     AVLTreeNode<T> *parent = root, *current = root;
     while (current) {
       parent = current;
-      if (val == *current->val)
+      if (val == *current->getVal())
 	return;
       
-      else if (val < *current->val) 
+      else if (val < *current->getVal()) 
         current = current->left;
       
       else 
@@ -84,7 +92,7 @@ public:
     }
 
     AVLTreeNode<T> *insertion;
-    if (val < *parent->val) {
+    if (val < *parent->getVal()) {
       insertion = parent->left = new AVLTreeNode<T>(val, parent, nullptr, nullptr);
     } else {
       insertion = parent->right = new AVLTreeNode<T>(val, parent, nullptr, nullptr);
@@ -101,8 +109,8 @@ public:
     if (!deletion)
       return false;
 
-    while (*deletion->val != val) {
-      if (val < *deletion->val)
+    while (*deletion->getVal() != val) {
+      if (val < *deletion->getVal())
 	deletion = deletion->left;
       else
 	deletion = deletion->right;
@@ -210,9 +218,9 @@ public:
   bool contains(const T& val) const override {
     AVLTreeNode<T> *current = root;
     while (current) {
-      if (*current->val == val)
+      if (*current->getVal() == val)
 	return true;
-      else if (*current->val < val)
+      else if (*current->getVal() < val)
 	current = current->right;
       else
 	current = current->left;
@@ -221,24 +229,24 @@ public:
     return false;
   }
 
-  bool isValid() const override {
+  bool isValid() const {
     // calcBalanceFactor(root);
     return isValidBST(root) && isValidAVLTree(root);
   }
 
-  const TreeNode<T>& getRoot() const override {
+  const AVLTreeNode<T>& getRoot() const override {
     return *this->root;
   }
   
-  unsigned int getHeight() const override {
+  unsigned int getHeight() const {
     return getHeight(root);
   }
 
-  std::size_t numNodes() const override {
+  std::size_t numNodes() const {
     return numNodes(root);
   }
 
-  void print() const override {
+  void print() const {
     print(root, "");
   }
 
@@ -248,49 +256,49 @@ private:
     if (!root)
       return true;
     
-    if (root->left && root->left->parent != root)
+    if (root->getLeft() && root->getLeft()->parent != root)
       return false;
     
-    if (root->right && root->right->parent != root)
+    if (root->getRight() && root->getRight()->parent != root)
       return false;
     
     if (root->parent->left != root && root->parent->right != root)
       return false;
     
-    if (root->left && *root->val < *root->left->val)
+    if (root->getLeft() && root->getVal() < *root->getLeft()->getVal())
       return false;
 
-    if (root->right && *root->right->val < *root->val)
+    if (root->getRight() && *root->getRight()->getVal() < root->getVal())
       return false;
     
-    return isValidBST(root->left) && isValidBST(root->right);
+    return isValidBST(root->getLeft()) && isValidBST(root->getRight());
   }
 
   bool isValidAVLTree(AVLTreeNode<T> *root) const {
     if (!root) return true;
-    return std::abs(root->balanceFactor) <= 1
-        && isValidAVLTree(root->left)
-        && isValidAVLTree(root->right);
+    return std::abs(root->getBalanceFactor()) <= 1
+        && isValidAVLTree(root->getLeft())
+        && isValidAVLTree(root->getRight());
   }
   
   void fixTree(AVLTreeNode<T> *root) {
-    if (!root || (!root->left && !root->right)) return;
-    fixTree(root->left);
-    fixTree(root->right);
+    if (!root || (!root->getLeft() && !root->getRight())) return;
+    fixTree(root->getLeft());
+    fixTree(root->getRight());
 
-    int bf = root->balanceFactor;
+    int bf = root->getBalanceFactor();
     if (abs(bf) < 2) return;
     if (bf >= 2) {
-      bool lr = root->left->balanceFactor < 0;
+      bool lr = root->getLeft()->balanceFactor < 0;
       if (lr)
-	leftRotate(root->left);
+	leftRotate(root->getLeft());
 
       rightRotate(root);
     }
     else if (bf <= 2) {
-      bool rl = root->right->balanceFactor > 0;
+      bool rl = root->getRight()->balanceFactor > 0;
       if (rl)
-	rightRotate(root->right);
+	rightRotate(root->getRight());
       leftRotate(root);
     }
 
@@ -298,7 +306,7 @@ private:
   }
 
   void rightRotate(AVLTreeNode<T> *root) {
-    AVLTreeNode<T> *leftSide = root->left;
+    AVLTreeNode<T> *leftSide = root->getLeft();
     if (root == root->parent->left) {
       root->parent->left = leftSide;
     }
@@ -307,7 +315,7 @@ private:
     }
     leftSide->parent = root->parent;
 
-    root->left = leftSide->right;
+    root->getLeft() = leftSide->right;
     if (leftSide->right) leftSide->right->parent = root;
     leftSide->right = root;
     root->parent = leftSide;
@@ -316,7 +324,7 @@ private:
   }
 
   void leftRotate(AVLTreeNode<T> *root) {
-    AVLTreeNode<T> *rightSide = root->right;
+    AVLTreeNode<T> *rightSide = root->getRight();
     if (root == root->parent->left) {
       root->parent->left = rightSide;
     } else {
@@ -324,7 +332,7 @@ private:
     }
     rightSide->parent = root->parent;
 
-    root->right = rightSide->left;
+    root->getRight() = rightSide->left;
     if (rightSide->left) rightSide->left->parent = root;
     rightSide->left = root;
     root->parent = rightSide;
@@ -342,41 +350,41 @@ private:
 
   void calcBalanceFactor(AVLTreeNode<T> *root) {
     if (!root) return;
-    calcBalanceFactor(root->left);
-    calcBalanceFactor(root->right);
+    calcBalanceFactor(root->getLeft());
+    calcBalanceFactor(root->getRight());
     setBalanceFactors(root);
   }
 
   void setBalanceFactors(AVLTreeNode<T> *root) {
-    if (!root->left && !root->right) {
+    if (!root->getLeft() && !root->getRight()) {
       root->height = 1;
-      root->balanceFactor = 0;
-    } else if (!root->right) {
-      root->height = root->left->height + 1;
-      root->balanceFactor = root->left->height;
-    } else if (!root->left) {
-      root->height = root->right->height + 1;
-      root->balanceFactor = -root->right->height;
+      root->getBalanceFactor() = 0;
+    } else if (!root->getRight()) {
+      root->height = root->getLeft()->height + 1;
+      root->getBalanceFactor() = root->getLeft()->height;
+    } else if (!root->getLeft()) {
+      root->height = root->getRight()->height + 1;
+      root->getBalanceFactor() = -root->getRight()->height;
     } else {
-      root->height = std::max(root->left->height, root->right->height) + 1;
-      root->balanceFactor = root->left->height - root->right->height;
+      root->height = std::max(root->getLeft()->height, root->getRight()->height) + 1;
+      root->getBalanceFactor() = root->getLeft()->height - root->getRight()->height;
     }
   }
 
   void calcHeights(AVLTreeNode<T> *root) {
     if (root) {
-      if (!root->left && !root->right) {
+      if (!root->getLeft() && !root->getRight()) {
         root->height = 1;
-      } else if (!root->left) {
-        calcHeights(root->right);
-        root->height = root->right->height + 1;
-      } else if (!root->right) {
-        calcHeights(root->left);
-        root->height = root->left->height + 1;
+      } else if (!root->getLeft()) {
+        calcHeights(root->getRight());
+        root->height = root->getRight()->height + 1;
+      } else if (!root->getRight()) {
+        calcHeights(root->getLeft());
+        root->height = root->getLeft()->height + 1;
       } else {
-        calcHeights(root->left);
-        calcHeights(root->right);
-        root->height = std::max(root->left->height, root->right->height) + 1;
+        calcHeights(root->getLeft());
+        calcHeights(root->getRight());
+        root->height = std::max(root->getLeft()->height, root->getRight()->height) + 1;
       }
     }
   }
@@ -385,25 +393,25 @@ private:
     if (!node) return;
 
     print(node->right, prefix + "  ");
-    std::cout << prefix << " + " << *node->val << std::endl;
+    std::cout << prefix << " + " << *node->getVal() << std::endl;
     print(node->left, prefix + "  ");
   }
 
   AVLTreeNode<T>* minimum(AVLTreeNode<T> *root) const {
-    if (!root || !root->left)
+    if (!root || !root->getLeft())
       return root;
     else
-      return minimum(root->left);
+      return minimum(root->getLeft());
   }
 
   std::size_t getHeight(AVLTreeNode<T> *root) const {
     if (!root) return 0;
-    else return  1 + std::max(getHeight(root->left), getHeight(root->right));
+    else return  1 + std::max(getHeight(root->getLeft()), getHeight(root->getRight()));
   }
 
   std::size_t numNodes(AVLTreeNode<T> *root) const {
     if (!root) return 0;
-    else return 1 + numNodes(root->left) + numNodes(root->right);
+    else return 1 + numNodes(root->getLeft()) + numNodes(root->getRight());
   }
 };
 
