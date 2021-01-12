@@ -43,7 +43,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-src/test/cpp/lib/
+python/src/test/cpp/lib/
 lib64/
 parts/
 sdist/

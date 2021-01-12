@@ -1,0 +1,33 @@
+plugins {
+    id "com.diffplug.spotless" version "5.1.0"
+    id 'java'
+    id 'application'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat()
+    }
+}
+
+dependencies {
+    /* jblas library for ai matrices and vectors, and pair
+     class for utility */
+    implementation 'org.jblas:jblas:1.2.4'
+    implementation 'commons-lang:commons-lang:2.6'
+
+    testImplementation 'junit:junit:4.12'
+}
+
+application {
+    mainClassName = '' // Change to whatever class you want to run
+}
