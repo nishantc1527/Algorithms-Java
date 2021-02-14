@@ -1,13 +1,12 @@
 package datastructures.minpriorityqueue;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import datastructures.minpriorityqueue.FibonacciHeap.FibonacciHeap;
 import java.util.Arrays;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-@SuppressWarnings("unused")
 public class FibonacciHeapTest {
 
   private FibonacciHeap heap;
@@ -45,7 +44,7 @@ public class FibonacciHeapTest {
 
   // TODO Fix The Fibonacci Heap Extract Min Method
   @Test
-  @Ignore
+  @Disabled
   public void chainedExtractMinTest() {
     for (int i = 0; i < 10000; i++) {
       heap = new FibonacciHeap();

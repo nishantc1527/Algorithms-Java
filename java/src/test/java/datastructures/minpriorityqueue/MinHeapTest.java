@@ -1,12 +1,12 @@
 package datastructures.minpriorityqueue;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import datastructures.minpriorityqueue.MinHeap.MinHeap;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.PriorityQueue;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MinHeapTest {
 

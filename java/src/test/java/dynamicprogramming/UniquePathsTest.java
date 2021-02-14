@@ -1,16 +1,16 @@
 package dynamicprogramming;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import dynmanicprogramming.problems.uniquepaths.UniquePaths;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class UniquePathsTest {
 
   private int m, n;
 
-  @Before
+  @BeforeEach
   public void setup() {
     m = 7;
     n = 3;

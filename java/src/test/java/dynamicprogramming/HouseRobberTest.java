@@ -1,16 +1,16 @@
 package dynamicprogramming;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import dynmanicprogramming.problems.houserobber.HouseRobber;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class HouseRobberTest {
 
   private int[] arr;
 
-  @Before
+  @BeforeEach
   public void setup() {
     arr = new int[] {1, 2, 3, 1, 4, 1, 3, 4, 3, 2, 1, 3, 4, 3, 2, 1};
   }

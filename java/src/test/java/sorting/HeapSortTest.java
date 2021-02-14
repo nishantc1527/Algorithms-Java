@@ -1,16 +1,16 @@
 package sorting;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import sorting.heapsort.HeapSort;
 
 public class HeapSortTest {
 
   private int[] arr;
 
-  @Before
+  @BeforeEach
   public void setup() {
     arr = new int[] {5, 3, 2, 1, 5};
   }

@@ -1,9 +1,9 @@
 package matrices;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import math.matrices.Matrix;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MatrixTest {
   private Matrix mat1, mat2;
