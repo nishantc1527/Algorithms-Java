@@ -57,7 +57,7 @@ public class UnionFind {
       return;
     }
 
-    parent[root1] = root2; // Merge the two trees.
+    parent[root2] = root1; // Merge the two trees.
   }
 
   /**
