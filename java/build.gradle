@@ -30,3 +30,7 @@ dependencies {
 application {
     mainClassName = '' // Change to whatever class you want to run
 }
+
+test {
+    useJUnitPlatform()
+}
