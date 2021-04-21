@@ -1,7 +1,12 @@
-# Java Users
+# Algorithms
 
-This repository supports Gradle. While you don't need it, it will make everything much easier. Testing is all done with JUnit 5. If you don't
-have Gradle, you have to download JUnit, as well as a couple dependencies listed below. If you do have Gradle, you're fine.
+A collection of common algorithms and data structures with source code in Java, C++, and Python.
+
+If you want to view the Java source code, go to java.md. If you want to view the Python source code, go to python.md, and same for C++ except go to cpp.md.
+
+# Gradle
+
+This repository uses Gradle. While you don't need it, it will make everything much easier. You don't need to install Gradle as I added the wrapper. Testing is all done with JUnit 5.
 
 # Dependencies Used
 
@@ -11,19 +16,23 @@ have Gradle, you have to download JUnit, as well as a couple dependencies listed
 
 # Using Gradle
 
-If you have gradle, to run everything it simply uses this command:
+To check if everything is correct, run this command:
 
-    ./gradlew build
+```bash
+./gradlew check
+```
 
-This checks for lots of things, like running the tests, check for compile errors, check for correct google java style guide, etc. If you only
-want to run a single file, then go to the build.gradle file and add this line at the bottom.
+This checks for lots of things, like running the tests, check for compile errors, check for correct google java style guide, etc. If you want to run a single file, then go to the build.gradle file and add this line at the bottom.
 
     mainClassName = 'sorting.bubblesort.BubbleSort'
 
-and run ```./gradlew run```.  Replace ```sorting.bubblesort.BubbleSort``` with the file you want to run. Make sure you exclude the ```src.main.java``` part. If you want to
-run the tests, simply run this command:
+and run 
 
-    ./gradlew test
+```bash
+./gradlew run
+```
+
+Replace ```sorting.bubblesort.BubbleSort``` with the file you want to run. Make sure you exclude the ```src.main.java``` part.
     
 # [Source Code](https://github.com/nishantc1527/Algorithms-Java/tree/master/src/main/java)
 
@@ -90,3 +99,7 @@ run the tests, simply run this command:
 * [Merge Sort](https://github.com/nishantc1527/Algorithms-Java/tree/master/src/main/java/sorting/mergesort)
 * [Quick Sort](https://github.com/nishantc1527/Algorithms-Java/tree/master/src/main/java/sorting/quicksort)
 * [Selection Sort](https://github.com/nishantc1527/Algorithms-Java/tree/master/src/main/java/sorting/selectionsort)
+
+# License
+
+This repository is licensed under the [MIT license](https://mit-license.org/).
