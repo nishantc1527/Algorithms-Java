@@ -25,16 +25,6 @@ run the tests, simply run this command:
 
     ./gradlew test
     
-# Using Only Java JDK (Not Recommended)
-
-Compile a file like this:
-
-    javac <path-to-file>
-    
-Then run it like this:
-
-    java <class-name>
-    
 # [Source Code](https://github.com/nishantc1527/Algorithms-Java/tree/master/src/main/java)
 
 ## [Bit Manipulation](https://github.com/nishantc1527/Algorithms-Java/tree/master/src/main/java/bitmanipulation)
