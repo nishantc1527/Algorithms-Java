@@ -11,10 +11,6 @@ on:
 
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: java
-    
     runs-on: ubuntu-latest
 
     steps:
