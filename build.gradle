@@ -4,6 +4,12 @@ plugins {
     id 'application'
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -21,16 +27,20 @@ spotless {
 
 dependencies {
     implementation 'org.jblas:jblas:1.2.4'
+    testCompile 'com.google.guava:guava:22.0'
     implementation 'commons-lang:commons-lang:2.6'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
-}
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
 
-application {
-    mainClassName = '' // Change to whatever class you want to run
+    testCompile 'com.google.truth:truth:1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
 }
 
 test {
     useJUnitPlatform()
+}
+
+application {
+    mainClassName = '' // Change to whatever class you want to run
 }
