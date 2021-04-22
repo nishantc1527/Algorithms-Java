@@ -1,4 +1,4 @@
-package datastructures.minpriorityqueue.FibonacciHeap;
+package datastructures.minpriorityqueue.fibonacciheap;
 
 import java.util.HashMap;
 import java.util.HashSet;

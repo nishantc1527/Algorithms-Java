@@ -1,4 +1,4 @@
-package datastructures.minpriorityqueue.MinHeap;
+package datastructures.minpriorityqueue.minheap;
 
 import java.util.ArrayList;
 import java.util.Comparator;
