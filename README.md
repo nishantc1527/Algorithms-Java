@@ -1,8 +1,6 @@
 # Algorithms
 
-A collection of common algorithms and data structures with source code in Java, C++, and Python.
-
-If you want to view the Java source code, go to java.md. If you want to view the Python source code, go to python.md, and same for C++ except go to cpp.md.
+A collection of common algorithms and data structures with source code in Java.
 
 # Gradle
 

@@ -1,6 +1,6 @@
 package graphtheory.shortestpathalgorithms.singlesource.dijkstrasshortestpath;
 
-import datastructures.minpriorityqueue.MinHeap.MinHeap;
+import datastructures.minpriorityqueue.minheap.MinHeap;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;

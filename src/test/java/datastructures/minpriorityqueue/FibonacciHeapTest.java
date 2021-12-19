@@ -2,7 +2,7 @@ package datastructures.minpriorityqueue;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import datastructures.minpriorityqueue.FibonacciHeap.FibonacciHeap;
+import datastructures.minpriorityqueue.fibonacciheap.FibonacciHeap;
 import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

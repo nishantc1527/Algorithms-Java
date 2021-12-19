@@ -78,8 +78,8 @@ public class UnionFind {
    * @return True if the {@link UnionFind} is path compressed.
    */
   public boolean isPathCompressed() {
-    for (int j : parent) {
-      if (j != parent[j]) {
+    for (int i = 0; i < parent.length; i++) {
+      if (parent[i] != parent[parent[i]]) {
         return false;
       }
     }
